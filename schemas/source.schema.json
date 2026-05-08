@@ -17,6 +17,46 @@
     "evidence"
   ],
   "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "rights": {
+            "properties": {
+              "verification_status": {
+                "enum": ["unverified", "source_note_only", "conflicting"]
+              }
+            },
+            "required": ["verification_status"]
+          }
+        },
+        "required": ["rights"]
+      },
+      "then": {
+        "properties": {
+          "rights": {
+            "properties": {
+              "commercial_use_allowed": {
+                "not": {
+                  "const": true
+                }
+              },
+              "derivatives_allowed": {
+                "not": {
+                  "const": true
+                }
+              },
+              "scan_redistribution_allowed": {
+                "not": {
+                  "const": true
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
   "properties": {
     "source_id": {
       "type": "string",

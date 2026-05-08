@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Lightweight validation for the JSONL dataset indexes."""
+"""Validate the JSONL dataset indexes against their JSON Schemas."""
 
 from __future__ import annotations
 
@@ -8,48 +8,40 @@ import json
 from pathlib import Path
 from typing import Any
 
+try:
+    from jsonschema import Draft202012Validator, FormatChecker
+    from jsonschema.exceptions import SchemaError
+except ImportError as exc:  # pragma: no cover - exercised when deps are absent.
+    raise SystemExit(
+        "Missing dependency: jsonschema. Install development dependencies with "
+        "`python3 -m pip install -r requirements-dev.txt`."
+    ) from exc
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SOURCES_PATH = REPO_ROOT / "data" / "index" / "sources.jsonl"
 ENTRIES_PATH = REPO_ROOT / "data" / "index" / "entries.jsonl"
-
-SOURCE_REQUIRED = {
-    "source_id",
-    "record_type",
-    "status",
-    "priority",
-    "provider",
-    "title",
-    "urls",
-    "rights",
-    "scope",
-    "ingest",
-    "evidence",
-}
-
-ENTRY_REQUIRED = {
-    "entry_id",
-    "source_id",
-    "source_record_id",
-    "sequence",
-    "title",
-    "creators",
-    "dates",
-    "languages",
-    "script",
-    "document_type",
-    "handwriting",
-    "files",
-    "rights",
-    "provenance",
-    "quality",
-    "transcription",
-}
+SOURCE_SCHEMA_PATH = REPO_ROOT / "schemas" / "source.schema.json"
+ENTRY_SCHEMA_PATH = REPO_ROOT / "schemas" / "entry.schema.json"
 
 
-def load_jsonl(path: Path, required: set[str], id_key: str) -> list[dict[str, Any]]:
+def load_schema(path: Path) -> dict[str, Any]:
     if not path.exists():
-        return []
+        raise SystemExit(f"{path}: file does not exist")
+    try:
+        schema = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise SystemExit(f"{path}: invalid JSON schema: {exc}") from exc
+    try:
+        Draft202012Validator.check_schema(schema)
+    except SchemaError as exc:
+        raise SystemExit(f"{path}: invalid JSON schema: {exc.message}") from exc
+    return schema
+
+
+def load_jsonl(path: Path, validator: Draft202012Validator, id_key: str) -> list[dict[str, Any]]:
+    if not path.exists():
+        raise SystemExit(f"{path}: file does not exist")
 
     rows: list[dict[str, Any]] = []
     seen: set[str] = set()
@@ -65,11 +57,11 @@ def load_jsonl(path: Path, required: set[str], id_key: str) -> list[dict[str, An
             if not isinstance(row, dict):
                 raise SystemExit(f"{path}:{line_number}: row must be a JSON object")
 
-            missing = sorted(required - row.keys())
-            if missing:
-                raise SystemExit(
-                    f"{path}:{line_number}: missing required fields: {', '.join(missing)}"
-                )
+            errors = sorted(validator.iter_errors(row), key=lambda error: list(error.path))
+            if errors:
+                first = errors[0]
+                location = ".".join(str(part) for part in first.path) or "<root>"
+                raise SystemExit(f"{path}:{line_number}: {location}: {first.message}")
 
             row_id = row.get(id_key)
             if not isinstance(row_id, str) or not row_id:
@@ -99,10 +91,19 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--sources", type=Path, default=SOURCES_PATH)
     parser.add_argument("--entries", type=Path, default=ENTRIES_PATH)
+    parser.add_argument("--source-schema", type=Path, default=SOURCE_SCHEMA_PATH)
+    parser.add_argument("--entry-schema", type=Path, default=ENTRY_SCHEMA_PATH)
     args = parser.parse_args()
 
-    sources = load_jsonl(args.sources, SOURCE_REQUIRED, "source_id")
-    entries = load_jsonl(args.entries, ENTRY_REQUIRED, "entry_id")
+    source_validator = Draft202012Validator(
+        load_schema(args.source_schema), format_checker=FormatChecker()
+    )
+    entry_validator = Draft202012Validator(
+        load_schema(args.entry_schema), format_checker=FormatChecker()
+    )
+
+    sources = load_jsonl(args.sources, source_validator, "source_id")
+    entries = load_jsonl(args.entries, entry_validator, "entry_id")
     validate_entries(entries, {source["source_id"] for source in sources})
 
     print(f"ok: {len(sources)} sources, {len(entries)} entries")

@@ -19,8 +19,8 @@ level instead of assuming that a collection-level label applies to every page.
   per individual page, note, letter, or other scanned unit.
 - `schemas/source.schema.json` and `schemas/entry.schema.json` define the
   machine-readable record contracts.
-- `scripts/validate_indexes.py` performs lightweight JSONL and referential
-  integrity checks without external dependencies.
+- `scripts/validate_indexes.py` validates JSONL records against the schemas and
+  checks source/entry referential integrity.
 - `LICENSE.md` documents the compound licensing policy for metadata and scans.
 
 ## Serialization Decision
@@ -36,7 +36,9 @@ truth stays line-oriented, diffable, streamable JSON.
 Run the current validation check with:
 
 ```bash
+python3 -m pip install -r requirements-dev.txt
 python3 scripts/validate_indexes.py
+python3 -m pytest
 ```
 
 ## Current Status

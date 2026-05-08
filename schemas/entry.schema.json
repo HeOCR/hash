@@ -22,6 +22,46 @@
     "transcription"
   ],
   "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "rights": {
+            "properties": {
+              "verification_status": {
+                "enum": ["unverified", "source_note_only", "conflicting"]
+              }
+            },
+            "required": ["verification_status"]
+          }
+        },
+        "required": ["rights"]
+      },
+      "then": {
+        "properties": {
+          "rights": {
+            "properties": {
+              "commercial_use_allowed": {
+                "not": {
+                  "const": true
+                }
+              },
+              "derivatives_allowed": {
+                "not": {
+                  "const": true
+                }
+              },
+              "scan_redistribution_allowed": {
+                "not": {
+                  "const": true
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
   "properties": {
     "entry_id": {
       "type": "string",
@@ -186,6 +226,7 @@
         "derivatives_allowed",
         "scan_redistribution_allowed",
         "attribution_required",
+        "verification_status",
         "evidence_text",
         "verified_at"
       ],
@@ -209,6 +250,10 @@
         },
         "attribution_required": {
           "type": ["boolean", "null"]
+        },
+        "verification_status": {
+          "type": "string",
+          "enum": ["unverified", "source_note_only", "primary_page_checked", "conflicting", "rejected"]
         },
         "evidence_text": {
           "type": ["string", "null"]

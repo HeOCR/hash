@@ -4,8 +4,13 @@ This repository is structured for compound licensing.
 
 ## Metadata
 
-Metadata authored directly in this repository is intended to be released under
-CC0 1.0 Universal (`CC0-1.0`) unless a future commit states otherwise.
+Metadata authored directly in this repository is dedicated to the public domain
+under CC0 1.0 Universal (`CC0-1.0`):
+
+https://creativecommons.org/publicdomain/zero/1.0/
+
+To the extent possible under law, the repository contributors waive copyright
+and related rights in this repository-authored metadata.
 
 This includes:
 
@@ -13,6 +18,10 @@ This includes:
 - source and entry index metadata authored here,
 - validation scripts,
 - generated metadata exports derived only from repository-authored metadata.
+
+This CC0 dedication does not apply to third-party scan files, third-party source
+metadata copied from providers, or provider-owned descriptive text unless that
+material is separately released under compatible terms.
 
 ## Scan Files
 

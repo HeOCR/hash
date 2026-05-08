@@ -102,6 +102,12 @@ Rights should be represented conservatively:
 - `evidence_text`: short phrase from the source page or source note.
 - `verified_at`: date when rights were checked against the primary source.
 
+Rows with `verification_status` set to `source_note_only`, `unverified`, or
+`conflicting` must not set positive permission fields to `true`. Use `null` for
+unknown permissions until the primary source page has been checked. Negative
+permission fields may still be set to `false` when a source note identifies a
+restriction, because that is a conservative exclusion signal.
+
 ## Entry Index
 
 `data/index/entries.jsonl` is the second huge table. It should contain one row
@@ -133,6 +139,10 @@ Required core fields:
 The entry-level rights record must not simply copy source-level rights blindly.
 It should record whether the specific scan page is cleared for redistribution,
 commercial use, and derivatives.
+
+Entry rights use the same verification rule as source rights: positive
+permission fields may be set to `true` only after primary-page evidence has been
+checked for that scan.
 
 ## Stable IDs
 
