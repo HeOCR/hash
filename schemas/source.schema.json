@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/schemas/source.schema.json",
+  "title": "Handwritten Hebrew Scan Source",
+  "type": "object",
+  "required": [
+    "source_id",
+    "record_type",
+    "status",
+    "priority",
+    "provider",
+    "title",
+    "urls",
+    "rights",
+    "scope",
+    "ingest",
+    "evidence"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:__[a-z0-9_]+)+$"
+    },
+    "record_type": {
+      "type": "string",
+      "enum": ["institution", "collection", "item", "dataset", "category"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["candidate", "verified", "rejected", "needs_review"]
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["seed", "high", "medium", "low", "exclude"]
+    },
+    "provider": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "urls": {
+      "type": "object",
+      "required": ["canonical"],
+      "additionalProperties": false,
+      "properties": {
+        "canonical": {
+          "type": "string",
+          "format": "uri"
+        },
+        "landing": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "api": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "download": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "related": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "required": [
+        "rights_basis",
+        "license_expression",
+        "commercial_use_allowed",
+        "derivatives_allowed",
+        "scan_redistribution_allowed",
+        "attribution_required",
+        "verification_status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "rights_basis": {
+          "type": "string",
+          "enum": ["public_domain", "cc0", "cc_by", "cc_by_sa", "restricted", "unknown", "mixed"]
+        },
+        "license_expression": {
+          "type": ["string", "null"]
+        },
+        "commercial_use_allowed": {
+          "type": ["boolean", "null"]
+        },
+        "derivatives_allowed": {
+          "type": ["boolean", "null"]
+        },
+        "scan_redistribution_allowed": {
+          "type": ["boolean", "null"]
+        },
+        "attribution_required": {
+          "type": ["boolean", "null"]
+        },
+        "evidence_text": {
+          "type": ["string", "null"]
+        },
+        "terms_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "verification_status": {
+          "type": "string",
+          "enum": ["unverified", "source_note_only", "primary_page_checked", "conflicting", "rejected"]
+        },
+        "verified_at": {
+          "type": ["string", "null"],
+          "format": "date"
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "required": ["date_range", "languages", "document_types", "creator_names", "expected_handwriting"],
+      "additionalProperties": false,
+      "properties": {
+        "date_range": {
+          "type": ["string", "null"]
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "document_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "creator_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "expected_handwriting": {
+          "type": "string",
+          "enum": ["yes", "mixed", "signature_only", "no", "unknown"]
+        },
+        "estimated_scan_count": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        }
+      }
+    },
+    "ingest": {
+      "type": "object",
+      "required": ["method", "access_notes", "agent_notes"],
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": ["manual_download", "iiif", "api", "scrape", "dataset_download", "unknown"]
+        },
+        "access_notes": {
+          "type": ["string", "null"]
+        },
+        "agent_notes": {
+          "type": ["string", "null"]
+        },
+        "blocked_reason": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["kind", "citation"],
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": ["repo_note", "primary_url", "secondary_url", "agent_assessment"]
+          },
+          "citation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "quote": {
+            "type": ["string", "null"]
+          }
+        }
+      }
+    }
+  }
+}

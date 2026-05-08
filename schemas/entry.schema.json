@@ -1,0 +1,287 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/schemas/entry.schema.json",
+  "title": "Handwritten Hebrew Scan Entry",
+  "type": "object",
+  "required": [
+    "entry_id",
+    "source_id",
+    "source_record_id",
+    "sequence",
+    "title",
+    "creators",
+    "dates",
+    "languages",
+    "script",
+    "document_type",
+    "handwriting",
+    "files",
+    "rights",
+    "provenance",
+    "quality",
+    "transcription"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "entry_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:__[a-z0-9_]+)+__p[0-9]{4,6}$"
+    },
+    "source_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:__[a-z0-9_]+)+$"
+    },
+    "source_record_id": {
+      "type": ["string", "null"]
+    },
+    "sequence": {
+      "type": "object",
+      "required": ["index", "label", "physical_unit_count"],
+      "additionalProperties": false,
+      "properties": {
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "label": {
+          "type": ["string", "null"]
+        },
+        "physical_unit_count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "creators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "role", "death_year"],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string",
+            "enum": ["writer", "author", "recipient", "signatory", "collector", "unknown"]
+          },
+          "death_year": {
+            "type": ["integer", "null"]
+          },
+          "authority_url": {
+            "type": ["string", "null"],
+            "format": "uri"
+          }
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "required": ["created", "created_precision", "accessed_at"],
+      "additionalProperties": false,
+      "properties": {
+        "created": {
+          "type": ["string", "null"]
+        },
+        "created_precision": {
+          "type": "string",
+          "enum": ["day", "month", "year", "range", "circa", "unknown"]
+        },
+        "accessed_at": {
+          "type": ["string", "null"],
+          "format": "date"
+        }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "script": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Hebr", "Latn", "Arab", "Cyrl", "unknown"]
+      }
+    },
+    "document_type": {
+      "type": "string",
+      "enum": ["letter", "diary", "notebook", "draft", "speech", "receipt", "form", "marginalia", "postcard", "poem", "other"]
+    },
+    "handwriting": {
+      "type": "object",
+      "required": ["extent", "hebrew_extent", "notes"],
+      "additionalProperties": false,
+      "properties": {
+        "extent": {
+          "type": "string",
+          "enum": ["full_page", "mostly_handwritten", "mixed", "signature_only", "not_handwritten", "unknown"]
+        },
+        "hebrew_extent": {
+          "type": "string",
+          "enum": ["full_page", "substantial", "partial", "none", "unknown"]
+        },
+        "notes": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["role", "local_path", "source_url", "sha256", "mime_type", "bytes", "width_px", "height_px"],
+        "additionalProperties": false,
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": ["original", "normalized", "thumbnail", "transcription", "metadata"]
+          },
+          "local_path": {
+            "type": ["string", "null"]
+          },
+          "source_url": {
+            "type": ["string", "null"],
+            "format": "uri"
+          },
+          "provider_file_id": {
+            "type": ["string", "null"]
+          },
+          "sha256": {
+            "type": ["string", "null"],
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "mime_type": {
+            "type": ["string", "null"]
+          },
+          "bytes": {
+            "type": ["integer", "null"],
+            "minimum": 0
+          },
+          "width_px": {
+            "type": ["integer", "null"],
+            "minimum": 1
+          },
+          "height_px": {
+            "type": ["integer", "null"],
+            "minimum": 1
+          }
+        }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "required": [
+        "rights_basis",
+        "license_expression",
+        "commercial_use_allowed",
+        "derivatives_allowed",
+        "scan_redistribution_allowed",
+        "attribution_required",
+        "evidence_text",
+        "verified_at"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "rights_basis": {
+          "type": "string",
+          "enum": ["public_domain", "cc0", "cc_by", "cc_by_sa", "restricted", "unknown", "mixed"]
+        },
+        "license_expression": {
+          "type": ["string", "null"]
+        },
+        "commercial_use_allowed": {
+          "type": ["boolean", "null"]
+        },
+        "derivatives_allowed": {
+          "type": ["boolean", "null"]
+        },
+        "scan_redistribution_allowed": {
+          "type": ["boolean", "null"]
+        },
+        "attribution_required": {
+          "type": ["boolean", "null"]
+        },
+        "evidence_text": {
+          "type": ["string", "null"]
+        },
+        "verified_at": {
+          "type": ["string", "null"],
+          "format": "date"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["acquired_at", "acquired_by", "source_landing_url", "notes"],
+      "additionalProperties": false,
+      "properties": {
+        "acquired_at": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "acquired_by": {
+          "type": ["string", "null"]
+        },
+        "source_landing_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "notes": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "required": ["usable_for_htr", "legibility", "exclusion_reasons"],
+      "additionalProperties": false,
+      "properties": {
+        "usable_for_htr": {
+          "type": ["boolean", "null"]
+        },
+        "legibility": {
+          "type": "string",
+          "enum": ["high", "medium", "low", "unknown"]
+        },
+        "exclusion_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "transcription": {
+      "type": "object",
+      "required": ["status", "text_path", "alto_path", "hocr_path"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["none", "raw", "reviewed", "aligned", "rejected"]
+        },
+        "text_path": {
+          "type": ["string", "null"]
+        },
+        "alto_path": {
+          "type": ["string", "null"]
+        },
+        "hocr_path": {
+          "type": ["string", "null"]
+        }
+      }
+    }
+  }
+}
