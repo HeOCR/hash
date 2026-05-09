@@ -60,6 +60,53 @@
           }
         }
       }
+    },
+    {
+      "if": {
+        "properties": {
+          "transcription": {
+            "properties": {
+              "rights": {
+                "properties": {
+                  "verification_status": {
+                    "enum": ["unverified", "source_note_only", "conflicting"]
+                  }
+                },
+                "required": ["verification_status"]
+              }
+            },
+            "required": ["rights"]
+          }
+        },
+        "required": ["transcription"]
+      },
+      "then": {
+        "properties": {
+          "transcription": {
+            "properties": {
+              "rights": {
+                "properties": {
+                  "commercial_use_allowed": {
+                    "not": {
+                      "const": true
+                    }
+                  },
+                  "derivatives_allowed": {
+                    "not": {
+                      "const": true
+                    }
+                  },
+                  "redistribution_allowed": {
+                    "not": {
+                      "const": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   ],
   "properties": {
@@ -310,7 +357,15 @@
     },
     "transcription": {
       "type": "object",
-      "required": ["status", "text_path", "alto_path", "hocr_path"],
+      "required": [
+        "status",
+        "text_path",
+        "alto_path",
+        "hocr_path",
+        "source_url",
+        "created_by",
+        "rights"
+      ],
       "additionalProperties": false,
       "properties": {
         "status": {
@@ -325,6 +380,61 @@
         },
         "hocr_path": {
           "type": ["string", "null"]
+        },
+        "source_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "created_by": {
+          "type": "string",
+          "enum": ["provider", "repo", "ocr", "unknown"]
+        },
+        "rights": {
+          "type": "object",
+          "required": [
+            "rights_basis",
+            "license_expression",
+            "commercial_use_allowed",
+            "derivatives_allowed",
+            "redistribution_allowed",
+            "attribution_required",
+            "verification_status",
+            "evidence_text",
+            "verified_at"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "rights_basis": {
+              "type": "string",
+              "enum": ["public_domain", "cc0", "cc_by", "cc_by_sa", "restricted", "unknown", "mixed"]
+            },
+            "license_expression": {
+              "type": ["string", "null"]
+            },
+            "commercial_use_allowed": {
+              "type": ["boolean", "null"]
+            },
+            "derivatives_allowed": {
+              "type": ["boolean", "null"]
+            },
+            "redistribution_allowed": {
+              "type": ["boolean", "null"]
+            },
+            "attribution_required": {
+              "type": ["boolean", "null"]
+            },
+            "verification_status": {
+              "type": "string",
+              "enum": ["unverified", "source_note_only", "primary_page_checked", "repo_authored", "conflicting", "rejected"]
+            },
+            "evidence_text": {
+              "type": ["string", "null"]
+            },
+            "verified_at": {
+              "type": ["string", "null"],
+              "format": "date"
+            }
+          }
         }
       }
     }
