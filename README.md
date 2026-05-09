@@ -15,7 +15,7 @@ level instead of assuming that a collection-level label applies to every page.
 - `docs/dataset_structure.md` defines the repository layout and ingestion model.
 - `data/index/sources.jsonl` is the source-level catalog, one JSON object per
   institution, collection, item, dataset, or source lead.
-- `data/index/entries.jsonl` is the future scan-level catalog, one JSON object
+- `data/index/entries.jsonl` is the scan-level catalog, one JSON object
   per individual page, note, letter, or other scanned unit.
 - `schemas/source.schema.json` and `schemas/entry.schema.json` define the
   machine-readable record contracts.
@@ -43,8 +43,9 @@ python3 -m pytest
 
 ## Current Status
 
-The repository currently contains candidate source leads only. Before a scan is
-added to `data/index/entries.jsonl`, an ingest agent must verify:
+The repository currently contains one verified seed scan plus candidate source
+leads. Before any additional scan is added to `data/index/entries.jsonl`, an
+ingest agent must verify:
 
 1. the scan is actually handwritten Hebrew or materially Hebrew-script,
 2. the document date is in scope,
