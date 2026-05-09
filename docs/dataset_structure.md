@@ -24,6 +24,11 @@ data/
   scans/
     <source_id>/
       <entry_id>.<ext>     # Original scan derivative stored by this repository.
+  transcriptions/
+    <entry_id>/
+      plain.txt            # Optional compatible transcript.
+      alto.xml             # Optional line/word-aligned transcript.
+      hocr.html            # Optional hOCR transcript.
   derived/
     thumbnails/
     normalized/
@@ -134,7 +139,8 @@ Required core fields:
 - `rights`: scan-level license and rights evidence.
 - `provenance`: acquisition timestamp, tool, source URL, and operator/agent.
 - `quality`: legibility, crop, skew, blur, color mode, and exclusion reasons.
-- `transcription`: optional status and paths for text/line/word ground truth.
+- `transcription`: optional status, paths, source, producer, and transcript
+  rights for text/line/word ground truth.
 
 The entry-level rights record must not simply copy source-level rights blindly.
 It should record whether the specific scan page is cleared for redistribution,
@@ -143,6 +149,16 @@ commercial use, and derivatives.
 Entry rights use the same verification rule as source rights: positive
 permission fields may be set to `true` only after primary-page evidence has been
 checked for that scan.
+
+Transcription rights are recorded separately from scan rights because a provider
+transcript, OCR output, or repo-authored correction can carry different legal
+terms than the image itself. If a transcript is available, store compatible
+artifacts under `data/transcriptions/<entry_id>/` and set one or more of
+`text_path`, `alto_path`, or `hocr_path`. A transcript record must also include
+`source_url`, `created_by`, and its own rights object. Positive transcript
+permission fields may be set to `true` only after transcript rights evidence has
+been checked, or when the transcript is repo-authored metadata released under
+the repository metadata license.
 
 ## Stable IDs
 

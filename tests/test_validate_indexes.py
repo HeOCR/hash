@@ -113,8 +113,57 @@ def test_unverified_entry_cannot_claim_positive_permissions(tmp_path: Path) -> N
             "text_path": None,
             "alto_path": None,
             "hocr_path": None,
+            "source_url": None,
+            "created_by": "unknown",
+            "rights": {
+                "rights_basis": "unknown",
+                "license_expression": None,
+                "commercial_use_allowed": None,
+                "derivatives_allowed": None,
+                "redistribution_allowed": None,
+                "attribution_required": None,
+                "verification_status": "unverified",
+                "evidence_text": None,
+                "verified_at": None,
+            },
         },
     }
+    bad_entries = tmp_path / "entries.jsonl"
+    bad_entries.write_text(json.dumps(entry, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    result = run_validator("--sources", SOURCES, "--entries", bad_entries)
+
+    assert result.returncode != 0
+    assert "should not be valid" in result.stderr
+
+
+def test_unverified_transcription_cannot_claim_positive_permissions(tmp_path: Path) -> None:
+    source_id = json.loads(SOURCES.read_text(encoding="utf-8").splitlines()[0])[
+        "source_id"
+    ]
+    entry = json.loads(ENTRIES.read_text(encoding="utf-8").splitlines()[0])
+    entry["entry_id"] = f"{source_id}__p0001"
+    entry["source_id"] = source_id
+    entry["transcription"] = {
+        "status": "raw",
+        "text_path": "data/transcriptions/example/plain.txt",
+        "alto_path": None,
+        "hocr_path": None,
+        "source_url": "https://example.org/transcript.txt",
+        "created_by": "provider",
+        "rights": {
+            "rights_basis": "public_domain",
+            "license_expression": "PDM-1.0",
+            "commercial_use_allowed": True,
+            "derivatives_allowed": None,
+            "redistribution_allowed": None,
+            "attribution_required": None,
+            "verification_status": "source_note_only",
+            "evidence_text": None,
+            "verified_at": None,
+        },
+    }
+
     bad_entries = tmp_path / "entries.jsonl"
     bad_entries.write_text(json.dumps(entry, ensure_ascii=False) + "\n", encoding="utf-8")
 
