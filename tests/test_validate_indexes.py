@@ -178,3 +178,46 @@ def test_missing_index_file_is_rejected(tmp_path: Path) -> None:
 
     assert result.returncode != 0
     assert "file does not exist" in result.stderr
+
+
+def test_cc_by_sa_entry_is_accepted(tmp_path: Path) -> None:
+    source = json.loads(SOURCES.read_text(encoding="utf-8").splitlines()[-1])
+    source["source_id"] = "example__cc_by_sa_seed"
+    source["status"] = "verified"
+    source["rights"] = {
+        "rights_basis": "cc_by_sa",
+        "license_expression": "CC-BY-SA-4.0",
+        "commercial_use_allowed": True,
+        "derivatives_allowed": True,
+        "scan_redistribution_allowed": True,
+        "attribution_required": True,
+        "evidence_text": "File page declares CC BY-SA 4.0.",
+        "terms_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "verification_status": "primary_page_checked",
+        "verified_at": "2026-05-09",
+    }
+
+    entry = json.loads(ENTRIES.read_text(encoding="utf-8").splitlines()[0])
+    entry["entry_id"] = f"{source['source_id']}__p0001"
+    entry["source_id"] = source["source_id"]
+    entry["rights"] = {
+        "rights_basis": "cc_by_sa",
+        "license_expression": "CC-BY-SA-4.0",
+        "commercial_use_allowed": True,
+        "derivatives_allowed": True,
+        "scan_redistribution_allowed": True,
+        "attribution_required": True,
+        "verification_status": "primary_page_checked",
+        "evidence_text": "File page declares CC BY-SA 4.0.",
+        "verified_at": "2026-05-09",
+    }
+
+    sources_path = tmp_path / "sources.jsonl"
+    sources_path.write_text(json.dumps(source, ensure_ascii=False) + "\n", encoding="utf-8")
+    entries_path = tmp_path / "entries.jsonl"
+    entries_path.write_text(json.dumps(entry, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    result = run_validator("--sources", sources_path, "--entries", entries_path)
+
+    assert result.returncode == 0, result.stderr
+    assert "ok: 1 sources, 1 entries" in result.stdout

@@ -45,10 +45,18 @@ Remix-friendly public release bundles should include only entries where:
 - derivatives are allowed,
 - source and scan-level rights evidence has been checked.
 
-If a release contains a mixture of public-domain, CC0, CC BY, or other compatible
-terms, the release must keep per-entry license metadata and include attribution
-where required. Do not describe such a bundle as having one uniform scan license
-unless every included scan has the same license.
+If a release contains a mixture of public-domain, CC0, CC BY, CC BY-SA, or
+other compatible terms, the release must keep per-entry license metadata and
+include attribution where required. Do not describe such a bundle as having
+one uniform scan license unless every included scan has the same license.
+
+CC BY-SA-4.0 entries are first-class members of remix-friendly bundles because
+the license permits redistribution, commercial use, and derivatives.
+ShareAlike inheritance flows downstream: anyone who creates and redistributes
+an *adaptation* of a CC BY-SA scan must release the adaptation under
+CC BY-SA-4.0 (or a compatible later version). Mere aggregation of CC BY-SA
+scans alongside public-domain or CC BY scans in a release bundle is not an
+adaptation, so the bundle itself is not forced to a single license.
 
 ## Exclusions
 
