@@ -190,13 +190,22 @@ The safest repository-level policy is:
 - public release bundles: include only entries where commercial use,
   redistribution, and derivatives are all allowed.
 
-If the corpus mixes public domain, CC0, and CC BY scans, the dataset should be
-distributed with a compound license notice rather than pretending there is one
-uniform scan license. Filtering by `rights.license_expression` and boolean
-permission fields should be a first-class workflow.
+If the corpus mixes public domain, CC0, CC BY, and CC BY-SA scans, the dataset
+should be distributed with a compound license notice rather than pretending
+there is one uniform scan license. Filtering by `rights.license_expression`
+and boolean permission fields should be a first-class workflow.
 
-Do not include CC BY-NC, CC BY-ND, research-only, building-access-only,
-permission-required, or unknown-rights scans in remix-friendly release bundles.
+CC BY-SA-4.0 entries are accepted alongside public-domain, CC0, and CC BY
+entries because ShareAlike permits commercial use, redistribution, and
+derivatives. Downstream re-distributors of an *adaptation* of a CC BY-SA scan
+must release the adaptation under CC BY-SA-4.0 (or a compatible later version).
+A release bundle that only aggregates scans without modifying them is not an
+adaptation, so the bundle itself does not need to be CC BY-SA-licensed; the
+per-entry license metadata travels with the file.
+
+Do not include CC BY-NC, CC BY-NC-SA, CC BY-ND, research-only,
+building-access-only, permission-required, or unknown-rights scans in
+remix-friendly release bundles.
 
 ## Seed Source Assessment
 
