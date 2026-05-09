@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+"""Validate the JSONL dataset indexes against their JSON Schemas."""
+
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+from typing import Any
+
+try:
+    from jsonschema import Draft202012Validator, FormatChecker
+    from jsonschema.exceptions import SchemaError
+except ImportError as exc:  # pragma: no cover - exercised when deps are absent.
+    raise SystemExit(
+        "Missing dependency: jsonschema. Install development dependencies with "
+        "`python3 -m pip install -r requirements-dev.txt`."
+    ) from exc
+
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+SOURCES_PATH = REPO_ROOT / "data" / "index" / "sources.jsonl"
+ENTRIES_PATH = REPO_ROOT / "data" / "index" / "entries.jsonl"
+SOURCE_SCHEMA_PATH = REPO_ROOT / "schemas" / "source.schema.json"
+ENTRY_SCHEMA_PATH = REPO_ROOT / "schemas" / "entry.schema.json"
+
+
+def load_schema(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        raise SystemExit(f"{path}: file does not exist")
+    try:
+        schema = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise SystemExit(f"{path}: invalid JSON schema: {exc}") from exc
+    try:
+        Draft202012Validator.check_schema(schema)
+    except SchemaError as exc:
+        raise SystemExit(f"{path}: invalid JSON schema: {exc.message}") from exc
+    return schema
+
+
+def load_jsonl(path: Path, validator: Draft202012Validator, id_key: str) -> list[dict[str, Any]]:
+    if not path.exists():
+        raise SystemExit(f"{path}: file does not exist")
+
+    rows: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    with path.open("r", encoding="utf-8") as handle:
+        for line_number, line in enumerate(handle, start=1):
+            stripped = line.strip()
+            if not stripped:
+                continue
+            try:
+                row = json.loads(stripped)
+            except json.JSONDecodeError as exc:
+                raise SystemExit(f"{path}:{line_number}: invalid JSON: {exc}") from exc
+            if not isinstance(row, dict):
+                raise SystemExit(f"{path}:{line_number}: row must be a JSON object")
+
+            errors = sorted(validator.iter_errors(row), key=lambda error: list(error.path))
+            if errors:
+                first = errors[0]
+                location = ".".join(str(part) for part in first.path) or "<root>"
+                raise SystemExit(f"{path}:{line_number}: {location}: {first.message}")
+
+            row_id = row.get(id_key)
+            if not isinstance(row_id, str) or not row_id:
+                raise SystemExit(f"{path}:{line_number}: {id_key} must be a non-empty string")
+            if row_id in seen:
+                raise SystemExit(f"{path}:{line_number}: duplicate {id_key}: {row_id}")
+            seen.add(row_id)
+            rows.append(row)
+    return rows
+
+
+def validate_entries(entries: list[dict[str, Any]], source_ids: set[str]) -> None:
+    entry_ids: set[str] = set()
+    for entry in entries:
+        entry_id = entry["entry_id"]
+        source_id = entry["source_id"]
+        if source_id not in source_ids:
+            raise SystemExit(f"{entry_id}: unknown source_id: {source_id}")
+        if not entry_id.startswith(f"{source_id}__p"):
+            raise SystemExit(f"{entry_id}: entry_id must start with source_id plus __p")
+        if entry_id in entry_ids:
+            raise SystemExit(f"{entry_id}: duplicate entry_id")
+        entry_ids.add(entry_id)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--sources", type=Path, default=SOURCES_PATH)
+    parser.add_argument("--entries", type=Path, default=ENTRIES_PATH)
+    parser.add_argument("--source-schema", type=Path, default=SOURCE_SCHEMA_PATH)
+    parser.add_argument("--entry-schema", type=Path, default=ENTRY_SCHEMA_PATH)
+    args = parser.parse_args()
+
+    source_validator = Draft202012Validator(
+        load_schema(args.source_schema), format_checker=FormatChecker()
+    )
+    entry_validator = Draft202012Validator(
+        load_schema(args.entry_schema), format_checker=FormatChecker()
+    )
+
+    sources = load_jsonl(args.sources, source_validator, "source_id")
+    entries = load_jsonl(args.entries, entry_validator, "entry_id")
+    validate_entries(entries, {source["source_id"] for source in sources})
+
+    print(f"ok: {len(sources)} sources, {len(entries)} entries")
+
+
+if __name__ == "__main__":
+    main()
