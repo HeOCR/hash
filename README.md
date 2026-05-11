@@ -43,12 +43,34 @@ python3 -m pytest
 
 ## Current Status
 
-The repository currently contains one verified seed scan plus candidate source
-leads. Before any additional scan is added to `data/index/entries.jsonl`, an
-ingest agent must verify:
+The corpus currently contains 60 ingested scans drawn from 45 verified sources,
+totalling ~45.27 MB on disk. The source-level index also tracks 12 candidate
+leads still being researched and 3 source records kept for provenance after
+being rejected as out of scope.
 
-1. the scan is actually handwritten Hebrew or materially Hebrew-script,
-2. the document date is in scope,
-3. the author/date/license combination allows redistribution and derivatives,
-4. the file was downloaded from a stable source URL,
-5. the local scan file has a stable checksum and recorded provenance.
+License breakdown across the 60 entries:
+
+- 51 `PDM-1.0` (Public Domain Mark)
+- 5 `LicenseRef-Public-Domain-Israel`
+- 2 `LicenseRef-Public-Domain-Ukraine`
+- 2 `CC-BY-SA-4.0`
+
+The repository uses a compound licensing model: repository-authored metadata
+is dedicated to the public domain under CC0 1.0 (see [`LICENSE`](LICENSE)),
+while per-scan rights are recorded individually in each entry. See
+[`LICENSE.md`](LICENSE.md) for the full policy, including the CC BY-SA
+ShareAlike caveat and the rules for remix-friendly release bundles.
+
+## How to use this repo
+
+- [`data/index/entries.jsonl`](data/index/entries.jsonl) is the source of
+  truth for the scan-level corpus — one JSON object per scan, with rights
+  evidence, file checksums, and provenance.
+- [`data/index/sources.jsonl`](data/index/sources.jsonl) catalogs the
+  upstream sources, including candidate leads and rejected records.
+- [`schemas/entry.schema.json`](schemas/entry.schema.json) and
+  [`schemas/source.schema.json`](schemas/source.schema.json) define the
+  record contracts; [`scripts/validate_indexes.py`](scripts/validate_indexes.py)
+  enforces them in CI.
+- Contributors adding new scans should start with
+  [`AGENTS.md`](AGENTS.md) for ingest rules, scope, and the pre-PR checklist.
