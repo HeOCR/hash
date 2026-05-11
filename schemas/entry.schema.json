@@ -131,9 +131,14 @@
               "attribution_text": {
                 "type": "string",
                 "minLength": 1
+              },
+              "attribution_url": {
+                "type": "string",
+                "format": "uri",
+                "minLength": 1
               }
             },
-            "required": ["attribution_text"]
+            "required": ["attribution_text", "attribution_url"]
           }
         }
       }
