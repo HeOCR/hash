@@ -87,6 +87,15 @@ def validate_entries(entries: list[dict[str, Any]], source_ids: set[str]) -> Non
             raise SystemExit(f"{entry_id}: duplicate entry_id")
         entry_ids.add(entry_id)
 
+        rights = entry["rights"]
+        if rights.get("attribution_required") is True:
+            attribution_text = rights.get("attribution_text")
+            if not isinstance(attribution_text, str) or not attribution_text.strip():
+                raise SystemExit(
+                    f"{entry_id}: rights.attribution_required is true but "
+                    f"rights.attribution_text is missing or empty"
+                )
+
 
 def _sha256_file(path: Path) -> str:
     with path.open("rb") as handle:

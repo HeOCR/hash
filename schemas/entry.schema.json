@@ -18,6 +18,8 @@
     "files",
     "rights",
     "provenance",
+    "holding_institution",
+    "holding_shelfmark",
     "quality",
     "transcription"
   ],
@@ -104,6 +106,34 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "rights": {
+            "properties": {
+              "attribution_required": {
+                "const": true
+              }
+            },
+            "required": ["attribution_required"]
+          }
+        },
+        "required": ["rights"]
+      },
+      "then": {
+        "properties": {
+          "rights": {
+            "properties": {
+              "attribution_text": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": ["attribution_text"]
           }
         }
       }
@@ -273,6 +303,8 @@
         "derivatives_allowed",
         "scan_redistribution_allowed",
         "attribution_required",
+        "attribution_text",
+        "attribution_url",
         "verification_status",
         "evidence_text",
         "verified_at"
@@ -297,6 +329,14 @@
         },
         "attribution_required": {
           "type": ["boolean", "null"]
+        },
+        "attribution_text": {
+          "type": ["string", "null"],
+          "minLength": 1
+        },
+        "attribution_url": {
+          "type": ["string", "null"],
+          "format": "uri"
         },
         "verification_status": {
           "type": "string",
@@ -331,6 +371,14 @@
           "type": ["string", "null"]
         }
       }
+    },
+    "holding_institution": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "holding_shelfmark": {
+      "type": ["string", "null"],
+      "minLength": 1
     },
     "quality": {
       "type": "object",

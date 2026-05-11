@@ -100,6 +100,8 @@ def test_unverified_entry_cannot_claim_positive_permissions(tmp_path: Path) -> N
             "derivatives_allowed": None,
             "scan_redistribution_allowed": None,
             "attribution_required": None,
+            "attribution_text": None,
+            "attribution_url": None,
             "verification_status": "source_note_only",
             "evidence_text": None,
             "verified_at": None,
@@ -110,6 +112,8 @@ def test_unverified_entry_cannot_claim_positive_permissions(tmp_path: Path) -> N
             "source_landing_url": None,
             "notes": None,
         },
+        "holding_institution": None,
+        "holding_shelfmark": None,
         "quality": {
             "usable_for_htr": None,
             "legibility": "unknown",
@@ -279,6 +283,8 @@ def test_cc_by_sa_entry_is_accepted(tmp_path: Path) -> None:
         "derivatives_allowed": True,
         "scan_redistribution_allowed": True,
         "attribution_required": True,
+        "attribution_text": "User:Example via Wikimedia Commons, CC BY-SA 4.0",
+        "attribution_url": "https://commons.wikimedia.org/wiki/File:Example.jpg",
         "verification_status": "primary_page_checked",
         "evidence_text": "File page declares CC BY-SA 4.0.",
         "verified_at": "2026-05-09",
@@ -293,3 +299,68 @@ def test_cc_by_sa_entry_is_accepted(tmp_path: Path) -> None:
 
     assert result.returncode == 0, result.stderr
     assert "ok: 1 sources, 1 entries" in result.stdout
+
+
+def _cc_by_sa_source_and_entry() -> tuple[dict, dict]:
+    source = json.loads(SOURCES.read_text(encoding="utf-8").splitlines()[-1])
+    source["source_id"] = "example__cc_by_sa_attribution"
+    source["status"] = "verified"
+    source["rights"] = {
+        "rights_basis": "cc_by_sa",
+        "license_expression": "CC-BY-SA-4.0",
+        "commercial_use_allowed": True,
+        "derivatives_allowed": True,
+        "scan_redistribution_allowed": True,
+        "attribution_required": True,
+        "evidence_text": "File page declares CC BY-SA 4.0.",
+        "terms_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "verification_status": "primary_page_checked",
+        "verified_at": "2026-05-09",
+    }
+
+    entry = json.loads(ENTRIES.read_text(encoding="utf-8").splitlines()[0])
+    entry["entry_id"] = f"{source['source_id']}__p0001"
+    entry["source_id"] = source["source_id"]
+    entry["rights"] = {
+        "rights_basis": "cc_by_sa",
+        "license_expression": "CC-BY-SA-4.0",
+        "commercial_use_allowed": True,
+        "derivatives_allowed": True,
+        "scan_redistribution_allowed": True,
+        "attribution_required": True,
+        "attribution_text": "User:Example via Wikimedia Commons, CC BY-SA 4.0",
+        "attribution_url": "https://commons.wikimedia.org/wiki/File:Example.jpg",
+        "verification_status": "primary_page_checked",
+        "evidence_text": "File page declares CC BY-SA 4.0.",
+        "verified_at": "2026-05-09",
+    }
+    return source, entry
+
+
+def test_attribution_required_with_text_is_accepted(tmp_path: Path) -> None:
+    source, entry = _cc_by_sa_source_and_entry()
+
+    sources_path = tmp_path / "sources.jsonl"
+    sources_path.write_text(json.dumps(source, ensure_ascii=False) + "\n", encoding="utf-8")
+    entries_path = tmp_path / "entries.jsonl"
+    entries_path.write_text(json.dumps(entry, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    result = run_validator("--sources", sources_path, "--entries", entries_path)
+
+    assert result.returncode == 0, result.stderr
+    assert "ok: 1 sources, 1 entries" in result.stdout
+
+
+def test_attribution_required_without_text_is_rejected(tmp_path: Path) -> None:
+    source, entry = _cc_by_sa_source_and_entry()
+    entry["rights"]["attribution_text"] = None
+
+    sources_path = tmp_path / "sources.jsonl"
+    sources_path.write_text(json.dumps(source, ensure_ascii=False) + "\n", encoding="utf-8")
+    entries_path = tmp_path / "entries.jsonl"
+    entries_path.write_text(json.dumps(entry, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    result = run_validator("--sources", sources_path, "--entries", entries_path)
+
+    assert result.returncode != 0
+    assert "attribution_text" in result.stderr
