@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 from typing import Any
@@ -87,6 +88,52 @@ def validate_entries(entries: list[dict[str, Any]], source_ids: set[str]) -> Non
         entry_ids.add(entry_id)
 
 
+def _sha256_file(path: Path) -> str:
+    with path.open("rb") as handle:
+        return hashlib.file_digest(handle, "sha256").hexdigest()
+
+
+def validate_entry_files(entries: list[dict[str, Any]], repo_root: Path) -> int:
+    verified = 0
+    for entry in entries:
+        entry_id = entry["entry_id"]
+        for file_obj in entry["files"]:
+            local_path = file_obj["local_path"]
+            if local_path is None:
+                continue
+
+            local_path_obj = Path(local_path)
+            if local_path_obj.is_absolute() or ".." in local_path_obj.parts:
+                raise SystemExit(
+                    f"{entry_id}: local_path must be repo-relative without '..': {local_path}"
+                )
+
+            absolute = repo_root / local_path_obj
+            if not absolute.is_file():
+                raise SystemExit(f"{entry_id}: file does not exist: {local_path}")
+
+            expected_bytes = file_obj["bytes"]
+            if expected_bytes is not None:
+                actual_bytes = absolute.stat().st_size
+                if actual_bytes != expected_bytes:
+                    raise SystemExit(
+                        f"{entry_id}: byte size mismatch for {local_path}: "
+                        f"expected {expected_bytes}, got {actual_bytes}"
+                    )
+
+            expected_sha = file_obj["sha256"]
+            if expected_sha is not None:
+                actual_sha = _sha256_file(absolute)
+                if actual_sha != expected_sha:
+                    raise SystemExit(
+                        f"{entry_id}: sha256 mismatch for {local_path}: "
+                        f"expected {expected_sha}, got {actual_sha}"
+                    )
+
+            verified += 1
+    return verified
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--sources", type=Path, default=SOURCES_PATH)
@@ -105,8 +152,9 @@ def main() -> None:
     sources = load_jsonl(args.sources, source_validator, "source_id")
     entries = load_jsonl(args.entries, entry_validator, "entry_id")
     validate_entries(entries, {source["source_id"] for source in sources})
+    verified = validate_entry_files(entries, REPO_ROOT)
 
-    print(f"ok: {len(sources)} sources, {len(entries)} entries")
+    print(f"ok: {len(sources)} sources, {len(entries)} entries, {verified} files verified")
 
 
 if __name__ == "__main__":
