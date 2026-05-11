@@ -37,12 +37,33 @@ report all tests passing. `git diff --check` must produce no output.
   coupled (for example, a tooling change plus the docs that describe it);
   avoid batching unrelated work.
 - Open PRs non-draft.
-- Apply exactly one of these labels:
-  - `enhancement` — content additions (new sources, scans, tooling) and
-    feature work.
-  - `documentation` — docs-only changes.
-  - `bug` — fixes for incorrect data, schema, or tooling behavior.
-- No milestones are configured; do not invent one.
+- Apply labels from the four orthogonal axes below. A PR usually carries one
+  label from each applicable axis; `area:*` is multi-pick when a change
+  legitimately spans concerns.
+  - **type** (exactly one): `enhancement` (new capability or content),
+    `bug` (fix for incorrect data, schema, or tooling), `documentation`
+    (docs-only), `type:refactor` (restructures without behavior change),
+    `type:chore` (housekeeping, no behavior change).
+  - **area** (one or more): `area:schema` (`schemas/*.json`),
+    `area:data` (`data/index/*.jsonl` or `data/scans/`),
+    `area:tooling` (`scripts/`, `tests/`, `requirements-dev.txt`),
+    `area:docs` (`README.md`, `AGENTS.md`, `docs/`),
+    `area:ci` (`.github/workflows/`),
+    `area:license` (`LICENSE`, `LICENSE.md`, license metadata).
+  - **scope** (optional, for recurring patterns): `scope:ingest-batch`
+    (bulk addition of new scans/sources), `scope:backfill` (populates
+    fields on existing rows), `scope:validator` (validator or test-suite
+    work).
+  - **size** (exactly one): `size:S` (small / single-file / trivial),
+    `size:M` (multi-file but bounded scope), `size:L` (sweeping; many
+    files or many entries touched).
+  - **release** (when applicable): `release:v0.1.0` for work targeted at
+    the v0.1.0 release; add new `release:vX.Y.Z` labels as later releases
+    are scoped.
+- Milestones track release scope. The active milestone is `v0.1.0` (the
+  initial public release). Every PR that contributes to a release should
+  be assigned to its milestone; open new milestones (`v0.2.0`, etc.) only
+  when their scope is actually being planned, not speculatively.
 - PR bodies should be detailed: what changed, why, validation evidence (paste
   the validator output and pytest summary), and any caveats. PR #3 and PR #4
   are the established tone reference.

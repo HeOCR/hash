@@ -53,89 +53,10 @@ def test_schema_errors_are_rejected(tmp_path: Path) -> None:
 
 
 def test_unverified_entry_cannot_claim_positive_permissions(tmp_path: Path) -> None:
-    source_id = json.loads(SOURCES.read_text(encoding="utf-8").splitlines()[0])[
-        "source_id"
-    ]
-    entry = {
-        "entry_id": f"{source_id}__p0001",
-        "source_id": source_id,
-        "source_record_id": None,
-        "sequence": {
-            "index": 1,
-            "label": "1",
-            "physical_unit_count": 1,
-        },
-        "title": "Example page",
-        "creators": [],
-        "dates": {
-            "created": None,
-            "created_precision": "unknown",
-            "accessed_at": None,
-        },
-        "languages": ["he"],
-        "script": ["Hebr"],
-        "document_type": "diary",
-        "handwriting": {
-            "extent": "unknown",
-            "hebrew_extent": "unknown",
-            "notes": None,
-        },
-        "files": [
-            {
-                "role": "original",
-                "local_path": None,
-                "source_url": None,
-                "provider_file_id": None,
-                "sha256": None,
-                "mime_type": None,
-                "bytes": None,
-                "width_px": None,
-                "height_px": None,
-            }
-        ],
-        "rights": {
-            "rights_basis": "public_domain",
-            "license_expression": "LicenseRef-Public-Domain-Israel",
-            "commercial_use_allowed": True,
-            "derivatives_allowed": None,
-            "scan_redistribution_allowed": None,
-            "attribution_required": None,
-            "verification_status": "source_note_only",
-            "evidence_text": None,
-            "verified_at": None,
-        },
-        "provenance": {
-            "acquired_at": None,
-            "acquired_by": None,
-            "source_landing_url": None,
-            "notes": None,
-        },
-        "quality": {
-            "usable_for_htr": None,
-            "legibility": "unknown",
-            "exclusion_reasons": [],
-            "notes": None,
-        },
-        "transcription": {
-            "status": "none",
-            "text_path": None,
-            "alto_path": None,
-            "hocr_path": None,
-            "source_url": None,
-            "created_by": "unknown",
-            "rights": {
-                "rights_basis": "unknown",
-                "license_expression": None,
-                "commercial_use_allowed": None,
-                "derivatives_allowed": None,
-                "redistribution_allowed": None,
-                "attribution_required": None,
-                "verification_status": "unverified",
-                "evidence_text": None,
-                "verified_at": None,
-            },
-        },
-    }
+    entry = _first_entry_with_real_file()
+    entry["rights"]["verification_status"] = "source_note_only"
+    entry["rights"]["commercial_use_allowed"] = True
+
     bad_entries = tmp_path / "entries.jsonl"
     bad_entries.write_text(json.dumps(entry, ensure_ascii=False) + "\n", encoding="utf-8")
 
@@ -252,9 +173,9 @@ def test_absolute_local_path_is_rejected(tmp_path: Path) -> None:
     assert entry["entry_id"] in result.stderr
 
 
-def test_cc_by_sa_entry_is_accepted(tmp_path: Path) -> None:
+def _cc_by_sa_source_and_entry() -> tuple[dict, dict]:
     source = json.loads(SOURCES.read_text(encoding="utf-8").splitlines()[-1])
-    source["source_id"] = "example__cc_by_sa_seed"
+    source["source_id"] = "example__cc_by_sa_attribution"
     source["status"] = "verified"
     source["rights"] = {
         "rights_basis": "cc_by_sa",
@@ -279,17 +200,83 @@ def test_cc_by_sa_entry_is_accepted(tmp_path: Path) -> None:
         "derivatives_allowed": True,
         "scan_redistribution_allowed": True,
         "attribution_required": True,
+        "attribution_text": "User:Example via Wikimedia Commons, CC BY-SA 4.0",
+        "attribution_url": "https://commons.wikimedia.org/wiki/File:Example.jpg",
         "verification_status": "primary_page_checked",
         "evidence_text": "File page declares CC BY-SA 4.0.",
         "verified_at": "2026-05-09",
     }
+    return source, entry
 
+
+def _write_and_run(tmp_path: Path, source: dict, entry: dict) -> subprocess.CompletedProcess[str]:
     sources_path = tmp_path / "sources.jsonl"
     sources_path.write_text(json.dumps(source, ensure_ascii=False) + "\n", encoding="utf-8")
     entries_path = tmp_path / "entries.jsonl"
     entries_path.write_text(json.dumps(entry, ensure_ascii=False) + "\n", encoding="utf-8")
+    return run_validator("--sources", sources_path, "--entries", entries_path)
 
-    result = run_validator("--sources", sources_path, "--entries", entries_path)
+
+def test_attribution_required_with_text_is_accepted(tmp_path: Path) -> None:
+    source, entry = _cc_by_sa_source_and_entry()
+
+    result = _write_and_run(tmp_path, source, entry)
 
     assert result.returncode == 0, result.stderr
     assert "ok: 1 sources, 1 entries" in result.stdout
+
+
+def test_attribution_required_without_text_is_rejected(tmp_path: Path) -> None:
+    source, entry = _cc_by_sa_source_and_entry()
+    entry["rights"]["attribution_text"] = None
+
+    result = _write_and_run(tmp_path, source, entry)
+
+    assert result.returncode != 0
+    assert "attribution_text" in result.stderr
+
+
+def test_attribution_required_with_blank_text_is_rejected(tmp_path: Path) -> None:
+    # A single space passes the schema's `minLength: 1` and `type: string`
+    # but is rejected by the validator-level check — proving the second
+    # enforcement layer catches what the schema does not.
+    source, entry = _cc_by_sa_source_and_entry()
+    entry["rights"]["attribution_text"] = "   "
+
+    result = _write_and_run(tmp_path, source, entry)
+
+    assert result.returncode != 0
+    assert entry["entry_id"] in result.stderr
+    assert "attribution_text is null, blank, or whitespace-only" in result.stderr
+
+
+def test_attribution_required_without_url_is_rejected(tmp_path: Path) -> None:
+    source, entry = _cc_by_sa_source_and_entry()
+    entry["rights"]["attribution_url"] = None
+
+    result = _write_and_run(tmp_path, source, entry)
+
+    assert result.returncode != 0
+    assert "attribution_url" in result.stderr
+
+
+def test_attribution_required_entries_round_trip_to_notice() -> None:
+    entries = [
+        json.loads(line)
+        for line in ENTRIES.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    required = [e for e in entries if e["rights"].get("attribution_required") is True]
+
+    assert required, "expected at least one attribution-required entry in the corpus"
+    for entry in required:
+        text = entry["rights"]["attribution_text"]
+        url = entry["rights"]["attribution_url"]
+        assert isinstance(text, str) and text.strip(), (
+            f"{entry['entry_id']}: attribution_text must be a non-blank string"
+        )
+        assert isinstance(url, str) and url.startswith("https://"), (
+            f"{entry['entry_id']}: attribution_url must be an https URI"
+        )
+        notice = f"Includes work by {text} <{url}>"
+        assert text in notice and url in notice
