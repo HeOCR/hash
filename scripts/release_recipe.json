@@ -1,0 +1,57 @@
+{
+  "name": "public-domain-hand-written-hebrew-scans",
+  "title": "Public Domain Hand-Written Hebrew Scans",
+  "version": "0.1.0-rc",
+  "description": "A small, agent-friendly dataset of public-domain (or permissively licensed) scans of handwritten Hebrew documents, paired with per-scan rights evidence. The index is line-oriented JSON (JSONL); rights are recorded at both source and scan level instead of relying on collection-level claims.",
+  "homepage": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans",
+  "repository_code": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans",
+  "authors": [
+    {"name": "Shay Palachy-Affek", "role": "maintainer"}
+  ],
+  "keywords": [
+    "Hebrew",
+    "handwriting",
+    "handwritten-text-recognition",
+    "manuscripts",
+    "public-domain",
+    "dataset"
+  ],
+  "metadata_license": {
+    "spdx": "CC0-1.0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "license_urls": {
+    "PDM-1.0": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "CC0-1.0": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "CC-BY-4.0": "https://creativecommons.org/licenses/by/4.0/",
+    "CC-BY-SA-4.0": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "license_names": {
+    "PDM-1.0": "Public Domain Mark 1.0",
+    "CC0-1.0": "Creative Commons Zero v1.0 Universal",
+    "CC-BY-4.0": "Creative Commons Attribution 4.0 International",
+    "CC-BY-SA-4.0": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "LicenseRef-Public-Domain-Israel": "Public Domain (Israel; life + 70)",
+    "LicenseRef-Public-Domain-Ukraine": "Public Domain (Ukraine; life + 70)"
+  },
+  "schema_urls": {
+    "entry": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/entry.schema.json",
+    "source": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/source.schema.json"
+  },
+  "resources": {
+    "entries": {
+      "path": "data/index/entries.jsonl",
+      "format": "jsonl",
+      "mediatype": "application/x-ndjson",
+      "encoding": "utf-8",
+      "description": "Scan-level index. One JSON object per page, with rights evidence, file checksums, and provenance."
+    },
+    "sources": {
+      "path": "data/index/sources.jsonl",
+      "format": "jsonl",
+      "mediatype": "application/x-ndjson",
+      "encoding": "utf-8",
+      "description": "Source-level catalog. One JSON object per institution, collection, item, dataset, or source lead."
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "contributors": [
+    {
+      "role": "maintainer",
+      "title": "Shay Palachy-Affek"
+    }
+  ],
+  "description": "A small, agent-friendly dataset of public-domain (or permissively licensed) scans of handwritten Hebrew documents, paired with per-scan rights evidence. The index is line-oriented JSON (JSONL); rights are recorded at both source and scan level instead of relying on collection-level claims.",
+  "homepage": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans",
+  "keywords": [
+    "Hebrew",
+    "dataset",
+    "handwriting",
+    "handwritten-text-recognition",
+    "manuscripts",
+    "public-domain"
+  ],
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "scope": "metadata",
+      "title": "Creative Commons Zero v1.0 Universal"
+    },
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "scans",
+      "title": "Creative Commons Attribution-ShareAlike 4.0 International"
+    },
+    {
+      "name": "LicenseRef-Public-Domain-Israel",
+      "scope": "scans",
+      "title": "Public Domain (Israel; life + 70)"
+    },
+    {
+      "name": "LicenseRef-Public-Domain-Ukraine",
+      "scope": "scans",
+      "title": "Public Domain (Ukraine; life + 70)"
+    },
+    {
+      "name": "PDM-1.0",
+      "path": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "scope": "scans",
+      "title": "Public Domain Mark 1.0"
+    }
+  ],
+  "name": "public-domain-hand-written-hebrew-scans",
+  "profile": "data-package",
+  "released_at": "2026-05-11T12:04:00Z",
+  "resources": [
+    {
+      "bytes": 168006,
+      "description": "Scan-level index. One JSON object per page, with rights evidence, file checksums, and provenance.",
+      "encoding": "utf-8",
+      "format": "jsonl",
+      "mediatype": "application/x-ndjson",
+      "name": "entries",
+      "path": "data/index/entries.jsonl",
+      "profile": "data-resource",
+      "record_count": 60,
+      "schema": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/entry.schema.json"
+    },
+    {
+      "bytes": 120331,
+      "description": "Source-level catalog. One JSON object per institution, collection, item, dataset, or source lead.",
+      "encoding": "utf-8",
+      "format": "jsonl",
+      "mediatype": "application/x-ndjson",
+      "name": "sources",
+      "path": "data/index/sources.jsonl",
+      "profile": "data-resource",
+      "record_count": 60,
+      "schema": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/source.schema.json"
+    }
+  ],
+  "schemas": {
+    "entry": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/entry.schema.json",
+    "source": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/source.schema.json"
+  },
+  "stats": {
+    "attribution_required_count": 2,
+    "byte_count": 47463804,
+    "institution_breakdown": {
+      "Bibliothèque nationale de France": 1,
+      "Bodleian Libraries": 3,
+      "Cambridge University Library, Taylor-Schechter Collection": 3,
+      "Gross Family Collection, Tel Aviv": 6,
+      "Hungarian Academy of Sciences, Kaufmann Genizah Collection": 4,
+      "Jewish Theological Seminary": 1,
+      "National Library of Israel": 2,
+      "University of Pennsylvania, Halper Collection": 2,
+      "Österreichische Nationalbibliothek": 1
+    },
+    "license_breakdown": {
+      "CC-BY-SA-4.0": 2,
+      "LicenseRef-Public-Domain-Israel": 5,
+      "LicenseRef-Public-Domain-Ukraine": 2,
+      "PDM-1.0": 51
+    },
+    "record_count": 60,
+    "source_count": 45,
+    "source_record_count": 60,
+    "source_status_breakdown": {
+      "candidate": 12,
+      "rejected": 3,
+      "verified": 45
+    }
+  },
+  "title": "Public Domain Hand-Written Hebrew Scans",
+  "version": "0.1.0-rc"
+}
