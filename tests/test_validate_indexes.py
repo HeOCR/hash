@@ -22,6 +22,14 @@ def run_validator(*args: str | Path) -> subprocess.CompletedProcess[str]:
     )
 
 
+def _first_entry_with_real_file() -> dict:
+    for line in ENTRIES.read_text(encoding="utf-8").splitlines():
+        entry = json.loads(line)
+        if entry["files"] and entry["files"][0]["local_path"] is not None:
+            return entry
+    raise RuntimeError("no entry has a non-null files[0].local_path")
+
+
 def test_current_indexes_validate() -> None:
     result = run_validator()
 
@@ -181,7 +189,7 @@ def test_missing_index_file_is_rejected(tmp_path: Path) -> None:
 
 
 def test_missing_local_path_is_rejected(tmp_path: Path) -> None:
-    entry = json.loads(ENTRIES.read_text(encoding="utf-8").splitlines()[0])
+    entry = _first_entry_with_real_file()
     entry["files"][0]["local_path"] = "data/scans/does_not_exist/missing__p0001.jpg"
 
     bad_entries = tmp_path / "entries.jsonl"
@@ -195,8 +203,10 @@ def test_missing_local_path_is_rejected(tmp_path: Path) -> None:
 
 
 def test_byte_size_mismatch_is_rejected(tmp_path: Path) -> None:
-    entry = json.loads(ENTRIES.read_text(encoding="utf-8").splitlines()[0])
-    entry["files"][0]["bytes"] = entry["files"][0]["bytes"] + 1
+    entry = _first_entry_with_real_file()
+    real_bytes = entry["files"][0]["bytes"]
+    corrupted_bytes = real_bytes + 1
+    entry["files"][0]["bytes"] = corrupted_bytes
 
     bad_entries = tmp_path / "entries.jsonl"
     bad_entries.write_text(json.dumps(entry, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -206,13 +216,15 @@ def test_byte_size_mismatch_is_rejected(tmp_path: Path) -> None:
     assert result.returncode != 0
     assert "byte size mismatch" in result.stderr
     assert entry["entry_id"] in result.stderr
+    assert f"expected {corrupted_bytes}" in result.stderr
+    assert f"got {real_bytes}" in result.stderr
 
 
 def test_sha256_mismatch_is_rejected(tmp_path: Path) -> None:
-    entry = json.loads(ENTRIES.read_text(encoding="utf-8").splitlines()[0])
-    original_sha = entry["files"][0]["sha256"]
-    flipped = ("b" if original_sha[0] != "b" else "c") + original_sha[1:]
-    entry["files"][0]["sha256"] = flipped
+    entry = _first_entry_with_real_file()
+    real_sha = entry["files"][0]["sha256"]
+    corrupted_sha = "0" * 64
+    entry["files"][0]["sha256"] = corrupted_sha
 
     bad_entries = tmp_path / "entries.jsonl"
     bad_entries.write_text(json.dumps(entry, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -221,6 +233,22 @@ def test_sha256_mismatch_is_rejected(tmp_path: Path) -> None:
 
     assert result.returncode != 0
     assert "sha256 mismatch" in result.stderr
+    assert entry["entry_id"] in result.stderr
+    assert f"expected {corrupted_sha}" in result.stderr
+    assert f"got {real_sha}" in result.stderr
+
+
+def test_absolute_local_path_is_rejected(tmp_path: Path) -> None:
+    entry = _first_entry_with_real_file()
+    entry["files"][0]["local_path"] = "/etc/hosts"
+
+    bad_entries = tmp_path / "entries.jsonl"
+    bad_entries.write_text(json.dumps(entry, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    result = run_validator("--sources", SOURCES, "--entries", bad_entries)
+
+    assert result.returncode != 0
+    assert "must be repo-relative" in result.stderr
     assert entry["entry_id"] in result.stderr
 
 

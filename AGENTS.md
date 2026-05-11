@@ -33,7 +33,9 @@ report all tests passing. `git diff --check` must produce no output.
 
 ## GitHub workflow
 
-- One PR per coherent change. No batching unrelated work.
+- One PR per coherent change. Batching is fine when the changes are tightly
+  coupled (for example, a tooling change plus the docs that describe it);
+  avoid batching unrelated work.
 - Open PRs non-draft.
 - Apply exactly one of these labels:
   - `enhancement` — content additions (new sources, scans, tooling) and
@@ -55,10 +57,12 @@ report all tests passing. `git diff --check` must produce no output.
 ### In scope
 
 - Hand-WRITTEN Hebrew-script content. Not printed, not typeset.
-- Allowed `document_type` values: `letter`, `diary`, `notebook`, `draft`,
-  `speech`, `receipt`, `form`, `marginalia`, `postcard`, `poem`, `other`.
-- Post-1929 work is preferred but not required, as long as the rights
-  situation is clean.
+- The allowed `document_type` values are enumerated in
+  `schemas/entry.schema.json` (snapshot today: `letter`, `diary`, `notebook`,
+  `draft`, `speech`, `receipt`, `form`, `marginalia`, `postcard`, `poem`,
+  `other`). The schema is authoritative.
+- Modern Hebrew handwriting is the focus, so post-1929 work is the typical
+  target. Older material is acceptable when the rights situation is clean.
 
 ### Out of scope
 
@@ -114,7 +118,7 @@ For each `entries[].files[]` entry that has a `local_path`, populate:
 - `mime_type` — e.g., `image/jpeg`.
 - `width_px` and `height_px` — pixel dimensions.
 
-Helpers (macOS):
+Helpers — macOS:
 
 ```bash
 shasum -a 256 FILE
@@ -123,8 +127,18 @@ file --mime-type -b FILE
 sips -g pixelWidth -g pixelHeight FILE
 ```
 
-The validator now re-checks every file's existence, size, and SHA-256 against
-the recorded metadata. Mismatches block CI.
+Helpers — Linux (CI runs on Ubuntu, so these are the same shapes used in CI
+debugging):
+
+```bash
+sha256sum FILE
+stat -c%s FILE
+file --mime-type -b FILE
+identify -format "%w %h\n" FILE   # ImageMagick; or use Pillow from Python.
+```
+
+`scripts/validate_indexes.py` re-checks file integrity against the recorded
+metadata on every run. Mismatches block CI.
 
 ### Transcription stub
 
@@ -167,7 +181,8 @@ When fetching from `upload.wikimedia.org`:
 - Send a descriptive `User-Agent` header. This repo uses
   `public-domain-hand-written-hebrew-scans-ingest/1.0 (https://github.com/HeOCR/public-domain-hand-written-hebrew-scans)`.
 - Space requests roughly 2 seconds apart. Aggressive batches get rate-limited.
-- On HTTP 429, back off ~90 seconds and retry only the failed subset. Do not
+- On HTTP 429, back off ~90 seconds (empirically reliable in this repo, not a
+  Wikimedia-published rate limit) and retry only the failed subset. Do not
   hammer.
 - Always download the file actually referenced from the Commons file page,
   not a thumbnail or a Special:FilePath redirect captured at a previous size.
