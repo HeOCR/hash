@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 from typing import Any
@@ -87,6 +88,44 @@ def validate_entries(entries: list[dict[str, Any]], source_ids: set[str]) -> Non
         entry_ids.add(entry_id)
 
 
+def _sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def validate_entry_files(entries: list[dict[str, Any]], repo_root: Path) -> None:
+    for entry in entries:
+        entry_id = entry["entry_id"]
+        for file_obj in entry.get("files", []):
+            local_path = file_obj.get("local_path")
+            if local_path is None:
+                continue
+            absolute = repo_root / local_path
+            if not absolute.exists():
+                raise SystemExit(f"{entry_id}: file does not exist: {local_path}")
+
+            expected_bytes = file_obj.get("bytes")
+            if expected_bytes is not None:
+                actual_bytes = absolute.stat().st_size
+                if actual_bytes != expected_bytes:
+                    raise SystemExit(
+                        f"{entry_id}: byte size mismatch for {local_path}: "
+                        f"expected {expected_bytes}, got {actual_bytes}"
+                    )
+
+            expected_sha = file_obj.get("sha256")
+            if expected_sha is not None:
+                actual_sha = _sha256_file(absolute)
+                if actual_sha != expected_sha:
+                    raise SystemExit(
+                        f"{entry_id}: sha256 mismatch for {local_path}: "
+                        f"expected {expected_sha}, got {actual_sha}"
+                    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--sources", type=Path, default=SOURCES_PATH)
@@ -105,6 +144,7 @@ def main() -> None:
     sources = load_jsonl(args.sources, source_validator, "source_id")
     entries = load_jsonl(args.entries, entry_validator, "entry_id")
     validate_entries(entries, {source["source_id"] for source in sources})
+    validate_entry_files(entries, REPO_ROOT)
 
     print(f"ok: {len(sources)} sources, {len(entries)} entries")
 

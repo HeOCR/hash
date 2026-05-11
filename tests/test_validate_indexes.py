@@ -180,6 +180,50 @@ def test_missing_index_file_is_rejected(tmp_path: Path) -> None:
     assert "file does not exist" in result.stderr
 
 
+def test_missing_local_path_is_rejected(tmp_path: Path) -> None:
+    entry = json.loads(ENTRIES.read_text(encoding="utf-8").splitlines()[0])
+    entry["files"][0]["local_path"] = "data/scans/does_not_exist/missing__p0001.jpg"
+
+    bad_entries = tmp_path / "entries.jsonl"
+    bad_entries.write_text(json.dumps(entry, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    result = run_validator("--sources", SOURCES, "--entries", bad_entries)
+
+    assert result.returncode != 0
+    assert "file does not exist" in result.stderr
+    assert entry["entry_id"] in result.stderr
+
+
+def test_byte_size_mismatch_is_rejected(tmp_path: Path) -> None:
+    entry = json.loads(ENTRIES.read_text(encoding="utf-8").splitlines()[0])
+    entry["files"][0]["bytes"] = entry["files"][0]["bytes"] + 1
+
+    bad_entries = tmp_path / "entries.jsonl"
+    bad_entries.write_text(json.dumps(entry, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    result = run_validator("--sources", SOURCES, "--entries", bad_entries)
+
+    assert result.returncode != 0
+    assert "byte size mismatch" in result.stderr
+    assert entry["entry_id"] in result.stderr
+
+
+def test_sha256_mismatch_is_rejected(tmp_path: Path) -> None:
+    entry = json.loads(ENTRIES.read_text(encoding="utf-8").splitlines()[0])
+    original_sha = entry["files"][0]["sha256"]
+    flipped = ("b" if original_sha[0] != "b" else "c") + original_sha[1:]
+    entry["files"][0]["sha256"] = flipped
+
+    bad_entries = tmp_path / "entries.jsonl"
+    bad_entries.write_text(json.dumps(entry, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    result = run_validator("--sources", SOURCES, "--entries", bad_entries)
+
+    assert result.returncode != 0
+    assert "sha256 mismatch" in result.stderr
+    assert entry["entry_id"] in result.stderr
+
+
 def test_cc_by_sa_entry_is_accepted(tmp_path: Path) -> None:
     source = json.loads(SOURCES.read_text(encoding="utf-8").splitlines()[-1])
     source["source_id"] = "example__cc_by_sa_seed"
