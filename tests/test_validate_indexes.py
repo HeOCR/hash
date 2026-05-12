@@ -10,6 +10,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 VALIDATOR = REPO_ROOT / "scripts" / "validate_indexes.py"
 SOURCES = REPO_ROOT / "data" / "index" / "sources.jsonl"
 ENTRIES = REPO_ROOT / "data" / "index" / "entries.jsonl"
+RECIPE = REPO_ROOT / "scripts" / "release_recipe.json"
 
 
 def run_validator(*args: str | Path) -> subprocess.CompletedProcess[str]:
@@ -35,6 +36,34 @@ def test_current_indexes_validate() -> None:
 
     assert result.returncode == 0, result.stderr
     assert "ok:" in result.stdout
+    assert "recipe ok" in result.stdout
+
+
+def test_recipe_missing_required_field_is_rejected(tmp_path: Path) -> None:
+    recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
+    del recipe["license_urls"]
+
+    bad_recipe = tmp_path / "release_recipe.json"
+    bad_recipe.write_text(json.dumps(recipe, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    result = run_validator("--recipe", bad_recipe)
+
+    assert result.returncode != 0
+    assert "license_urls" in result.stderr
+    assert str(bad_recipe) in result.stderr
+
+
+def test_recipe_with_unknown_top_level_key_is_rejected(tmp_path: Path) -> None:
+    recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
+    recipe["surprise"] = "not allowed"
+
+    bad_recipe = tmp_path / "release_recipe.json"
+    bad_recipe.write_text(json.dumps(recipe, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    result = run_validator("--recipe", bad_recipe)
+
+    assert result.returncode != 0
+    assert "surprise" in result.stderr
 
 
 def test_schema_errors_are_rejected(tmp_path: Path) -> None:

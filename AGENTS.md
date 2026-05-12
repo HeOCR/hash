@@ -13,8 +13,9 @@ Canonical layout, schema motivation, and ingestion model live in
 [`docs/dataset_structure.md`](docs/dataset_structure.md). Compound licensing
 (CC0 metadata, per-scan rights) is described in [`LICENSE.md`](LICENSE.md).
 The machine-readable contracts are
-[`schemas/source.schema.json`](schemas/source.schema.json) and
-[`schemas/entry.schema.json`](schemas/entry.schema.json).
+[`schemas/source.schema.json`](schemas/source.schema.json),
+[`schemas/entry.schema.json`](schemas/entry.schema.json), and
+[`schemas/release_recipe.schema.json`](schemas/release_recipe.schema.json).
 
 ## Mandatory pre-PR commands
 
