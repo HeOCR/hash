@@ -347,6 +347,56 @@ def test_check_mode_fails_when_stale(tmp_path: Path) -> None:
     assert "datapackage.json" in result.stderr
 
 
+def test_citation_identifiers_passthrough_emits_identifiers_block(tmp_path: Path) -> None:
+    # The live recipe ships `citation_identifiers: []`, so the passthrough
+    # branch in build_citation is live-but-untested on the committed corpus.
+    # Inject a representative entry (Zenodo DOI shape — what v0.1.0 will get
+    # once the tag is cut and Zenodo mints the DOI) into a tmp recipe and
+    # verify the generated CITATION.cff carries it through verbatim.
+    recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
+    injected = [
+        {
+            "type": "doi",
+            "value": "10.5281/zenodo.0000000",
+            "description": "v0.1.0 archived release",
+        }
+    ]
+    recipe["citation_identifiers"] = injected
+    custom_recipe = tmp_path / "recipe.json"
+    custom_recipe.write_text(json.dumps(recipe), encoding="utf-8")
+
+    notice = tmp_path / "NOTICE.md"
+    citation = tmp_path / "CITATION.cff"
+    datapackage = tmp_path / "datapackage.json"
+
+    result = subprocess.run(
+        [
+            sys.executable, str(GENERATOR),
+            "--sources", str(SOURCES),
+            "--entries", str(ENTRIES),
+            "--recipe", str(custom_recipe),
+            "--notice", str(notice),
+            "--citation", str(citation),
+            "--datapackage", str(datapackage),
+        ],
+        cwd=tmp_path,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    assert result.returncode == 0, result.stderr
+
+    document = yaml.safe_load(citation.read_text(encoding="utf-8"))
+    assert "identifiers" in document, "CITATION.cff missing identifiers block"
+    assert isinstance(document["identifiers"], list)
+    assert len(document["identifiers"]) == 1
+
+    emitted = document["identifiers"][0]
+    assert emitted["type"] == injected[0]["type"]
+    assert emitted["value"] == injected[0]["value"]
+    assert emitted["description"] == injected[0]["description"]
+
+
 def test_recipe_required_fields_must_be_present(tmp_path: Path) -> None:
     # Tampered recipes with required fields removed should fail loudly,
     # not silently default. This guards R7 — no `.get(..., default)` on
