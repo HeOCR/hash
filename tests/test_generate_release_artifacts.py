@@ -6,6 +6,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import yaml
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GENERATOR = REPO_ROOT / "scripts" / "generate_release_artifacts.py"
@@ -34,24 +36,28 @@ def _load_sources() -> list[dict]:
 
 
 def _run_generator(
-    workdir: Path,
     *,
+    cwd: Path,
+    sources: Path = SOURCES,
+    entries: Path = ENTRIES,
     notice: Path,
     citation: Path,
     datapackage: Path,
+    extra_args: tuple[str, ...] = (),
 ) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         [
             sys.executable,
             str(GENERATOR),
-            "--sources", str(SOURCES),
-            "--entries", str(ENTRIES),
+            "--sources", str(sources),
+            "--entries", str(entries),
             "--recipe", str(RECIPE),
             "--notice", str(notice),
             "--citation", str(citation),
             "--datapackage", str(datapackage),
+            *extra_args,
         ],
-        cwd=workdir,
+        cwd=cwd,
         text=True,
         capture_output=True,
         check=False,
@@ -59,11 +65,14 @@ def _run_generator(
 
 
 def test_committed_artifacts_are_up_to_date(tmp_path: Path) -> None:
+    # Pytest mirror of the CI `--check` step: catches the local "didn't
+    # regenerate before committing" mode while the CI workflow catches
+    # "regenerated locally but didn't stage". Intentionally redundant.
     notice = tmp_path / "NOTICE.md"
     citation = tmp_path / "CITATION.cff"
     datapackage = tmp_path / "datapackage.json"
 
-    result = _run_generator(tmp_path, notice=notice, citation=citation, datapackage=datapackage)
+    result = _run_generator(cwd=tmp_path, notice=notice, citation=citation, datapackage=datapackage)
     assert result.returncode == 0, result.stderr
 
     assert notice.read_bytes() == NOTICE.read_bytes(), (
@@ -84,11 +93,11 @@ def test_generator_is_idempotent(tmp_path: Path) -> None:
         "datapackage": tmp_path / "datapackage.json",
     }
 
-    first = _run_generator(tmp_path, **paths)
+    first = _run_generator(cwd=tmp_path, **paths)
     assert first.returncode == 0, first.stderr
     snapshot = {name: path.read_bytes() for name, path in paths.items()}
 
-    second = _run_generator(tmp_path, **paths)
+    second = _run_generator(cwd=tmp_path, **paths)
     assert second.returncode == 0, second.stderr
     for name, path in paths.items():
         assert path.read_bytes() == snapshot[name], f"{name} differed between runs"
@@ -101,7 +110,7 @@ def test_datapackage_counts_match_index() -> None:
 
     assert package["stats"]["record_count"] == len(entries)
     assert package["stats"]["source_record_count"] == len(sources)
-    assert package["stats"]["source_count"] == len({e["source_id"] for e in entries})
+    assert package["stats"]["entry_source_count"] == len({e["source_id"] for e in entries})
 
     breakdown = package["stats"]["license_breakdown"]
     assert sum(breakdown.values()) == len(entries)
@@ -114,7 +123,6 @@ def test_datapackage_counts_match_index() -> None:
 
 
 def test_datapackage_keys_are_sorted() -> None:
-    # sort_keys=True is the determinism contract; assert it from the bytes.
     raw = DATAPACKAGE.read_text(encoding="utf-8")
     package = json.loads(raw)
     assert list(package.keys()) == sorted(package.keys())
@@ -166,8 +174,6 @@ def test_notice_has_stanza_per_attribution_required_entry() -> None:
 
 
 def test_notice_lists_no_non_attribution_entries() -> None:
-    # Only the two CC-BY-SA entries should have ### stanzas. Other entry IDs must
-    # not appear in NOTICE.md — that would over-credit public-domain works.
     text = NOTICE.read_text(encoding="utf-8")
     entries = _load_entries()
     for entry in entries:
@@ -177,12 +183,23 @@ def test_notice_lists_no_non_attribution_entries() -> None:
             )
 
 
-def test_citation_is_cff_1_2_0() -> None:
-    text = CITATION.read_text(encoding="utf-8")
-    assert "cff-version: 1.2.0" in text
-    assert "type: dataset" in text
-    assert 'license: "CC0-1.0"' in text
-    assert 'version: "0.1.0-rc"' in text
+def test_citation_parses_and_has_required_cff_keys() -> None:
+    # Round-trip through a real YAML parser — the whole point of CITATION.cff is
+    # that downstream tools (Zenodo, GitHub) can read it. Hand-rolled YAML would
+    # not survive this assertion.
+    document = yaml.safe_load(CITATION.read_text(encoding="utf-8"))
+    assert isinstance(document, dict)
+
+    for required in ("cff-version", "type", "title", "authors", "version", "date-released"):
+        assert required in document, f"CITATION.cff missing required key: {required}"
+
+    assert document["cff-version"] == "1.2.0"
+    assert document["type"] == "dataset"
+    assert document["license"] == "CC0-1.0"
+    assert document["version"] == "0.1.0-rc"
+    assert isinstance(document["authors"], list) and document["authors"]
+    for author in document["authors"]:
+        assert "name" in author
 
 
 def test_citation_date_released_matches_max_acquired_at() -> None:
@@ -192,8 +209,8 @@ def test_citation_date_released_matches_max_acquired_at() -> None:
         for e in entries
         if e["provenance"].get("acquired_at")
     )
-    text = CITATION.read_text(encoding="utf-8")
-    assert f'date-released: "{max_acquired[:10]}"' in text
+    document = yaml.safe_load(CITATION.read_text(encoding="utf-8"))
+    assert str(document["date-released"]) == max_acquired[:10]
 
 
 def test_released_at_matches_max_acquired_at() -> None:
@@ -207,36 +224,136 @@ def test_released_at_matches_max_acquired_at() -> None:
     assert package["released_at"] == max_acquired
 
 
-def test_generator_survives_relocated_indexes(tmp_path: Path) -> None:
-    # Confirm the script is parameterised end-to-end: pass non-default paths and
-    # check the outputs land where requested. Guards against accidental REPO_ROOT
-    # hardcoding inside the build_* helpers.
-    sources_copy = tmp_path / "sources.jsonl"
+def test_generator_uses_cli_entries_for_resource_stats(tmp_path: Path) -> None:
+    # Drop one entry, run the generator against the trimmed file, and verify
+    # the manifest reflects the modified input — not the committed repo file.
+    # This is the test that R2/R3 were missing.
+    original_lines = ENTRIES.read_text(encoding="utf-8").splitlines()
+    trimmed = [line for line in original_lines if line.strip()][:-1]
     entries_copy = tmp_path / "entries.jsonl"
-    shutil.copyfile(SOURCES, sources_copy)
-    shutil.copyfile(ENTRIES, entries_copy)
+    entries_copy.write_text("\n".join(trimmed) + "\n", encoding="utf-8")
 
     notice = tmp_path / "NOTICE.md"
     citation = tmp_path / "CITATION.cff"
     datapackage = tmp_path / "datapackage.json"
 
+    result = _run_generator(
+        cwd=tmp_path,
+        entries=entries_copy,
+        notice=notice,
+        citation=citation,
+        datapackage=datapackage,
+    )
+    assert result.returncode == 0, result.stderr
+
+    package = json.loads(datapackage.read_text(encoding="utf-8"))
+    expected_record_count = len(trimmed)
+
+    assert package["stats"]["record_count"] == expected_record_count
+    assert sum(package["stats"]["license_breakdown"].values()) == expected_record_count
+
+    by_name = {resource["name"]: resource for resource in package["resources"]}
+    assert by_name["entries"]["record_count"] == expected_record_count
+    assert by_name["entries"]["bytes"] == entries_copy.stat().st_size
+
+
+def test_attribution_gate_is_license_driven(tmp_path: Path) -> None:
+    # If we drove inclusion off the `attribution_required` flag alone, an
+    # entry with a CC-BY-SA license but `attribution_required: false` would
+    # silently disappear from NOTICE.md. Verify that the generator rejects
+    # that configuration instead of producing a broken NOTICE.
+    entries = _load_entries()
+    target = next(
+        e for e in entries
+        if e["rights"]["license_expression"] == "CC-BY-SA-4.0"
+    )
+    target = json.loads(json.dumps(target))  # deep-copy
+    target["rights"]["attribution_required"] = False
+
+    rest = [
+        e for e in entries
+        if e["entry_id"] != target["entry_id"]
+        and e["rights"]["license_expression"] != "CC-BY-SA-4.0"
+    ]
+    entries_copy = tmp_path / "entries.jsonl"
+    entries_copy.write_text(
+        "\n".join(json.dumps(e, ensure_ascii=False) for e in rest + [target]) + "\n",
+        encoding="utf-8",
+    )
+
+    notice = tmp_path / "NOTICE.md"
+    citation = tmp_path / "CITATION.cff"
+    datapackage = tmp_path / "datapackage.json"
+
+    result = _run_generator(
+        cwd=tmp_path,
+        entries=entries_copy,
+        notice=notice,
+        citation=citation,
+        datapackage=datapackage,
+    )
+    assert result.returncode != 0
+    assert "CC-BY-SA-4.0" in result.stderr
+    assert "attribution_required" in result.stderr
+    assert not notice.exists()
+
+
+def test_check_mode_passes_when_up_to_date(tmp_path: Path) -> None:
+    result = subprocess.run(
+        [sys.executable, str(GENERATOR), "--check"],
+        cwd=REPO_ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    assert result.returncode == 0, result.stderr
+    assert "ok" in result.stdout
+
+
+def test_check_mode_fails_when_stale(tmp_path: Path) -> None:
+    # Copy current artefacts to tmp and corrupt one, then assert --check
+    # exits non-zero and identifies it.
+    notice = tmp_path / "NOTICE.md"
+    citation = tmp_path / "CITATION.cff"
+    datapackage = tmp_path / "datapackage.json"
+    shutil.copyfile(NOTICE, notice)
+    shutil.copyfile(CITATION, citation)
+    shutil.copyfile(DATAPACKAGE, datapackage)
+    datapackage.write_text("{}\n", encoding="utf-8")
+
+    result = _run_generator(
+        cwd=tmp_path,
+        notice=notice,
+        citation=citation,
+        datapackage=datapackage,
+        extra_args=("--check",),
+    )
+    assert result.returncode == 1
+    assert "stale" in result.stderr
+    assert "datapackage.json" in result.stderr
+
+
+def test_recipe_required_fields_must_be_present(tmp_path: Path) -> None:
+    # Tampered recipes with required fields removed should fail loudly,
+    # not silently default. This guards R7 — no `.get(..., default)` on
+    # required recipe keys.
+    recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
+    del recipe["authors"]
+    bad_recipe = tmp_path / "bad_recipe.json"
+    bad_recipe.write_text(json.dumps(recipe), encoding="utf-8")
+
     result = subprocess.run(
         [
-            sys.executable,
-            str(GENERATOR),
-            "--sources", str(sources_copy),
-            "--entries", str(entries_copy),
-            "--recipe", str(RECIPE),
-            "--notice", str(notice),
-            "--citation", str(citation),
-            "--datapackage", str(datapackage),
+            sys.executable, str(GENERATOR),
+            "--recipe", str(bad_recipe),
+            "--notice", str(tmp_path / "NOTICE.md"),
+            "--citation", str(tmp_path / "CITATION.cff"),
+            "--datapackage", str(tmp_path / "datapackage.json"),
         ],
         cwd=tmp_path,
         text=True,
         capture_output=True,
         check=False,
     )
-    assert result.returncode == 0, result.stderr
-    assert notice.exists()
-    assert citation.exists()
-    assert datapackage.exists()
+    assert result.returncode != 0
+    assert "authors" in result.stderr or "KeyError" in result.stderr

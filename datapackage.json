@@ -80,7 +80,7 @@
   },
   "stats": {
     "attribution_required_count": 2,
-    "byte_count": 47463804,
+    "entry_source_count": 45,
     "institution_breakdown": {
       "Bibliothèque nationale de France": 1,
       "Bodleian Libraries": 3,
@@ -99,7 +99,7 @@
       "PDM-1.0": 51
     },
     "record_count": 60,
-    "source_count": 45,
+    "scan_byte_count": 47463804,
     "source_record_count": 60,
     "source_status_breakdown": {
       "candidate": 12,

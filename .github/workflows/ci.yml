@@ -18,8 +18,6 @@ jobs:
       - name: Validate JSONL indexes
         run: python scripts/validate_indexes.py
       - name: Check release artefacts are up to date (run `python3 scripts/generate_release_artifacts.py` to refresh)
-        run: |
-          python scripts/generate_release_artifacts.py
-          git diff --exit-code -- NOTICE.md CITATION.cff datapackage.json
+        run: python scripts/generate_release_artifacts.py --check
       - name: Run pytest
         run: python -m pytest

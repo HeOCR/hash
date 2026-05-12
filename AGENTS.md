@@ -24,12 +24,28 @@ PR — they must stay green.
 
 ```bash
 python3 scripts/validate_indexes.py
+python3 scripts/generate_release_artifacts.py
 python3 -m pytest
 git diff --check
 ```
 
-`validate_indexes.py` must end with `ok: N sources, M entries`. `pytest` must
+`validate_indexes.py` must end with `ok: N sources, M entries`.
+`generate_release_artifacts.py` must leave `NOTICE.md`, `CITATION.cff`, and
+`datapackage.json` unchanged in the diff — re-run it after any edit to
+`data/index/*.jsonl` or `scripts/release_recipe.json` and stage the
+regenerated artefacts. `python3 scripts/generate_release_artifacts.py --check`
+is the non-mutating equivalent (CI runs the `--check` form). `pytest` must
 report all tests passing. `git diff --check` must produce no output.
+
+## Release artefacts
+
+`NOTICE.md`, `CITATION.cff`, and `datapackage.json` at the repo root are
+generated deterministically from `data/index/*.jsonl` and
+`scripts/release_recipe.json`. Do not edit them by hand. Their `released_at` /
+`date-released` fields track `max(provenance.acquired_at)` across the entries,
+which means every ingest PR will bump these timestamps — that is intentional
+and avoids a manually-maintained release-date field. Regenerate by running
+`python3 scripts/generate_release_artifacts.py` from the repo root.
 
 ## GitHub workflow
 

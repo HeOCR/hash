@@ -38,6 +38,7 @@
     "entry": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/entry.schema.json",
     "source": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/source.schema.json"
   },
+  "citation_identifiers": [],
   "resources": {
     "entries": {
       "path": "data/index/entries.jsonl",
