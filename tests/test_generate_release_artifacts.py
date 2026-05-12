@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import importlib.util
 import json
 import shutil
 import subprocess
@@ -12,6 +13,10 @@ from frictionless import Package
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GENERATOR = REPO_ROOT / "scripts" / "generate_release_artifacts.py"
+
+_spec = importlib.util.spec_from_file_location("generate_release_artifacts", GENERATOR)
+_gen = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_gen)
 RECIPE = REPO_ROOT / "scripts" / "release_recipe.json"
 SOURCES = REPO_ROOT / "data" / "index" / "sources.jsonl"
 ENTRIES = REPO_ROOT / "data" / "index" / "entries.jsonl"
@@ -345,6 +350,25 @@ def test_check_mode_fails_when_stale(tmp_path: Path) -> None:
     assert result.returncode == 1
     assert "stale" in result.stderr
     assert "datapackage.json" in result.stderr
+
+
+def test_citation_identifiers_passthrough_emits_identifiers_block() -> None:
+    recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
+    identifier = {"type": "doi", "value": "10.5281/zenodo.0000000", "description": "v0.1.0 archived release"}
+    recipe["citation_identifiers"] = [identifier]
+    entries = _load_entries()
+    released_at = _gen._derive_released_at(entries)
+    document = yaml.safe_load(_gen.build_citation(entries, recipe, released_at))
+    assert document.get("identifiers") == [identifier]
+
+
+def test_citation_empty_identifiers_omits_identifiers_block() -> None:
+    recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
+    recipe["citation_identifiers"] = []
+    entries = _load_entries()
+    released_at = _gen._derive_released_at(entries)
+    document = yaml.safe_load(_gen.build_citation(entries, recipe, released_at))
+    assert "identifiers" not in document
 
 
 def test_recipe_required_fields_must_be_present(tmp_path: Path) -> None:
