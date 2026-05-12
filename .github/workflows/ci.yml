@@ -21,5 +21,7 @@ jobs:
         run: python scripts/validate_datapackage.py
       - name: Check release artefacts are up to date (run `python3 scripts/generate_release_artifacts.py` to refresh)
         run: python scripts/generate_release_artifacts.py --check
+      - name: Check README status section is up to date (run `python3 scripts/update_readme_status.py` to refresh)
+        run: python scripts/update_readme_status.py --check
       - name: Run pytest
         run: python -m pytest

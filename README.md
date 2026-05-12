@@ -41,6 +41,7 @@ python3 scripts/validate_indexes.py
 python3 -m pytest
 ```
 
+<!-- begin:status -->
 ## Current Status
 
 The corpus currently contains 60 ingested scans drawn from 45 verified sources,
@@ -50,16 +51,17 @@ being rejected as out of scope.
 
 License breakdown across the 60 entries:
 
-- 51 `PDM-1.0` (Public Domain Mark)
-- 5 `LicenseRef-Public-Domain-Israel`
-- 2 `LicenseRef-Public-Domain-Ukraine`
-- 2 `CC-BY-SA-4.0`
+- 51 `PDM-1.0` (Public Domain Mark 1.0)
+- 5 `LicenseRef-Public-Domain-Israel` (Public Domain (Israel; life + 70))
+- 2 `CC-BY-SA-4.0` (Creative Commons Attribution-ShareAlike 4.0 International)
+- 2 `LicenseRef-Public-Domain-Ukraine` (Public Domain (Ukraine; life + 70))
 
 The repository uses a compound licensing model: repository-authored metadata
 is dedicated to the public domain under CC0 1.0 (see [`LICENSE`](LICENSE)),
 while per-scan rights are recorded individually in each entry. See
 [`LICENSE.md`](LICENSE.md) for the full policy, including the CC BY-SA
 ShareAlike caveat and the rules for remix-friendly release bundles.
+<!-- end:status -->
 
 ## How to use this repo
 
