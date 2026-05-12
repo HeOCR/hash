@@ -19,9 +19,10 @@ The machine-readable contracts are
 
 ## Mandatory pre-PR commands
 
-Run these from the repo root before opening or updating a PR. All four
-checks are also run in CI (`.github/workflows/ci.yml`) on every push to
-`main` and every PR — they must stay green.
+Run these from the repo root before opening or updating a PR. The
+first four are also run in CI (`.github/workflows/ci.yml`) on every
+push to `main` and every PR — they must stay green; `git diff --check`
+is local-only.
 
 ```bash
 python3 scripts/validate_indexes.py
