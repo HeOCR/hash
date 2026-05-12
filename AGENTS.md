@@ -26,7 +26,7 @@ checks are also run in CI (`.github/workflows/ci.yml`) on every push to
 ```bash
 python3 scripts/validate_indexes.py
 python3 scripts/generate_release_artifacts.py
-python3 -c "from frictionless import Package; errs=list(Package.metadata_validate(Package('datapackage.json').to_descriptor())); import sys; sys.exit('\n'.join(str(e) for e in errs) or print('ok: datapackage.json metadata valid'))"
+python3 scripts/validate_datapackage.py
 python3 -m pytest
 git diff --check
 ```
@@ -36,14 +36,11 @@ git diff --check
 `datapackage.json` unchanged in the diff — re-run it after any edit to
 `data/index/*.jsonl` or `scripts/release_recipe.json` and stage the
 regenerated artefacts. `python3 scripts/generate_release_artifacts.py --check`
-is the non-mutating equivalent (CI runs the `--check` form). The
-Frictionless one-liner validates `datapackage.json` against the Data
-Package spec independently of pytest — it must print
-`ok: datapackage.json metadata valid` (a `frictionless validate
-datapackage.json` CLI call walks resource bodies in 5.x and fails on
-JSONL, which is why we call `Package.metadata_validate` directly).
-`pytest` must report all tests passing. `git diff --check` must produce
-no output.
+is the non-mutating equivalent (CI runs the `--check` form).
+`validate_datapackage.py` checks `datapackage.json` against the
+Frictionless Data Package spec independently of the pytest harness; it
+must end with `ok: datapackage.json metadata valid`. `pytest` must
+report all tests passing. `git diff --check` must produce no output.
 
 ## Release artefacts
 
