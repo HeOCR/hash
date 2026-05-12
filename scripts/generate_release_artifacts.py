@@ -331,7 +331,11 @@ def build_datapackage(
     resources: list[dict[str, Any]] = []
     for name in sorted(recipe["resources"]):
         spec = recipe["resources"][name]
-        resource: dict[str, Any] = {
+        # Note: no `schema` field. Frictionless reserves `resources[].schema`
+        # for Table Schema (column definitions), but our data is nested JSON
+        # validated against JSON Schema. We expose the JSON Schema URLs via
+        # the top-level `schemas` block as a custom extension instead.
+        resources.append({
             "name": name,
             "path": spec["path"],
             "profile": "data-resource",
@@ -341,12 +345,7 @@ def build_datapackage(
             "description": spec["description"],
             "record_count": resource_records_for[name],
             "bytes": resource_path_for[name].stat().st_size,
-        }
-        if name == "entries":
-            resource["schema"] = recipe["schema_urls"]["entry"]
-        elif name == "sources":
-            resource["schema"] = recipe["schema_urls"]["source"]
-        resources.append(resource)
+        })
 
     return {
         "profile": "data-package",

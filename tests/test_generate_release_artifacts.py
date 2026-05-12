@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 
 import yaml
+from frictionless import Package
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -200,6 +201,19 @@ def test_citation_parses_and_has_required_cff_keys() -> None:
     assert isinstance(document["authors"], list) and document["authors"]
     for author in document["authors"]:
         assert "name" in author
+
+
+def test_datapackage_validates_against_frictionless_spec() -> None:
+    # Round-trip the committed manifest through the Frictionless library and
+    # assert it loads cleanly with no metadata errors. Symmetric to the CFF
+    # round-trip test: the whole point of using a published spec is that
+    # downstream tooling can parse it.
+    package = Package(str(DATAPACKAGE))
+    assert package.name == "public-domain-hand-written-hebrew-scans"
+    assert package.version == "0.1.0-rc"
+
+    errors = list(Package.metadata_validate(package.to_descriptor()))
+    assert errors == [], [getattr(e, "message", str(e)) for e in errors]
 
 
 def test_citation_date_released_matches_max_acquired_at() -> None:

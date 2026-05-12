@@ -1,3 +1,4 @@
 jsonschema>=4.0,<5
 pytest>=8.0,<9
 PyYAML>=6,<7
+frictionless>=5,<6

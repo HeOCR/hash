@@ -58,8 +58,7 @@
       "name": "entries",
       "path": "data/index/entries.jsonl",
       "profile": "data-resource",
-      "record_count": 60,
-      "schema": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/entry.schema.json"
+      "record_count": 60
     },
     {
       "bytes": 120331,
@@ -70,8 +69,7 @@
       "name": "sources",
       "path": "data/index/sources.jsonl",
       "profile": "data-resource",
-      "record_count": 60,
-      "schema": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/source.schema.json"
+      "record_count": 60
     }
   ],
   "schemas": {
