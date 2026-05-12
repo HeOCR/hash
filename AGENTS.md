@@ -19,13 +19,15 @@ The machine-readable contracts are
 
 ## Mandatory pre-PR commands
 
-Run these from the repo root before opening or updating a PR. The first two are
-also run in CI (`.github/workflows/ci.yml`) on every push to `main` and every
-PR — they must stay green.
+Run these from the repo root before opening or updating a PR. The
+first four are also run in CI (`.github/workflows/ci.yml`) on every
+push to `main` and every PR — they must stay green; `git diff --check`
+is local-only.
 
 ```bash
 python3 scripts/validate_indexes.py
 python3 scripts/generate_release_artifacts.py
+python3 scripts/validate_datapackage.py
 python3 -m pytest
 git diff --check
 ```
@@ -35,7 +37,10 @@ git diff --check
 `datapackage.json` unchanged in the diff — re-run it after any edit to
 `data/index/*.jsonl` or `scripts/release_recipe.json` and stage the
 regenerated artefacts. `python3 scripts/generate_release_artifacts.py --check`
-is the non-mutating equivalent (CI runs the `--check` form). `pytest` must
+is the non-mutating equivalent (CI runs the `--check` form).
+`validate_datapackage.py` checks `datapackage.json` against the
+Frictionless Data Package spec independently of the pytest harness; it
+must end with `ok: datapackage.json metadata valid`. `pytest` must
 report all tests passing. `git diff --check` must produce no output.
 
 ## Release artefacts
