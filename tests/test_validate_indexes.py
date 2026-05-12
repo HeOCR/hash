@@ -39,31 +39,100 @@ def test_current_indexes_validate() -> None:
     assert "recipe ok" in result.stdout
 
 
-def test_recipe_missing_required_field_is_rejected(tmp_path: Path) -> None:
-    recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
-    del recipe["license_urls"]
-
+def _write_recipe(tmp_path: Path, recipe: dict) -> Path:
     bad_recipe = tmp_path / "release_recipe.json"
     bad_recipe.write_text(json.dumps(recipe, ensure_ascii=False) + "\n", encoding="utf-8")
+    return bad_recipe
+
+
+def test_recipe_missing_required_top_level_field_is_rejected(tmp_path: Path) -> None:
+    recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
+    del recipe["license_urls"]
+    bad_recipe = _write_recipe(tmp_path, recipe)
 
     result = run_validator("--recipe", bad_recipe)
 
     assert result.returncode != 0
-    assert "license_urls" in result.stderr
+    assert "'license_urls' is a required property" in result.stderr
     assert str(bad_recipe) in result.stderr
+
+
+def test_recipe_missing_required_nested_field_is_rejected(tmp_path: Path) -> None:
+    recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
+    del recipe["metadata_license"]["spdx"]
+    bad_recipe = _write_recipe(tmp_path, recipe)
+
+    result = run_validator("--recipe", bad_recipe)
+
+    assert result.returncode != 0
+    assert "metadata_license:" in result.stderr
+    assert "'spdx' is a required property" in result.stderr
 
 
 def test_recipe_with_unknown_top_level_key_is_rejected(tmp_path: Path) -> None:
     recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
     recipe["surprise"] = "not allowed"
-
-    bad_recipe = tmp_path / "release_recipe.json"
-    bad_recipe.write_text(json.dumps(recipe, ensure_ascii=False) + "\n", encoding="utf-8")
+    bad_recipe = _write_recipe(tmp_path, recipe)
 
     result = run_validator("--recipe", bad_recipe)
 
     assert result.returncode != 0
-    assert "surprise" in result.stderr
+    assert "Additional properties are not allowed" in result.stderr
+    assert "'surprise'" in result.stderr
+
+
+def test_recipe_with_wrong_type_is_rejected(tmp_path: Path) -> None:
+    recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
+    recipe["version"] = 1
+    bad_recipe = _write_recipe(tmp_path, recipe)
+
+    result = run_validator("--recipe", bad_recipe)
+
+    assert result.returncode != 0
+    assert "version:" in result.stderr
+    assert "is not of type 'string'" in result.stderr
+
+
+def test_recipe_with_non_uri_license_url_is_rejected(tmp_path: Path) -> None:
+    # Regression guard: format: uri must actually run. Requires the
+    # jsonschema[format] extra in requirements-dev.txt.
+    recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
+    recipe["license_urls"]["CC0-1.0"] = "not a url"
+    bad_recipe = _write_recipe(tmp_path, recipe)
+
+    result = run_validator("--recipe", bad_recipe)
+
+    assert result.returncode != 0
+    assert "license_urls" in result.stderr
+    assert "'uri'" in result.stderr
+
+
+def test_recipe_metadata_license_spdx_missing_from_license_names_is_rejected(
+    tmp_path: Path,
+) -> None:
+    recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
+    del recipe["license_names"][recipe["metadata_license"]["spdx"]]
+    bad_recipe = _write_recipe(tmp_path, recipe)
+
+    result = run_validator("--recipe", bad_recipe)
+
+    assert result.returncode != 0
+    assert "metadata_license.spdx" in result.stderr
+    assert "license_names" in result.stderr
+
+
+def test_recipe_license_urls_missing_from_license_names_is_rejected(
+    tmp_path: Path,
+) -> None:
+    recipe = json.loads(RECIPE.read_text(encoding="utf-8"))
+    recipe["license_urls"]["LicenseRef-Orphan"] = "https://example.com/orphan"
+    bad_recipe = _write_recipe(tmp_path, recipe)
+
+    result = run_validator("--recipe", bad_recipe)
+
+    assert result.returncode != 0
+    assert "license_urls" in result.stderr
+    assert "LicenseRef-Orphan" in result.stderr
 
 
 def test_schema_errors_are_rejected(tmp_path: Path) -> None:

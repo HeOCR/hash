@@ -92,6 +92,24 @@ def validate_recipe(path: Path, validator: Draft202012Validator) -> None:
         location = ".".join(str(part) for part in first.path) or "<root>"
         raise SystemExit(f"{path}: {location}: {first.message}")
 
+    # Cross-keyset checks the schema cannot express. The generator falls back to
+    # the SPDX id when license_names is missing an entry, so a missing name
+    # silently degrades NOTICE.md / CITATION.cff output instead of erroring.
+    license_names: dict[str, str] = recipe["license_names"]
+    license_urls: dict[str, str] = recipe["license_urls"]
+    metadata_spdx = recipe["metadata_license"]["spdx"]
+    if metadata_spdx not in license_names:
+        raise SystemExit(
+            f"{path}: metadata_license.spdx: "
+            f"{metadata_spdx!r} must also appear as a key in license_names"
+        )
+    missing_names = sorted(set(license_urls) - set(license_names))
+    if missing_names:
+        raise SystemExit(
+            f"{path}: license_urls: "
+            f"keys missing from license_names: {missing_names}"
+        )
+
 
 def validate_entries(entries: list[dict[str, Any]], source_ids: set[str]) -> None:
     entry_ids: set[str] = set()
@@ -188,11 +206,13 @@ def main() -> None:
         load_schema(args.recipe_schema), format_checker=FormatChecker()
     )
 
+    # Recipe first: it is one small file, so a typo should not cost a full
+    # file-integrity hash pass before surfacing.
+    validate_recipe(args.recipe, recipe_validator)
     sources = load_jsonl(args.sources, source_validator, "source_id")
     entries = load_jsonl(args.entries, entry_validator, "entry_id")
     validate_entries(entries, {source["source_id"] for source in sources})
     verified = validate_entry_files(entries, REPO_ROOT)
-    validate_recipe(args.recipe, recipe_validator)
 
     print(
         f"ok: {len(sources)} sources, {len(entries)} entries, "
