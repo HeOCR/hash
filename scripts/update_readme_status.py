@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """Rewrite the README.md "Current Status" block from datapackage.json stats.
 
-The block is delimited by HTML comment markers:
+The dynamic block is delimited by HTML comment markers:
 
     <!-- begin:status -->
-    ...
+    ...generated content (heading + numbers + license breakdown)...
     <!-- end:status -->
 
+    Any static prose after <!-- end:status --> is left untouched.
+
 The script reads stats directly from datapackage.json (the on-disk CI-gated
-manifest) so that the README and the manifest are always derived from the same
-source of truth.
+manifest) so that the README and the manifest share a single source of truth.
 
 Use --check to verify the on-disk README matches what would be generated
 without touching the tree.
@@ -30,17 +31,6 @@ README_PATH = REPO_ROOT / "README.md"
 BEGIN_MARKER = "<!-- begin:status -->"
 END_MARKER = "<!-- end:status -->"
 
-# Verbatim static paragraph at the end of the "Current Status" block.
-# This text never changes unless the licensing policy itself changes, so it
-# is intentionally hard-coded here rather than derived from the manifest.
-_STATIC_PARAGRAPH = (
-    "The repository uses a compound licensing model: repository-authored metadata\n"
-    "is dedicated to the public domain under CC0 1.0 (see [`LICENSE`](LICENSE)),\n"
-    "while per-scan rights are recorded individually in each entry. See\n"
-    "[`LICENSE.md`](LICENSE.md) for the full policy, including the CC BY-SA\n"
-    "ShareAlike caveat and the rules for remix-friendly release bundles."
-)
-
 
 def _load_datapackage(path: Path) -> dict[str, Any]:
     if not path.exists():
@@ -60,12 +50,12 @@ def build_readme_section(datapackage: dict[str, Any]) -> str:
     stats = datapackage["stats"]
     record_count = stats["record_count"]
     entry_source_count = stats["entry_source_count"]
-    size_mb = f"{stats['scan_byte_count'] / (1024 * 1024):.2f}"
+    size_mib = f"{stats['scan_byte_count'] / (1024 * 1024):.2f}"
     source_status = stats["source_status_breakdown"]
     candidate_count = source_status.get("candidate", 0)
     rejected_count = source_status.get("rejected", 0)
 
-    # Build name → title map from the scan-scoped license listings in the manifest.
+    # Build name → title map from scan-scoped license listings in the manifest.
     license_title_map: dict[str, str] = {
         lic["name"]: lic["title"]
         for lic in datapackage.get("licenses", [])
@@ -86,30 +76,34 @@ def build_readme_section(datapackage: dict[str, Any]) -> str:
             license_lines.append(f"- {count} `{license_id}`")
     license_block = "\n".join(license_lines)
 
+    paragraph = (
+        f"The corpus currently contains {record_count} ingested scans drawn from "
+        f"{entry_source_count} verified sources, totalling ~{size_mib} MiB on disk. "
+        f"The source-level index also tracks {candidate_count} candidate leads "
+        f"still being researched and {rejected_count} source records kept for "
+        f"provenance after being rejected as out of scope."
+    )
+
     return (
         f"## Current Status\n"
         f"\n"
-        f"The corpus currently contains {record_count} ingested scans drawn from "
-        f"{entry_source_count} verified sources,\n"
-        f"totalling ~{size_mb} MB on disk. The source-level index also tracks "
-        f"{candidate_count} candidate\n"
-        f"leads still being researched and {rejected_count} source records kept "
-        f"for provenance after\n"
-        f"being rejected as out of scope.\n"
+        f"{paragraph}\n"
         f"\n"
         f"License breakdown across the {record_count} entries:\n"
         f"\n"
-        f"{license_block}\n"
-        f"\n"
-        f"{_STATIC_PARAGRAPH}"
+        f"{license_block}"
     )
 
 
-def _replace_status_section(readme_text: str, new_section: str) -> str:
+def _replace_status_section(
+    readme_text: str,
+    new_section: str,
+    readme_path: Path,
+) -> str:
     if BEGIN_MARKER not in readme_text:
-        raise SystemExit(f"README.md: missing '{BEGIN_MARKER}' marker")
+        raise SystemExit(f"{readme_path}: missing '{BEGIN_MARKER}' marker")
     if END_MARKER not in readme_text:
-        raise SystemExit(f"README.md: missing '{END_MARKER}' marker")
+        raise SystemExit(f"{readme_path}: missing '{END_MARKER}' marker")
     before, rest = readme_text.split(BEGIN_MARKER, 1)
     _, after = rest.split(END_MARKER, 1)
     return before + BEGIN_MARKER + "\n" + new_section + "\n" + END_MARKER + after
@@ -118,22 +112,28 @@ def _replace_status_section(readme_text: str, new_section: str) -> str:
 def update(
     datapackage_path: Path = DATAPACKAGE_PATH,
     readme_path: Path = README_PATH,
-) -> None:
+) -> bool:
+    """Rewrite the status section. Returns True if the file was changed."""
     datapackage = _load_datapackage(datapackage_path)
     section = build_readme_section(datapackage)
     readme_text = readme_path.read_text(encoding="utf-8")
-    new_text = _replace_status_section(readme_text, section)
+    new_text = _replace_status_section(readme_text, section, readme_path)
+    if new_text == readme_text:
+        return False
     readme_path.write_text(new_text, encoding="utf-8")
+    return True
 
 
 def check(
     datapackage_path: Path = DATAPACKAGE_PATH,
     readme_path: Path = README_PATH,
 ) -> list[Path]:
+    if not readme_path.exists():
+        raise SystemExit(f"{readme_path}: file does not exist")
     datapackage = _load_datapackage(datapackage_path)
     section = build_readme_section(datapackage)
-    readme_text = readme_path.read_text(encoding="utf-8") if readme_path.exists() else ""
-    expected = _replace_status_section(readme_text, section)
+    readme_text = readme_path.read_text(encoding="utf-8")
+    expected = _replace_status_section(readme_text, section, readme_path)
     if readme_text != expected:
         return [readme_path]
     return []
@@ -172,12 +172,15 @@ def main() -> None:
         print("ok: README.md status section is up to date")
         return
 
-    update(datapackage_path=args.datapackage, readme_path=args.readme)
+    changed = update(datapackage_path=args.datapackage, readme_path=args.readme)
     try:
         display = args.readme.relative_to(REPO_ROOT)
     except ValueError:
         display = args.readme
-    print(f"wrote: {display}")
+    if changed:
+        print(f"wrote: {display}")
+    else:
+        print(f"ok: {display} already up to date")
 
 
 if __name__ == "__main__":
