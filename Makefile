@@ -4,16 +4,18 @@
 
 PYTHON ?= python3
 
+.DEFAULT_GOAL := help
 .PHONY: help validate artifacts exports release test all check
 
 help:
 	@echo "Targets:"
-	@echo "  validate   - run scripts/validate_indexes.py (schema + file integrity)"
-	@echo "  artifacts  - regenerate NOTICE.md, CITATION.cff, datapackage.json"
+	@echo "  validate   - run scripts/validate_indexes.py + validate_datapackage.py"
+	@echo "  artifacts  - regenerate NOTICE.md, CITATION.cff, datapackage.json,"
+	@echo "               and the README status section"
 	@echo "  exports    - regenerate exports/*.csv and dist/entries.parquet"
-	@echo "  release    - assemble dist/<package>-<version>.tar.gz"
+	@echo "  release    - run 'check' first, then assemble dist/<package>-<version>.tar.gz"
 	@echo "  test       - run pytest"
-	@echo "  check      - validate + artifacts --check + exports --check + test"
+	@echo "  check      - validate + all --check gates + pytest + git diff --check"
 	@echo "  all        - validate + artifacts + exports + test + release"
 
 validate:
@@ -27,7 +29,12 @@ artifacts:
 exports:
 	$(PYTHON) scripts/build_exports.py
 
-release: artifacts exports
+# `release` deliberately depends on `check`, not on `artifacts` / `exports`.
+# A release target that silently rewrites committed files (NOTICE.md,
+# datapackage.json, exports/*.csv) is a footgun: the resulting tarball would
+# not match any committed git state. `make check` enforces that everything is
+# already in sync; only then do we build the tarball.
+release: check
 	$(PYTHON) scripts/build_release.py
 
 test:
@@ -40,5 +47,6 @@ check:
 	$(PYTHON) scripts/update_readme_status.py --check
 	$(PYTHON) scripts/build_exports.py --check
 	$(PYTHON) -m pytest
+	git diff --check
 
 all: validate artifacts exports test release

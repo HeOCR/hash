@@ -17,21 +17,24 @@ The bundle includes:
   CITATION.cff              Citation File Format (generated)
   datapackage.json          Frictionless Data Package manifest (generated)
   README.md                 repo README
-  MANIFEST.txt              generated: per-file path, bytes, sha256
+  MANIFEST.txt              generated: per-file sha256, bytes, path
 
 The tarball name is `<package_name>-<version>.tar.gz`, drawn from
 `datapackage.json`. Inside the archive every path is rooted at the same
 `<package_name>-<version>/` directory so `tar xzf` produces a single
 versioned folder.
 
-Each TarInfo is normalised (uid/gid 0, mtime 0, mode 0o644 for files,
-0o755 for dirs) so the tarball is reproducible: same inputs, byte-identical
-archive within a single Python/tar build.
+Each TarInfo and the outer gzip header are timestamped with
+`released_at` from `datapackage.json` (which itself tracks
+`max(provenance.acquired_at)` across the entries), so the tarball is
+reproducible: same inputs → byte-identical archive, with file mtimes that
+reflect the actual corpus release date rather than 1970-01-01.
 """
 
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import gzip
 import hashlib
 import io
@@ -63,14 +66,23 @@ INCLUDED_FILES: tuple[str, ...] = (
 )
 
 
-def _load_version(datapackage_path: Path) -> tuple[str, str]:
+def _load_release_metadata(datapackage_path: Path) -> tuple[str, str, int]:
+    """Return (name, version, released_at_epoch) from datapackage.json."""
     if not datapackage_path.exists():
         raise SystemExit(
             f"{datapackage_path}: file does not exist. "
             f"Run `python3 scripts/generate_release_artifacts.py` first."
         )
     descriptor = json.loads(datapackage_path.read_text(encoding="utf-8"))
-    return descriptor["name"], descriptor["version"]
+    released_at = descriptor["released_at"]
+    # `released_at` is ISO 8601 with a "Z" suffix; fromisoformat in 3.11+
+    # handles "Z" natively but parse defensively to support older runners.
+    if released_at.endswith("Z"):
+        released_at = released_at[:-1] + "+00:00"
+    timestamp = int(
+        dt.datetime.fromisoformat(released_at).astimezone(dt.timezone.utc).timestamp()
+    )
+    return descriptor["name"], descriptor["version"], timestamp
 
 
 def _gather_paths(repo_root: Path) -> list[Path]:
@@ -101,28 +113,26 @@ def _sha256(path: Path) -> str:
 def _build_manifest(paths: list[Path], repo_root: Path) -> bytes:
     """Return MANIFEST.txt as bytes: `<sha256>  <bytes>  <relative_path>`.
 
-    Includes MANIFEST.txt as the last line, with `-` placeholders for its own
-    sha256 and bytes (since both are unknown until after this text is built).
-    Consumers that need to verify MANIFEST.txt should verify the tarball's
-    detached signature instead.
+    MANIFEST.txt does not list itself. Consumers who need to verify the
+    manifest should re-run `scripts/build_release.py` and diff, or rely on
+    the detached signature shipped alongside the tarball at release time.
     """
     lines = []
     for path in paths:
         relative = path.relative_to(repo_root).as_posix()
         lines.append(f"{_sha256(path)}  {path.stat().st_size:>12}  {relative}")
-    lines.append(f"{'-' * 64}  {'-' * 12}  MANIFEST.txt")
     return ("\n".join(lines) + "\n").encode("utf-8")
 
 
 def _archive_member(
-    name: str, *, is_dir: bool = False, size: int = 0
+    name: str, *, mtime: int, is_dir: bool = False, size: int = 0
 ) -> tarfile.TarInfo:
     info = tarfile.TarInfo(name=name)
     info.uid = 0
     info.gid = 0
     info.uname = ""
     info.gname = ""
-    info.mtime = 0
+    info.mtime = mtime
     if is_dir:
         info.type = tarfile.DIRTYPE
         info.mode = 0o755
@@ -139,37 +149,37 @@ def build_tarball(
     manifest_bytes: bytes,
     archive_root: str,
     repo_root: Path,
+    mtime: int,
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # Write the tar payload to an in-memory buffer first so we can wrap it in a
-    # gzip stream with an explicit mtime=0 header. `tarfile.open(mode="w:gz")`
-    # writes the current wall-clock time into the gzip header, which would make
-    # the archive bytes drift across runs even though the inner tar is
-    # reproducible.
-    tar_buffer = io.BytesIO()
-    with tarfile.open(
-        fileobj=tar_buffer, mode="w", format=tarfile.PAX_FORMAT
-    ) as tar:
-        # Single top-level dir entry so `tar xzf` produces one versioned folder.
-        tar.addfile(_archive_member(archive_root + "/", is_dir=True))
-
-        for path in paths:
-            relative = path.relative_to(repo_root).as_posix()
-            data = path.read_bytes()
-            info = _archive_member(f"{archive_root}/{relative}", size=len(data))
-            tar.addfile(info, io.BytesIO(data))
-
-        manifest_info = _archive_member(
-            f"{archive_root}/MANIFEST.txt", size=len(manifest_bytes)
-        )
-        tar.addfile(manifest_info, io.BytesIO(manifest_bytes))
-
+    # Chain gzip → tarfile so the tar payload streams through gzip without
+    # buffering the whole 45+ MiB archive in memory. Setting mtime on the
+    # gzip header (not the wall clock, which is what tarfile.open("w:gz")
+    # would write) is what makes the outer .tar.gz byte-deterministic.
     with open(output_path, "wb") as raw:
         with gzip.GzipFile(
-            filename="", mode="wb", fileobj=raw, mtime=0, compresslevel=9
+            filename="", mode="wb", fileobj=raw, mtime=mtime, compresslevel=9
         ) as gz:
-            gz.write(tar_buffer.getvalue())
+            with tarfile.open(
+                fileobj=gz, mode="w", format=tarfile.PAX_FORMAT
+            ) as tar:
+                tar.addfile(
+                    _archive_member(archive_root + "/", mtime=mtime, is_dir=True)
+                )
+                for path in paths:
+                    relative = path.relative_to(repo_root).as_posix()
+                    data = path.read_bytes()
+                    info = _archive_member(
+                        f"{archive_root}/{relative}", mtime=mtime, size=len(data)
+                    )
+                    tar.addfile(info, io.BytesIO(data))
+                manifest_info = _archive_member(
+                    f"{archive_root}/MANIFEST.txt",
+                    mtime=mtime,
+                    size=len(manifest_bytes),
+                )
+                tar.addfile(manifest_info, io.BytesIO(manifest_bytes))
 
 
 def generate(
@@ -177,7 +187,7 @@ def generate(
     datapackage_path: Path = DATAPACKAGE_PATH,
     dist_dir: Path = DIST_DIR,
 ) -> Path:
-    name, version = _load_version(datapackage_path)
+    name, version, mtime = _load_release_metadata(datapackage_path)
     archive_root = f"{name}-{version}"
     output_path = dist_dir / f"{archive_root}.tar.gz"
 
@@ -189,6 +199,7 @@ def generate(
         manifest_bytes=manifest_bytes,
         archive_root=archive_root,
         repo_root=repo_root,
+        mtime=mtime,
     )
     return output_path
 
