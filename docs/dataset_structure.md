@@ -64,14 +64,25 @@ Use newline-delimited JSON as the canonical editable serialization:
 JSONL is preferred over CSV because each source and scan needs nested rights
 evidence, acquisition instructions, provenance, dimensions, checksums, and
 quality annotations. JSONL is still easy for agents to append, stream, diff, and
-validate. Analytics-oriented exports can be generated later:
+validate. Analytics-oriented flat exports are derived from the JSONL by
+`scripts/build_exports.py`:
 
-- `exports/sources.csv` for spreadsheets,
-- `exports/entries.csv` for simple review,
-- `exports/entries.parquet` for large-scale ML or data-engineering workflows,
-- `exports/catalog.sqlite` for local search.
+- `exports/entries.csv` — one row per scan, with `files[role=="original"]`
+  flattened into `file_*` columns and `creator_count` / `file_count`
+  summary columns (committed).
+- `exports/sources.csv` — one row per source row (committed).
+- `exports/creators.csv` — one row per `(entry_id, position, creator)`
+  pair, so consumers can join on `entry_id` without positional gymnastics
+  inside a single cell (committed).
+- `dist/entries.parquet` — same shape as `entries.csv` with preserved
+  types (nullable booleans, `int64` file sizes). Produced under `dist/`
+  as an uncommitted build artefact, not under `exports/`, because it is
+  binary and large enough to be unfriendly to git diffs.
 
-Those exports should be treated as derived artifacts, not the source of truth.
+A SQLite catalog (`exports/catalog.sqlite` or `dist/catalog.sqlite`) is
+not built today; add one if and when downstream consumers ask for offline
+SQL search. Exports are derived artefacts — the JSONL is still the source
+of truth.
 
 ## Source Index
 
