@@ -28,6 +28,7 @@ is local-only.
 python3 scripts/validate_indexes.py
 python3 scripts/generate_release_artifacts.py
 python3 scripts/validate_datapackage.py
+python3 scripts/update_readme_status.py
 python3 -m pytest
 git diff --check
 ```
@@ -40,8 +41,16 @@ regenerated artefacts. `python3 scripts/generate_release_artifacts.py --check`
 is the non-mutating equivalent (CI runs the `--check` form).
 `validate_datapackage.py` checks `datapackage.json` against the
 Frictionless Data Package spec independently of the pytest harness; it
-must end with `ok: datapackage.json metadata valid`. `pytest` must
-report all tests passing. `git diff --check` must produce no output.
+must end with `ok: datapackage.json metadata valid`.
+`update_readme_status.py` rewrites the `<!-- begin:status --> /
+<!-- end:status -->` block in `README.md` from `datapackage.json` — re-run it
+after any ingest PR regenerates `datapackage.json` and stage the updated
+`README.md`. It must leave `README.md` unchanged in the diff (i.e., run it,
+then `git diff README.md` must be empty). `python3
+scripts/update_readme_status.py --check` is the non-mutating equivalent (CI
+runs the `--check` form); it must end with `ok: README.md status section is up
+to date`. `pytest` must report all tests passing. `git diff --check` must
+produce no output.
 
 ## Release artefacts
 
