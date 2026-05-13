@@ -20,7 +20,7 @@ The machine-readable contracts are
 ## Mandatory pre-PR commands
 
 Run these from the repo root before opening or updating a PR. The
-first four are also run in CI (`.github/workflows/ci.yml`) on every
+first five are also run in CI (`.github/workflows/ci.yml`) on every
 push to `main` and every PR — they must stay green; `git diff --check`
 is local-only.
 
@@ -29,6 +29,7 @@ python3 scripts/validate_indexes.py
 python3 scripts/generate_release_artifacts.py
 python3 scripts/validate_datapackage.py
 python3 scripts/update_readme_status.py
+python3 scripts/build_exports.py
 python3 -m pytest
 git diff --check
 ```
@@ -49,7 +50,12 @@ after any ingest PR regenerates `datapackage.json` and stage the updated
 then `git diff README.md` must be empty). `python3
 scripts/update_readme_status.py --check` is the non-mutating equivalent (CI
 runs the `--check` form); it must end with `ok: README.md status section is up
-to date`. `pytest` must report all tests passing. `git diff --check` must
+to date`. `build_exports.py` rewrites `exports/entries.csv` and
+`exports/sources.csv` (and `dist/entries.parquet`, which is uncommitted) from
+`data/index/*.jsonl` — re-run it after any ingest PR and stage the regenerated
+CSVs. `python3 scripts/build_exports.py --check` is the non-mutating
+equivalent (CI runs the `--check` form); it must end with `ok: CSV exports are
+up to date`. `pytest` must report all tests passing. `git diff --check` must
 produce no output.
 
 ## Release artefacts
@@ -61,6 +67,17 @@ generated deterministically from `data/index/*.jsonl` and
 which means every ingest PR will bump these timestamps — that is intentional
 and avoids a manually-maintained release-date field. Regenerate by running
 `python3 scripts/generate_release_artifacts.py` from the repo root.
+
+`exports/entries.csv` and `exports/sources.csv` are flat tabular views of the
+JSONL indexes, regenerated deterministically by
+`python3 scripts/build_exports.py`. They are committed so that downstream
+spreadsheet / pandas users can clone the repo and use the data without a build
+step, and so PR diffs surface column-level changes. Parquet
+(`dist/entries.parquet`) and the release tarball
+(`dist/<name>-<version>.tar.gz`, produced by `python3 scripts/build_release.py`)
+are build artefacts under `dist/`, which is `.gitignore`d. The `Makefile` at
+the repo root wraps these commands (`make exports`, `make release`, `make
+check`, `make all`).
 
 ## GitHub workflow
 
@@ -256,6 +273,7 @@ The following are already in `.gitignore` and should never appear in a diff:
 - `.claude/` — local agent session state.
 - `.DS_Store` — macOS Finder metadata.
 - `__pycache__/`, `*.pyc`, `*.pyo`, `*.pyd` — Python bytecode caches.
+- `dist/` — release build artefacts (Parquet exports, tarball).
 
 If `git status` shows any of these as untracked, leave them untracked. Do
 not `git add -f` to override the ignore.

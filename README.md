@@ -29,16 +29,33 @@ The canonical editable indexes are newline-delimited JSON (`.jsonl`).
 
 JSONL is deliberately used instead of CSV because these records need nested
 rights evidence, multiple URLs, per-field provenance, quality measurements,
-and acquisition state. CSV or TSV exports can be generated later for browsing;
-Parquet or SQLite exports can be generated later for analytics; the source of
-truth stays line-oriented, diffable, streamable JSON.
+and acquisition state. The source of truth stays line-oriented, diffable,
+streamable JSON.
 
-Run the current validation check with:
+## Flat Exports
+
+For spreadsheet / pandas / data-engineering workflows the repo ships flat
+derived views of the indexes under `exports/`:
+
+- `exports/entries.csv` — one row per scan, with `files[role=="original"]`
+  flattened into `file_*` columns and `creator_count` / `file_count`
+  summary columns.
+- `exports/sources.csv` — one row per source row.
+- `exports/creators.csv` — one row per `(entry_id, creator)` pair (use this
+  when you need creator names / death years / authority URLs without
+  doing positional gymnastics inside a single cell).
+- `dist/entries.parquet` — same shape as `entries.csv` with preserved
+  types (nullable booleans, int64 file sizes). Produced under `dist/`
+  (uncommitted build artefact).
+
+Regenerate the exports and rebuild the release tarball with:
 
 ```bash
 python3 -m pip install -r requirements-dev.txt
 python3 scripts/validate_indexes.py
 python3 -m pytest
+make exports
+make release
 ```
 
 <!-- begin:status -->
