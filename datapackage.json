@@ -50,7 +50,7 @@
   "released_at": "2026-05-15T00:00:00Z",
   "resources": [
     {
-      "bytes": 174002,
+      "bytes": 174332,
       "description": "Scan-level index. One JSON object per page, with rights evidence, file checksums, and provenance.",
       "encoding": "utf-8",
       "format": "jsonl",
