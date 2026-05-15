@@ -47,10 +47,10 @@
   ],
   "name": "public-domain-hand-written-hebrew-scans",
   "profile": "data-package",
-  "released_at": "2026-05-11T12:04:00Z",
+  "released_at": "2026-05-15T00:00:00Z",
   "resources": [
     {
-      "bytes": 168006,
+      "bytes": 174002,
       "description": "Scan-level index. One JSON object per page, with rights evidence, file checksums, and provenance.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -58,10 +58,10 @@
       "name": "entries",
       "path": "data/index/entries.jsonl",
       "profile": "data-resource",
-      "record_count": 60
+      "record_count": 62
     },
     {
-      "bytes": 120331,
+      "bytes": 122306,
       "description": "Source-level catalog. One JSON object per institution, collection, item, dataset, or source lead.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -78,7 +78,7 @@
   },
   "stats": {
     "attribution_required_count": 2,
-    "entry_source_count": 45,
+    "entry_source_count": 46,
     "institution_breakdown": {
       "Bibliothèque nationale de France": 1,
       "Bodleian Libraries": 3,
@@ -94,15 +94,16 @@
       "CC-BY-SA-4.0": 2,
       "LicenseRef-Public-Domain-Israel": 5,
       "LicenseRef-Public-Domain-Ukraine": 2,
-      "PDM-1.0": 51
+      "PDM-1.0": 53
     },
-    "record_count": 60,
-    "scan_byte_count": 47463804,
+    "record_count": 62,
+    "scan_byte_count": 48117382,
     "source_record_count": 60,
     "source_status_breakdown": {
-      "candidate": 12,
+      "candidate": 10,
+      "needs_review": 1,
       "rejected": 3,
-      "verified": 45
+      "verified": 46
     }
   },
   "title": "Public Domain Hand-Written Hebrew Scans",
