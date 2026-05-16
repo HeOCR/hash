@@ -47,10 +47,10 @@
   ],
   "name": "public-domain-hand-written-hebrew-scans",
   "profile": "data-package",
-  "released_at": "2026-05-15T00:00:00Z",
+  "released_at": "2026-05-16T20:47:03Z",
   "resources": [
     {
-      "bytes": 174332,
+      "bytes": 1169776,
       "description": "Scan-level index. One JSON object per page, with rights evidence, file checksums, and provenance.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -58,10 +58,10 @@
       "name": "entries",
       "path": "data/index/entries.jsonl",
       "profile": "data-resource",
-      "record_count": 62
+      "record_count": 389
     },
     {
-      "bytes": 126240,
+      "bytes": 124879,
       "description": "Source-level catalog. One JSON object per institution, collection, item, dataset, or source lead.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -77,8 +77,8 @@
     "source": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/source.schema.json"
   },
   "stats": {
-    "attribution_required_count": 2,
-    "entry_source_count": 46,
+    "attribution_required_count": 329,
+    "entry_source_count": 51,
     "institution_breakdown": {
       "Bibliothèque nationale de France": 1,
       "Bodleian Libraries": 3,
@@ -86,23 +86,23 @@
       "Gross Family Collection, Tel Aviv": 6,
       "Hungarian Academy of Sciences, Kaufmann Genizah Collection": 4,
       "Jewish Theological Seminary": 1,
-      "National Library of Israel": 2,
+      "National Library of Israel": 329,
       "University of Pennsylvania, Halper Collection": 2,
       "Österreichische Nationalbibliothek": 1
     },
     "license_breakdown": {
       "CC-BY-SA-4.0": 2,
-      "LicenseRef-Public-Domain-Israel": 5,
+      "LicenseRef-Public-Domain-Israel": 332,
       "LicenseRef-Public-Domain-Ukraine": 2,
       "PDM-1.0": 53
     },
-    "record_count": 62,
-    "scan_byte_count": 48117382,
+    "record_count": 389,
+    "scan_byte_count": 475977782,
     "source_record_count": 60,
     "source_status_breakdown": {
-      "candidate": 10,
+      "candidate": 4,
       "rejected": 4,
-      "verified": 46
+      "verified": 52
     }
   },
   "title": "Public Domain Hand-Written Hebrew Scans",

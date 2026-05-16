@@ -7,7 +7,7 @@ Repository-authored metadata is dedicated to the public domain under CC0 1.0 Uni
 Scan files carry per-entry rights. The entries listed below carry a license that requires attribution (currently CC-BY-4.0, CC-BY-SA-4.0). Anyone redistributing or reusing these scans must keep the listed credit and link to the source page on which the rights claim was verified.
 
 - Corpus release: `0.1.0-rc`
-- Released at: `2026-05-15T00:00:00Z`
+- Released at: `2026-05-16T20:47:03Z`
 
 ## Attribution-required entries
 
@@ -27,6 +27,2949 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Source page: <https://commons.wikimedia.org/wiki/File:Cod._Hebr._120_-_Zalman_Stern_1849_---_12a.jpg>
 - Scan file URL: <https://upload.wikimedia.org/wikipedia/commons/6/6a/Cod._Hebr._120_-_Zalman_Stern_1849_---_12a.jpg>
 - Holding institution: Österreichische Nationalbibliothek (Cod. Hebr. 120, fol. 12a)
+
+### Pocket diary 1939, Hannah Senesh, page 1
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0001`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 2
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0002`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 3
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0003`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 4
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0004`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 5
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0005`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 6
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0006`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 7
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0007`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 8
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0008`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 9
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0009`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 10
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0010`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 11
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0011`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 12
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0012`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 13
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0013`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 14
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0014`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 15
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0015`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 16
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0016`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 17
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0017`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 18
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0018`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 19
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0019`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 20
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0020`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 21
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0021`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 22
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0022`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 23
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0023`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 24
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0024`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 25
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0025`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 26
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0026`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 27
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0027`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 28
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0028`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 29
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0029`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 30
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0030`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 31
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0031`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 32
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0032`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 33
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0033`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 34
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0034`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 35
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0035`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 36
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0036`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 37
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0037`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 38
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0038`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 39
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0039`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 40
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0040`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 41
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0041`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 42
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0042`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 43
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0043`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 44
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0044`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 45
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0045`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 46
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0046`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 47
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0047`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 48
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0048`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 49
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0049`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 50
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0050`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 51
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0051`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 52
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0052`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 53
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0053`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 54
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0054`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 55
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0055`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 56
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0056`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 57
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0057`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 58
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0058`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 59
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0059`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 60
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0060`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 61
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0061`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 62
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0062`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 63
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0063`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 64
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0064`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 65
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0065`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 66
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0066`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 67
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0067`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 68
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0068`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 69
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0069`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 70
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0070`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 71
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0071`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 72
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0072`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 73
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0073`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 74
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0074`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 75
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0075`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 76
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0076`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 77
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0077`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 78
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0078`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 79
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0079`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 80
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0080`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 81
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0081`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 82
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0082`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 83
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0083`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 84
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0084`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 85
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0085`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 86
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0086`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 87
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0087`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 88
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0088`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 89
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0089`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 90
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0090`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 91
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0091`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 92
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0092`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 93
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0093`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 94
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0094`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 95
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0095`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 96
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0096`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 97
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0097`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 98
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0098`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 99
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0099`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 100
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0100`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 101
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0101`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 102
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0102`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 103
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0103`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 104
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0104`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 105
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0105`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 106
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0106`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 107
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0107`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 108
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0108`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 109
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0109`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 110
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0110`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Pocket diary 1939, Hannah Senesh, page 111
+
+- Entry: `nli__nnl_archive_al997009761278705171__p0111`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009761278705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009761278705171)
+
+### Handwritten speech draft, Hannah Senesh, page 1
+
+- Entry: `nli__nnl_archive_al997009831775705171__p0001`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009831775705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009831775705171)
+
+### Handwritten speech draft, Hannah Senesh, page 2
+
+- Entry: `nli__nnl_archive_al997009831775705171__p0002`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009831775705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009831775705171)
+
+### Handwritten speech draft, Hannah Senesh, page 3
+
+- Entry: `nli__nnl_archive_al997009831775705171__p0003`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009831775705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009831775705171)
+
+### Handwritten speech draft, Hannah Senesh, page 4
+
+- Entry: `nli__nnl_archive_al997009831775705171__p0004`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009831775705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009831775705171)
+
+### Hebrew poem notebook, Hannah Senesh, page 1
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0001`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 2
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0002`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 3
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0003`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 4
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0004`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 5
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0005`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 6
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0006`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 7
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0007`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 8
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0008`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 9
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0009`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 10
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0010`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 11
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0011`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 12
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0012`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 13
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0013`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 14
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0014`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 15
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0015`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 16
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0016`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 17
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0017`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 18
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0018`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 19
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0019`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 20
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0020`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Hebrew poem notebook, Hannah Senesh, page 21
+
+- Entry: `nli__nnl_archive_al997009912248405171__p0021`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 1
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0001`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 2
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0002`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 3
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0003`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 4
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0004`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 5
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0005`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 6
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0006`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 7
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0007`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 8
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0008`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 9
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0009`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 10
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0010`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 11
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0011`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 12
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0012`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 13
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0013`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 14
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0014`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 15
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0015`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 16
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0016`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 17
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0017`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 18
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0018`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 19
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0019`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 20
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0020`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 21
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0021`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 22
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0022`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 23
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0023`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 24
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0024`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 25
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0025`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 26
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0026`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 27
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0027`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 28
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0028`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 29
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0029`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 30
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0030`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 31
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0031`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 32
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0032`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 33
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0033`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 34
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0034`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 35
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0035`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 36
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0036`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 37
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0037`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 38
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0038`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 39
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0039`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 40
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0040`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 41
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0041`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 42
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0042`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 43
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0043`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 44
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0044`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 45
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0045`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 46
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0046`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 47
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0047`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 48
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0048`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 49
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0049`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 50
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0050`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 51
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0051`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 52
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0052`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 53
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0053`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 54
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0054`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 55
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0055`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 56
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0056`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 57
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0057`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 58
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0058`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 59
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0059`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 60
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0060`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 61
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0061`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 62
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0062`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 63
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0063`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 64
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0064`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 65
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0065`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 66
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0066`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 67
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0067`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 68
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0068`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 69
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0069`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 70
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0070`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 71
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0071`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 72
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0072`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 73
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0073`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 74
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0074`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 75
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0075`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 76
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0076`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 77
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0077`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 78
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0078`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 79
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0079`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 80
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0080`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 81
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0081`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 82
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0082`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 83
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0083`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 84
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0084`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 85
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0085`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 86
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0086`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 87
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0087`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 88
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0088`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 89
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0089`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Handwritten diary and Violin draft, Hannah Senesh, page 90
+
+- Entry: `nli__nnl_archive_al997009912248505171__p0090`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248505171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248505171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 1
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0001`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 2
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0002`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 3
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0003`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 4
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0004`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 5
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0005`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 6
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0006`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 7
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0007`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 8
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0008`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 9
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0009`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 10
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0010`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 11
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0011`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 12
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0012`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 13
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0013`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 14
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0014`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 15
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0015`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 16
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0016`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 17
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0017`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 18
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0018`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 19
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0019`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 20
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0020`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 21
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0021`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 22
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0022`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 23
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0023`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 24
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0024`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 25
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0025`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 26
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0026`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 27
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0027`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 28
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0028`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 29
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0029`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 30
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0030`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 31
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0031`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 32
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0032`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 33
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0033`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 34
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0034`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 35
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0035`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 36
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0036`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 37
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0037`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 38
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0038`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 39
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0039`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 40
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0040`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 41
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0041`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 42
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0042`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 43
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0043`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 44
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0044`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 45
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0045`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 46
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0046`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 47
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0047`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 48
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0048`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 49
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0049`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 50
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0050`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 51
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0051`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 52
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0052`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 53
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0053`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 54
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0054`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 55
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0055`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 56
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0056`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 57
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0057`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 58
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0058`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 59
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0059`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 60
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0060`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 61
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0061`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 62
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0062`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 63
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0063`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 64
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0064`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 65
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0065`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 66
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0066`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 67
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0067`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 68
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0068`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 69
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0069`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 70
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0070`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 71
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0071`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 72
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0072`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 73
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0073`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 74
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0074`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 75
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0075`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 76
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0076`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 77
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0077`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 78
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0078`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 79
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0079`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 80
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0080`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 81
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0081`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 82
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0082`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 83
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0083`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 84
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0084`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 85
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0085`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 86
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0086`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 87
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0087`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 88
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0088`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 89
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0089`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 90
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0090`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 91
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0091`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 92
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0092`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 93
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0093`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 94
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0094`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 95
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0095`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 96
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0096`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 97
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0097`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 98
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0098`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 99
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0099`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 100
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0100`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
+
+### Hebrew/Hungarian diary, Hannah Senesh, page 101
+
+- Entry: `nli__nnl_archive_al997009912248705171__p0101`
+- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
+- Licensor: Hannah Senesh; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
+- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248705171/NLI>
+- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248705171)
 
 ## Full per-entry rights
 

@@ -21,7 +21,9 @@ import hashlib
 import json
 import shutil
 import sys
+import tempfile
 import time
+import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -83,11 +85,17 @@ RIGHTS = {
     "commercial_use_allowed": True,
     "derivatives_allowed": True,
     "scan_redistribution_allowed": True,
-    "attribution_required": False,
-    "attribution_text": None,
-    "attribution_url": None,
+    "attribution_required": True,
+    "attribution_text": "Hannah Senesh; National Library of Israel",
+    "attribution_url": "https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI",
     "verification_status": "primary_page_checked",
-    "evidence_text": "NLI item page displays 'Any Use Permitted' and 'Public Domain in Israel' labels.",
+    "evidence_text": (
+        "NLI item page 'Any Use Permitted': 'You may copy and use the item for any purpose. "
+        "There is no need to contact the National Library for permission to use the item. "
+        "This item is part of the Public Domain and is not subject to copyright restrictions "
+        "in the State of Israel. Any use of this item must include the creator's name and "
+        "indicate its source in the National Library of Israel's collections.'"
+    ),
     "terms_url": None,
     "verified_at": "2026-05-16",
 }
@@ -280,8 +288,48 @@ def promote_sources(sources: list[dict], ingested_source_ids: set[str]) -> None:
             src["status"] = "verified"
 
 
+def expand_zips(zip_path: Path) -> list[Path]:
+    """Extract a nli_senesh_*.zip into a temp dir, returning sorted image paths.
+
+    The zip stem determines the filename prefix used for the extracted pages,
+    so nli_senesh_diary_violin.zip -> nli_senesh_diary_violin_p0001.jpg etc.
+    Files are extracted to a sibling temp directory and the paths returned for
+    normal per-file ingestion.
+    """
+    stem = zip_path.stem  # e.g. nli_senesh_diary_violin
+    result = find_prefix(zip_path.name)
+    if result is None:
+        print(f"  [skip] {zip_path.name}: no matching prefix in zip filename")
+        return []
+
+    tmp_dir = Path(tempfile.mkdtemp(prefix=f"nli_senesh_{stem}_"))
+    with zipfile.ZipFile(zip_path) as zf:
+        image_names = sorted(
+            n for n in zf.namelist()
+            if Path(n).suffix.lower() in (".jpg", ".jpeg", ".png")
+            and not Path(n).name.startswith(".")
+            and "__MACOSX" not in n
+        )
+        if not image_names:
+            print(f"  [skip] {zip_path.name}: no image files inside zip")
+            return []
+        zf.extractall(tmp_dir, members=image_names)
+
+    extracted: list[Path] = []
+    for seq, name in enumerate(image_names, start=1):
+        src = tmp_dir / name
+        ext = Path(name).suffix.lower()
+        dest_name = f"{stem}_p{seq:03d}{ext}"
+        dest = tmp_dir / dest_name
+        src.rename(dest)
+        extracted.append(dest)
+
+    print(f"  [zip] {zip_path.name}: extracted {len(extracted)} page(s)")
+    return extracted
+
+
 def main(watch_minutes: int = 30) -> None:
-    print(f"Watching {DOWNLOADS_DIR} for nli_senesh_*.{{jpg,jpeg,png,pdf}} files...")
+    print(f"Watching {DOWNLOADS_DIR} for nli_senesh_*.{{jpg,jpeg,png,pdf,zip}} ...")
     print(f"Will watch for up to {watch_minutes} minutes.")
 
     deadline = time.time() + watch_minutes * 60
@@ -293,6 +341,7 @@ def main(watch_minutes: int = 30) -> None:
             str(DOWNLOADS_DIR / "nli_senesh_*.jpeg"),
             str(DOWNLOADS_DIR / "nli_senesh_*.png"),
             str(DOWNLOADS_DIR / "nli_senesh_*.pdf"),
+            str(DOWNLOADS_DIR / "nli_senesh_*.zip"),
         ]
         found_files = []
         for pat in patterns:
@@ -307,29 +356,37 @@ def main(watch_minutes: int = 30) -> None:
             ingested_source_ids: set[str] = set()
             new_entries: list[dict] = []
 
+            # Expand any zips into individual image paths first
+            image_files: list[Path] = []
             for fpath in sorted(new_files):
                 dl_path = Path(fpath)
+                if dl_path.suffix.lower() == ".zip":
+                    image_files.extend(expand_zips(dl_path))
+                    processed.add(fpath)
+                else:
+                    image_files.append(dl_path)
+
+            for dl_path in image_files:
                 print(f"  Processing: {dl_path.name}")
                 entry = ingest_file(dl_path)
                 if entry is None:
-                    processed.add(fpath)
+                    processed.add(str(dl_path))
                     continue
 
                 entry_id = entry["entry_id"]
                 if entry_id in existing_ids:
                     print(f"    [skip] {entry_id} already in entries.jsonl")
-                    processed.add(fpath)
+                    processed.add(str(dl_path))
                     continue
 
                 new_entries.append(entry)
                 ingested_source_ids.add(entry["source_id"])
                 existing_ids.add(entry_id)
-                processed.add(fpath)
+                processed.add(str(dl_path))
                 print(f"    -> {entry_id} ({entry['files'][0]['local_path']})")
 
             if new_entries:
                 entries.extend(new_entries)
-                # Sort entries by entry_id for cleanliness
                 entries.sort(key=lambda e: e["entry_id"])
                 save_jsonl(ENTRIES_PATH, entries)
                 promote_sources(sources, ingested_source_ids)
