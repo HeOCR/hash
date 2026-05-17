@@ -139,7 +139,10 @@ def _attribution_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
     selected = [
         entry
         for entry in entries
-        if entry["rights"].get("license_expression") in ATTRIBUTION_REQUIRING_LICENSES
+        if (
+            entry["rights"].get("license_expression") in ATTRIBUTION_REQUIRING_LICENSES
+            or entry["rights"].get("attribution_required") is True
+        )
     ]
     return sorted(selected, key=lambda entry: entry["entry_id"])
 
