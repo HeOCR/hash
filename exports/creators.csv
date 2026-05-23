@@ -1,5 +1,7 @@
 entry_id,position,name,role,death_year,authority_url
+commons__auerbach_letter_shtenzel_1961__p0001,0,Shlomo Zalman Auerbach,author,1995,
 commons__begani_netatikha__p0001,0,Rachel Bluwstein,author,1931,https://www.wikidata.org/wiki/Q241180
+commons__bendin_semichah_shtenzel_1933__p0001,0,Rabbinical Court of Będzin,author,,
 commons__bialik_el_hazippor__p0001,0,Hayyim Nahman Bialik,author,1934,https://www.wikidata.org/wiki/Q189518
 commons__bialik_letter_safed_1927__p0001,0,Hayyim Nahman Bialik,author,1934,https://www.wikidata.org/wiki/Q189518
 commons__bialik_letter_safed_1927__p0002,0,Hayyim Nahman Bialik,author,1934,https://www.wikidata.org/wiki/Q189518
@@ -33,6 +35,8 @@ commons__leningrad_codex_folio_474a__p0001,0,Shmuel ben Ya'akov,writer,,https://
 commons__mahzor_vitry_1204__p0001,0,Unknown 13th-century scribe,writer,,
 commons__mahzor_vitry_1204__p0001,1,Simcha ben Samuel of Vitry,author,1105,https://www.wikidata.org/wiki/Q1473023
 commons__maimonides_responsum_ts_ns_163_57__p0001,0,Moses Maimonides,writer,1204,https://www.wikidata.org/wiki/Q127398
+commons__manger_unter_di_khurves__p0001,0,Itzik Manger,author,1969,https://www.wikidata.org/wiki/Q1001688
+commons__manger_unter_di_khurves__p0002,0,Itzik Manger,author,1969,https://www.wikidata.org/wiki/Q1001688
 commons__mardumsk_haskama_1931__p0001,0,Shlomo Hanokh HaKohen Rabinowicz,author,1942,
 commons__mira_ben_ari_letter__p0001,0,Mira Ben-Ari,author,1948,
 commons__more_nevuchim_yemenite__p0001,0,Unknown Yemenite scribe,writer,,
@@ -63,6 +67,11 @@ commons__tsherniak_postcard_1913__p0001,0,Shalom Shakhna Tsherniak,author,1937,
 commons__tsherniak_postcard_1913__p0002,0,Shalom Shakhna Tsherniak,author,1937,
 commons__volozhin_letter_shapira_1930__p0001,0,Yaʻakov Shapira,author,1936,
 commons__volozhin_letter_shapira_1930__p0002,0,Yaʻakov Shapira,author,1936,
+commons__weidenfeld_eruv_letter_1947__p0001,0,Dov Berish Weidenfeld,author,1966,
+commons__weidenfeld_letter_shtenzel_1959__p0001,0,Dov Berish Weidenfeld,author,1966,
+commons__wosner_halachic_ruling_1981__p0001,0,Shmuel Halevi Wosner,author,2015,
+commons__wosner_letter_halakhah_yomit_1986__p0001,0,Shmuel Halevi Wosner,author,2015,
+commons__wosner_support_letter_1990__p0001,0,Shmuel Halevi Wosner,author,2015,
 commons__zalman_stern_cod_hebr_120__p0001,0,Unknown 14th-century scribe,writer,,
 commons__zalman_stern_cod_hebr_120__p0001,1,Zalman Stern,signatory,,
 nli__nnl_archive_al997009761278705171__p0001,0,Hannah Senesh,author,1944,https://www.wikidata.org/wiki/Q231364
