@@ -214,7 +214,7 @@ def test_datapackage_validates_against_frictionless_spec() -> None:
     # round-trip test: the whole point of using a published spec is that
     # downstream tooling can parse it.
     package = Package(str(DATAPACKAGE))
-    assert package.name == "public-domain-hand-written-hebrew-scans"
+    assert package.name == "hash"
     assert package.version == "0.1.0-rc"
 
     errors = list(Package.metadata_validate(package.to_descriptor()))

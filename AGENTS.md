@@ -248,7 +248,7 @@ page (and that is what `evidence_text` must quote).
 When fetching from `upload.wikimedia.org`:
 
 - Send a descriptive `User-Agent` header. This repo uses
-  `public-domain-hand-written-hebrew-scans-ingest/1.0 (https://github.com/HeOCR/public-domain-hand-written-hebrew-scans)`.
+  `hash-ingest/1.0 (https://github.com/HeOCR/hash)`.
 - Space requests roughly 2 seconds apart. Aggressive batches get rate-limited.
 - On HTTP 429, back off ~90 seconds (empirically reliable in this repo, not a
   Wikimedia-published rate limit) and retry only the failed subset. Do not

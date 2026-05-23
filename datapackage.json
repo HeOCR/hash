@@ -6,7 +6,7 @@
     }
   ],
   "description": "A small, agent-friendly dataset of public-domain (or permissively licensed) scans of handwritten Hebrew documents, paired with per-scan rights evidence. The index is line-oriented JSON (JSONL); rights are recorded at both source and scan level instead of relying on collection-level claims.",
-  "homepage": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans",
+  "homepage": "https://github.com/HeOCR/hash",
   "keywords": [
     "Hebrew",
     "dataset",
@@ -45,7 +45,7 @@
       "title": "Public Domain Mark 1.0"
     }
   ],
-  "name": "public-domain-hand-written-hebrew-scans",
+  "name": "hash",
   "profile": "data-package",
   "released_at": "2026-05-16T20:47:03Z",
   "resources": [
@@ -73,8 +73,8 @@
     }
   ],
   "schemas": {
-    "entry": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/entry.schema.json",
-    "source": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/source.schema.json"
+    "entry": "https://github.com/HeOCR/hash/blob/main/schemas/entry.schema.json",
+    "source": "https://github.com/HeOCR/hash/blob/main/schemas/source.schema.json"
   },
   "stats": {
     "attribution_required_count": 276,
@@ -105,6 +105,6 @@
       "verified": 52
     }
   },
-  "title": "Public Domain Hand-Written Hebrew Scans",
+  "title": "HASH — Hebrew Archive of Scanned Handwriting",
   "version": "0.1.0-rc"
 }
