@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/schemas/entry.schema.json",
+  "$id": "https://github.com/HeOCR/hash/schemas/entry.schema.json",
   "title": "Handwritten Hebrew Scan Entry",
   "type": "object",
   "required": [

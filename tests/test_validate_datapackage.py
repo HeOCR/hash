@@ -27,7 +27,7 @@ def test_live_datapackage_validates() -> None:
 
     assert result.returncode == 0, result.stderr
     assert result.stdout.startswith("ok: datapackage.json metadata valid"), result.stdout
-    assert "public-domain-hand-written-hebrew-scans" in result.stdout
+    assert "hash" in result.stdout
     assert "v0.1.0-rc" in result.stdout
 
 

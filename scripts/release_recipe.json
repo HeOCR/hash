@@ -1,10 +1,10 @@
 {
-  "name": "public-domain-hand-written-hebrew-scans",
-  "title": "Public Domain Hand-Written Hebrew Scans",
+  "name": "hash",
+  "title": "HASH — Hebrew Archive of Scanned Handwriting",
   "version": "0.1.0-rc",
   "description": "A small, agent-friendly dataset of public-domain (or permissively licensed) scans of handwritten Hebrew documents, paired with per-scan rights evidence. The index is line-oriented JSON (JSONL); rights are recorded at both source and scan level instead of relying on collection-level claims.",
-  "homepage": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans",
-  "repository_code": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans",
+  "homepage": "https://github.com/HeOCR/hash",
+  "repository_code": "https://github.com/HeOCR/hash",
   "authors": [
     {"name": "Shay Palachy-Affek", "role": "maintainer"}
   ],
@@ -35,8 +35,8 @@
     "LicenseRef-Public-Domain-Ukraine": "Public Domain (Ukraine; life + 70)"
   },
   "schema_urls": {
-    "entry": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/entry.schema.json",
-    "source": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/blob/main/schemas/source.schema.json"
+    "entry": "https://github.com/HeOCR/hash/blob/main/schemas/entry.schema.json",
+    "source": "https://github.com/HeOCR/hash/blob/main/schemas/source.schema.json"
   },
   "citation_identifiers": [],
   "resources": {

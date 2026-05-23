@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/HeOCR/public-domain-hand-written-hebrew-scans/schemas/release_recipe.schema.json",
+  "$id": "https://github.com/HeOCR/hash/schemas/release_recipe.schema.json",
   "title": "Release Recipe",
   "description": "Stable inputs consumed by scripts/generate_release_artifacts.py to produce NOTICE.md, CITATION.cff, and datapackage.json. Every field exercised by the generator is required; the generator uses strict recipe[\"field\"] access, so a missing key would otherwise surface as a KeyError mid-render.",
   "type": "object",

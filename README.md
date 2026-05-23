@@ -1,8 +1,8 @@
-# Public Domain Hand-Written Hebrew Scans
+# HASH — Hebrew Archive of Scanned Handwriting
 
-This repository is intended to be a simple, agent-friendly dataset of scanned
-handwritten Hebrew notes, letters, notebook pages, drafts, forms, and similar
-documents from the modern Hebrew handwriting period.
+A simple, agent-friendly dataset of scanned handwritten Hebrew notes, letters,
+notebook pages, drafts, forms, and similar documents from the modern Hebrew
+handwriting period.
 
 The target corpus is limited to scans that can be redistributed and transformed
 for downstream uses, including substantial remixing and machine-learning
