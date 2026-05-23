@@ -7,9 +7,41 @@ Repository-authored metadata is dedicated to the public domain under CC0 1.0 Uni
 Scan files carry per-entry rights. The entries listed below carry a license that requires attribution (currently CC-BY-4.0, CC-BY-SA-4.0). Anyone redistributing or reusing these scans must keep the listed credit and link to the source page on which the rights claim was verified.
 
 - Corpus release: `0.1.0-rc`
-- Released at: `2026-05-16T20:47:03Z`
+- Released at: `2026-05-23T20:31:45Z`
 
 ## Attribution-required entries
+
+### Rabbi Shlomo Zalman Auerbach letter on daily Mishnah study (1961)
+
+- Entry: `commons__auerbach_letter_shtenzel_1961__p0001`
+- License: [Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA-3.0)](https://creativecommons.org/licenses/by-sa/3.0/)
+- Licensor: Shlomo Zalman Auerbach; Wikimedia Commons / Mimi4040
+- Source page: <https://commons.wikimedia.org/wiki/File:%D7%94%D7%A8%D7%91_%D7%A9%D7%9C%D7%9E%D7%94_%D7%96%D7%9C%D7%9E%D7%9F_%D7%90%D7%95%D7%99%D7%99%D7%A8%D7%91%D7%9A_%D7%91%D7%9E%D7%9B%D7%AA%D7%91_%D7%9C%D7%A8%D7%91%D7%99_%D7%99%D7%95%D7%A0%D7%94_%D7%A9%D7%98%D7%A0%D7%A6%D7%9C_%D7%90%D7%95%D7%93%D7%95%D7%AA_%D7%9C%D7%99%D7%9E%D7%95%D7%93_%D7%94%D7%9E%D7%A9%D7%A0%D7%94_%D7%94%D7%99%D7%95%D7%9E%D7%99%D7%AA.pdf>
+- Holding institution: Wikimedia Commons (הרב_שלמה_זלמן_אויירבך_במכתב_לרבי_יונה_שטנצל_אודות_לימוד_המשנה_היומית.pdf)
+
+### Rabbinical ordination (semichah) from the Będzin Rabbinic Court for Rabbi Yona Shtenzel (1933)
+
+- Entry: `commons__bendin_semichah_shtenzel_1933__p0001`
+- License: [Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA-3.0)](https://creativecommons.org/licenses/by-sa/3.0/)
+- Licensor: Rabbinical Court of Będzin; Wikimedia Commons / Mimi4040
+- Source page: <https://commons.wikimedia.org/wiki/File:%D7%9B%D7%AA%D7%91_%D7%A1%D7%9E%D7%99%D7%9B%D7%94_%D7%A9%D7%9C_%D7%91%D7%99%D7%AA_%D7%93%D7%99%D7%9F_%D7%91%D7%A0%D7%93%D7%99%D7%9F_%D7%A2%D7%91%D7%95%D7%A8_%D7%94%D7%A8%D7%91_%D7%99%D7%95%D7%A0%D7%94_%D7%A9%D7%98%D7%A0%D7%A6%D7%9C.pdf>
+- Holding institution: Wikimedia Commons (כתב_סמיכה_של_בית_דין_בנדין_עבור_הרב_יונה_שטנצל.pdf)
+
+### Manuscript of Itzik Manger's 'Unter di Khurves' (Among the Ruins), page 1
+
+- Entry: `commons__manger_unter_di_khurves__p0001`
+- License: [Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA-3.0)](https://creativecommons.org/licenses/by-sa/3.0/)
+- Licensor: Itzik Manger; Wikimedia Commons
+- Source page: <https://commons.wikimedia.org/wiki/File:Manuscript_of_Itzik_Manger%27s_Unter_di_Khurves_I.jpg>
+- Holding institution: Wikimedia Commons (Manuscript_of_Itzik_Manger's_Unter_di_Khurves_I.jpg)
+
+### Manuscript of Itzik Manger's 'Unter di Khurves' (Among the Ruins), page 2
+
+- Entry: `commons__manger_unter_di_khurves__p0002`
+- License: [Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA-3.0)](https://creativecommons.org/licenses/by-sa/3.0/)
+- Licensor: Itzik Manger; Wikimedia Commons
+- Source page: <https://commons.wikimedia.org/wiki/File:Manuscript_of_Itzik_Manger%27s_Unter_di_Khurves_II.jpg>
+- Holding institution: Wikimedia Commons (Manuscript_of_Itzik_Manger's_Unter_di_Khurves_II.jpg)
 
 ### Title page of a Yemenite Pirke de-Rabbi Eliezer manuscript (1876)
 
@@ -18,6 +50,46 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Licensor: User:Davidbena via Wikimedia Commons, CC BY-SA 4.0
 - Source page: <https://commons.wikimedia.org/wiki/File:Yemenite_MSS._(Pirke_Rebbe_Eliezer)_Copied_in_1876.jpg>
 - Scan file URL: <https://upload.wikimedia.org/wikipedia/commons/b/ba/Yemenite_MSS._%28Pirke_Rebbe_Eliezer%29_Copied_in_1876.jpg>
+
+### Rabbi Dov Berish Weidenfeld letter on Eruv to Rabbi Yona Shtenzel (1947, second side)
+
+- Entry: `commons__weidenfeld_eruv_letter_1947__p0001`
+- License: [Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA-3.0)](https://creativecommons.org/licenses/by-sa/3.0/)
+- Licensor: Dov Berish Weidenfeld; Wikimedia Commons / Mimi4040
+- Source page: <https://commons.wikimedia.org/wiki/File:%D7%9E%D7%9B%D7%AA%D7%91_%D7%90%D7%95%D7%93%D7%95%D7%AA_%D7%A2%D7%99%D7%A8%D7%95%D7%91_%D7%91%D7%A2%D7%A8%D7%91_%D7%A9%D7%91%D7%AA_%D7%94%D7%A8%D7%91_%D7%93%D7%95%D7%91_%D7%91%D7%A2%D7%A8%D7%99%D7%A9_%D7%95%D7%99%D7%93%D7%A0%D7%A4%D7%9C%D7%93_%D7%9C%D7%A8%D7%91%D7%99_%D7%99%D7%95%D7%A0%D7%94_%D7%A9%D7%98%D7%A0%D7%A6%D7%9C_%D7%A6%D7%93_%D7%A9%D7%A0%D7%99.pdf>
+- Holding institution: Wikimedia Commons (מכתב_אודות_עירוב_בערב_שבת_הרב_דוב_בעריש_וידנפלד_לרבי_יונה_שטנצל_צד_שני.pdf)
+
+### Rabbi Dov Berish Weidenfeld (Tchebiner Gaon) on the importance of daily halacha study (1959)
+
+- Entry: `commons__weidenfeld_letter_shtenzel_1959__p0001`
+- License: [Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA-3.0)](https://creativecommons.org/licenses/by-sa/3.0/)
+- Licensor: Dov Berish Weidenfeld; Wikimedia Commons / Mimi4040
+- Source page: <https://commons.wikimedia.org/wiki/File:%D7%94%D7%A8%D7%91_%D7%93%D7%91_%D7%91%D7%A8%D7%99%D7%A9_%D7%95%D7%99%D7%93%D7%A0%D7%A4%D7%9C%D7%93_%D7%A2%D7%9C_%D7%97%D7%A9%D7%99%D7%91%D7%95%D7%AA_%D7%9C%D7%99%D7%9E%D7%95%D7%93_%D7%94%D7%9C%D7%9B%D7%94_%D7%99%D7%95%D7%9E%D7%99%D7%AA_%D7%A9%D7%9C_%D7%94%D7%A8%D7%91_%D7%99%D7%95%D7%A0%D7%94_%D7%A9%D7%98%D7%A0%D7%A6%D7%9C_%D7%96%D7%A6%D7%9C.JPG>
+- Holding institution: Wikimedia Commons (הרב_דב_בריש_וידנפלד_על_חשיבות_לימוד_הלכה_יומית_של_הרב_יונה_שטנצל_זצל.JPG)
+
+### Handwritten halachic ruling by Rabbi Shmuel Halevi Wosner (1981)
+
+- Entry: `commons__wosner_halachic_ruling_1981__p0001`
+- License: [Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA-3.0)](https://creativecommons.org/licenses/by-sa/3.0/)
+- Licensor: Shmuel Halevi Wosner; Wikimedia Commons / Mimi4040
+- Source page: <https://commons.wikimedia.org/wiki/File:%D7%A4%D7%A1%D7%A7_%D7%94%D7%9C%D7%9B%D7%AA%D7%99_%D7%91%D7%9B%D7%AA%D7%91_%D7%99%D7%93%D7%95_%D7%A9%D7%9C_%D7%94%D7%A8%D7%91_%D7%95%D7%95%D7%90%D7%96%D7%A0%D7%A8.pdf>
+- Holding institution: Wikimedia Commons (פסק_הלכתי_בכתב_ידו_של_הרב_וואזנר.pdf)
+
+### Rabbi Shmuel Halevi Wosner on daily halacha study (1986)
+
+- Entry: `commons__wosner_letter_halakhah_yomit_1986__p0001`
+- License: [Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA-3.0)](https://creativecommons.org/licenses/by-sa/3.0/)
+- Licensor: Shmuel Halevi Wosner; Wikimedia Commons / Mimi4040
+- Source page: <https://commons.wikimedia.org/wiki/File:%D7%94%D7%A8%D7%91_%D7%A9%D7%9E%D7%95%D7%90%D7%9C_%D7%94%D7%9C%D7%95%D7%99_%D7%95%D7%95%D7%90%D7%96%D7%A0%D7%A8_%D7%A2%D7%9C_%D7%9C%D7%99%D7%9E%D7%95%D7%93_%D7%94%D7%9C%D7%9B%D7%94_%D7%99%D7%95%D7%9E%D7%99%D7%AA.JPG>
+- Holding institution: Wikimedia Commons (הרב_שמואל_הלוי_וואזנר_על_לימוד_הלכה_יומית.JPG)
+
+### Rabbi Shmuel Halevi Wosner support letter for the national Mishnah competition (1990)
+
+- Entry: `commons__wosner_support_letter_1990__p0001`
+- License: [Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA-3.0)](https://creativecommons.org/licenses/by-sa/3.0/)
+- Licensor: Shmuel Halevi Wosner; Wikimedia Commons / Mimi4040
+- Source page: <https://commons.wikimedia.org/wiki/File:%D7%9E%D7%9B%D7%AA%D7%91_%D7%AA%D7%9E%D7%99%D7%9B%D7%94_%D7%A9%D7%9C_%D7%94%D7%A8%D7%91_%D7%A9%D7%9E%D7%95%D7%90%D7%9C_%D7%94%D7%9C%D7%95%D7%99_%D7%95%D7%95%D7%90%D7%96%D7%A0%D7%A8_%D7%9C%D7%99%D7%95%22%D7%A8_%D7%94%D7%97%D7%99%D7%93%D7%95%D7%9F_%D7%94%D7%90%D7%A8%D7%A6%D7%99_%D7%A9%D7%9C_%D7%97%D7%AA%D7%9E_%D7%94%D7%9E%D7%A9%D7%A0%D7%94_%D7%94%D7%A8%D7%91_%D7%A9%D7%9C%D7%9E%D7%94_%D7%A9%D7%98%D7%A0%D7%A6%D7%9C.pdf>
+- Holding institution: Wikimedia Commons (מכתב_תמיכה_של_הרב_שמואל_הלוי_וואזנר_ליו"ר_החידון_הארצי_של_חתן_המשנה_הרב_שלמה_שטנצל.pdf)
 
 ### Vienna Cod. Hebr. 120, fol. 12a (ex-libris Zalman Stern 1849)
 

@@ -23,6 +23,12 @@
       "title": "Creative Commons Zero v1.0 Universal"
     },
     {
+      "name": "CC-BY-SA-3.0",
+      "path": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "scope": "scans",
+      "title": "Creative Commons Attribution-ShareAlike 3.0 Unported"
+    },
+    {
       "name": "CC-BY-SA-4.0",
       "path": "https://creativecommons.org/licenses/by-sa/4.0/",
       "scope": "scans",
@@ -47,10 +53,10 @@
   ],
   "name": "hash",
   "profile": "data-package",
-  "released_at": "2026-05-16T20:47:03Z",
+  "released_at": "2026-05-23T20:31:45Z",
   "resources": [
     {
-      "bytes": 1002194,
+      "bytes": 1033740,
       "description": "Scan-level index. One JSON object per page, with rights evidence, file checksums, and provenance.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -58,10 +64,10 @@
       "name": "entries",
       "path": "data/index/entries.jsonl",
       "profile": "data-resource",
-      "record_count": 336
+      "record_count": 345
     },
     {
-      "bytes": 124879,
+      "bytes": 158772,
       "description": "Source-level catalog. One JSON object per institution, collection, item, dataset, or source lead.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -69,7 +75,7 @@
       "name": "sources",
       "path": "data/index/sources.jsonl",
       "profile": "data-resource",
-      "record_count": 60
+      "record_count": 77
     }
   ],
   "schemas": {
@@ -77,8 +83,8 @@
     "source": "https://github.com/HeOCR/hash/blob/main/schemas/source.schema.json"
   },
   "stats": {
-    "attribution_required_count": 276,
-    "entry_source_count": 51,
+    "attribution_required_count": 285,
+    "entry_source_count": 59,
     "institution_breakdown": {
       "Bibliothèque nationale de France": 1,
       "Bodleian Libraries": 3,
@@ -88,21 +94,23 @@
       "Jewish Theological Seminary": 1,
       "National Library of Israel": 276,
       "University of Pennsylvania, Halper Collection": 2,
+      "Wikimedia Commons": 9,
       "Österreichische Nationalbibliothek": 1
     },
     "license_breakdown": {
+      "CC-BY-SA-3.0": 9,
       "CC-BY-SA-4.0": 2,
       "LicenseRef-Public-Domain-Israel": 279,
       "LicenseRef-Public-Domain-Ukraine": 2,
       "PDM-1.0": 53
     },
-    "record_count": 336,
-    "scan_byte_count": 376113019,
-    "source_record_count": 60,
+    "record_count": 345,
+    "scan_byte_count": 389193522,
+    "source_record_count": 77,
     "source_status_breakdown": {
-      "candidate": 4,
-      "rejected": 4,
-      "verified": 52
+      "candidate": 5,
+      "rejected": 12,
+      "verified": 60
     }
   },
   "title": "HASH — Hebrew Archive of Scanned Handwriting",
