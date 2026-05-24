@@ -67,7 +67,7 @@
       "record_count": 345
     },
     {
-      "bytes": 180071,
+      "bytes": 190593,
       "description": "Source-level catalog. One JSON object per institution, collection, item, dataset, or source lead.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -75,7 +75,7 @@
       "name": "sources",
       "path": "data/index/sources.jsonl",
       "profile": "data-resource",
-      "record_count": 90
+      "record_count": 93
     }
   ],
   "schemas": {
@@ -106,9 +106,9 @@
     },
     "record_count": 345,
     "scan_byte_count": 389193522,
-    "source_record_count": 90,
+    "source_record_count": 93,
     "source_status_breakdown": {
-      "candidate": 13,
+      "candidate": 16,
       "needs_review": 1,
       "rejected": 16,
       "verified": 60
