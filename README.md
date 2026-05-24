@@ -1,8 +1,10 @@
 # HASH — Hebrew Archive of Scanned Handwriting
 
-A simple, agent-friendly dataset of scanned handwritten Hebrew notes, letters,
-notebook pages, drafts, forms, and similar documents from the modern Hebrew
-handwriting period.
+A simple, agent-friendly dataset of scanned handwritten Hebrew-script documents
+— notes, letters, notebook pages, drafts, forms, and similar material — from
+the 18th century onward. The focus is everyday cursive Hebrew handwriting
+(כתב יד, not דפוס); Yiddish documents written in the same Hebrew round script
+are also in scope.
 
 The target corpus is limited to scans that can be redistributed and transformed
 for downstream uses, including substantial remixing and machine-learning

@@ -125,20 +125,28 @@ check`, `make all`).
 
 ### In scope
 
-- Hand-WRITTEN Hebrew-script content. Not printed, not typeset.
+- Hand-WRITTEN (כתב יד) Hebrew-script content. Not printed (דפוס), not
+  typeset, not lithographed.
+- **Script target:** the round, cursive Hebrew letter-script used in everyday
+  handwriting from the 18th century onward — the same script used for both
+  Hebrew and Yiddish. Yiddish documents written in Hebrew script are explicitly
+  in scope; the letter-shapes are identical.
+- **Minimum date:** 18th century (c. 1700). Material older than that uses
+  substantially different scribal hands and is out of scope.
 - The allowed `document_type` values are enumerated in
   `schemas/entry.schema.json` (snapshot today: `letter`, `diary`, `notebook`,
   `draft`, `speech`, `receipt`, `form`, `marginalia`, `postcard`, `poem`,
   `other`). The schema is authoritative.
-- Modern Hebrew handwriting is the focus, so post-1929 work is the typical
-  target. Older material is acceptable when the rights situation is clean.
 
 ### Out of scope
 
-- Printed or typeset pages, even if Hebrew.
+- Printed or typeset pages, even if Hebrew or Yiddish.
+- Medieval scribal manuscript hands (pre-18th century).
 - Signature-only crops.
 - Vector teaching samples and synthetic font specimens.
-- Non-Hebrew documents (or pages with no meaningful Hebrew handwriting).
+- Non-Hebrew-script documents (or pages with no meaningful Hebrew-script
+  handwriting). Arabic-script Judeo-Arabic is out of scope; Yiddish in Hebrew
+  script is in scope.
 - Anything still in copyright. Israel uses life + 70: the author must have
   died on or before December 31 of `(current_year − 71)`. If you can't
   establish that, reject.
