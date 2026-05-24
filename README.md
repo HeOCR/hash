@@ -61,7 +61,7 @@ make release
 <!-- begin:status -->
 ## Current Status
 
-The corpus currently contains 345 ingested scans drawn from 59 verified sources, totalling ~371.16 MiB on disk. The source-level index also tracks 5 candidate leads still being researched and 12 source records kept for provenance after being rejected as out of scope.
+The corpus currently contains 345 ingested scans drawn from 59 verified sources, totalling ~371.16 MiB on disk. The source-level index also tracks 13 candidate leads still being researched and 16 source records kept for provenance after being rejected as out of scope.
 
 License breakdown across the 345 entries:
 
