@@ -7,7 +7,7 @@ Repository-authored metadata is dedicated to the public domain under CC0 1.0 Uni
 Scan files carry per-entry rights. The entries listed below carry a license that requires attribution (currently CC-BY-4.0, CC-BY-SA-4.0). Anyone redistributing or reusing these scans must keep the listed credit and link to the source page on which the rights claim was verified.
 
 - Corpus release: `0.1.0-rc`
-- Released at: `2026-05-24T00:00:00Z`
+- Released at: `2026-05-25T00:00:00Z`
 
 ## Attribution-required entries
 
