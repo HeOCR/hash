@@ -63,12 +63,12 @@ make release
 <!-- begin:status -->
 ## Current Status
 
-The corpus currently contains 209 ingested scans drawn from 57 verified sources, totalling ~292.25 MiB on disk. The source-level index also tracks 15 candidate leads still being researched and 37 source records kept for provenance after being rejected as out of scope.
+The corpus currently contains 198 ingested scans drawn from 48 verified sources, totalling ~283.00 MiB on disk. The source-level index also tracks 15 candidate leads still being researched and 46 source records kept for provenance after being rejected as out of scope.
 
-License breakdown across the 209 entries:
+License breakdown across the 198 entries:
 
-- 145 `LicenseRef-Public-Domain-Israel` (Public Domain (Israel; life + 70))
-- 54 `PDM-1.0` (Public Domain Mark 1.0)
+- 144 `LicenseRef-Public-Domain-Israel` (Public Domain (Israel; life + 70))
+- 44 `PDM-1.0` (Public Domain Mark 1.0)
 - 9 `CC-BY-SA-3.0` (Creative Commons Attribution-ShareAlike 3.0 Unported)
 - 1 `LicenseRef-Public-Domain-Ukraine` (Public Domain (Ukraine; life + 70))
 <!-- end:status -->

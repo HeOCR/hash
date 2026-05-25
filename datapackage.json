@@ -50,7 +50,7 @@
   "released_at": "2026-05-25T00:00:00Z",
   "resources": [
     {
-      "bytes": 623236,
+      "bytes": 596414,
       "description": "Scan-level index. One JSON object per page, with rights evidence, file checksums, and provenance.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -58,10 +58,10 @@
       "name": "entries",
       "path": "data/index/entries.jsonl",
       "profile": "data-resource",
-      "record_count": 209
+      "record_count": 198
     },
     {
-      "bytes": 226459,
+      "bytes": 227260,
       "description": "Source-level catalog. One JSON object per institution, collection, item, dataset, or source lead.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -78,31 +78,28 @@
   },
   "stats": {
     "attribution_required_count": 153,
-    "entry_source_count": 57,
+    "entry_source_count": 48,
     "institution_breakdown": {
       "Benjamin Zucker Family Ketubah Collection": 1,
       "Bibliothèque nationale de France": 1,
-      "Bodleian Libraries": 2,
-      "Cambridge University Library, Taylor-Schechter Collection": 1,
-      "Library of Congress": 27,
-      "National Library of Israel": 146,
-      "University of Pennsylvania, Halper Collection": 1,
+      "Library of Congress": 24,
+      "National Library of Israel": 145,
       "Wikimedia Commons": 9
     },
     "license_breakdown": {
       "CC-BY-SA-3.0": 9,
-      "LicenseRef-Public-Domain-Israel": 145,
+      "LicenseRef-Public-Domain-Israel": 144,
       "LicenseRef-Public-Domain-Ukraine": 1,
-      "PDM-1.0": 54
+      "PDM-1.0": 44
     },
-    "record_count": 209,
-    "scan_byte_count": 306446056,
+    "record_count": 198,
+    "scan_byte_count": 296751462,
     "source_record_count": 111,
     "source_status_breakdown": {
       "candidate": 15,
       "needs_review": 1,
-      "rejected": 37,
-      "verified": 58
+      "rejected": 46,
+      "verified": 49
     }
   },
   "title": "HASH — Hebrew Archive of Scanned Handwriting",
