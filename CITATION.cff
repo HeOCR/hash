@@ -3,7 +3,7 @@ cff-version: 1.2.0
 message: Please cite this dataset using the metadata below.
 type: dataset
 title: HASH — Hebrew Archive of Scanned Handwriting
-abstract: A small, agent-friendly dataset of public-domain (or permissively licensed) scans of handwritten Hebrew documents, paired with per-scan rights evidence. The index is line-oriented JSON (JSONL); rights are recorded at both source and scan level instead of relying on collection-level claims. Release 0.1.0-rc contains 373 scan entries drawn from 77 verified sources (9 CC-BY-SA-3.0, 2 CC-BY-SA-4.0, 279 LicenseRef-Public-Domain-Israel, 2 LicenseRef-Public-Domain-Ukraine, 81 PDM-1.0).
+abstract: A small, agent-friendly dataset of public-domain (or permissively licensed) scans of handwritten Hebrew documents, paired with per-scan rights evidence. The index is line-oriented JSON (JSONL); rights are recorded at both source and scan level instead of relying on collection-level claims. Release 0.1.0-rc contains 198 scan entries drawn from 48 verified sources (9 CC-BY-SA-3.0, 144 LicenseRef-Public-Domain-Israel, 1 LicenseRef-Public-Domain-Ukraine, 44 PDM-1.0).
 authors:
 - name: Shay Palachy-Affek
 version: 0.1.0-rc

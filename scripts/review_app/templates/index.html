@@ -1,0 +1,693 @@
+{% extends "base.html" %}
+
+{% block title %}HASH Review — Home{% endblock %}
+
+{% block extra_styles %}
+  /* ── Stats dashboard ── */
+  .stats-dashboard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px 18px;
+    margin-bottom: 32px;
+  }
+
+  .stats-top {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+  .stat-block {
+    flex: 1;
+    min-width: 100px;
+    padding: 0 20px 0 0;
+    border-right: 1px solid var(--border);
+    margin-right: 20px;
+  }
+  .stat-block:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+  .stat-num {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+    letter-spacing: -.5px;
+  }
+  .stat-num.accent  { color: var(--accent); }
+  .stat-num.success { color: var(--success); }
+  .stat-num.warn    { color: var(--warn); }
+  .stat-num.muted   { color: var(--muted); }
+  .stat-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .stat-sub {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* License bar */
+  .lic-section { margin-top: 4px; }
+  .lic-bar-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .lic-bar {
+    display: flex;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    gap: 2px;
+    margin-bottom: 10px;
+  }
+  .lic-bar-seg {
+    height: 100%;
+    border-radius: 2px;
+    transition: opacity .15s;
+  }
+  .lic-bar-seg:hover { opacity: .75; }
+  .lic-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+  .lic-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .lic-dot {
+    width: 9px; height: 9px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .lic-legend-item strong { color: var(--text); }
+  .lic-legend-item .lic-pct { color: var(--muted); font-size: 11px; }
+
+  .section-block { margin-bottom: 40px; }
+
+  /* ── Pending batches ── */
+  .batch-list { display: flex; flex-direction: column; gap: 12px; }
+  .batch-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: border-color .15s;
+  }
+  .batch-card:hover { border-color: var(--accent); }
+  .batch-card .batch-info { flex: 1; min-width: 0; }
+  .batch-card .batch-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 4px;
+  }
+  .batch-card .batch-meta {
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .batch-card .batch-actions { display: flex; gap: 8px; }
+  .progress-bar { height: 4px; background: var(--surface2); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+  .progress-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; }
+
+  /* ── Corpus views ── */
+  .view-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .view-header h2 { margin: 0; }
+  .view-toggle {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .view-toggle-btn {
+    padding: 6px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    background: transparent;
+    color: var(--muted);
+    border: none;
+    border-radius: 0;
+    transition: all .15s;
+  }
+  .view-toggle-btn.active {
+    background: var(--accent);
+    color: #fff;
+  }
+  .view-toggle-btn:hover:not(.active) { color: var(--text); background: var(--surface2); }
+
+  /* ── All-entries view (flat scroll) ── */
+  .entry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  .entry-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    overflow: hidden; display: flex; flex-direction: column; transition: border-color .15s;
+  }
+  .entry-card:hover { border-color: var(--accent); }
+  .entry-card.is-flagged  { border-color: var(--danger); }
+  .entry-card.has-comment { border-color: var(--accent2); }
+  .entry-header { padding: 8px 12px 7px; border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 3px; }
+  .license-tag { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; width: fit-content; }
+  .license-tag.clean   { background: #1a3a2e; color: var(--success); }
+  .license-tag.warning { background: #3a2e1a; color: var(--warn); }
+  .transcript-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 4px; width: fit-content; margin-top: 1px; }
+  .transcript-badge.none { background: var(--surface2); color: var(--muted); }
+  .transcript-badge.has  { background: #1a2240; color: var(--accent); }
+  .entry-img-wrap { background: #000; cursor: zoom-in; position: relative; }
+  .entry-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; transition: opacity .15s; }
+  .entry-card.is-flagged .entry-img { opacity: 0.3; }
+  .entry-img-placeholder { width: 100%; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 40px; background: var(--surface2); }
+  .flag-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+  .flag-overlay span { font-size: 44px; opacity: 0.7; }
+  .entry-body { padding: 10px 12px 8px; flex: 1; display: flex; flex-direction: column; gap: 4px; }
+  .entry-id    { font-family: "SF Mono","Fira Code",monospace; font-size: 10px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .entry-title { font-size: 12px; color: var(--text); line-height: 1.4; }
+  .entry-meta  { font-size: 11px; color: var(--muted); display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
+  .entry-source-lbl { font-size: 10px; color: var(--muted); font-style: italic; }
+  /* Action strip — controlled by global toggle */
+  .action-strip {
+    padding: 8px 12px 10px; border-top: 1px solid var(--border);
+    flex-direction: column; gap: 6px;
+  }
+  .flag-btn { width: 100%; justify-content: center; font-size: 12px; }
+  .entry-card.is-flagged .flag-btn { background: var(--danger); color: #fff; border-color: var(--danger); }
+  .comment-box {
+    width: 100%; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px;
+    color: var(--text); font-size: 12px; padding: 6px 8px;
+    resize: vertical; min-height: 48px; font-family: inherit; transition: border-color .15s;
+  }
+  .comment-box:focus { outline: none; border-color: var(--accent); }
+  .entry-footer { padding: 6px 12px 8px; border-top: 1px solid var(--border); display: flex; gap: 8px; font-size: 11px; }
+  .entry-footer a { color: var(--muted); }
+  .entry-footer a:hover { color: var(--accent); }
+
+  /* Browse save bar */
+  .browse-save-bar {
+    position: sticky; bottom: 0;
+    background: var(--surface); border-top: 1px solid var(--border);
+    padding: 12px 24px; align-items: center; gap: 16px; z-index: 50;
+    margin: 32px -24px -32px;
+  }
+  .browse-save-bar .save-summary { font-size: 13px; color: var(--muted); flex: 1; }
+  #all-save-status {
+    font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; display: none;
+  }
+  #all-save-status.ok     { background: #1a3a2e; color: var(--success); display: inline-block; }
+  #all-save-status.error  { background: #3a1a1f; color: var(--danger);  display: inline-block; }
+  #all-save-status.saving { background: var(--surface2); color: var(--muted); display: inline-block; }
+
+  /* Lightbox */
+  #lightbox-home { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,.88); align-items: center; justify-content: center; cursor: zoom-out; }
+  #lightbox-home.open { display: flex; }
+  #lightbox-home img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 4px; box-shadow: 0 8px 40px rgba(0,0,0,.6); }
+
+  /* ── Group card grid ── */
+  .group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 14px;
+  }
+  .group-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    transition: border-color .15s, transform .1s;
+  }
+  .group-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+  .group-thumb {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    background: var(--surface2);
+    display: block;
+  }
+  .group-thumb-placeholder {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: var(--surface2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 32px;
+  }
+  .group-card-body { padding: 10px 12px 12px; }
+  .group-card-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .group-card-sub { font-size: 11px; color: var(--muted); margin-bottom: 5px; }
+  .group-card-meta {
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+  }
+  .group-card-count {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .lic-chip {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    background: #1a2240;
+    color: var(--accent);
+  }
+
+  .empty-state {
+    padding: 40px 24px;
+    text-align: center;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+  }
+{% endblock %}
+
+{% block content %}
+
+<!-- ── Stats Dashboard ─────────────────────────────────────── -->
+{% if stats %}
+<div class="stats-dashboard">
+
+  <div class="stats-top">
+    <div class="stat-block">
+      <div class="stat-num accent">{{ stats.total }}</div>
+      <div class="stat-label">Entries</div>
+      {% if stats.year_min %}
+      <div class="stat-sub">{{ stats.year_min }}–{{ stats.year_max }}</div>
+      {% endif %}
+    </div>
+
+    <div class="stat-block">
+      <div class="stat-num">{{ stats.source_count }}</div>
+      <div class="stat-label">Sources</div>
+    </div>
+
+    <div class="stat-block">
+      <div class="stat-num">{{ stats.writer_count }}</div>
+      <div class="stat-label">Writers</div>
+    </div>
+
+    <div class="stat-block">
+      {% if stats.transcript_count > 0 %}
+        <div class="stat-num success">{{ stats.transcript_count }}</div>
+        <div class="stat-label">Transcripts</div>
+        <div class="stat-sub">{{ stats.transcript_pct }}% of corpus</div>
+      {% else %}
+        <div class="stat-num muted">0</div>
+        <div class="stat-label">Transcripts</div>
+        <div class="stat-sub">none yet</div>
+      {% endif %}
+    </div>
+
+    {% if stats.warned_count %}
+    <div class="stat-block">
+      <div class="stat-num warn">{{ stats.warned_count }}</div>
+      <div class="stat-label">⚠ Rights unclear</div>
+      <div class="stat-sub">{{ ((stats.warned_count / stats.total) * 100) | round | int }}% of entries</div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="lic-section">
+    <div class="lic-bar-label">License breakdown</div>
+    <div class="lic-bar">
+      {% for lic in stats.licenses %}
+      <div class="lic-bar-seg"
+           style="width:{{ lic.pct }}%; background:{{ lic.color }}"
+           title="{{ lic.expression }}: {{ lic.count }} entries ({{ lic.pct }}%)">
+      </div>
+      {% endfor %}
+    </div>
+    <div class="lic-legend">
+      {% for lic in stats.licenses %}
+      <div class="lic-legend-item">
+        <div class="lic-dot" style="background:{{ lic.color }}"></div>
+        <strong>{{ lic.short }}</strong>
+        <span class="lic-pct">{{ lic.count }} &nbsp;·&nbsp; {{ lic.pct }}%</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+{% endif %}
+
+<!-- ── Pending Batches ──────────────────────────────────────── -->
+{% if pending_batches %}
+<div class="section-block">
+  <p class="section-label">Awaiting Review</p>
+  <div class="batch-list">
+    {% for b in pending_batches %}
+      {% set decided = b.decisions|length %}
+      {% set pct = ((decided / b.total) * 100)|round|int if b.total else 0 %}
+      <div class="batch-card">
+        <div class="batch-info">
+          <div class="batch-name">{{ b.label }}</div>
+          <div class="batch-meta">
+            <span>{{ b.total }} entries</span>
+            {% if b.approved %}<span style="color:var(--success)">{{ b.approved }} accepted</span>{% endif %}
+            {% if b.commented %}<span style="color:var(--warn)">{{ b.commented }} with notes</span>{% endif %}
+            {% if decided %}<span>{{ decided }}/{{ b.total }} reviewed</span>{% else %}<span>Not started</span>{% endif %}
+          </div>
+          {% if decided %}
+          <div class="progress-bar">
+            <div class="progress-bar-fill" style="width:{{ pct }}%"></div>
+          </div>
+          {% endif %}
+        </div>
+        <div class="batch-actions">
+          {% if decided and decided == b.total %}<span class="badge badge-approved">Done</span>
+          {% elif decided %}<span class="badge badge-pending">In progress</span>
+          {% else %}<span class="badge badge-info">New</span>{% endif %}
+          <a href="/review/{{ b.batch_id }}" class="btn btn-primary">Review →</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<!-- ── Corpus Browser ───────────────────────────────────────── -->
+<div class="section-block">
+  <div class="view-header">
+    <h2 style="margin:0">Corpus — {{ total_entries }} entries</h2>
+    <div class="view-toggle">
+      <button class="view-toggle-btn active" id="btn-writer" onclick="switchView('writer')">By Writer</button>
+      <button class="view-toggle-btn"        id="btn-source" onclick="switchView('source')">By Source</button>
+      <button class="view-toggle-btn"        id="btn-all"    onclick="switchView('all')">All Entries</button>
+    </div>
+  </div>
+
+  <!-- By Writer -->
+  <div id="view-writer">
+    {% if writer_groups %}
+    <div class="group-grid">
+      {% for g in writer_groups %}
+      <a class="group-card" href="/writer/{{ g.slug }}">
+        {% if g.sample_thumb %}
+          <img class="group-thumb" src="{{ g.sample_thumb }}" alt="{{ g.name }}"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="group-thumb-placeholder" style="display:none">✍️</div>
+        {% else %}
+          <div class="group-thumb-placeholder">✍️</div>
+        {% endif %}
+        <div class="group-card-body">
+          <div class="group-card-name" title="{{ g.name }}">{{ g.name }}</div>
+          <div class="group-card-sub">
+            {% if g.death_year %}d. {{ g.death_year }}{% endif %}
+          </div>
+          <div class="group-card-meta">
+            <span class="group-card-count">{{ g.entry_count }}</span>
+            <span>entr{{ "y" if g.entry_count == 1 else "ies" }}</span>
+            {% if g.date_range %}<span>· {{ g.date_range }}</span>{% endif %}
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+      <div class="empty-state">No corpus entries yet.</div>
+    {% endif %}
+  </div>
+
+  <!-- All Entries (flat scroll) -->
+  <div id="view-all" style="display:none">
+    <div class="entry-grid" id="all-entry-grid">
+    {% for e in all_entries %}
+    {% set r = e.rights %}
+    {% set t = e._transcript %}
+    {% set dec = e._decision %}
+    {% set is_flagged = dec.get('status') == 'rejected' if dec else false %}
+    {% set saved_comment = dec.get('comment','') if dec else '' %}
+    <div class="entry-card {% if is_flagged %}is-flagged{% elif saved_comment %}has-comment{% endif %}"
+         id="all-card-{{ e.entry_id }}"
+         data-entry-id="{{ e.entry_id }}">
+
+      <div class="entry-header">
+        {% if e._rights_warning %}
+          <div class="license-tag warning">⚠ {{ e._rights_warning }}</div>
+        {% else %}
+          <div class="license-tag clean">✓ {{ r.license_expression }}{% if r.commercial_use_allowed %} · commercial OK{% endif %}</div>
+        {% endif %}
+        {% if t.has_transcript %}
+          <div class="transcript-badge has">📄 Transcript · {{ t.license or 'license unknown' }}</div>
+        {% else %}
+          <div class="transcript-badge none">— No transcript</div>
+        {% endif %}
+      </div>
+
+      <div class="entry-img-wrap" onclick="openLightboxHome('{{ e._orig_url or e._thumb_url or '' }}')">
+        {% if e._thumb_url %}
+          <img class="entry-img" src="{{ e._thumb_url }}" alt="{{ e.entry_id }}"
+               loading="lazy"
+               onerror="this.parentNode.innerHTML='<div class=entry-img-placeholder>📜</div>'">
+        {% else %}
+          <div class="entry-img-placeholder">📜</div>
+        {% endif %}
+        {% if is_flagged %}<div class="flag-overlay"><span>🚫</span></div>{% endif %}
+      </div>
+
+      <div class="entry-body">
+        {% if e.title %}
+          <div class="entry-title">{{ e.title[:90] }}{% if e.title|length > 90 %}…{% endif %}</div>
+        {% endif %}
+        <div class="entry-meta">
+          {% set yr = (e.dates.created[:4] if e.dates and e.dates.created else None) if e.dates is mapping else None %}
+          {% if yr %}<span>{{ yr }}</span>{% endif %}
+          {% if e.languages %}<span>{{ e.languages | join(', ') }}</span>{% endif %}
+          {% if e.document_type %}<span class="badge badge-info" style="font-size:10px">{{ e.document_type }}</span>{% endif %}
+        </div>
+        <div class="entry-source-lbl">{{ e._source_title[:60] }}{% if e._source_title|length > 60 %}…{% endif %}</div>
+      </div>
+
+      <div class="action-strip" id="all-actions-{{ e.entry_id }}">
+        <button class="btn btn-ghost flag-btn"
+                id="all-flag-btn-{{ e.entry_id }}"
+                onclick="toggleFlagAll('{{ e.entry_id }}')">
+          {{ '✓ Un-flag' if is_flagged else '🚫 Flag for removal' }}
+        </button>
+        <textarea class="comment-box"
+                  id="all-cmt-{{ e.entry_id }}"
+                  placeholder="Note or reason…"
+                  oninput="onCommentAll('{{ e.entry_id }}')">{{ saved_comment }}</textarea>
+      </div>
+
+      <div class="entry-footer">
+        {% if e._orig_url %}<a href="{{ e._orig_url }}" target="_blank">⬡ full scan</a>{% endif %}
+        <span style="margin-left:auto"><a href="/audit#card-{{ e.entry_id }}">audit ↗</a></span>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+
+  <!-- By Source -->
+  <div id="view-source" style="display:none">
+    {% if source_groups %}
+    <div class="group-grid">
+      {% for g in source_groups %}
+      <a class="group-card" href="/source/{{ g.source_id }}">
+        {% if g.sample_thumb %}
+          <img class="group-thumb" src="{{ g.sample_thumb }}" alt="{{ g.title }}"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="group-thumb-placeholder" style="display:none">📜</div>
+        {% else %}
+          <div class="group-thumb-placeholder">📜</div>
+        {% endif %}
+        <div class="group-card-body">
+          <div class="group-card-name" title="{{ g.title }}">{{ g.title }}</div>
+          <div class="group-card-sub">{{ g.provider }}</div>
+          <div class="group-card-meta">
+            <span class="group-card-count">{{ g.entry_count }}</span>
+            <span>entr{{ "y" if g.entry_count == 1 else "ies" }}</span>
+            {% for lic in g.licenses %}
+              <span class="lic-chip">{{ lic }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+      <div class="empty-state">No corpus entries yet.</div>
+    {% endif %}
+  </div>
+</div>
+
+<!-- Browse save bar (only when Actions toggle is on) -->
+<div class="browse-save-bar" id="all-save-bar">
+  <div class="save-summary" id="all-save-summary">{{ total_entries }} entries · 0 flagged</div>
+  <span id="all-save-status"></span>
+  <button class="btn btn-danger" onclick="saveAllDecisions()">💾 Save flags</button>
+</div>
+
+<!-- Lightbox for all-entries view -->
+<div id="lightbox-home" onclick="closeLightboxHome()">
+  <img id="lightbox-home-img" src="" alt="Full scan">
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+  // Persist view choice in sessionStorage
+  const stored = sessionStorage.getItem('hashView') || 'writer';
+
+  function switchView(v) {
+    ['writer','source','all'].forEach(id => {
+      document.getElementById('view-' + id).style.display = v === id ? '' : 'none';
+      document.getElementById('btn-' + id).classList.toggle('active', v === id);
+    });
+    // Show/hide the browse save bar only for the all-entries view
+    const bar = document.getElementById('all-save-bar');
+    if (bar) bar.style.setProperty('--force-hide', v === 'all' ? '' : 'none');
+    sessionStorage.setItem('hashView', v);
+    currentView = v;
+  }
+
+  let currentView = stored;
+  // Apply stored view on load; also honor ?view= param
+  const params = new URLSearchParams(location.search);
+  switchView(params.get('view') || stored);
+
+  // ── All-entries flag/comment state ─────────────────────────
+  const ALL_ENTRY_IDS = {{ all_entries | map(attribute='entry_id') | list | tojson }};
+  const allFlagged  = new Set();
+  const allNotes    = {};
+
+  // Seed from server decisions
+  {% for e in all_entries %}{% set dec = e._decision %}{% if dec %}
+  {% if dec.get('status') == 'rejected' %}allFlagged.add({{ e.entry_id | tojson }});{% endif %}
+  {% if dec.get('comment','').strip() %}allNotes[{{ e.entry_id | tojson }}] = {{ dec.get('comment','') | tojson }};{% endif %}
+  {% endif %}{% endfor %}
+
+  function updateAllSummary() {
+    const el = document.getElementById('all-save-summary');
+    if (el) el.textContent = `${ALL_ENTRY_IDS.length} entries · ${allFlagged.size} flagged`;
+  }
+
+  function refreshAllCard(eid) {
+    const card = document.getElementById('all-card-' + eid);
+    if (!card) return;
+    const btn  = document.getElementById('all-flag-btn-' + eid);
+    const isFl = allFlagged.has(eid);
+    const hasCmt = !!(allNotes[eid] && allNotes[eid].trim());
+    card.classList.toggle('is-flagged',  isFl);
+    card.classList.toggle('has-comment', !isFl && hasCmt);
+    if (btn) btn.textContent = isFl ? '✓ Un-flag' : '🚫 Flag for removal';
+    let ov = card.querySelector('.flag-overlay');
+    if (isFl && !ov) {
+      ov = document.createElement('div');
+      ov.className = 'flag-overlay';
+      ov.innerHTML = '<span>🚫</span>';
+      const wrap = card.querySelector('.entry-img-wrap');
+      if (wrap) wrap.appendChild(ov);
+    } else if (!isFl && ov) { ov.remove(); }
+    updateAllSummary();
+  }
+
+  function toggleFlagAll(eid) {
+    if (allFlagged.has(eid)) allFlagged.delete(eid); else allFlagged.add(eid);
+    refreshAllCard(eid);
+  }
+
+  function onCommentAll(eid) {
+    allNotes[eid] = document.getElementById('all-cmt-' + eid).value;
+    refreshAllCard(eid);
+  }
+
+  async function saveAllDecisions() {
+    const payload = {};
+    for (const eid of ALL_ENTRY_IDS) {
+      const isFl = allFlagged.has(eid);
+      const cmt  = allNotes[eid] || '';
+      if (isFl || cmt.trim()) {
+        payload[eid] = { status: isFl ? 'rejected' : 'approved', comment: cmt };
+      }
+    }
+    const el = document.getElementById('all-save-status');
+    el.className = 'saving'; el.textContent = 'Saving…';
+    try {
+      const existing = await fetch('/api/audit/decisions').then(r => r.ok ? r.json() : {});
+      const merged = { ...existing, ...payload };
+      for (const eid of ALL_ENTRY_IDS) {
+        if (!allFlagged.has(eid) && !(allNotes[eid] || '').trim()) {
+          delete merged[eid];
+        }
+      }
+      const res = await fetch('/api/audit/decide', {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(merged),
+      });
+      const json = await res.json();
+      if (json.ok) {
+        el.className = 'ok'; el.textContent = `✓ Saved`;
+        setTimeout(() => { el.style.display='none'; el.className=''; }, 3000);
+      } else { throw new Error(json.error || 'error'); }
+    } catch(err) { el.className = 'error'; el.textContent = '✗ ' + err.message; }
+  }
+
+  function openLightboxHome(url) {
+    if (!url) return;
+    document.getElementById('lightbox-home-img').src = url;
+    document.getElementById('lightbox-home').classList.add('open');
+  }
+  function closeLightboxHome() {
+    document.getElementById('lightbox-home').classList.remove('open');
+    document.getElementById('lightbox-home-img').src = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightboxHome(); });
+
+  updateAllSummary();
+</script>
+{% endblock %}
