@@ -1,0 +1,287 @@
+{% extends "base.html" %}
+
+{% block title %}HASH Review — Home{% endblock %}
+
+{% block extra_styles %}
+  .section-block { margin-bottom: 40px; }
+
+  /* ── Pending batches ── */
+  .batch-list { display: flex; flex-direction: column; gap: 12px; }
+  .batch-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: border-color .15s;
+  }
+  .batch-card:hover { border-color: var(--accent); }
+  .batch-card .batch-info { flex: 1; min-width: 0; }
+  .batch-card .batch-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 4px;
+  }
+  .batch-card .batch-meta {
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .batch-card .batch-actions { display: flex; gap: 8px; }
+  .progress-bar { height: 4px; background: var(--surface2); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+  .progress-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; }
+
+  /* ── Corpus views ── */
+  .view-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .view-header h2 { margin: 0; }
+  .view-toggle {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .view-toggle-btn {
+    padding: 6px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    background: transparent;
+    color: var(--muted);
+    border: none;
+    border-radius: 0;
+    transition: all .15s;
+  }
+  .view-toggle-btn.active {
+    background: var(--accent);
+    color: #fff;
+  }
+  .view-toggle-btn:hover:not(.active) { color: var(--text); background: var(--surface2); }
+  .view-count { font-size: 12px; color: var(--muted); margin-left: auto; }
+
+  /* ── Group card grid ── */
+  .group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 14px;
+  }
+  .group-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    transition: border-color .15s, transform .1s;
+  }
+  .group-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+  .group-thumb {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    background: var(--surface2);
+    display: block;
+  }
+  .group-thumb-placeholder {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: var(--surface2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 32px;
+  }
+  .group-card-body { padding: 10px 12px 12px; }
+  .group-card-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .group-card-sub { font-size: 11px; color: var(--muted); margin-bottom: 5px; }
+  .group-card-meta {
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+  }
+  .group-card-count {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .lic-chip {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    background: #1a2240;
+    color: var(--accent);
+  }
+
+  .empty-state {
+    padding: 40px 24px;
+    text-align: center;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+  }
+{% endblock %}
+
+{% block content %}
+
+<!-- ── Pending Batches ──────────────────────────────────────── -->
+{% if pending_batches %}
+<div class="section-block">
+  <p class="section-label">Awaiting Review</p>
+  <div class="batch-list">
+    {% for b in pending_batches %}
+      {% set decided = b.decisions|length %}
+      {% set pct = ((decided / b.total) * 100)|round|int if b.total else 0 %}
+      <div class="batch-card">
+        <div class="batch-info">
+          <div class="batch-name">{{ b.label }}</div>
+          <div class="batch-meta">
+            <span>{{ b.total }} entries</span>
+            {% if b.approved %}<span style="color:var(--success)">{{ b.approved }} accepted</span>{% endif %}
+            {% if b.commented %}<span style="color:var(--warn)">{{ b.commented }} with notes</span>{% endif %}
+            {% if decided %}<span>{{ decided }}/{{ b.total }} reviewed</span>{% else %}<span>Not started</span>{% endif %}
+          </div>
+          {% if decided %}
+          <div class="progress-bar">
+            <div class="progress-bar-fill" style="width:{{ pct }}%"></div>
+          </div>
+          {% endif %}
+        </div>
+        <div class="batch-actions">
+          {% if decided and decided == b.total %}<span class="badge badge-approved">Done</span>
+          {% elif decided %}<span class="badge badge-pending">In progress</span>
+          {% else %}<span class="badge badge-info">New</span>{% endif %}
+          <a href="/review/{{ b.batch_id }}" class="btn btn-primary">Review →</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<!-- ── Corpus Browser ───────────────────────────────────────── -->
+<div class="section-block">
+  <div class="view-header">
+    <h2 style="margin:0">Corpus — {{ total_entries }} entries</h2>
+    <div class="view-toggle">
+      <button class="view-toggle-btn active" id="btn-writer" onclick="switchView('writer')">By Writer</button>
+      <button class="view-toggle-btn"        id="btn-source" onclick="switchView('source')">By Source</button>
+    </div>
+  </div>
+
+  <!-- By Writer -->
+  <div id="view-writer">
+    {% if writer_groups %}
+    <div class="group-grid">
+      {% for g in writer_groups %}
+      <a class="group-card" href="/writer/{{ g.slug }}">
+        {% if g.sample_thumb %}
+          <img class="group-thumb" src="{{ g.sample_thumb }}" alt="{{ g.name }}"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="group-thumb-placeholder" style="display:none">✍️</div>
+        {% else %}
+          <div class="group-thumb-placeholder">✍️</div>
+        {% endif %}
+        <div class="group-card-body">
+          <div class="group-card-name" title="{{ g.name }}">{{ g.name }}</div>
+          <div class="group-card-sub">
+            {% if g.death_year %}d. {{ g.death_year }}{% endif %}
+          </div>
+          <div class="group-card-meta">
+            <span class="group-card-count">{{ g.entry_count }}</span>
+            <span>entr{{ "y" if g.entry_count == 1 else "ies" }}</span>
+            {% if g.date_range %}<span>· {{ g.date_range }}</span>{% endif %}
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+      <div class="empty-state">No corpus entries yet.</div>
+    {% endif %}
+  </div>
+
+  <!-- By Source -->
+  <div id="view-source" style="display:none">
+    {% if source_groups %}
+    <div class="group-grid">
+      {% for g in source_groups %}
+      <a class="group-card" href="/source/{{ g.source_id }}">
+        {% if g.sample_thumb %}
+          <img class="group-thumb" src="{{ g.sample_thumb }}" alt="{{ g.title }}"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="group-thumb-placeholder" style="display:none">📜</div>
+        {% else %}
+          <div class="group-thumb-placeholder">📜</div>
+        {% endif %}
+        <div class="group-card-body">
+          <div class="group-card-name" title="{{ g.title }}">{{ g.title }}</div>
+          <div class="group-card-sub">{{ g.provider }}</div>
+          <div class="group-card-meta">
+            <span class="group-card-count">{{ g.entry_count }}</span>
+            <span>entr{{ "y" if g.entry_count == 1 else "ies" }}</span>
+            {% for lic in g.licenses %}
+              <span class="lic-chip">{{ lic }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+      <div class="empty-state">No corpus entries yet.</div>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+  // Persist view choice in sessionStorage
+  const stored = sessionStorage.getItem('hashView') || 'writer';
+
+  function switchView(v) {
+    document.getElementById('view-writer').style.display = v === 'writer' ? '' : 'none';
+    document.getElementById('view-source').style.display = v === 'source' ? '' : 'none';
+    document.getElementById('btn-writer').classList.toggle('active', v === 'writer');
+    document.getElementById('btn-source').classList.toggle('active', v === 'source');
+    sessionStorage.setItem('hashView', v);
+  }
+
+  // Apply stored view on load; also honor ?view= param
+  const params = new URLSearchParams(location.search);
+  switchView(params.get('view') || stored);
+</script>
+{% endblock %}

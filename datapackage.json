@@ -29,12 +29,6 @@
       "title": "Creative Commons Attribution-ShareAlike 3.0 Unported"
     },
     {
-      "name": "CC-BY-SA-4.0",
-      "path": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "scope": "scans",
-      "title": "Creative Commons Attribution-ShareAlike 4.0 International"
-    },
-    {
       "name": "LicenseRef-Public-Domain-Israel",
       "scope": "scans",
       "title": "Public Domain (Israel; life + 70)"
@@ -56,7 +50,7 @@
   "released_at": "2026-05-25T00:00:00Z",
   "resources": [
     {
-      "bytes": 1114387,
+      "bytes": 623236,
       "description": "Scan-level index. One JSON object per page, with rights evidence, file checksums, and provenance.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -64,10 +58,10 @@
       "name": "entries",
       "path": "data/index/entries.jsonl",
       "profile": "data-resource",
-      "record_count": 373
+      "record_count": 209
     },
     {
-      "bytes": 224679,
+      "bytes": 226459,
       "description": "Source-level catalog. One JSON object per institution, collection, item, dataset, or source lead.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -83,37 +77,32 @@
     "source": "https://github.com/HeOCR/hash/blob/main/schemas/source.schema.json"
   },
   "stats": {
-    "attribution_required_count": 285,
-    "entry_source_count": 77,
+    "attribution_required_count": 153,
+    "entry_source_count": 57,
     "institution_breakdown": {
       "Benjamin Zucker Family Ketubah Collection": 1,
       "Bibliothèque nationale de France": 1,
-      "Bodleian Libraries": 3,
-      "Cambridge University Library, Taylor-Schechter Collection": 3,
-      "Gross Family Collection, Tel Aviv": 6,
-      "Hungarian Academy of Sciences, Kaufmann Genizah Collection": 4,
-      "Jewish Theological Seminary": 1,
+      "Bodleian Libraries": 2,
+      "Cambridge University Library, Taylor-Schechter Collection": 1,
       "Library of Congress": 27,
-      "National Library of Israel": 276,
-      "University of Pennsylvania, Halper Collection": 2,
-      "Wikimedia Commons": 9,
-      "Österreichische Nationalbibliothek": 1
+      "National Library of Israel": 146,
+      "University of Pennsylvania, Halper Collection": 1,
+      "Wikimedia Commons": 9
     },
     "license_breakdown": {
       "CC-BY-SA-3.0": 9,
-      "CC-BY-SA-4.0": 2,
-      "LicenseRef-Public-Domain-Israel": 279,
-      "LicenseRef-Public-Domain-Ukraine": 2,
-      "PDM-1.0": 81
+      "LicenseRef-Public-Domain-Israel": 145,
+      "LicenseRef-Public-Domain-Ukraine": 1,
+      "PDM-1.0": 54
     },
-    "record_count": 373,
-    "scan_byte_count": 400863249,
+    "record_count": 209,
+    "scan_byte_count": 306446056,
     "source_record_count": 111,
     "source_status_breakdown": {
       "candidate": 15,
       "needs_review": 1,
-      "rejected": 17,
-      "verified": 78
+      "rejected": 37,
+      "verified": 58
     }
   },
   "title": "HASH — Hebrew Archive of Scanned Handwriting",

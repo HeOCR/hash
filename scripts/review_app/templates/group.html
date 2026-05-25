@@ -1,0 +1,258 @@
+{% extends "base.html" %}
+
+{% block title %}HASH — {{ group_title }}{% endblock %}
+
+{% block extra_styles %}
+  .group-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .group-header .back-link {
+    font-size: 12px;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .group-header h1 { margin: 0; }
+  .group-header .sub {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .group-header .spacer { flex: 1; }
+  .group-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 13px;
+    color: var(--muted);
+    align-self: center;
+  }
+  .group-count strong { color: var(--text); }
+
+  /* Entry cards */
+  .entry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+  }
+  .entry-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color .15s;
+  }
+  .entry-card:hover { border-color: var(--accent); }
+
+  /* Rights strip */
+  .entry-header {
+    padding: 8px 12px 7px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .license-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    width: fit-content;
+  }
+  .license-tag.clean   { background: #1a3a2e; color: var(--success); }
+  .license-tag.warning { background: #3a2e1a; color: var(--warn); }
+
+  /* Transcript badge */
+  .transcript-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 4px;
+    width: fit-content;
+    margin-top: 1px;
+  }
+  .transcript-badge.none { background: var(--surface2); color: var(--muted); }
+  .transcript-badge.has  { background: #1a2240; color: var(--accent); }
+
+  /* Image */
+  .entry-img-wrap { background: #000; cursor: zoom-in; }
+  .entry-img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+  }
+  .entry-img-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 40px;
+    background: var(--surface2);
+  }
+
+  /* Body */
+  .entry-body { padding: 10px 12px 12px; flex: 1; display: flex; flex-direction: column; gap: 4px; }
+  .entry-id   { font-family: "SF Mono","Fira Code",monospace; font-size: 10px; color: var(--muted);
+                white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .entry-title { font-size: 12px; color: var(--text); line-height: 1.4; }
+  .entry-meta  { font-size: 11px; color: var(--muted); display: flex; gap: 7px; flex-wrap: wrap; align-items: center; margin-top: 2px; }
+
+  .entry-footer {
+    padding: 7px 12px 9px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 11px;
+  }
+  .entry-footer a { color: var(--muted); }
+  .entry-footer a:hover { color: var(--accent); }
+
+  /* Source line (only shown in writer view) */
+  .entry-source { font-size: 10px; color: var(--muted); font-style: italic; margin-top: 3px; }
+
+  /* Lightbox */
+  #lightbox {
+    display: none; position: fixed; inset: 0; z-index: 999;
+    background: rgba(0,0,0,.88); align-items: center; justify-content: center; cursor: zoom-out;
+  }
+  #lightbox.open { display: flex; }
+  #lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain;
+                  border-radius: 4px; box-shadow: 0 8px 40px rgba(0,0,0,.6); }
+{% endblock %}
+
+{% block content %}
+<div class="group-header">
+  <div>
+    <a class="back-link" href="/?view={{ back_param }}">← Back</a>
+    <h1>
+      {{ group_title }}
+      {% if authority_url %}
+        <a href="{{ authority_url }}" target="_blank" style="font-size:13px;font-weight:400;margin-left:6px;color:var(--muted)">↗ Wikidata</a>
+      {% endif %}
+    </h1>
+    {% if group_subtitle %}<div class="sub">{{ group_subtitle }}</div>{% endif %}
+  </div>
+  <div class="spacer"></div>
+  <div class="group-count">
+    <strong>{{ entries|length }}</strong>
+    entr{{ "y" if entries|length == 1 else "ies" }}
+  </div>
+</div>
+
+<div class="entry-grid">
+{% for e in entries %}
+{% set r = e.rights %}
+{% set t = e._transcript %}
+<div class="entry-card">
+
+  <!-- Rights / transcript strip -->
+  <div class="entry-header">
+    {% if e._rights_warning %}
+      <div class="license-tag warning">⚠ {{ e._rights_warning }}</div>
+    {% else %}
+      <div class="license-tag clean">
+        ✓ {{ r.license_expression }}{% if r.commercial_use_allowed %} · commercial OK{% endif %}
+      </div>
+    {% endif %}
+
+    {% if t.has_transcript %}
+      <div class="transcript-badge has">
+        📄 Transcript · {{ t.license or 'license unknown' }}
+        {% if t.source_url %}
+          <a href="{{ t.source_url }}" target="_blank" style="color:var(--accent)">↗</a>
+        {% endif %}
+      </div>
+    {% else %}
+      <div class="transcript-badge none">— No transcript</div>
+    {% endif %}
+  </div>
+
+  <!-- Image -->
+  <div class="entry-img-wrap"
+       onclick="openLightbox('{{ e._orig_url or e._thumb_url or '' }}')">
+    {% if e._thumb_url %}
+      <img class="entry-img" src="{{ e._thumb_url }}" alt="{{ e.entry_id }}"
+           loading="lazy"
+           onerror="this.parentNode.innerHTML='<div class=entry-img-placeholder>📜</div>'">
+    {% else %}
+      <div class="entry-img-placeholder">📜</div>
+    {% endif %}
+  </div>
+
+  <!-- Body -->
+  <div class="entry-body">
+    {% if e.title %}
+      <div class="entry-title">{{ e.title[:100] }}{% if e.title|length > 100 %}…{% endif %}</div>
+    {% endif %}
+    <div class="entry-meta">
+      {% set yr = (e.dates.created[:4] if e.dates and e.dates.created else None) if e.dates is mapping else None %}
+      {% if yr %}<span>{{ yr }}</span>{% endif %}
+      {% if e.languages %}<span>{{ e.languages | join(', ') }}</span>{% endif %}
+      {% if e.document_type %}<span class="badge badge-info" style="font-size:10px">{{ e.document_type }}</span>{% endif %}
+    </div>
+    {% if group_type == 'writer' %}
+      <div class="entry-source">{{ e.source_id.replace('_',' ') }}</div>
+    {% elif group_type == 'source' %}
+      {% if e.creators %}
+        <div class="entry-source">{{ e.creators | map(attribute='name') | join(', ') }}</div>
+      {% endif %}
+    {% endif %}
+    <div class="entry-id">{{ e.entry_id }}</div>
+  </div>
+
+  <!-- Footer links -->
+  <div class="entry-footer">
+    {% if e._orig_url %}
+      <a href="{{ e._orig_url }}" target="_blank">⬡ full scan</a>
+    {% endif %}
+    {% if r.attribution_url %}
+      <a href="{{ r.attribution_url }}" target="_blank">source page</a>
+    {% endif %}
+    <span style="margin-left:auto">
+      <a href="/audit#card-{{ e.entry_id }}">audit ↗</a>
+    </span>
+  </div>
+</div>
+{% endfor %}
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Full scan">
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function openLightbox(url) {
+  if (!url) return;
+  document.getElementById('lightbox-img').src = url;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lightbox-img').src = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+{% endblock %}

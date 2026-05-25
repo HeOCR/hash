@@ -1,0 +1,419 @@
+{% extends "base.html" %}
+
+{% block title %}HASH — Corpus Audit{% endblock %}
+
+{% block extra_styles %}
+  .audit-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .audit-toolbar h1 { margin: 0; }
+  .audit-toolbar .spacer { flex: 1; }
+  .stats-pill {
+    display: inline-flex;
+    gap: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .stats-pill .stat-val         { font-weight: 700; color: var(--text); margin-right: 2px; }
+  .stats-pill .stat-val.danger  { color: var(--danger); }
+  .stats-pill .stat-val.warn    { color: var(--warn); }
+
+  /* Filter bar */
+  .filter-bar { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+  .filter-btn {
+    padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 500;
+    cursor: pointer; border: 1px solid var(--border); background: transparent;
+    color: var(--muted); transition: all .15s;
+  }
+  .filter-btn:hover              { background: var(--surface2); color: var(--text); border-color: var(--muted); }
+  .filter-btn.active             { background: var(--surface2); color: var(--text); border-color: var(--muted); }
+  .filter-btn.active-danger      { background: #3a1a1f; color: var(--danger);  border-color: var(--danger); }
+  .filter-btn.active-warn        { background: #3a2e1a; color: var(--warn);    border-color: var(--warn); }
+
+  /* Entry grid */
+  .entry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .entry-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color .15s;
+  }
+  .entry-card.is-rejected { border-color: var(--danger); }
+  .entry-card.has-comment { border-color: var(--accent2); }
+
+  /* Rights / source header */
+  .entry-header {
+    padding: 10px 12px 8px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .entry-source-line {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .entry-source-line .provider { color: var(--muted); font-weight: 400; }
+  .license-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    width: fit-content;
+  }
+  .license-tag.clean   { background: #1a3a2e; color: var(--success); }
+  .license-tag.warning { background: #3a2e1a; color: var(--warn); }
+  .license-evidence {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 2px;
+    line-height: 1.4;
+    /* Clamp to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Image */
+  .entry-img-wrap { position: relative; background: #000; cursor: zoom-in; }
+  .entry-img {
+    width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block;
+    transition: opacity .15s;
+  }
+  .entry-card.is-rejected .entry-img { opacity: 0.3; }
+  .entry-img-placeholder {
+    width: 100%; aspect-ratio: 3/4;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 40px; background: var(--surface2);
+  }
+  .reject-overlay {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    pointer-events: none;
+  }
+  .reject-overlay span { font-size: 44px; opacity: 0.7; }
+
+  /* Card body */
+  .entry-body { padding: 10px 12px; flex: 1; display: flex; flex-direction: column; gap: 5px; }
+  .entry-id   { font-family: "SF Mono","Fira Code",monospace; font-size: 10px; color: var(--muted);
+                white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .entry-meta { font-size: 12px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .entry-title { font-size: 12px; color: var(--text); }
+
+  .comment-box {
+    width: 100%; margin-top: 4px;
+    background: var(--surface2); border: 1px solid var(--border); border-radius: 6px;
+    color: var(--text); font-size: 12px; padding: 6px 8px;
+    resize: vertical; min-height: 52px; font-family: inherit;
+    transition: border-color .15s;
+  }
+  .comment-box:focus { outline: none; border-color: var(--accent); }
+
+  /* Action strip */
+  .entry-actions {
+    padding: 8px 12px 10px; display: flex; gap: 8px; align-items: center;
+    border-top: 1px solid var(--border);
+  }
+  .reject-toggle { flex: 1; justify-content: center; font-size: 12px; }
+  .entry-card.is-rejected .reject-toggle {
+    background: var(--danger); color: #fff; border-color: var(--danger);
+  }
+
+  /* Lightbox */
+  #lightbox {
+    display: none; position: fixed; inset: 0; z-index: 999;
+    background: rgba(0,0,0,.88); align-items: center; justify-content: center; cursor: zoom-out;
+  }
+  #lightbox.open { display: flex; }
+  #lightbox img  { max-width: 90vw; max-height: 90vh; object-fit: contain;
+                   border-radius: 4px; box-shadow: 0 8px 40px rgba(0,0,0,.6); }
+
+  /* Submit bar */
+  .submit-bar {
+    position: sticky; bottom: 0; background: var(--surface);
+    border-top: 1px solid var(--border); padding: 12px 24px;
+    display: flex; align-items: center; gap: 16px; z-index: 50;
+    margin: 32px -24px -32px;
+  }
+  .submit-bar .submit-summary { font-size: 13px; color: var(--muted); flex: 1; }
+  #save-status {
+    font-size: 12px; font-weight: 600; padding: 4px 12px;
+    border-radius: 20px; display: none;
+  }
+  #save-status.ok     { background: #1a3a2e; color: var(--success); display: inline-block; }
+  #save-status.error  { background: #3a1a1f; color: var(--danger);  display: inline-block; }
+  #save-status.saving { background: var(--surface2); color: var(--muted); display: inline-block; }
+{% endblock %}
+
+{% block content %}
+<div class="audit-toolbar">
+  <div>
+    <a href="/" class="muted" style="font-size:12px">← Home</a>
+    <h1 style="margin-top:4px">Corpus Audit</h1>
+  </div>
+  <div class="spacer"></div>
+  <div class="stats-pill">
+    <span><span class="stat-val" id="stat-total">{{ total }}</span> entries</span>
+    <span><span class="stat-val danger" id="stat-rejected">{{ decisions.values()|selectattr('status','eq','rejected')|list|length }}</span> flagged</span>
+    {% if warned %}<span><span class="stat-val warn">{{ warned }}</span> ⚠ license</span>{% endif %}
+  </div>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="setFilter('all',this)">All ({{ total }})</button>
+  <button class="filter-btn"        onclick="setFilter('flagged',this)">Flagged</button>
+  <button class="filter-btn"        onclick="setFilter('warned',this)">⚠ License unclear ({{ warned }})</button>
+  <button class="filter-btn"        onclick="setFilter('commented',this)">With notes</button>
+</div>
+
+<div class="entry-grid" id="entry-grid">
+{% for e in entries %}
+{% set dec = e._decision %}
+{% set is_rej  = dec.get('status') == 'rejected' if dec else false %}
+{% set has_cmt = dec.get('comment','').strip() if dec else '' %}
+{% set r = e.rights %}
+<div class="entry-card {% if is_rej %}is-rejected{% elif has_cmt %}has-comment{% endif %}"
+     id="card-{{ e.entry_id }}"
+     data-entry-id="{{ e.entry_id }}"
+     data-rejected="{{ 'true' if is_rej else 'false' }}"
+     data-warned="{{ 'true' if e._rights_warning else 'false' }}">
+
+  <!-- Rights / source header -->
+  <div class="entry-header">
+    <div class="entry-source-line">
+      {{ e._source_title[:55] }}{% if e._source_title|length > 55 %}…{% endif %}
+      {% if e._source_provider %}
+        <span class="provider"> · {{ e._source_provider }}</span>
+      {% endif %}
+    </div>
+
+    {% if e._rights_warning %}
+      <div class="license-tag warning">⚠ {{ e._rights_warning }}</div>
+    {% else %}
+      <div class="license-tag clean">
+        ✓ {{ r.license_expression }}
+        {% if r.commercial_use_allowed %}&nbsp;· commercial OK{% endif %}
+      </div>
+    {% endif %}
+
+    {% if r.evidence_text %}
+      <div class="license-evidence" title="{{ r.evidence_text }}">{{ r.evidence_text }}</div>
+    {% endif %}
+
+    {% set t = e._transcript %}
+    {% if t and t.has_transcript %}
+      <div style="display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:600;
+                  padding:2px 7px;border-radius:4px;background:#1a2240;color:var(--accent);width:fit-content;margin-top:2px">
+        📄 Transcript · {{ t.license or 'license unknown' }}
+        {% if t.source_url %}<a href="{{ t.source_url }}" target="_blank" style="color:var(--accent)">↗</a>{% endif %}
+      </div>
+    {% else %}
+      <div style="display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:600;
+                  padding:2px 7px;border-radius:4px;background:var(--surface2);color:var(--muted);width:fit-content;margin-top:2px">
+        — No transcript
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- Image -->
+  <div class="entry-img-wrap"
+       onclick="openLightbox('{{ e._orig_url or e._thumb_url or '' }}')">
+    {% if e._thumb_url %}
+      <img class="entry-img" src="{{ e._thumb_url }}" alt="{{ e.entry_id }}"
+           loading="lazy"
+           onerror="this.parentNode.innerHTML='<div class=entry-img-placeholder>📜</div>'">
+    {% else %}
+      <div class="entry-img-placeholder">📜</div>
+    {% endif %}
+    {% if is_rej %}
+    <div class="reject-overlay"><span>🚫</span></div>
+    {% endif %}
+  </div>
+
+  <!-- Body -->
+  <div class="entry-body">
+    <div class="entry-id">{{ e.entry_id }}</div>
+    <div class="entry-meta">
+      {% if e.dates.created %}<span>{{ e.dates.created }}</span>{% endif %}
+      {% if e.languages %}<span>{{ e.languages | join(', ') }}</span>{% endif %}
+      {% if e.document_type %}<span class="badge badge-info" style="font-size:10px">{{ e.document_type }}</span>{% endif %}
+    </div>
+    {% if e.title %}
+      <div class="entry-title">{{ e.title[:90] }}{% if e.title|length > 90 %}…{% endif %}</div>
+    {% endif %}
+    <textarea class="comment-box"
+              id="cmt-{{ e.entry_id }}"
+              placeholder="Note or reason for flagging…"
+              oninput="onComment('{{ e.entry_id }}')">{{ has_cmt }}</textarea>
+  </div>
+
+  <!-- Actions -->
+  <div class="entry-actions">
+    <button class="btn btn-ghost reject-toggle"
+            id="rej-btn-{{ e.entry_id }}"
+            onclick="toggleReject('{{ e.entry_id }}')">
+      {% if is_rej %}✓ Un-flag{% else %}🚫 Flag for removal{% endif %}
+    </button>
+    {% if e._orig_url %}
+      <a href="{{ e._orig_url }}" target="_blank" style="font-size:11px;color:var(--muted)">⬡ full</a>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+</div>
+
+<!-- Submit bar -->
+<div class="submit-bar">
+  <div class="submit-summary" id="submit-summary">
+    {{ total }} entries in corpus — flag any that should be removed.
+  </div>
+  <span id="save-status"></span>
+  <button class="btn btn-danger" onclick="saveDecisions()">💾 Save flags</button>
+  <a href="/" class="btn btn-ghost">← Home</a>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Full scan">
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const ENTRIES  = {{ entries | tojson }};
+const rejected = new Set();
+const notes    = {};
+
+// Seed from server decisions
+{% for e in entries %}
+{% set dec = e._decision %}
+{% if dec %}
+{% if dec.get('status') == 'rejected' %}rejected.add({{ e.entry_id | tojson }});{% endif %}
+{% if dec.get('comment','').strip() %}notes[{{ e.entry_id | tojson }}] = {{ dec.get('comment','') | tojson }};{% endif %}
+{% endif %}
+{% endfor %}
+
+function updateStats() {
+  document.getElementById('stat-rejected').textContent = rejected.size;
+  document.getElementById('submit-summary').textContent =
+    `${ENTRIES.length} entries · ${rejected.size} flagged for removal`;
+}
+
+function refreshCard(eid) {
+  const card   = document.getElementById('card-' + eid);
+  const btn    = document.getElementById('rej-btn-' + eid);
+  const isRej  = rejected.has(eid);
+  const hasCmt = !!(notes[eid] && notes[eid].trim());
+
+  card.classList.toggle('is-rejected', isRej);
+  card.classList.toggle('has-comment', !isRej && hasCmt);
+  card.dataset.rejected = isRej ? 'true' : 'false';
+  btn.textContent = isRej ? '✓ Un-flag' : '🚫 Flag for removal';
+
+  // Overlay
+  let ov = card.querySelector('.reject-overlay');
+  if (isRej && !ov) {
+    ov = document.createElement('div');
+    ov.className = 'reject-overlay';
+    ov.innerHTML = '<span>🚫</span>';
+    card.querySelector('.entry-img-wrap').appendChild(ov);
+  } else if (!isRej && ov) { ov.remove(); }
+
+  updateStats();
+  applyFilter(currentFilter);
+}
+
+function toggleReject(eid) {
+  if (rejected.has(eid)) rejected.delete(eid); else rejected.add(eid);
+  refreshCard(eid);
+}
+
+function onComment(eid) {
+  notes[eid] = document.getElementById('cmt-' + eid).value;
+  refreshCard(eid);
+}
+
+let currentFilter = 'all';
+function setFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b =>
+    b.classList.remove('active','active-danger','active-warn'));
+  if (f === 'flagged')   btn.classList.add('active-danger');
+  else if (f === 'warned') btn.classList.add('active-warn');
+  else btn.classList.add('active');
+  applyFilter(f);
+}
+function applyFilter(f) {
+  document.querySelectorAll('.entry-card').forEach(card => {
+    const eid = card.dataset.entryId;
+    let show = true;
+    if (f === 'flagged')   show = rejected.has(eid);
+    if (f === 'warned')    show = card.dataset.warned === 'true';
+    if (f === 'commented') show = !!(notes[eid] && notes[eid].trim());
+    card.style.display = show ? '' : 'none';
+  });
+}
+
+async function saveDecisions() {
+  const payload = {};
+  for (const e of ENTRIES) {
+    const isRej = rejected.has(e.entry_id);
+    const cmt   = notes[e.entry_id] || '';
+    if (isRej || cmt.trim()) {
+      payload[e.entry_id] = { status: isRej ? 'rejected' : 'approved', comment: cmt };
+    }
+  }
+  const el = document.getElementById('save-status');
+  el.className = 'saving'; el.textContent = 'Saving…';
+  try {
+    const res  = await fetch('/api/audit/decide', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(payload),
+    });
+    const json = await res.json();
+    if (json.ok) {
+      el.className = 'ok';
+      el.textContent = `✓ Saved — ${json.rejected} flagged`;
+      setTimeout(() => { el.style.display = 'none'; }, 4000);
+    } else { throw new Error(json.error || 'error'); }
+  } catch(err) { el.className = 'error'; el.textContent = '✗ ' + err.message; }
+}
+
+function openLightbox(url) {
+  if (!url) return;
+  document.getElementById('lightbox-img').src = url;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lightbox-img').src = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+updateStats();
+</script>
+{% endblock %}
