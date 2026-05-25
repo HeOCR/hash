@@ -272,7 +272,7 @@
   </div>
 
   <!-- Actions -->
-  <div class="entry-actions">
+  <div class="entry-actions action-strip">
     <button class="btn btn-ghost reject-toggle"
             id="rej-btn-{{ e.entry_id }}"
             onclick="toggleReject('{{ e.entry_id }}')">
@@ -292,7 +292,7 @@
     {{ total }} entries in corpus — flag any that should be removed.
   </div>
   <span id="save-status"></span>
-  <button class="btn btn-danger" onclick="saveDecisions()">💾 Save flags</button>
+  <button class="btn btn-danger action-strip" onclick="saveDecisions()">💾 Save flags</button>
   <a href="/" class="btn btn-ghost">← Home</a>
 </div>
 

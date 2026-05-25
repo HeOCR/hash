@@ -311,11 +311,21 @@ def index():
     writer_groups = _group_by_writer(all_entries)
     source_groups = _group_by_source(all_entries, sources)
     stats = compute_corpus_stats(all_entries, sources)
+    decisions = load_audit_decisions()
+    for e in all_entries:
+        e["_thumb_url"]      = _entry_image_url(e, "thumbnail")
+        e["_orig_url"]       = _entry_image_url(e, "original")
+        e["_transcript"]     = _transcript_info(e)
+        e["_rights_warning"] = rights_warning(e)
+        src = sources.get(e["source_id"], {})
+        e["_source_title"]   = src.get("title") or e.get("holding_institution") or e["source_id"]
+        e["_decision"]       = decisions.get(e["entry_id"], {})
     return render_template(
         "index.html",
         pending_batches=pending_batches,
         writer_groups=writer_groups,
         source_groups=source_groups,
+        all_entries=all_entries,
         total_entries=len(all_entries),
         stats=stats,
     )
@@ -328,11 +338,13 @@ def source_detail(source_id):
     entries = [e for e in all_entries if e["source_id"] == source_id]
     if not entries:
         abort(404)
+    decisions = load_audit_decisions()
     for e in entries:
-        e["_thumb_url"]  = _entry_image_url(e, "thumbnail")
-        e["_orig_url"]   = _entry_image_url(e, "original")
-        e["_transcript"] = _transcript_info(e)
+        e["_thumb_url"]      = _entry_image_url(e, "thumbnail")
+        e["_orig_url"]       = _entry_image_url(e, "original")
+        e["_transcript"]     = _transcript_info(e)
         e["_rights_warning"] = rights_warning(e)
+        e["_decision"]       = decisions.get(e["entry_id"], {})
     src = sources.get(source_id, {})
     return render_template(
         "group.html",
@@ -373,11 +385,13 @@ def writer_detail(slug):
 
     if not entries:
         abort(404)
+    decisions = load_audit_decisions()
     for e in entries:
-        e["_thumb_url"]  = _entry_image_url(e, "thumbnail")
-        e["_orig_url"]   = _entry_image_url(e, "original")
-        e["_transcript"] = _transcript_info(e)
+        e["_thumb_url"]      = _entry_image_url(e, "thumbnail")
+        e["_orig_url"]       = _entry_image_url(e, "original")
+        e["_transcript"]     = _transcript_info(e)
         e["_rights_warning"] = rights_warning(e)
+        e["_decision"]       = decisions.get(e["entry_id"], {})
 
     subtitle = f"d. {death_year}" if death_year else ""
     return render_template(
@@ -488,6 +502,11 @@ def audit():
         commented=commented,
         warned=warned,
     )
+
+
+@app.route("/api/audit/decisions")
+def get_audit_decisions():
+    return jsonify(load_audit_decisions())
 
 
 @app.route("/api/audit/decide", methods=["POST"])
