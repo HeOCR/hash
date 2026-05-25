@@ -114,6 +114,84 @@ def load_audit_decisions():
         return {}
 
 
+_LICENSE_COLORS = {
+    "PDM-1.0":                          "#3ecf8e",   # green
+    "CC0-1.0":                          "#3ecf8e",
+    "CC-BY-4.0":                        "#6c8ef5",   # blue
+    "CC-BY-SA-4.0":                     "#8b6cf5",   # purple
+    "CC-BY-SA-3.0":                     "#8b6cf5",
+    "CC-BY-SA-2.0":                     "#8b6cf5",
+    "CC-BY-3.0":                        "#6c8ef5",
+    "LicenseRef-Public-Domain-Israel":  "#3ecf8e",
+    "LicenseRef-Public-Domain-Ukraine": "#3ecf8e",
+}
+_LICENSE_SHORT = {
+    "LicenseRef-Public-Domain-Israel":  "PD (Israel)",
+    "LicenseRef-Public-Domain-Ukraine": "PD (Ukraine)",
+    "CC-BY-SA-3.0": "CC BY-SA 3.0",
+    "CC-BY-SA-4.0": "CC BY-SA 4.0",
+}
+
+
+def compute_corpus_stats(entries, sources):
+    """Aggregate stats for the dashboard header."""
+    if not entries:
+        return {}
+    total = len(entries)
+
+    writers = set()
+    for e in entries:
+        for c in (e.get("creators") or []):
+            if c.get("name"):
+                writers.add(c["name"])
+
+    lic_counts: dict[str, int] = {}
+    for e in entries:
+        lic = (e.get("rights") or {}).get("license_expression") or "unknown"
+        lic_counts[lic] = lic_counts.get(lic, 0) + 1
+
+    transcript_count = sum(
+        1 for e in entries
+        if (e.get("transcription") or {}).get("status") not in ("none", "unknown", None, "")
+    )
+
+    warned_count = sum(1 for e in entries if rights_warning(e))
+
+    years = []
+    for e in entries:
+        d = e.get("dates") or {}
+        created = d.get("created", "") if isinstance(d, dict) else ""
+        if created:
+            try:
+                years.append(int(str(created)[:4]))
+            except (ValueError, TypeError):
+                pass
+
+    source_count = len({e["source_id"] for e in entries})
+
+    lics_sorted = sorted(lic_counts.items(), key=lambda x: -x[1])
+    return {
+        "total": total,
+        "source_count": source_count,
+        "writer_count": len(writers),
+        "transcript_count": transcript_count,
+        "transcript_pct": round(100 * transcript_count / total) if total else 0,
+        "warned_count": warned_count,
+        "year_min": min(years) if years else None,
+        "year_max": max(years) if years else None,
+        "licenses": [
+            {
+                "expression": lic,
+                "short": _LICENSE_SHORT.get(lic, lic),
+                "count": cnt,
+                "pct": round(100 * cnt / total),
+                "color": _LICENSE_COLORS.get(lic, "#f5a623"),
+            }
+            for lic, cnt in lics_sorted
+        ],
+    }
+
+
 def _transcript_info(entry):
     """Return display info about the transcription field."""
     t = entry.get("transcription") or {}
@@ -232,12 +310,14 @@ def index():
     pending_batches = load_pending_batches()
     writer_groups = _group_by_writer(all_entries)
     source_groups = _group_by_source(all_entries, sources)
+    stats = compute_corpus_stats(all_entries, sources)
     return render_template(
         "index.html",
         pending_batches=pending_batches,
         writer_groups=writer_groups,
         source_groups=source_groups,
         total_entries=len(all_entries),
+        stats=stats,
     )
 
 

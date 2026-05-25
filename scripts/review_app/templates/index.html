@@ -3,6 +3,98 @@
 {% block title %}HASH Review — Home{% endblock %}
 
 {% block extra_styles %}
+  /* ── Stats dashboard ── */
+  .stats-dashboard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px 18px;
+    margin-bottom: 32px;
+  }
+
+  .stats-top {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+  .stat-block {
+    flex: 1;
+    min-width: 100px;
+    padding: 0 20px 0 0;
+    border-right: 1px solid var(--border);
+    margin-right: 20px;
+  }
+  .stat-block:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+  .stat-num {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+    letter-spacing: -.5px;
+  }
+  .stat-num.accent  { color: var(--accent); }
+  .stat-num.success { color: var(--success); }
+  .stat-num.warn    { color: var(--warn); }
+  .stat-num.muted   { color: var(--muted); }
+  .stat-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .stat-sub {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* License bar */
+  .lic-section { margin-top: 4px; }
+  .lic-bar-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .lic-bar {
+    display: flex;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    gap: 2px;
+    margin-bottom: 10px;
+  }
+  .lic-bar-seg {
+    height: 100%;
+    border-radius: 2px;
+    transition: opacity .15s;
+  }
+  .lic-bar-seg:hover { opacity: .75; }
+  .lic-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+  .lic-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .lic-dot {
+    width: 9px; height: 9px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .lic-legend-item strong { color: var(--text); }
+  .lic-legend-item .lic-pct { color: var(--muted); font-size: 11px; }
+
   .section-block { margin-bottom: 40px; }
 
   /* ── Pending batches ── */
@@ -152,6 +244,74 @@
 {% endblock %}
 
 {% block content %}
+
+<!-- ── Stats Dashboard ─────────────────────────────────────── -->
+{% if stats %}
+<div class="stats-dashboard">
+
+  <div class="stats-top">
+    <div class="stat-block">
+      <div class="stat-num accent">{{ stats.total }}</div>
+      <div class="stat-label">Entries</div>
+      {% if stats.year_min %}
+      <div class="stat-sub">{{ stats.year_min }}–{{ stats.year_max }}</div>
+      {% endif %}
+    </div>
+
+    <div class="stat-block">
+      <div class="stat-num">{{ stats.source_count }}</div>
+      <div class="stat-label">Sources</div>
+    </div>
+
+    <div class="stat-block">
+      <div class="stat-num">{{ stats.writer_count }}</div>
+      <div class="stat-label">Writers</div>
+    </div>
+
+    <div class="stat-block">
+      {% if stats.transcript_count > 0 %}
+        <div class="stat-num success">{{ stats.transcript_count }}</div>
+        <div class="stat-label">Transcripts</div>
+        <div class="stat-sub">{{ stats.transcript_pct }}% of corpus</div>
+      {% else %}
+        <div class="stat-num muted">0</div>
+        <div class="stat-label">Transcripts</div>
+        <div class="stat-sub">none yet</div>
+      {% endif %}
+    </div>
+
+    {% if stats.warned_count %}
+    <div class="stat-block">
+      <div class="stat-num warn">{{ stats.warned_count }}</div>
+      <div class="stat-label">⚠ Rights unclear</div>
+      <div class="stat-sub">{{ ((stats.warned_count / stats.total) * 100) | round | int }}% of entries</div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="lic-section">
+    <div class="lic-bar-label">License breakdown</div>
+    <div class="lic-bar">
+      {% for lic in stats.licenses %}
+      <div class="lic-bar-seg"
+           style="width:{{ lic.pct }}%; background:{{ lic.color }}"
+           title="{{ lic.expression }}: {{ lic.count }} entries ({{ lic.pct }}%)">
+      </div>
+      {% endfor %}
+    </div>
+    <div class="lic-legend">
+      {% for lic in stats.licenses %}
+      <div class="lic-legend-item">
+        <div class="lic-dot" style="background:{{ lic.color }}"></div>
+        <strong>{{ lic.short }}</strong>
+        <span class="lic-pct">{{ lic.count }} &nbsp;·&nbsp; {{ lic.pct }}%</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+{% endif %}
 
 <!-- ── Pending Batches ──────────────────────────────────────── -->
 {% if pending_batches %}
