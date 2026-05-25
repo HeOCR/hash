@@ -601,7 +601,7 @@
   switchView(params.get('view') || stored);
 
   // ── All-entries flag/comment state ─────────────────────────
-  const ALL_ENTRIES = {{ all_entries | tojson }};
+  const ALL_ENTRY_IDS = {{ all_entries | map(attribute='entry_id') | list | tojson }};
   const allFlagged  = new Set();
   const allNotes    = {};
 
@@ -613,7 +613,7 @@
 
   function updateAllSummary() {
     const el = document.getElementById('all-save-summary');
-    if (el) el.textContent = `${ALL_ENTRIES.length} entries · ${allFlagged.size} flagged`;
+    if (el) el.textContent = `${ALL_ENTRY_IDS.length} entries · ${allFlagged.size} flagged`;
   }
 
   function refreshAllCard(eid) {
@@ -648,11 +648,11 @@
 
   async function saveAllDecisions() {
     const payload = {};
-    for (const e of ALL_ENTRIES) {
-      const isFl = allFlagged.has(e.entry_id);
-      const cmt  = allNotes[e.entry_id] || '';
+    for (const eid of ALL_ENTRY_IDS) {
+      const isFl = allFlagged.has(eid);
+      const cmt  = allNotes[eid] || '';
       if (isFl || cmt.trim()) {
-        payload[e.entry_id] = { status: isFl ? 'rejected' : 'approved', comment: cmt };
+        payload[eid] = { status: isFl ? 'rejected' : 'approved', comment: cmt };
       }
     }
     const el = document.getElementById('all-save-status');
@@ -660,9 +660,9 @@
     try {
       const existing = await fetch('/api/audit/decisions').then(r => r.ok ? r.json() : {});
       const merged = { ...existing, ...payload };
-      for (const e of ALL_ENTRIES) {
-        if (!allFlagged.has(e.entry_id) && !(allNotes[e.entry_id] || '').trim()) {
-          delete merged[e.entry_id];
+      for (const eid of ALL_ENTRY_IDS) {
+        if (!allFlagged.has(eid) && !(allNotes[eid] || '').trim()) {
+          delete merged[eid];
         }
       }
       const res = await fetch('/api/audit/decide', {

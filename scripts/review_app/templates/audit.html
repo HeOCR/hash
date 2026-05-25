@@ -304,7 +304,7 @@
 
 {% block scripts %}
 <script>
-const ENTRIES  = {{ entries | tojson }};
+const ENTRY_IDS = {{ entries | map(attribute='entry_id') | list | tojson }};
 const rejected = new Set();
 const notes    = {};
 
@@ -320,7 +320,7 @@ const notes    = {};
 function updateStats() {
   document.getElementById('stat-rejected').textContent = rejected.size;
   document.getElementById('submit-summary').textContent =
-    `${ENTRIES.length} entries · ${rejected.size} flagged for removal`;
+    `${ENTRY_IDS.length} entries · ${rejected.size} flagged for removal`;
 }
 
 function refreshCard(eid) {
@@ -380,11 +380,11 @@ function applyFilter(f) {
 
 async function saveDecisions() {
   const payload = {};
-  for (const e of ENTRIES) {
-    const isRej = rejected.has(e.entry_id);
-    const cmt   = notes[e.entry_id] || '';
+  for (const eid of ENTRY_IDS) {
+    const isRej = rejected.has(eid);
+    const cmt   = notes[eid] || '';
     if (isRej || cmt.trim()) {
-      payload[e.entry_id] = { status: isRej ? 'rejected' : 'approved', comment: cmt };
+      payload[eid] = { status: isRej ? 'rejected' : 'approved', comment: cmt };
     }
   }
   const el = document.getElementById('save-status');

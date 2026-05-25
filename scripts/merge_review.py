@@ -221,6 +221,23 @@ def main():
             print(f"     Note: {cmt}")
     print()
     print("Pending/decisions files retained as audit trail.")
+
+    # ── Prune stale entries from audit_decisions.json ─────────
+    audit_decisions_path = REVIEW_DIR / "audit_decisions.json"
+    if audit_decisions_path.exists():
+        try:
+            audit_dec: dict = json.loads(audit_decisions_path.read_text(encoding="utf-8"))
+            stale = [eid for eid in audit_dec if eid not in existing_ids]
+            if stale:
+                for eid in stale:
+                    del audit_dec[eid]
+                audit_decisions_path.write_text(
+                    json.dumps(audit_dec, ensure_ascii=False, indent=2), encoding="utf-8"
+                )
+                print(f"✓  Pruned {len(stale)} stale decisions from audit_decisions.json")
+        except Exception as e:
+            print(f"⚠  Could not prune audit_decisions.json: {e}")
+
     print(f"Run `python3 scripts/validate_indexes.py` to verify the updated index.")
 
 
