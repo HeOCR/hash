@@ -50,7 +50,7 @@
   "released_at": "2026-05-25T00:00:00Z",
   "resources": [
     {
-      "bytes": 596414,
+      "bytes": 600351,
       "description": "Scan-level index. One JSON object per page, with rights evidence, file checksums, and provenance.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -58,7 +58,7 @@
       "name": "entries",
       "path": "data/index/entries.jsonl",
       "profile": "data-resource",
-      "record_count": 198
+      "record_count": 197
     },
     {
       "bytes": 227260,
@@ -77,23 +77,23 @@
     "source": "https://github.com/HeOCR/hash/blob/main/schemas/source.schema.json"
   },
   "stats": {
-    "attribution_required_count": 153,
+    "attribution_required_count": 152,
     "entry_source_count": 48,
     "institution_breakdown": {
       "Benjamin Zucker Family Ketubah Collection": 1,
       "Bibliothèque nationale de France": 1,
       "Library of Congress": 24,
-      "National Library of Israel": 145,
+      "National Library of Israel": 144,
       "Wikimedia Commons": 9
     },
     "license_breakdown": {
       "CC-BY-SA-3.0": 9,
-      "LicenseRef-Public-Domain-Israel": 144,
+      "LicenseRef-Public-Domain-Israel": 143,
       "LicenseRef-Public-Domain-Ukraine": 1,
       "PDM-1.0": 44
     },
-    "record_count": 198,
-    "scan_byte_count": 296751462,
+    "record_count": 197,
+    "scan_byte_count": 295543454,
     "source_record_count": 111,
     "source_status_breakdown": {
       "candidate": 15,

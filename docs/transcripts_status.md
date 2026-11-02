@@ -1,29 +1,43 @@
 # Transcript Acquisition Status
 
-_Last updated: 2026-05-25. Run by automated agent; items requiring human help are listed below._
+_Last updated: 2026-05-25 (provenance corrected 2026-11-02). Run by automated agent; items requiring human help are listed below._
+
+## Provenance correction (2026-11-02)
+
+The first version of this page described 6 Wikisource transcripts and 1 partial one. What `main` actually holds is different, and none of the texts is human-reviewed:
+
+- **10 entries have a transcript file**, and all have `transcription.status: reviewed`. They are the 6 Wikisource-based texts below plus 4 GPT-4o vision transcriptions (`created_by: ocr`) added in #34.
+- **All 10 were edited in commit `cf1d4d4` by an AI agent**, toward what is visible on the scan. That edit cut the Wikisource poems to the lines on the page, took over autograph variants, added titles, dates and signatures, and rewrote the GPT-4o texts.
+- **None of them has had a human review.** The maintainer confirmed on 2026-11-02 that the `cf1d4d4` edits were not reviewed, so all 10 texts are unreviewed. The review tool sets `status: reviewed` without recording a reviewer, a method or a text checksum. `status: reviewed` therefore does not mean a human checked the text against the scan.
+- **The texts are not diplomatic transcriptions.** The Wikisource-based texts keep the edition's full niqqud, which the autographs mostly lack. Page numbers, stamps and marginal notes are left out.
+- **The Wosner entry has no transcript.** `commons__wosner_halachic_ruling_1981__p0001` has `status: none` and no text file on `main`.
+
+Each entry's `transcription.rights.evidence_text` now carries the same correction. Statuses and texts are unchanged.
 
 ## Summary
 
 | Status   | Count | Notes                                    |
 |----------|-------|------------------------------------------|
-| full     | 6     | Complete plain-text transcript           |
-| partial  | 1     | Fragment / first folio only              |
-| none     | 191   | Not yet transcribed                      |
-| **Total**| **198** |                                        |
+| text present (`status: reviewed`, but unreviewed) | 10 | 6 Wikisource-based and 4 GPT-4o-based, all agent-edited in `cf1d4d4` |
+| none     | 187   | HTR candidates only (`data/transcripts/candidates/`) |
+| **Total**| **197** | One blank page was removed in `8eaf554` |
 
-## Completed transcripts (7 entries)
+## Entries with a transcript (10)
 
-All files saved to `data/transcripts/`; `entries.jsonl` updated with `transcription` field.
+All files are in `data/transcripts/`.
 
-| Entry ID                                    | Source                  | Rights       | Notes                                   |
-|---------------------------------------------|-------------------------|--------------|-----------------------------------------|
-| `commons__bialik_el_hazippor__p0001`        | Hebrew Wikisource       | PD-old-70    | Full poem with full niqqud (vocalization) |
-| `commons__hatikvah_imber_manuscript__p0001` | Hebrew Wikisource       | PD-old-100   | Full 9-stanza original "Tikvatenu" (1886) |
-| `commons__rachel_aqara_1928__p0001`         | Hebrew Wikisource       | PD-old-70    | Vocalized version only (stripped unvocalized header) |
-| `commons__rachel_gan_naul__p0001`           | Hebrew Wikisource       | PD-old-70    | Full poem with niqqud                   |
-| `commons__rachel_rak_al_atzmi__p0001`       | Hebrew Wikisource       | PD-old-70    | Full poem without niqqud (unvocalized)  |
-| `commons__begani_netatikha__p0001`          | Hebrew Wikisource       | PD-old-70    | Full poem with niqqud                   |
-| `commons__wosner_halachic_ruling_1981__p0001` | Wikimedia Commons description | CC-BY-SA-3.0 | PARTIAL — description text only, not full responsum |
+| Entry ID | Base text | Rights | Notes |
+|---|---|---|---|
+| `commons__bialik_el_hazippor__p0001` | Hebrew Wikisource | PD-old-70 | Cut to the 4 lines on the page; full niqqud from the edition |
+| `commons__hatikvah_imber_manuscript__p0001` | Hebrew Wikisource ("Tikvatenu", 1886) | PD-old-100 | Cut to the 2 stanzas on the sheet; "מקהלה" and the signature line added |
+| `commons__rachel_aqara_1928__p0001` | Hebrew Wikisource | PD-old-70 | Edited toward the draft; keeps "ושחרחר", which is struck out on the scan |
+| `commons__rachel_gan_naul__p0001` | Hebrew Wikisource | PD-old-70 | Title and autograph variants added |
+| `commons__rachel_rak_al_atzmi__p0001` | Hebrew Wikisource | PD-old-70 | The unpointed edition was replaced with a pointed text |
+| `commons__begani_netatikha__p0001` | Hebrew Wikisource | PD-old-70 | Autograph wording, date and closing line added |
+| `loc__2018757642__p0005` | GPT-4o vision | PDM-1.0 | Title page; the evidence text still says it needs human review |
+| `loc__2018757719__p0002` | GPT-4o vision | PDM-1.0 | Title page; the evidence text still says it needs human review |
+| `nli__nnl_archive_al997009912248405171__p0004` | GPT-4o vision | LicenseRef-Public-Domain-Israel | GPT-4o had returned "[blank]"; the text was written in `cf1d4d4` |
+| `nli__nnl_archive_al997009912248405171__p0005` | GPT-4o vision | LicenseRef-Public-Domain-Israel | The GPT-4o text was rewritten in `cf1d4d4` |
 
 ## Items requiring human assistance
 
