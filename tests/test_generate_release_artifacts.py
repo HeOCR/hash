@@ -288,7 +288,8 @@ def test_attribution_gate_is_license_driven(tmp_path: Path) -> None:
         e for e in entries
         if e["rights"]["license_expression"] not in _gen.ATTRIBUTION_REQUIRING_LICENSES
     ]
-    assert _gen.ATTRIBUTION_REQUIRING_LICENSES
+    # Every accepted attribution license must be gated (AGENTS.md "Accepted licenses").
+    assert {"CC-BY-4.0", "CC-BY-SA-3.0", "CC-BY-SA-4.0"} <= _gen.ATTRIBUTION_REQUIRING_LICENSES
     for license_expr in sorted(_gen.ATTRIBUTION_REQUIRING_LICENSES):
         target = json.loads(json.dumps(rest[0]))  # deep-copy
         target["entry_id"] = "synthetic__attribution_gate__p0001"

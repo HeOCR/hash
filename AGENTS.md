@@ -166,6 +166,10 @@ license text into the record.
 - `CC0-1.0`
 - `CC-BY-4.0`
 - `CC-BY-SA-4.0` (with the caveat below)
+- `CC-BY-SA-3.0` (with the caveat below). The maintainer accepted it on
+  2026-11-02; the 9 entries ingested in #33 carry it. Under CC's
+  compatibility rules, adaptations of BY-SA 3.0 material may be released
+  under BY-SA 4.0.
 - Jurisdiction public-domain refs such as `LicenseRef-Public-Domain-Israel`,
   `LicenseRef-Public-Domain-Ukraine`.
 
@@ -266,8 +270,8 @@ When fetching from `upload.wikimedia.org`:
 
 ## CC-BY-SA caveat
 
-`CC-BY-SA-4.0` is only acceptable when the licensor actually holds rights
-over the underlying work. A modern photographer's CC-BY-SA grant on a
+`CC-BY-SA-4.0` and `CC-BY-SA-3.0` are only acceptable when the licensor
+actually holds rights over the underlying work. A modern photographer's CC-BY-SA grant on a
 *photograph of someone else's still-in-copyright handwriting* does NOT make
 the handwriting free — reject those entries. PR #3's body is the canonical
 write-up of this policy. When in doubt, treat the underlying work and the

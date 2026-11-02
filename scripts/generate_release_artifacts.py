@@ -47,6 +47,7 @@ DATAPACKAGE_PATH = REPO_ROOT / "datapackage.json"
 # in AGENTS.md.
 ATTRIBUTION_REQUIRING_LICENSES: frozenset[str] = frozenset({
     "CC-BY-4.0",
+    "CC-BY-SA-3.0",
     "CC-BY-SA-4.0",
 })
 
