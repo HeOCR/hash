@@ -280,41 +280,41 @@ def test_attribution_gate_is_license_driven(tmp_path: Path) -> None:
     # If we drove inclusion off the `attribution_required` flag alone, an
     # entry with a CC-BY-SA license but `attribution_required: false` would
     # silently disappear from NOTICE.md. Verify that the generator rejects
-    # that configuration instead of producing a broken NOTICE.
+    # that configuration instead of producing a broken NOTICE, for every
+    # attribution-requiring license. The offending entry is synthesised so
+    # the test does not depend on the live index carrying such a license.
     entries = _load_entries()
-    target = next(
-        e for e in entries
-        if e["rights"]["license_expression"] == "CC-BY-SA-4.0"
-    )
-    target = json.loads(json.dumps(target))  # deep-copy
-    target["rights"]["attribution_required"] = False
-
     rest = [
         e for e in entries
-        if e["entry_id"] != target["entry_id"]
-        and e["rights"]["license_expression"] != "CC-BY-SA-4.0"
+        if e["rights"]["license_expression"] not in _gen.ATTRIBUTION_REQUIRING_LICENSES
     ]
-    entries_copy = tmp_path / "entries.jsonl"
-    entries_copy.write_text(
-        "\n".join(json.dumps(e, ensure_ascii=False) for e in rest + [target]) + "\n",
-        encoding="utf-8",
-    )
+    assert _gen.ATTRIBUTION_REQUIRING_LICENSES
+    for license_expr in sorted(_gen.ATTRIBUTION_REQUIRING_LICENSES):
+        target = json.loads(json.dumps(rest[0]))  # deep-copy
+        target["entry_id"] = "synthetic__attribution_gate__p0001"
+        target["rights"]["license_expression"] = license_expr
+        target["rights"]["attribution_required"] = False
 
-    notice = tmp_path / "NOTICE.md"
-    citation = tmp_path / "CITATION.cff"
-    datapackage = tmp_path / "datapackage.json"
+        case = tmp_path / license_expr
+        case.mkdir()
+        entries_copy = case / "entries.jsonl"
+        entries_copy.write_text(
+            "\n".join(json.dumps(e, ensure_ascii=False) for e in rest + [target]) + "\n",
+            encoding="utf-8",
+        )
+        notice = case / "NOTICE.md"
 
-    result = _run_generator(
-        cwd=tmp_path,
-        entries=entries_copy,
-        notice=notice,
-        citation=citation,
-        datapackage=datapackage,
-    )
-    assert result.returncode != 0
-    assert "CC-BY-SA-4.0" in result.stderr
-    assert "attribution_required" in result.stderr
-    assert not notice.exists()
+        result = _run_generator(
+            cwd=case,
+            entries=entries_copy,
+            notice=notice,
+            citation=case / "CITATION.cff",
+            datapackage=case / "datapackage.json",
+        )
+        assert result.returncode != 0, license_expr
+        assert license_expr in result.stderr
+        assert "attribution_required" in result.stderr
+        assert not notice.exists()
 
 
 def test_check_mode_passes_when_up_to_date(tmp_path: Path) -> None:
