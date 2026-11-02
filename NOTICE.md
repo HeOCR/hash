@@ -236,15 +236,6 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
 - Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
 
-### Hebrew poem notebook, Hannah Senesh, page 12
-
-- Entry: `nli__nnl_archive_al997009912248405171__p0012`
-- License: Public Domain (Israel; life + 70) (LicenseRef-Public-Domain-Israel)
-- Licensor: Hannah Senesh; National Library of Israel
-- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009165988705171/NLI>
-- Scan file URL: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009912248405171/NLI>
-- Holding institution: National Library of Israel (NNL_ARCHIVE_AL997009912248405171)
-
 ### Handwritten diary and Violin draft, Hannah Senesh, page 3
 
 - Entry: `nli__nnl_archive_al997009912248505171__p0003`
