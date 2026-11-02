@@ -356,7 +356,10 @@ def test_builder_picks_original_among_multiple_roles(tmp_path: Path) -> None:
     target = json.loads(json.dumps(entries[0]))
     target["entry_id"] = "synthetic__multi_role__p0001"
     target["source_id"] = "synthetic__multi_role"
-    original = json.loads(json.dumps(target["files"][0]))
+    # Select by role: live entries may already list a thumbnail first.
+    original = json.loads(
+        json.dumps(next(f for f in target["files"] if f["role"] == "original"))
+    )
     thumbnail = json.loads(json.dumps(original))
     thumbnail["role"] = "thumbnail"
     thumbnail["local_path"] = None
