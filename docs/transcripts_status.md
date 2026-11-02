@@ -8,7 +8,7 @@ The first version of this page described 6 Wikisource transcripts and 1 partial 
 
 - **10 entries have a transcript file**, and all have `transcription.status: reviewed`. They are the 6 Wikisource-based texts below plus 4 GPT-4o vision transcriptions (`created_by: ocr`) added in #34.
 - **All 10 were edited in commit `cf1d4d4` by an AI agent**, toward what is visible on the scan. That edit cut the Wikisource poems to the lines on the page, took over autograph variants, added titles, dates and signatures, and rewrote the GPT-4o texts.
-- **No human reviewer was recorded for any of them.** The review tool sets `status: reviewed` without recording a reviewer, a method or a text checksum. `status: reviewed` therefore does not mean a human checked the text against the scan.
+- **None of them has had a human review.** The maintainer confirmed on 2026-11-02 that the `cf1d4d4` edits were not reviewed, so all 10 texts are unreviewed. The review tool sets `status: reviewed` without recording a reviewer, a method or a text checksum. `status: reviewed` therefore does not mean a human checked the text against the scan.
 - **The texts are not diplomatic transcriptions.** The Wikisource-based texts keep the edition's full niqqud, which the autographs mostly lack. Page numbers, stamps and marginal notes are left out.
 - **The Wosner entry has no transcript.** `commons__wosner_halachic_ruling_1981__p0001` has `status: none` and no text file on `main`.
 
@@ -18,7 +18,7 @@ Each entry's `transcription.rights.evidence_text` now carries the same correctio
 
 | Status   | Count | Notes                                    |
 |----------|-------|------------------------------------------|
-| text present (`status: reviewed`, no human review recorded) | 10 | 6 Wikisource-based and 4 GPT-4o-based, all agent-edited in `cf1d4d4` |
+| text present (`status: reviewed`, but unreviewed) | 10 | 6 Wikisource-based and 4 GPT-4o-based, all agent-edited in `cf1d4d4` |
 | none     | 187   | HTR candidates only (`data/transcripts/candidates/`) |
 | **Total**| **197** | One blank page was removed in `8eaf554` |
 
