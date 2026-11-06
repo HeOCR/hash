@@ -40,6 +40,8 @@ first pass of baselines and bounding boxes without any training data collection:
 | **MiDRASH Project** | Cairo Genizah (large) | Baseline segmentation + HTR | <https://github.com/MiDRASH-Project> (see releases) |
 | **Princeton Geniza Project — HTR4PGP** | Princeton Geniza Lab fragments | Baseline segmentation + HTR | <https://github.com/Princeton-CDH/geniza> (model registry) |
 
+> **Correction (2026-11-06):** the `https://github.com/MiDRASH-Project` organization cited above does not exist. MiDRASH outputs are published on Zenodo, for example automatic Kraken transcriptions of the NLI Geniza (Zenodo 17734473, machine output, not ground truth). See `HeOCR/hocrgen` `docs/2026_11_06_israeli_public_domain_documents_research/verification/track_d_transcribed_datasets.md` §5.
+
 **Relevance to this corpus:** The HASH corpus already includes Cairo Genizah fragments from
 Wikimedia Commons (Bodleian T-S items, Halper items) and has `openn__cairo_genizah` as a
 candidate source.  These models apply directly to that material.
