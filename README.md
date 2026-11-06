@@ -32,8 +32,8 @@ per-scan record before redistributing or transforming a specific image.
 |---|---|
 | Ingested scans | 198 |
 | Verified sources | 48 |
-| Candidate leads still under research | 15 |
-| Provenance-only rejected source records | 46 |
+| Candidate leads still under research | 14 |
+| Provenance-only rejected source records | 47 |
 | Corpus size on disk | ~283.00 MiB |
 | Repository-authored metadata license | [CC0 1.0](LICENSE) |
 | Per-scan rights policy | [`LICENSE.md`](LICENSE.md) |
@@ -91,7 +91,7 @@ make release
 <!-- begin:status -->
 ## Current Status
 
-The corpus currently contains 197 ingested scans drawn from 48 verified sources, totalling ~281.85 MiB on disk. The source-level index also tracks 15 candidate leads still being researched and 46 source records kept for provenance after being rejected as out of scope.
+The corpus currently contains 197 ingested scans drawn from 48 verified sources, totalling ~281.85 MiB on disk. The source-level index also tracks 14 candidate leads still being researched and 47 source records kept for provenance after being rejected as out of scope.
 
 License breakdown across the 197 entries:
 
