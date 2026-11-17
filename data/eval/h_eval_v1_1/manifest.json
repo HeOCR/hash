@@ -1,0 +1,46 @@
+{
+ "eval_set": "h_eval_v1_1",
+ "amends": "h_eval_v1",
+ "base_manifest_sha256": "63e9f31cfdd1987c17f02dbb5028ed9427a2e1d0993ac53625adb91226cbb642",
+ "selector": "scripts/select_h_eval_v1_1.py",
+ "selector_commit": "8902662a56540576c1ea5746b00c579c4b534514",
+ "selector_dirty": false,
+ "hash_commit": "8902662a56540576c1ea5746b00c579c4b534514",
+ "seed": 20261119,
+ "target_total": 100,
+ "caps": {
+  "pages_per_unit": 3,
+  "pages_per_writer": 8
+ },
+ "hand_rule": "role writer; plus role author outside nli__ms_ sources (legacy autograph convention); else unknown:<unit>",
+ "added_primary_pages": 56,
+ "added_primary_units": 19,
+ "added_primary_hands": 19,
+ "added_seen_writer_pages": 0,
+ "added_other_hebrew_script_pages": 10,
+ "main_language_rule": "primary only if no other Hebrew-script language is recorded (lead 2026-11-18)",
+ "combined_primary_pages": 100,
+ "combined_primary_hands": 49,
+ "holdout_added_pages": 108,
+ "flagged_units": 12,
+ "unscored": 14,
+ "added_by_period": {
+  "1800_1899": 23,
+  "1900_1948": 12,
+  "before_1800": 15,
+  "undated": 6
+ },
+ "added_by_document_type": {
+  "diary": 3,
+  "letter": 18,
+  "notebook": 3,
+  "other": 26,
+  "poem": 6
+ },
+ "added_by_provider": {
+  "National Library of Israel": 56
+ },
+ "added_copies": 32,
+ "manifest_sha256": "a1c7f6166eef0fcbbd17e9d5f35a510ff40cc31454e003db1c6d310703b2a153",
+ "signed": "data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource"
+}
