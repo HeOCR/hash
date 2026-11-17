@@ -29,6 +29,11 @@
       "title": "Creative Commons Attribution-ShareAlike 3.0 Unported"
     },
     {
+      "name": "LicenseRef-NLI-Public-Domain-Free-Use",
+      "scope": "scans",
+      "title": "LicenseRef-NLI-Public-Domain-Free-Use"
+    },
+    {
       "name": "LicenseRef-Public-Domain-Israel",
       "scope": "scans",
       "title": "Public Domain (Israel; life + 70)"
@@ -47,10 +52,10 @@
   ],
   "name": "hash",
   "profile": "data-package",
-  "released_at": "2026-05-25T00:00:00Z",
+  "released_at": "2026-11-17T21:59:47Z",
   "resources": [
     {
-      "bytes": 600351,
+      "bytes": 921849,
       "description": "Scan-level index. One JSON object per page, with rights evidence, file checksums, and provenance.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -58,10 +63,10 @@
       "name": "entries",
       "path": "data/index/entries.jsonl",
       "profile": "data-resource",
-      "record_count": 197
+      "record_count": 298
     },
     {
-      "bytes": 228016,
+      "bytes": 307107,
       "description": "Source-level catalog. One JSON object per institution, collection, item, dataset, or source lead.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -69,7 +74,7 @@
       "name": "sources",
       "path": "data/index/sources.jsonl",
       "profile": "data-resource",
-      "record_count": 111
+      "record_count": 146
     }
   ],
   "schemas": {
@@ -77,29 +82,30 @@
     "source": "https://github.com/HeOCR/hash/blob/main/schemas/source.schema.json"
   },
   "stats": {
-    "attribution_required_count": 152,
-    "entry_source_count": 48,
+    "attribution_required_count": 253,
+    "entry_source_count": 83,
     "institution_breakdown": {
       "Benjamin Zucker Family Ketubah Collection": 1,
       "Bibliothèque nationale de France": 1,
       "Library of Congress": 24,
-      "National Library of Israel": 144,
+      "National Library of Israel": 245,
       "Wikimedia Commons": 9
     },
     "license_breakdown": {
       "CC-BY-SA-3.0": 9,
+      "LicenseRef-NLI-Public-Domain-Free-Use": 101,
       "LicenseRef-Public-Domain-Israel": 143,
       "LicenseRef-Public-Domain-Ukraine": 1,
       "PDM-1.0": 44
     },
-    "record_count": 197,
-    "scan_byte_count": 295543454,
-    "source_record_count": 111,
+    "record_count": 298,
+    "scan_byte_count": 349322886,
+    "source_record_count": 146,
     "source_status_breakdown": {
       "candidate": 14,
       "needs_review": 1,
       "rejected": 47,
-      "verified": 49
+      "verified": 84
     }
   },
   "title": "HASH — Hebrew Archive of Scanned Handwriting",
