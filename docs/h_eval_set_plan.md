@@ -26,7 +26,7 @@ HASH as it is (lead 2026-11-18), with honest intervals; the intake round grows i
 
 ## 2. Plan
 
-1. **v1 selection from the pool as it is now** (step 2's rules), handed to eval and pre-registered (steps 3–4).
+1. **v1 selection from the pool as it is now** (step 3's rules), checked for exposure, handed to eval and pre-registered (steps 4–5).
 2. **HASH intake round (data-collection), after v1.** Ingest more writers, so the set grows beyond Senesh-heavy material.
    - First from the 14 HASH sources already at `candidate` status, then new LoC, Commons and OPenn items.
    - Targets: at least 20 new hands, more letters, notebooks and records (not diaries), more pre-1900 and post-1948 pages.
