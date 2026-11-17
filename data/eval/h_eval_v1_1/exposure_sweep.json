@@ -1,0 +1,18 @@
+{
+ "eval_set": "h_eval_v1_1",
+ "checked_at": "2026-11-18",
+ "method": "fixed-string search for every v1.1 held-out source_id, NLI record id and file sha256 over *.list/*.json/*.jsonl/*.txt/*.csv/*.tsv in the HeOCR task workspace (tasks/) and the hocrgen, hocrsyngen, hletterscriptgen, heocr-engine and heocr-restricted-eval clones",
+ "training_lists_checked": [
+  "tasks/r7-tesseract-real/data/bynli/train.list",
+  "tasks/r8b-tesseract/data/train_main.list",
+  "tasks/r9-tesseract/data/train_a.list",
+  "tasks/r9-tesseract/data/train_b.list"
+ ],
+ "training_hits": 0,
+ "files_with_hits": 1,
+ "non_training_hits": {
+  "nli__nnl_archive_al997009912248705171": "hocrgen package fixture (HASH snapshot) holds page p0056 of this Senesh unit; the selected pages are p0057, p0094, p0096; not training"
+ },
+ "text_exposure": "not run yet: no references exist. eval runs check_train_overlap on the reviewed text before scoring.",
+ "signed": "data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource"
+}
