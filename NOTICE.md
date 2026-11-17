@@ -7,7 +7,7 @@ Repository-authored metadata is dedicated to the public domain under CC0 1.0 Uni
 Scan files carry per-entry rights. The entries listed below carry a license that requires attribution (currently CC-BY-4.0, CC-BY-SA-3.0, CC-BY-SA-4.0). Anyone redistributing or reusing these scans must keep the listed credit and link to the source page on which the rights claim was verified.
 
 - Corpus release: `0.1.0-rc`
-- Released at: `2026-11-17T21:59:47Z`
+- Released at: `2026-11-17T22:24:57Z`
 
 ## Attribution-required entries
 
@@ -191,6 +191,87 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL104548874/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 6920=28)
 
+### גזע ישי : "מקורות ... יואש מלך יהודה ומפלת עתליה ... שיר בחמשה חלקים ..." העתקה מדפוס וינה תקצ"ה בידי י.ל. זומר. — Page 2
+
+- Entry: `nli__ms_990000404570205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: זומר, יהודה ליב; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000404570205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL79638784/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 2630=28)
+
+### גזע ישי : "מקורות ... יואש מלך יהודה ומפלת עתליה ... שיר בחמשה חלקים ..." העתקה מדפוס וינה תקצ"ה בידי י.ל. זומר. — Page 3
+
+- Entry: `nli__ms_990000404570205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: זומר, יהודה ליב; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000404570205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL79638787/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 2630=28)
+
+### גזע ישי : "מקורות ... יואש מלך יהודה ומפלת עתליה ... שיר בחמשה חלקים ..." העתקה מדפוס וינה תקצ"ה בידי י.ל. זומר. — Page 4
+
+- Entry: `nli__ms_990000404570205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: זומר, יהודה ליב; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000404570205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL79638789/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 2630=28)
+
+### זובח תודה : מנהגי בדיקת הריאה הנהוגים בשלוניקי. העתקה מדפוס שלוניקי תרל"ה. — Page 2
+
+- Entry: `nli__ms_990000404600205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: עבדל בן אהרן אפרים; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000404600205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL79638088/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 2635=28)
+
+### זובח תודה : מנהגי בדיקת הריאה הנהוגים בשלוניקי. העתקה מדפוס שלוניקי תרל"ה. — Page 3
+
+- Entry: `nli__ms_990000404600205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: עבדל בן אהרן אפרים; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000404600205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL79638091/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 2635=28)
+
+### זובח תודה : מנהגי בדיקת הריאה הנהוגים בשלוניקי. העתקה מדפוס שלוניקי תרל"ה. — Page 4
+
+- Entry: `nli__ms_990000404600205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: עבדל בן אהרן אפרים; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000404600205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL79638093/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 2635=28)
+
+### כתובים (שיר השירים) : "... ותרגומו ... גם תבסיר נלוה עמו ביאור בלשון פרסי ...". כנראה העתקה מדפוס ירושלים (תרנ"ו או תרס"ד). — Page 2
+
+- Entry: `nli__ms_990000404610205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000404610205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL79638304/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 2643=28)
+
+### כתובים (שיר השירים) : "... ותרגומו ... גם תבסיר נלוה עמו ביאור בלשון פרסי ...". כנראה העתקה מדפוס ירושלים (תרנ"ו או תרס"ד). — Page 3
+
+- Entry: `nli__ms_990000404610205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000404610205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL79638322/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 2643=28)
+
+### כתובים (שיר השירים) : "... ותרגומו ... גם תבסיר נלוה עמו ביאור בלשון פרסי ...". כנראה העתקה מדפוס ירושלים (תרנ"ו או תרס"ד). — Page 4
+
+- Entry: `nli__ms_990000404610205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000404610205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL79638337/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 2643=28)
+
 ### משלי גלרט : העתקה מגרמנית לעברית בידי משה הכהן ריכרסון. — Page 2
 
 - Entry: `nli__ms_990000407010205171__p0002`
@@ -272,6 +353,33 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL104548509/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 6935=8)
 
+### דיואן תימני. — Page 2
+
+- Entry: `nli__ms_990000411340205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000411340205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL72452722/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Yah. Heb. 212)
+
+### דיואן תימני. — Page 3
+
+- Entry: `nli__ms_990000411340205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000411340205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL72452729/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Yah. Heb. 212)
+
+### דיואן תימני. — Page 4
+
+- Entry: `nli__ms_990000411340205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000411340205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL72452739/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Yah. Heb. 212)
+
 ### בחינת עולם : כנראה העתקה מדפוס שונצינו רמ"ה - בהשמטת הביאור. — page 2
 
 - Entry: `nli__ms_990000413390205171__p0002`
@@ -298,6 +406,33 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000413390205171>
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL160672184/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 7020=28)
+
+### ספור הצרות : על גזירות גירושים שנפגעו מהן יהודי הערים הבאות: טריויסו, ויצינצה, פילטרי, ציוידאל, אודיני, "ג'ואיק"ה אי קטנה תוך עיר ויניצייה", פריאול, טרנטו, מנטובה, רומא קרימונא. קצתם העתקה מס' עמק הבכא. בסוף מעשה בשודדים משנת 1627. — Page 2
+
+- Entry: `nli__ms_990000416060205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000416060205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL75575877/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 6101=38)
+
+### ספור הצרות : על גזירות גירושים שנפגעו מהן יהודי הערים הבאות: טריויסו, ויצינצה, פילטרי, ציוידאל, אודיני, "ג'ואיק"ה אי קטנה תוך עיר ויניצייה", פריאול, טרנטו, מנטובה, רומא קרימונא. קצתם העתקה מס' עמק הבכא. בסוף מעשה בשודדים משנת 1627. — Page 3
+
+- Entry: `nli__ms_990000416060205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000416060205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL75575881/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 6101=38)
+
+### ספור הצרות : על גזירות גירושים שנפגעו מהן יהודי הערים הבאות: טריויסו, ויצינצה, פילטרי, ציוידאל, אודיני, "ג'ואיק"ה אי קטנה תוך עיר ויניצייה", פריאול, טרנטו, מנטובה, רומא קרימונא. קצתם העתקה מס' עמק הבכא. בסוף מעשה בשודדים משנת 1627. — Page 4
+
+- Entry: `nli__ms_990000416060205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000416060205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL75575883/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 6101=38)
 
 ### לקט יוסף : מאמרים ופשטים בערכין ובסדר א"ב. העתקה מדפוס אופנבך תע"ו. — page 2
 
@@ -352,6 +487,114 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000422120205171>
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL77922004/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 1025=28)
+
+### שטרות : העתקי שטרות מארם צובא, חלקם העתקה מטור אבן-העזר וחלקם העתקה משטרות קונקרטים בני הזמן. — Page 2
+
+- Entry: `nli__ms_990000422980205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000422980205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL78158943/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 1148=28)
+
+### שטרות : העתקי שטרות מארם צובא, חלקם העתקה מטור אבן-העזר וחלקם העתקה משטרות קונקרטים בני הזמן. — Page 3
+
+- Entry: `nli__ms_990000422980205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000422980205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL78158948/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 1148=28)
+
+### שטרות : העתקי שטרות מארם צובא, חלקם העתקה מטור אבן-העזר וחלקם העתקה משטרות קונקרטים בני הזמן. — Page 4
+
+- Entry: `nli__ms_990000422980205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000422980205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL78158949/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 1148=28)
+
+### קבץ כתבים : סיפורים, אגרות, זכרונות, תמונות וציורים לקטנים ולגדולים. — Page 2
+
+- Entry: `nli__ms_990000430150205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: פיורקו, אברהם מרדכי בן יצחק; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000430150205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL72656200/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 5433=28)
+
+### קבץ כתבים : סיפורים, אגרות, זכרונות, תמונות וציורים לקטנים ולגדולים. — Page 3
+
+- Entry: `nli__ms_990000430150205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: פיורקו, אברהם מרדכי בן יצחק; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000430150205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL72656206/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 5433=28)
+
+### קבץ כתבים : סיפורים, אגרות, זכרונות, תמונות וציורים לקטנים ולגדולים. — Page 4
+
+- Entry: `nli__ms_990000430150205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: פיורקו, אברהם מרדכי בן יצחק; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000430150205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL72656220/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 5433=28)
+
+### עשרה למאה : עשרה דרושים מאת ר' צבי הירש במהרי"ל מגיד מק"ק וואיידסלוב. כנראה העתקה מדפוס ברלין, תקס"א. — Page 2
+
+- Entry: `nli__ms_990000430860205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000430860205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL71727063/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 5555=28)
+
+### עשרה למאה : עשרה דרושים מאת ר' צבי הירש במהרי"ל מגיד מק"ק וואיידסלוב. כנראה העתקה מדפוס ברלין, תקס"א. — Page 3
+
+- Entry: `nli__ms_990000430860205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000430860205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL71727070/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 5555=28)
+
+### עשרה למאה : עשרה דרושים מאת ר' צבי הירש במהרי"ל מגיד מק"ק וואיידסלוב. כנראה העתקה מדפוס ברלין, תקס"א. — Page 4
+
+- Entry: `nli__ms_990000430860205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000430860205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL71727081/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 5555=28)
+
+### ספר זכרון : "ס' זכרון" מאת משכיל בן מורביה, והוא ילקוט שירים מתורגמים ברובם, הגיונות בתורה, פילוסופיה ודברי יומן בעברית וגרמנית-יהודית. — Page 2
+
+- Entry: `nli__ms_990000431370205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000431370205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL71726925/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 5616=28)
+
+### ספר זכרון : "ס' זכרון" מאת משכיל בן מורביה, והוא ילקוט שירים מתורגמים ברובם, הגיונות בתורה, פילוסופיה ודברי יומן בעברית וגרמנית-יהודית. — Page 3
+
+- Entry: `nli__ms_990000431370205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000431370205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL71726933/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 5616=28)
+
+### ספר זכרון : "ס' זכרון" מאת משכיל בן מורביה, והוא ילקוט שירים מתורגמים ברובם, הגיונות בתורה, פילוסופיה ודברי יומן בעברית וגרמנית-יהודית. — Page 4
+
+- Entry: `nli__ms_990000431370205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000431370205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL71726939/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 5616=28)
 
 ### בריתא דמלאכת המשכן : העתקה מכ"י פאריז 353.20 "בעד הרב החכם ר' אברהם ברלינר ד"ר נ"י בברלין" (1א). — Page 2
 
@@ -434,6 +677,33 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL76452569/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 68=28)
 
+### לישרים תהלה : העתקה מהדפוס. — Page 2
+
+- Entry: `nli__ms_990000434740205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000434740205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL76451959/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 70=28)
+
+### לישרים תהלה : העתקה מהדפוס. — Page 3
+
+- Entry: `nli__ms_990000434740205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000434740205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL76451966/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 70=28)
+
+### לישרים תהלה : העתקה מהדפוס. — Page 4
+
+- Entry: `nli__ms_990000434740205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000434740205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL76451998/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 70=28)
+
 ### לקוטים : לקוטי קבלת האר"י לאחד מתלמידי ר' משה זכות, כנראה העתקה של הגהות לס' אוצרות חיים (נמשך בעיקר אחרי סדר הדרושים באוצרות חיים) או לס' עץ חיים. — Page 2
 
 - Entry: `nli__ms_990000435870205171__p0002`
@@ -460,6 +730,33 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000435870205171>
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL76645173/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 174=28)
+
+### מחברת שירים. — Page 2
+
+- Entry: `nli__ms_990000436280205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000436280205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL77217084/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 219=28)
+
+### מחברת שירים. — Page 3
+
+- Entry: `nli__ms_990000436280205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000436280205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL77217085/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 219=28)
+
+### מחברת שירים. — Page 4
+
+- Entry: `nli__ms_990000436280205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000436280205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL77217086/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 219=28)
 
 ### פנקס. — Page 2
 
@@ -488,6 +785,87 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL76673875/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 297=28)
 
+### חדושים : קבץ שטרות, תקנות רבני המערב, מנהגים, תשובות, סדר הגט, חדושים, חשבון הלוח ופיוטים. — Flyleaf
+
+- Entry: `nli__ms_990000437530205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000437530205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL285432976/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 356=38)
+
+### חדושים : קבץ שטרות, תקנות רבני המערב, מנהגים, תשובות, סדר הגט, חדושים, חשבון הלוח ופיוטים. — Flyleaf
+
+- Entry: `nli__ms_990000437530205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000437530205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL285432980/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 356=38)
+
+### חדושים : קבץ שטרות, תקנות רבני המערב, מנהגים, תשובות, סדר הגט, חדושים, חשבון הלוח ופיוטים. — Flyleaf
+
+- Entry: `nli__ms_990000437530205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000437530205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL285432986/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 356=38)
+
+### נחלת אבות : סיפור מאת צבי אלעזר טעללער. — Page 2
+
+- Entry: `nli__ms_990000438290205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000438290205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL77089006/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 450=28)
+
+### נחלת אבות : סיפור מאת צבי אלעזר טעללער. — Page 3
+
+- Entry: `nli__ms_990000438290205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000438290205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL77089010/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 450=28)
+
+### נחלת אבות : סיפור מאת צבי אלעזר טעללער. — Page 4
+
+- Entry: `nli__ms_990000438290205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000438290205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL77089013/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 450=28)
+
+### הנהגת האדם : הנהגת האדם, דינים והנהגות לכל השנה. העתקה מן הדפוס. — Page 2
+
+- Entry: `nli__ms_990000438660205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000438660205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL68631449/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 474=8)
+
+### הנהגת האדם : הנהגת האדם, דינים והנהגות לכל השנה. העתקה מן הדפוס. — Page 3
+
+- Entry: `nli__ms_990000438660205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000438660205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL68631452/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 474=8)
+
+### הנהגת האדם : הנהגת האדם, דינים והנהגות לכל השנה. העתקה מן הדפוס. — Page 4
+
+- Entry: `nli__ms_990000438660205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000438660205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL68631454/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 474=8)
+
 ### פנקס. — Page 2
 
 - Entry: `nli__ms_990000440170205171__p0002`
@@ -514,6 +892,33 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000440170205171>
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL79661232/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 2703=28)
+
+### פנקס העתקות. — Page 2
+
+- Entry: `nli__ms_990000451220205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000451220205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL68763931/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 660=8)
+
+### פנקס העתקות. — Page 3
+
+- Entry: `nli__ms_990000451220205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000451220205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL68763932/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 660=8)
+
+### פנקס העתקות. — Page 4
+
+- Entry: `nli__ms_990000451220205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000451220205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL68763934/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 660=8)
 
 ### מעשה בדיבוק : סיפור על נפש מת שנתגלגלה באשה. נרשם ביידיש מפי אביה של האשה. — Fol. 001-002
 
@@ -542,6 +947,33 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL137248891/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 7634=38)
 
+### פנקס העתקות. — Page 2
+
+- Entry: `nli__ms_990000454790205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000454790205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL79633997/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 3001=28)
+
+### פנקס העתקות. — Page 3
+
+- Entry: `nli__ms_990000454790205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000454790205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL79633998/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 3001=28)
+
+### פנקס העתקות. — Page 4
+
+- Entry: `nli__ms_990000454790205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000454790205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL79633999/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 3001=28)
+
 ### פנקס מדינת ליטא. — Page 2
 
 - Entry: `nli__ms_990000455690205171__p0002`
@@ -569,6 +1001,33 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL70579255/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 3175=38)
 
+### אגרת. — page 2
+
+- Entry: `nli__ms_990000464850205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: צאלח, יחיא בן יוסף; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000464850205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL160698715/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 7173=28)
+
+### אגרת. — page 3
+
+- Entry: `nli__ms_990000464850205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: צאלח, יחיא בן יוסף; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000464850205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL160698716/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 7173=28)
+
+### אגרת. — page 4
+
+- Entry: `nli__ms_990000464850205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: צאלח, יחיא בן יוסף; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000464850205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL160698718/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 7173=28)
+
 ### פסק דין בענין קריאה בתורה. — Page 2
 
 - Entry: `nli__ms_990000752880205171__p0002`
@@ -595,6 +1054,33 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000752880205171>
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL50518538/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 8960=28)
+
+### ספור הנס של מרדכי ואסתר. — Page 2
+
+- Entry: `nli__ms_990001344810205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990001344810205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL72674353/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 6234=28)
+
+### ספור הנס של מרדכי ואסתר. — Page 3
+
+- Entry: `nli__ms_990001344810205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990001344810205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL72674355/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 6234=28)
+
+### ספור הנס של מרדכי ואסתר. — Page 4
+
+- Entry: `nli__ms_990001344810205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990001344810205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL72674367/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 6234=28)
 
 ### אגרת. — Frag. 001r
 
@@ -650,6 +1136,60 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL169375693/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 577.10.26=4)
 
+### אגרת. — Page 2
+
+- Entry: `nli__ms_990025469380205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990025469380205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL75177865/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 5190=38)
+
+### אגרת. — Page 3
+
+- Entry: `nli__ms_990025469380205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990025469380205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL75177872/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 5190=38)
+
+### אגרת. — Page 4
+
+- Entry: `nli__ms_990025469380205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990025469380205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL75177881/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 5190=38)
+
+### ספור מסע. — Page 2
+
+- Entry: `nli__ms_990025672050205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990025672050205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL75627455/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 6485=38)
+
+### ספור מסע. — Page 3
+
+- Entry: `nli__ms_990025672050205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990025672050205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL75627456/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 6485=38)
+
+### ספור מסע. — Page 4
+
+- Entry: `nli__ms_990025672050205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990025672050205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL75627457/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 6485=38)
+
 ### זכרונות וארושיבסקי. — Page 2
 
 - Entry: `nli__ms_990025783230205171__p0002`
@@ -704,6 +1244,33 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL71540536/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 4192=28)
 
+### פנקס העתקות. — page 2
+
+- Entry: `nli__ms_990025880400205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990025880400205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL262662022/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 352=24)
+
+### פנקס העתקות. — page 3
+
+- Entry: `nli__ms_990025880400205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990025880400205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL262662041/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 352=24)
+
+### פנקס העתקות. — page 4
+
+- Entry: `nli__ms_990025880400205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990025880400205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL262662059/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 352=24)
+
 ### אגרת. — Page 1
 
 - Entry: `nli__ms_990025900380205171__p0001`
@@ -730,6 +1297,60 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990025900380205171>
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL80339123/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 1227=24)
+
+### תקנות ומנהגי ק"ק פררה. — page 2
+
+- Entry: `nli__ms_990026113730205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990026113730205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL146901924/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 7809=8)
+
+### תקנות ומנהגי ק"ק פררה. — page 3
+
+- Entry: `nli__ms_990026113730205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990026113730205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL146901928/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 7809=8)
+
+### תקנות ומנהגי ק"ק פררה. — page 4
+
+- Entry: `nli__ms_990026113730205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990026113730205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL146901930/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 7809=8)
+
+### מאמר על השתן. — Page 2
+
+- Entry: `nli__ms_990027068830205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990027068830205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL14818114/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 85=28)
+
+### מאמר על השתן. — Page 3
+
+- Entry: `nli__ms_990027068830205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990027068830205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL14818149/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 85=28)
+
+### מאמר על השתן. — Page 4
+
+- Entry: `nli__ms_990027068830205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990027068830205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL14818009/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 85=28)
 
 ### פנקס. — Page 2
 
@@ -805,6 +1426,78 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 
 ### אגרת. — Page 1
 
+- Entry: `nli__ms_990032583600205171__p0001`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990032583600205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL9693819/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 8199.30=8)
+
+### אגרת. — Page 2
+
+- Entry: `nli__ms_990032583600205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990032583600205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL9693823/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 8199.30=8)
+
+### דרושים ופרושים מאת המגיד ר' דב בר ממזריץ' : כולל העתקה מכתביו של ר' לוי יצחק מברדיצ'ב. — Page 2
+
+- Entry: `nli__ms_990034246640205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990034246640205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL12997661/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (F 75946)
+
+### דרושים ופרושים מאת המגיד ר' דב בר ממזריץ' : כולל העתקה מכתביו של ר' לוי יצחק מברדיצ'ב. — Page 3
+
+- Entry: `nli__ms_990034246640205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990034246640205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL12997748/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (F 75946)
+
+### דרושים ופרושים מאת המגיד ר' דב בר ממזריץ' : כולל העתקה מכתביו של ר' לוי יצחק מברדיצ'ב. — Page 4
+
+- Entry: `nli__ms_990034246640205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990034246640205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL12997652/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (F 75946)
+
+### פנקס. — Page 2
+
+- Entry: `nli__ms_990034252090205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990034252090205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL13027363/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (F 75969)
+
+### פנקס. — Page 3
+
+- Entry: `nli__ms_990034252090205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990034252090205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL13027366/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (F 75969)
+
+### פנקס. — Page 4
+
+- Entry: `nli__ms_990034252090205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990034252090205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL13027358/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (F 75969)
+
+### אגרת. — Page 1
+
 - Entry: `nli__ms_990035325400205171__p0001`
 - License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
 - Licensor: אלקים, דוד; National Library of Israel
@@ -829,6 +1522,60 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990035325400205171>
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL13334275/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (MSS-D 2080)
+
+### מכתב מאת שד"ר צפת באיטליה מרדכי אשיאו. — 3662574-10_0001
+
+- Entry: `nli__ms_990036625740205171__p0001`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: אשיאו, מרדכי; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL990036625740205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL258867001/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (990036625740205171)
+
+### מכתב מאת שד"ר צפת באיטליה מרדכי אשיאו. — 3662574-10_0002
+
+- Entry: `nli__ms_990036625740205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: אשיאו, מרדכי; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL990036625740205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL258867002/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (990036625740205171)
+
+### מכתב מאת שד"ר צפת באיטליה מרדכי אשיאו. — 3662574-10_0003
+
+- Entry: `nli__ms_990036625740205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: אשיאו, מרדכי; National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL990036625740205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL258867003/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (990036625740205171)
+
+### מכתב המלצה לשליח חברון, כנראה בדרום צרפת. — 3662576-10_0001
+
+- Entry: `nli__ms_990036625760205171__p0001`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL990036625760205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL258867108/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (990036625760205171)
+
+### מכתב המלצה לשליח חברון, כנראה בדרום צרפת. — 3662576-10_0002
+
+- Entry: `nli__ms_990036625760205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL990036625760205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL258867109/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (990036625760205171)
+
+### מכתב המלצה לשליח חברון, כנראה בדרום צרפת. — 3662576-10_0003
+
+- Entry: `nli__ms_990036625760205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL990036625760205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL258867110/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (990036625760205171)
 
 ### זכרונות. — Page 2
 
@@ -856,6 +1603,60 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990036744800205171>
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL17287609/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 8517=28)
+
+### קבץ העתקות. — Page 2
+
+- Entry: `nli__ms_990038380190205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990038380190205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL55587250/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (F 76462)
+
+### קבץ העתקות. — Page 3
+
+- Entry: `nli__ms_990038380190205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990038380190205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL55587255/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (F 76462)
+
+### קבץ העתקות. — Page 4
+
+- Entry: `nli__ms_990038380190205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990038380190205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL55587260/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (F 76462)
+
+### פנקס. — Leaf 001
+
+- Entry: `nli__ms_990038938750205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990038938750205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL50205189/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (MSS-D 10137)
+
+### פנקס. — Leaf 002
+
+- Entry: `nli__ms_990038938750205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990038938750205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL50205192/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (MSS-D 10137)
+
+### פנקס. — Leaf 003
+
+- Entry: `nli__ms_990038938750205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990038938750205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL50205193/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (MSS-D 10137)
 
 ### מכתב אל אהרן הכהן. — Fol. [002]
 
@@ -910,6 +1711,87 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990043786520205171>
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL64397225/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (MSS-D 14425)
+
+### פנקס. — Leaf 002
+
+- Entry: `nli__ms_990044062070205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990044062070205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL61039669/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (MSS-D 15772)
+
+### פנקס. — Leaf 003
+
+- Entry: `nli__ms_990044062070205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990044062070205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL61039670/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (MSS-D 15772)
+
+### פנקס. — Leaf 004
+
+- Entry: `nli__ms_990044062070205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990044062070205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL61039671/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (MSS-D 15772)
+
+### אבני זכרון. — Flyleaf 001
+
+- Entry: `nli__ms_990047583270205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: חרירי, פינחס בן יצחק; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990047583270205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL71022885/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (MSS-D 14459)
+
+### אבני זכרון. — Flyleaf 002
+
+- Entry: `nli__ms_990047583270205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: חרירי, פינחס בן יצחק; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990047583270205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL71022902/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (MSS-D 14459)
+
+### אבני זכרון. — Leaf 001
+
+- Entry: `nli__ms_990047583270205171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: חרירי, פינחס בן יצחק; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH990047583270205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL71022915/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (MSS-D 14459)
+
+### אגרת. — Fol. 001r
+
+- Entry: `nli__ms_997011001339205171__p0001`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: אופנהיים, ליזר; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH997011001339205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL198860514/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (MSS-D)
+
+### אגרת. — Fol. 001v
+
+- Entry: `nli__ms_997011001339205171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: אופנהיים, ליזר; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH997011001339205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL198860516/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (MSS-D)
+
+### אגרת. — color
+
+- Entry: `nli__ms_997011001339205171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: אופנהיים, ליזר; National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH997011001339205171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL198860521/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (MSS-D)
 
 ### פסק דין מפאס. — Folio verso
 
@@ -991,6 +1873,60 @@ Scan files carry per-entry rights. The entries listed below carry a license that
 - Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH997014651564805171>
 - Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL188201036/full/!2500,2500/0/default.jpg>
 - Holding institution: National Library of Israel (Ms. Heb. 11609.37=4)
+
+### תקנות ופסקים. — Doc. 001
+
+- Entry: `nli__ms_997014671435805171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH997014671435805171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL188201034/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 11609.40=4)
+
+### תקנות ופסקים. — Doc. 001
+
+- Entry: `nli__ms_997014671435805171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH997014671435805171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL188201035/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 11609.40=4)
+
+### תקנות ופסקים. — Doc. 002
+
+- Entry: `nli__ms_997014671435805171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH997014671435805171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL188201036/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 11609.40=4)
+
+### פסק. — Doc. 001
+
+- Entry: `nli__ms_997014986805305171__p0002`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH997014986805305171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL188201034/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 11609.51=4)
+
+### פסק. — Doc. 001
+
+- Entry: `nli__ms_997014986805305171__p0003`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH997014986805305171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL188201035/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 11609.51=4)
+
+### פסק. — Doc. 002
+
+- Entry: `nli__ms_997014986805305171__p0004`
+- License: LicenseRef-NLI-Public-Domain-Free-Use (LicenseRef-NLI-Public-Domain-Free-Use)
+- Licensor: National Library of Israel
+- Source page: <https://www.nli.org.il/en/manuscripts/NNL_ALEPH997014986805305171>
+- Scan file URL: <https://iiif.nli.org.il/IIIFv21/FL188201036/full/!2500,2500/0/default.jpg>
+- Holding institution: National Library of Israel (Ms. Heb. 11609.51=4)
 
 ### Pocket diary 1939, Hannah Senesh, page 43
 

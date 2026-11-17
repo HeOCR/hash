@@ -1,0 +1,88 @@
+{
+ "sources": 35,
+ "entries": 104,
+ "skips": [
+  {
+   "source_id": "nli__ms_997012976363605171",
+   "canvas": 1,
+   "skip": "image HTTP 0"
+  },
+  {
+   "source_id": "nli__ms_997012976363605171",
+   "canvas": 2,
+   "skip": "image HTTP 0"
+  },
+  {
+   "source_id": "nli__ms_997012976363605171",
+   "canvas": 3,
+   "skip": "image HTTP 0"
+  },
+  {
+   "source_id": "nli__ms_997012976363605171",
+   "canvas": 4,
+   "skip": "image HTTP 0"
+  },
+  {
+   "source_id": "nli__ms_997012976363605171",
+   "canvas": 5,
+   "skip": "image HTTP 0"
+  },
+  {
+   "source_id": "nli__ms_997012976363605171",
+   "canvas": 6,
+   "skip": "image HTTP 0"
+  },
+  {
+   "source_id": "nli__ms_997012976363605171",
+   "skip": "no usable canvas"
+  },
+  {
+   "source_id": "nli__ms_990024537810205171",
+   "canvas": 0,
+   "skip": "image HTTP 403"
+  },
+  {
+   "source_id": "nli__ms_990024537810205171",
+   "canvas": 1,
+   "skip": "image HTTP 403"
+  },
+  {
+   "source_id": "nli__ms_990024537810205171",
+   "skip": "no usable canvas"
+  },
+  {
+   "source_id": "nli__ms_990024537750205171",
+   "canvas": 1,
+   "skip": "image HTTP 403"
+  },
+  {
+   "source_id": "nli__ms_990024537750205171",
+   "canvas": 2,
+   "skip": "image HTTP 403"
+  },
+  {
+   "source_id": "nli__ms_990024537750205171",
+   "canvas": 3,
+   "skip": "image HTTP 403"
+  },
+  {
+   "source_id": "nli__ms_990024537750205171",
+   "canvas": 4,
+   "skip": "image HTTP 403"
+  },
+  {
+   "source_id": "nli__ms_990024537750205171",
+   "canvas": 5,
+   "skip": "image HTTP 403"
+  },
+  {
+   "source_id": "nli__ms_990024537750205171",
+   "canvas": 6,
+   "skip": "image HTTP 403"
+  },
+  {
+   "source_id": "nli__ms_990024537750205171",
+   "skip": "no usable canvas"
+  }
+ ]
+}

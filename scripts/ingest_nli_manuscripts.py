@@ -51,11 +51,24 @@ HEB_NUM = {"א": 1, "ב": 2, "ג": 3, "ד": 4, "ה": 5, "ו": 6, "ז": 7, "ח": 
 SCRIBE_RELATORS = ("סופר", "מעתיק", "scribe", "copyist", "כותב")
 COPY_MARKS = ("העתק", "copy", "העתיק")
 PRIVATE_LIST_TITLES = ("פנקס", "חשבונות", "רשימת", "רשימות", "קבלות", "פנקסי")
-INSTITUTION_WORDS = r"institut|librar|universit|seminary|monaster|cathedral|museum|centre|center|collection|archive|bibliot|state|civic|ספרי|אוניברסיט|מוזאו"
+INSTITUTION_WORDS = r"communit|קהיל|institut|librar|universit|seminary|monaster|cathedral|museum|centre|center|collection|archive|bibliot|state|civic|ספרי|אוניברסיט|מוזאו"
 GENRE_DOC_TYPE = [("Personal correspondence", "letter"), ("Letters", "letter"), ("אגרת", "letter"), ("מכתב", "letter"),
                   ("Diaries", "diary"), ("יומן", "diary"), ("Notebooks", "notebook"), ("מחברת", "notebook"),
                   ("Poetry", "poem"), ("שירים", "poem"), ("Drafts", "draft")]
+ISO = {"heb": "he", "yid": "yi", "ara": "ar", "ger": "de", "per": "fa", "eng": "en", "ita": "it", "spa": "es",
+       "fre": "fr", "lat": "la"}
 _last = [0.0]
+
+
+def lang_codes(raw):
+    """MARC/DC language codes -> HASH codes (ISO 639-1 where one exists, else the 639-2/3 code), he first."""
+    out = []
+    for r in raw:
+        for c in re.split(r"[;,\s]+", r or ""):
+            c = ISO.get(c.strip().lower(), c.strip().lower())
+            if c and c not in out:
+                out.append(c)
+    return sorted(out, key=lambda c: (c != "he", out.index(c)))
 
 
 def fetch(url, delay):
@@ -90,6 +103,21 @@ def marc_fields(xml_bytes):
 
 def years_in(text):
     return [int(y) for y in re.findall(r"(?<!\d)(1[3-9]\d\d|20[0-2]\d)(?!\d)", text or "")]
+
+
+GEM = {"א": 1, "ב": 2, "ג": 3, "ד": 4, "ה": 5, "ו": 6, "ז": 7, "ח": 8, "ט": 9, "י": 10, "כ": 20, "ך": 20, "ל": 30,
+       "מ": 40, "ם": 40, "נ": 50, "ן": 50, "ס": 60, "ע": 70, "פ": 80, "ף": 80, "צ": 90, "ץ": 90, "ק": 100, "ר": 200,
+       "ש": 300, "ת": 400}
+
+
+def hebrew_years(text):
+    """Hebrew-calendar years written as letters (e.g. תרס"ב -> 1902), assuming the omitted thousands are 5000."""
+    out = []
+    for w in re.findall(r'ת[א-ת]*["״׳\'][א-ת]', text or ""):
+        v = sum(GEM.get(c, 0) for c in w)
+        if 400 <= v <= 799:
+            out.append(5000 + v - 3760)
+    return out
 
 
 def century_year(text):
@@ -145,11 +173,12 @@ def assess(rec_id, search_rec, delay):
     if not any("public domain free use" in f.get("a", "").lower() for f in m.get("939", [])):
         reasons.append("MARC 939 is not 'public domain free use'")
     langs = [f.get("a", "") for f in m.get("041", [])] + dc(search_rec, "language")
+    d["languages"] = lang_codes(langs)
     if not any("heb" in l for l in langs):
         d.update(decision="rejected", reasons=[f"languages {langs} without heb"]); return d
     date_text = " ".join(f.get("c", "") for t in ("260", "264") for f in m.get(t, [])) + " " + \
         " ".join(dc(search_rec, "non_standard_date") + dc(search_rec, "date"))
-    ys = [y for y in years_in(date_text) if y <= YEAR_NOW]
+    ys = [y for y in years_in(date_text) + hebrew_years(date_text) if 1000 < y <= YEAR_NOW]
     year = max(ys) if ys else century_year(date_text)
     d["created"] = (str(max(ys)) if ys else (date_text.strip() or None))
     d["created_year_est"] = year
@@ -201,8 +230,10 @@ def existing_units():
 def cmd_pick(a):
     recs = json.loads(Path(a.discovery).read_text(encoding="utf-8"))
     have = existing_units()
+    decided = {d["record_id"] for plan in (a.exclude_plans or [])
+               for d in json.loads(Path(plan).read_text(encoding="utf-8"))["decisions"]}
     pool = [(rid, r) for rid, r in sorted(recs.items())
-            if f"nli__ms_{rid}" not in have and "National Library of Israel" in " ".join(dc(r, "source"))]
+            if f"nli__ms_{rid}" not in have and rid not in decided and "National Library of Israel" in " ".join(dc(r, "source"))]
     rng = random.Random(a.seed)
     by_term = defaultdict(list)
     for rid, r in pool:
@@ -221,7 +252,7 @@ def cmd_pick(a):
             decisions.append(d)
             accepted += d["decision"] == "accepted"
             print(f"{d['decision']:9} {rid} {t} {d['title'][:40]} {d['reasons'][:1]}", flush=True)
-    out = {"seed": a.seed, "n": a.n, "discovery": a.discovery, "picked_at": datetime.now(timezone.utc).isoformat(),
+    out = {"seed": a.seed, "n": a.n, "discovery": a.discovery, "exclude_plans": a.exclude_plans or [], "picked_at": datetime.now(timezone.utc).isoformat(),
            "counts": dict(Counter(d["decision"] for d in decisions)), "decisions": decisions,
            "signed": "data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource"}
     Path(a.out).write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
@@ -314,7 +345,7 @@ def cmd_ingest(a):
                 "creators": d["creators"],
                 "dates": {"created": d.get("created"), "created_precision": d["created_precision"],
                           "accessed_at": now.date().isoformat()},
-                "languages": ["he"], "script": ["Hebr"], "document_type": d["document_type"],
+                "languages": d.get("languages") or ["he"], "script": ["Hebr"], "document_type": d["document_type"],
                 "handwriting": {"extent": "full_page", "hebrew_extent": "full_page",
                                 "notes": f"NLI manuscript {d['record_id']}; canvas {ci + 1} of {d['canvas_count']}; "
                                          f"ink ratio {ratio:.3f} (automatic, not viewed)."
@@ -359,6 +390,7 @@ def main():
     p = sub.add_parser("pick"); p.add_argument("discovery"); p.add_argument("--n", type=int, default=40)
     p.add_argument("--seed", type=int, required=True); p.add_argument("--out", required=True)
     p.add_argument("--delay", type=float, default=1.5)
+    p.add_argument("--exclude-plans", nargs="*", help="earlier batch plans; their records are never re-assessed")
     i = sub.add_parser("ingest"); i.add_argument("plan"); i.add_argument("--pages", type=int, default=3)
     i.add_argument("--min-ink", type=float, default=0.01); i.add_argument("--delay", type=float, default=1.5)
     a = ap.parse_args()
