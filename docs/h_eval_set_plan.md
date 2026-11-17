@@ -1,7 +1,7 @@
 # Handwriting (H) eval set v1: plan
 
-Status: plan only, for heocr-lead's review (task from lead, Shay-approved 2026-11-18). Nothing is selected, downloaded or
-transcribed by this PR.
+Status: plan, approved by heocr-lead 2026-11-18 with the decisions in §7 (task from lead, Shay-approved 2026-11-18).
+Nothing is selected, downloaded or transcribed by this PR.
 
 **Goal.** Give decision 0017's H domain its first scored set: 50–100 rights-clean handwritten Hebrew pages from HASH,
 spread over writers, periods, document types and hand styles, with no page, document or (where possible) writer that any
@@ -21,18 +21,21 @@ training input has seen. eval pre-registers the set before any transcription exi
 
 **What the caps leave.** With at most 3 pages per unit and 8 per writer, each unknown-author unit counted as its own hand,
 and the training-exposed units removed (§3), the public-domain pool gives about 51 pages from 32 hands. Dropping the two
-writers that training has seen (Bialik, Rachel) leaves about 48. So v1 can reach 50 only just, and 100 not at all,
-from HASH as it is. Step 2 below fills the gap.
+writers that training has seen (Bialik, Rachel) leaves about 48. So v1 ships at about 50 pages from
+HASH as it is (lead 2026-11-18), with honest intervals; the intake round grows it toward 100 through dated amendments.
 
 ## 2. Plan
 
-1. **HASH intake round (data-collection).** Ingest more writers before selecting, so the set isn't a Senesh set.
+1. **v1 selection from the pool as it is now** (step 2's rules), handed to eval and pre-registered (steps 3–4).
+2. **HASH intake round (data-collection), after v1.** Ingest more writers, so the set grows beyond Senesh-heavy material.
    - First from the 14 HASH sources already at `candidate` status, then new LoC, Commons and OPenn items.
    - Targets: at least 20 new hands, more letters, notebooks and records (not diaries), more pre-1900 and post-1948 pages.
    - The usual HASH rules apply: per-scan rights evidence, PD by term or a permissive licence, NLI-API Google-class scans
      excluded.
    - Each new source goes through the normal HASH ingest PR (validate_indexes, release artefacts, exports, tests).
-2. **Selection (data-collection, scripted, metadata only).**
+   - **Growth by amendment only.** New hands enter as a dated amendment (v1.1, v1.2, …) with its own selector run, seed
+     and pre-registration. v1's pages are never reshuffled or replaced, and v1 scores stay reportable on their own.
+3. **Selection (data-collection, scripted, metadata only).**
    - The selector reads only the HASH index, never page images, and is seeded. It and its seed are committed before it
      runs.
    - **Whole units.** A unit's pages are either all eval or all non-eval (0017 rule 1); a unit is the bootstrap cluster.
@@ -42,11 +45,11 @@ from HASH as it is. Step 2 below fills the gap.
      the pool allows, then by provider. Seeded order inside each cell.
    - **Gates:** `hebrew_extent` is `full_page`; the entry is not blank or a cover; `languages` includes `he` (Yiddish- or
      Aramaic-only pages go to a separate, unscored list).
-   - **Size:** 50 at minimum for v1. If the intake allows, 100.
-3. **Exclusion and exposure (data-collection runs it, eval runs the official check).** See §3.
-4. **Hand-off.** A batch manifest to eval (§5). eval pre-registers before any transcription: strata, measures, the rule
+   - **Size:** about 50 for v1, from what passes now; toward 100 through amendments.
+4. **Exclusion and exposure (data-collection runs it, eval runs the official check).** See §3.
+5. **Hand-off.** A batch manifest to eval (§5). eval pre-registers before any transcription: strata, measures, the rule
    that admits a reference, and the exposure rule.
-5. **Transcription (later).** A new heocr-review volunteer queue, after the mid-century volunteer task is running (§6).
+6. **Transcription (later).** A new heocr-review volunteer queue, after the mid-century volunteer task is running (§6).
 
 ## 3. Exclusion and exposure
 
@@ -60,8 +63,8 @@ from HASH as it is. Step 2 below fills the gap.
   - hocrsyngen and s16/s17 glyph manifests;
   - hletterscript and hletterscriptgen;
   - HASH transcripts used anywhere as training text.
-- **Writers.** The writers list goes into the manifest. Seen writers stay out of the primary set. If they are kept at
-  all, they form a separate, labelled `seen_writer` stratum.
+- **Writers.** The writers list goes into the manifest. Seen writers form a separate `seen_writer` stratum, reported
+  apart (lead 2026-11-18). They are never in the primary score, which uses only unseen writers.
 - **Text exposure.** Once references exist, eval's `check_train_overlap.py` runs on every compared model's list. Pages
   are then scored zero-exposure first, as with mid-century (word 6-gram, no threshold).
 - **Hold-out record.** The selected units go into a HASH hold-out file (`data/index/eval_holdout.jsonl`, added with the
@@ -74,15 +77,16 @@ from HASH as it is. Step 2 below fills the gap.
 - **In without a flag:** pages that are plainly public-domain archival material. That is a holding institution (NLI,
   LoC, a university library via OPenn) or Commons with a PD-by-term basis, and an author dead more than 70 years or a
   pre-1900 document. Shay's 2026-11-06 ruling applies: such pages need no per-page privacy review.
+- **Out of v1: the 8 Commons `cc_by_sa` units (9 pages), 1933–1990** (lead 2026-11-18). They are licensed, not PD by
+  term; they are modern rabbinic letters and rulings, and some name recipients who may still be living. Taking them in
+  later is a privacy question for Shay, through lead.
 - **Flagged to lead before they enter the set:**
-  - **The 8 Commons `cc_by_sa` units (9 pages), 1933–1990.** They are licensed, not PD by term. They are modern rabbinic
-    letters and rulings, and some name recipients who may still be living or recently dead.
   - **Any page from after 1948, or by a writer who died less than 70 years ago,** whatever the licence.
   - **Any page whose main content is about a private person:** a medical or legal record, or a personal record of
     someone other than the writer.
   - The flag goes to lead with the unit ID, rights basis and reason. The page stays out until lead says yes.
-- **Licence of the set.** Reference text CC0, as for review-app contributions. Images keep each scan's own rights
-  (`public_domain` or `cc_by_sa` with attribution). The manifest carries the attribution line.
+- **Licence of the set.** Reference text CC0, as for review-app contributions. Images keep each scan's own rights (all
+  `public_domain` in v1). The manifest carries each scan's attribution line.
 
 ## 5. Batch manifest for eval (HASH/hocrgen style)
 
@@ -101,7 +105,7 @@ Each row has:
   a post-hoc stratum.
 - **Flags:** `rights_flag` and `privacy_flag`, each null or a reason; only rows with both null are in the set.
 
-## 6. Transcription and pre-fill: proposal
+## 6. Transcription and pre-fill (approved by lead 2026-11-18; eval registers it)
 
 There is no reference yet, so the queue needs a starting text or none. Options:
 
@@ -111,7 +115,7 @@ There is no reference yet, so the queue needs a starting text or none. Options:
 | B. Stock Tesseract or our R-series lines as a draft | about the same as A: these readers are trained on print, and their handwriting output is mostly noise | small, but it anchors toward the readers we score |
 | C. HASH's existing HTR consolidation (GPT-4o + Kraken + Transkribus) as a draft | fastest | anchors toward those engines; they can't then be scored fairly against it |
 
-**My proposal:**
+**Approved:**
 
 - **A for a calibration subset.** At least 20% of pages, drawn by seed and spread over every stratum, are typed from
   scratch.
@@ -122,14 +126,21 @@ There is no reference yet, so the queue needs a starting text or none. Options:
 - **Engines in the draft** (GPT-4o, Kraken, Transkribus) are scored only on the calibration subset. Elsewhere they carry
   an "anchored" label.
 - **Not B.** It costs the same as A and adds bias toward the models we care about most.
-- **eval and lead decide.** The pre-registration fixes the choice.
+- **Draft engines' terms on the card.** The set's card records, for each engine whose output fed the drafts (GPT-4o,
+  Kraken, Transkribus), its terms of use and the version or date of the run. It also states that the references are
+  human-made: the drafts are only a starting point, and every reference line is typed or corrected by a person.
+- **eval's pre-registration fixes the details** (subset seed, measures, the rule that admits a reference).
 
-## 7. Decisions needed
+## 7. Decisions (lead, 2026-11-18)
 
-- **Lead:** yes or no on the 8 `cc_by_sa` units, and on each later flag.
-- **Lead:** whether seen writers (Bialik, Rachel) form a `seen_writer` stratum or stay out.
-- **eval with lead:** the pre-fill option (§6), strata, measures, and the rule that admits a reference.
-- **Lead:** whether v1 waits for 100 pages or ships at 50 and grows to v1.1.
+1. **The 8 `cc_by_sa` units are out of v1.** Excluding them is the safe default; taking them in later goes to Shay as a
+   privacy question.
+2. **Seen writers (Bialik, Rachel Bluwstein) form a separate `seen_writer` stratum,** reported apart and never in the
+   primary score.
+3. **v1 ships at about 50 pages** from what passes now, with honest intervals, and grows to 100 by dated amendments as
+   the intake adds hands, never by reshuffling v1.
+4. **Pre-fill as in §6,** for eval to register; draft engines' terms recorded on the card.
+5. **Flags keep going to lead:** pages after 1948, writers dead less than 70 years, pages mainly about a private person.
 
 ## Not in this PR
 
