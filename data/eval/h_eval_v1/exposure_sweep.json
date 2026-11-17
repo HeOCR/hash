@@ -1,0 +1,54 @@
+{
+ "eval_set": "h_eval_v1",
+ "checked_at": "2026-11-18",
+ "method": "fixed-string search for every held-out source_id and every file sha256 of the held-out units, over *.list/*.json/*.jsonl/*.txt/*.csv/*.tsv in the HeOCR task workspace (tasks/) and the hocrgen, hocrsyngen, hletterscriptgen, heocr-engine and heocr-restricted-eval clones",
+ "training_lists_checked": [
+  "tasks/r7-tesseract-real/data/bynli/train.list",
+  "tasks/r8b-tesseract/data/train_main.list",
+  "tasks/r9-tesseract/data/train_a.list",
+  "tasks/r9-tesseract/data/train_b.list"
+ ],
+ "training_hits": 0,
+ "training_used_units_excluded": {
+  "source": "HeOCR/hletterscript upstream entries",
+  "units": [
+   "commons__bialik_el_hazippor",
+   "commons__bialik_letter_safed_1927",
+   "commons__rachel_aqara_1928"
+  ]
+ },
+ "hocrgen_exports": "HASH appears only in source_health checks; no HASH item is in any public-beta item or split manifest",
+ "files_with_hits": 93,
+ "selected_pages_with_non_training_hits": {
+  "commons__begani_netatikha__p0001": [
+   "r3_real_diagnostic (dev predictions and published-text references; not training)"
+  ],
+  "commons__blazer_letter_grayevsky_1905__p0001": [
+   "hocrgen package fixture (HASH snapshot; not training)",
+   "hocrgen pipeline run intermediates, never in a train/validation/test split",
+   "hocrgen pipeline source-health check (not training)"
+  ],
+  "commons__hatikvah_imber_manuscript__p0001": [
+   "r3_real_diagnostic (dev predictions and published-text references; not training)"
+  ],
+  "commons__rachel_gan_naul__p0001": [
+   "r3_real_diagnostic (dev predictions and published-text references; not training)"
+  ],
+  "commons__rachel_rak_al_atzmi__p0001": [
+   "r3_real_diagnostic (dev predictions and published-text references; not training)"
+  ],
+  "loc__2018757642__p0005": [
+   "r3_real_diagnostic (dev predictions and published-text references; not training)"
+  ],
+  "loc__2018757701__p0005": [
+   "hocrgen package fixture (HASH snapshot; not training)",
+   "hocrgen pipeline run intermediates, never in a train/validation/test split",
+   "hocrgen pipeline source-health check (not training)"
+  ],
+  "loc__2018757719__p0002": [
+   "r3_real_diagnostic (dev predictions and published-text references; not training)"
+  ]
+ },
+ "text_exposure": "not run yet: no references exist. eval runs check_train_overlap on the reviewed text before scoring (plan §3).",
+ "signed": "data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource"
+}

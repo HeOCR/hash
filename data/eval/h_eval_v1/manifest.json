@@ -1,0 +1,46 @@
+{
+ "eval_set": "h_eval_v1",
+ "plan": "docs/h_eval_set_plan.md",
+ "selector": "scripts/select_h_eval.py",
+ "selector_commit": "fc0f32b645629c27daa31ddc3abada11eee5517e",
+ "selector_dirty": false,
+ "hash_commit": "fc0f32b645629c27daa31ddc3abada11eee5517e",
+ "seed": 20261118,
+ "target": 50,
+ "caps": {
+  "pages_per_unit": 3,
+  "pages_per_writer": 5
+ },
+ "primary_pages": 44,
+ "primary_units": 31,
+ "primary_hands": 31,
+ "seen_writer_pages": 3,
+ "holdout_units": 34,
+ "holdout_pages": 127,
+ "flagged_units": 8,
+ "unscored": 14,
+ "primary_by_period": {
+  "1800_1899": 22,
+  "1900_1948": 12,
+  "before_1800": 8,
+  "undated": 2
+ },
+ "primary_by_document_type": {
+  "diary": 3,
+  "draft": 3,
+  "letter": 15,
+  "notebook": 1,
+  "other": 17,
+  "poem": 4,
+  "postcard": 1
+ },
+ "primary_by_provider": {
+  "Library of Congress": 24,
+  "National Library of Israel": 5,
+  "Wikimedia Commons": 15
+ },
+ "primary_known_text": 3,
+ "manifest_sha256": "63e9f31cfdd1987c17f02dbb5028ed9427a2e1d0993ac53625adb91226cbb642",
+ "hand_style": "empty: filled by eval or reviewers during transcription (plan §5)",
+ "signed": "data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource"
+}
