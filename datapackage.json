@@ -55,7 +55,7 @@
   "released_at": "2026-11-17T22:24:57Z",
   "resources": [
     {
-      "bytes": 1245751,
+      "bytes": 1246023,
       "description": "Scan-level index. One JSON object per page, with rights evidence, file checksums, and provenance.",
       "encoding": "utf-8",
       "format": "jsonl",
@@ -66,7 +66,7 @@
       "record_count": 402
     },
     {
-      "bytes": 386108,
+      "bytes": 386208,
       "description": "Source-level catalog. One JSON object per institution, collection, item, dataset, or source lead.",
       "encoding": "utf-8",
       "format": "jsonl",

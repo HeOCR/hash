@@ -295,7 +295,10 @@
    "shelfmark": "Ms. Heb. 3001=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 70 years from author death date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990001321750205171",
@@ -655,7 +658,10 @@
    "shelfmark": "MSS-D 15772",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "פנקס"
+   "term": "פנקס",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990000872480205171",
@@ -1576,7 +1582,11 @@
    "shelfmark": "Ms. Heb. 11188=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he",
+    "jrb"
+   ]
   },
   {
    "record_id": "990000430150205171",
@@ -1700,7 +1710,10 @@
    "shelfmark": "Ms. Heb. 5433=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 70 years from author death date",
    "rights_939": "public domain free use",
-   "term": "זכרונות"
+   "term": "זכרונות",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "997009349241605171",
@@ -2807,7 +2820,10 @@
    "shelfmark": "Ms. Heb. 7173=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 70 years from author death date",
    "rights_939": "public domain free use",
-   "term": "אגרת"
+   "term": "אגרת",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990051363540205171",
@@ -2972,7 +2988,10 @@
    "shelfmark": "Ms. Heb. 2635=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 70 years from author death date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990000455920205171",
@@ -3380,7 +3399,10 @@
    "shelfmark": "Ms. Heb. 219=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "מחברת"
+   "term": "מחברת",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990001114570205171",
@@ -4180,7 +4202,10 @@
    "shelfmark": "Ms. Heb. 352=24",
    "rights_903": "No restrictions; 000000001 Public domain Over 70 years from author death date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990001864220205171",
@@ -5124,7 +5149,10 @@
    "shelfmark": "Ms. Heb. 11609.51=4",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "פסק"
+   "term": "פסק",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990053540390205171",
@@ -5759,7 +5787,11 @@
    "shelfmark": "Ms. Heb. 5555=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he",
+    "yi"
+   ]
   },
   {
    "record_id": "997008370458905171",
@@ -6370,7 +6402,10 @@
    "shelfmark": null,
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "מכתב"
+   "term": "מכתב",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990052199180205171",
@@ -6603,7 +6638,10 @@
    "shelfmark": "MSS-D 10137",
    "rights_903": "No restrictions; 000000001 Public domain Anonymous work over 70 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "פנקס"
+   "term": "פנקס",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "997011045269905171",
@@ -7706,7 +7744,10 @@
    "shelfmark": "Ms. Heb. 2630=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990001348750205171",
@@ -8000,7 +8041,11 @@
    "shelfmark": "Ms. Heb. 5616=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "יומן"
+   "term": "יומן",
+   "languages": [
+    "he",
+    "de"
+   ]
   },
   {
    "record_id": "990001301900205171",
@@ -8224,7 +8269,10 @@
    "shelfmark": null,
    "rights_903": "No restrictions; 000000001 Public domain Over 70 years from author death date",
    "rights_939": "public domain free use",
-   "term": "מכתב"
+   "term": "מכתב",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990051330270205171",
@@ -8703,7 +8751,11 @@
    "shelfmark": "Ms. Heb. 356=38",
    "rights_903": "No restrictions; 000000001 Public domain Anonymous work over 70 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "תקנות"
+   "term": "תקנות",
+   "languages": [
+    "he",
+    "lad"
+   ]
   },
   {
    "record_id": "990001816910205171",
@@ -9240,7 +9292,10 @@
    "shelfmark": null,
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "מכתב"
+   "term": "מכתב",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990051333210205171",
@@ -9348,7 +9403,10 @@
    "shelfmark": "Ms. Heb. 6485=38",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "סיפור"
+   "term": "סיפור",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990033679030205171",
@@ -10128,7 +10186,10 @@
    "shelfmark": "Ms. Heb. 6101=38",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990000553000205171",
@@ -11345,7 +11406,10 @@
    "shelfmark": "MSS-D",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "אגרת"
+   "term": "אגרת",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990053234910205171",
@@ -12895,7 +12959,10 @@
    "shelfmark": "Ms. Heb. 70=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 70 years from author death date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990048763180205171",
@@ -13239,7 +13306,10 @@
    "shelfmark": "Ms. Heb. 85=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "מאמר"
+   "term": "מאמר",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990051924840205171",
@@ -13403,7 +13473,10 @@
    "shelfmark": "F 75969",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "פנקס"
+   "term": "פנקס",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990053568920205171",
@@ -15464,7 +15537,11 @@
    "shelfmark": "Ms. Heb. 2643=28",
    "rights_903": "No restrictions; 000000001 Public domain Anonymous work over 70 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he",
+    "fa"
+   ]
   },
   {
    "record_id": "990051170430205171",
@@ -15902,7 +15979,10 @@
    "shelfmark": "Ms. Heb. 450=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 70 years from author death date",
    "rights_939": "public domain free use",
-   "term": "סיפור"
+   "term": "סיפור",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990001143720205171",
@@ -16387,7 +16467,11 @@
    "shelfmark": "Ms. Heb. 8199.30=8",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "אגרת"
+   "term": "אגרת",
+   "languages": [
+    "he",
+    "jrb"
+   ]
   },
   {
    "record_id": "990053234670205171",
@@ -16607,7 +16691,10 @@
    "shelfmark": "Ms. Heb. 1148=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990047583270205171",
@@ -16764,7 +16851,10 @@
    "shelfmark": "MSS-D 14459",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "זכרונות"
+   "term": "זכרונות",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990001114300205171",
@@ -17750,7 +17840,10 @@
    "shelfmark": "Ms. Heb. 5190=38",
    "rights_903": "No restrictions; 000000001 Copyright status not determined Missing copyright data",
    "rights_939": "public domain free use",
-   "term": "אגרת"
+   "term": "אגרת",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990053160550205171",
@@ -18093,7 +18186,10 @@
    "shelfmark": "F 76462",
    "rights_903": "No restrictions; 000000001 Public domain Anonymous work over 70 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990000421280205171",
@@ -18412,7 +18508,10 @@
    "shelfmark": "Ms. Yah. Heb. 212",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "יומן"
+   "term": "יומן",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990001888830205171",
@@ -19339,7 +19438,10 @@
    "shelfmark": "Ms. Heb. 7809=8",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "תקנות"
+   "term": "תקנות",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990001684540205171",
@@ -19613,7 +19715,10 @@
    "shelfmark": "Ms. Heb. 474=8",
    "rights_903": "No restrictions; 000000001 Public domain Over 70 years from author death date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990000577210205171",
@@ -20017,7 +20122,10 @@
    "shelfmark": null,
    "rights_903": "No restrictions; 000000001 Public domain Over 70 years from author death date",
    "rights_939": "public domain free use",
-   "term": "מכתב"
+   "term": "מכתב",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990051252100205171",
@@ -20706,7 +20814,10 @@
    "shelfmark": "Ms. Heb. 11609.40=4",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "תקנות"
+   "term": "תקנות",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990001364610205171",
@@ -21199,7 +21310,10 @@
    "shelfmark": "Ms. Heb. 660=8",
    "rights_903": "No restrictions; 000000001 Public domain Over 70 years from author death date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990001717130205171",
@@ -22009,7 +22123,10 @@
    "shelfmark": "Ms. Heb. 6234=28",
    "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
    "rights_939": "public domain free use",
-   "term": "סיפור"
+   "term": "סיפור",
+   "languages": [
+    "he"
+   ]
   },
   {
    "record_id": "990034209690205171",
@@ -22970,7 +23087,10 @@
    "shelfmark": "F 75946",
    "rights_903": "No restrictions; 000000001 Public domain Over 70 years from author death date",
    "rights_939": "public domain free use",
-   "term": "העתקה"
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
   }
  ],
  "signed": "data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource",

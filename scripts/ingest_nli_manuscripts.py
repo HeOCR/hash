@@ -55,7 +55,20 @@ INSTITUTION_WORDS = r"communit|קהיל|institut|librar|universit|seminary|monas
 GENRE_DOC_TYPE = [("Personal correspondence", "letter"), ("Letters", "letter"), ("אגרת", "letter"), ("מכתב", "letter"),
                   ("Diaries", "diary"), ("יומן", "diary"), ("Notebooks", "notebook"), ("מחברת", "notebook"),
                   ("Poetry", "poem"), ("שירים", "poem"), ("Drafts", "draft")]
+ISO = {"heb": "he", "yid": "yi", "ara": "ar", "ger": "de", "per": "fa", "eng": "en", "ita": "it", "spa": "es",
+       "fre": "fr", "lat": "la"}
 _last = [0.0]
+
+
+def lang_codes(raw):
+    """MARC/DC language codes -> HASH codes (ISO 639-1 where one exists, else the 639-2/3 code), he first."""
+    out = []
+    for r in raw:
+        for c in re.split(r"[;,\s]+", r or ""):
+            c = ISO.get(c.strip().lower(), c.strip().lower())
+            if c and c not in out:
+                out.append(c)
+    return sorted(out, key=lambda c: (c != "he", out.index(c)))
 
 
 def fetch(url, delay):
@@ -160,6 +173,7 @@ def assess(rec_id, search_rec, delay):
     if not any("public domain free use" in f.get("a", "").lower() for f in m.get("939", [])):
         reasons.append("MARC 939 is not 'public domain free use'")
     langs = [f.get("a", "") for f in m.get("041", [])] + dc(search_rec, "language")
+    d["languages"] = lang_codes(langs)
     if not any("heb" in l for l in langs):
         d.update(decision="rejected", reasons=[f"languages {langs} without heb"]); return d
     date_text = " ".join(f.get("c", "") for t in ("260", "264") for f in m.get(t, [])) + " " + \
@@ -331,7 +345,7 @@ def cmd_ingest(a):
                 "creators": d["creators"],
                 "dates": {"created": d.get("created"), "created_precision": d["created_precision"],
                           "accessed_at": now.date().isoformat()},
-                "languages": ["he"], "script": ["Hebr"], "document_type": d["document_type"],
+                "languages": d.get("languages") or ["he"], "script": ["Hebr"], "document_type": d["document_type"],
                 "handwriting": {"extent": "full_page", "hebrew_extent": "full_page",
                                 "notes": f"NLI manuscript {d['record_id']}; canvas {ci + 1} of {d['canvas_count']}; "
                                          f"ink ratio {ratio:.3f} (automatic, not viewed)."
