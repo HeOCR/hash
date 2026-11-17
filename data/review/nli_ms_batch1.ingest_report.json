@@ -1,0 +1,20 @@
+{
+ "sources": 35,
+ "entries": 101,
+ "skips": [
+  {
+   "source_id": "nli__ms_990038268100205171",
+   "canvas": 0,
+   "skip": "image HTTP 403"
+  },
+  {
+   "source_id": "nli__ms_990038268100205171",
+   "canvas": 1,
+   "skip": "image HTTP 403"
+  },
+  {
+   "source_id": "nli__ms_990038268100205171",
+   "skip": "no usable canvas"
+  }
+ ]
+}
