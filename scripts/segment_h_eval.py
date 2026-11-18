@@ -6,7 +6,8 @@ Every page in the two registered manifests is segmented with kraken's default ba
 with kraken, Apache-2.0), text direction horizontal-rl. Segmentation only: no recognition model is loaded or run, so no
 machine text exists for these pages and every line's `prefill` is "". Lines keep kraken's reading order (`i`).
 Each line has `polygon` (kraken boundary), `baseline` and `box` [x0, y0, x1, y1] (the polygon's bounds, clipped to the
-image), in image pixels of the file as stored (no EXIF rotation; the script refuses a rotated file). A line kraken gives
+image), in image pixels as displayed: where the file has an EXIF orientation (2-8), it is applied first, as browsers do, and
+the page records `exif_orientation` and `image_size` in that displayed frame (tag 0 is invalid and read as 1). A line kraken gives
 no polygon for gets `box` null and `box_status` "no_polygon". Nothing is guessed or filtered.
 The output follows heocr-restricted-eval's midcentury_line_items.v1 shape.
 Signed: data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource
@@ -38,7 +39,7 @@ def main():
 
     import kraken
     from kraken import blla
-    from PIL import Image
+    from PIL import Image, ImageOps
 
     model = Path(kraken.__file__).parent / "blla.mlmodel"
     rows, man_sha = [], {}
@@ -53,7 +54,9 @@ def main():
         img = ROOT / r["image_path"]
         assert sha(img) == r["image_sha256"], f"{r['entry_id']}: image sha256 differs from the manifest"
         im = Image.open(img)
-        assert im.getexif().get(0x0112, 1) == 1, f"{r['entry_id']}: EXIF orientation set; boxes would not match the view"
+        orient = im.getexif().get(0x0112, 1) or 1
+        if orient != 1:
+            im = ImageOps.exif_transpose(im)
         W, H = im.size
         seg = blla.segment(im.convert("RGB"), text_direction=TEXT_DIRECTION, model=None)
         lines = []
@@ -70,7 +73,8 @@ def main():
                           "match": None, "tier_a": None, "bidi_risk": None})
         items.append({"page_key": r["entry_id"], "eval_set": r["eval_set"], "stratum": r["stratum"],
                       "source_id": r["source_id"], "image": r["image_path"], "image_sha256": r["image_sha256"],
-                      "image_size": [W, H], "prefill_source": None, "prefill_from_stock": False,
+                      "image_size": [W, H], "exif_orientation": orient,
+                      "coordinate_frame": "display", "prefill_source": None, "prefill_from_stock": False,
                       "regions": len(seg.regions.get("text", [])) if isinstance(seg.regions, dict) else None,
                       "lines": lines})
         print(r["entry_id"], len(lines), flush=True)
