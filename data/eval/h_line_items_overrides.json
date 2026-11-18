@@ -1,0 +1,22 @@
+{
+ "note": "Page-level decisions from data-collection's agent visual check (2026-11-18; an agent check, not human review). Committed before the run that applies them. 'legacy' = kraken's legacy box segmenter (nlbin + pageseg.segment, Apache-2.0, no recognition) replaces blla on that page, because blla found no or almost no lines on a page with visible text and legacy found them. 'no_hebrew_text' = the page shows no Hebrew handwriting (blank or ruled leaf, flyleaf, cover, or a near-blank microfilm frame); its boxes are kept as segmented, and eval decides whether the page stays in the set. 'poor' = boxes are known to be poor on this page.",
+ "segmenter": {
+  "commons__hirsch_torah_letter_1878__p0003": "legacy",
+  "nli__ms_990025817680205171__p0002": "legacy",
+  "nli__ms_990036625760205171__p0002": "legacy",
+  "nli__ms_990032583600205171__p0001": "legacy",
+  "commons__begani_netatikha__p0001": "legacy"
+ },
+ "page_flags": {
+  "nli__ms_990035325400205171__p0001": "no_hebrew_text",
+  "nli__ms_990035325400205171__p0003": "no_hebrew_text",
+  "nli__ms_990036744800205171__p0002": "no_hebrew_text",
+  "nli__ms_990047583270205171__p0002": "no_hebrew_text",
+  "nli__ms_990047583270205171__p0003": "no_hebrew_text",
+  "nli__ms_990025817680205171__p0003": "no_hebrew_text",
+  "nli__ms_990000437530205171__p0002": "no_hebrew_text",
+  "nli__ms_990000437530205171__p0004": "no_hebrew_text",
+  "commons__hirsch_torah_letter_1878__p0003": "poor",
+  "nli__ms_990032583600205171__p0001": "poor"
+ }
+}
