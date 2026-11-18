@@ -18,7 +18,8 @@ Two steps:
 
 ``pick`` reads search results (NLI Search API JSON keyed by record id), fetches each candidate's manifest and MARC
 (metadata only), applies the rules, and writes the batch plan with every decision. ``ingest`` downloads up to
---pages canvases per unit (IIIF, long side at most 2500 px), drops blank pages by ink ratio (no one views them), and
+--pages canvases per unit (IIIF, long side at most 2500 px), drops blank pages by ink ratio and by a line gate
+(kraken blla must find at least --min-lines text lines; segmentation only, no recognition), and
 appends sources and entries to data/index. At most one request per --delay seconds; generic client name.
 Signed: data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource
 """
@@ -269,6 +270,20 @@ def ink_ratio(img):
     return dark / total
 
 
+_BLLA = None
+
+
+def line_count(img):
+    """Text lines kraken's default blla segmenter finds (segmentation only). The 2026-11-18 H line-box check found 8
+    blank, ruled or cover leaves that passed the ink gate (dark scan borders count as ink); blla found fewer than 3
+    lines on every one of them, and 3 or more on 101 of the 105 pages with text."""
+    global _BLLA
+    if _BLLA is None:
+        from kraken import blla
+        _BLLA = blla
+    return len(_BLLA.segment(img.convert("RGB"), text_direction="horizontal-rl").lines)
+
+
 def cmd_ingest(a):
     from PIL import Image
     plan = json.loads(Path(a.plan).read_text(encoding="utf-8"))
@@ -302,6 +317,12 @@ def cmd_ingest(a):
             ratio = ink_ratio(img)
             if ratio < a.min_ink:
                 report.append({"source_id": sid, "canvas": ci, "skip": f"ink ratio {ratio:.4f} below {a.min_ink}"}); continue
+            if a.min_lines:
+                n = line_count(img)
+                if n < a.min_lines:
+                    report.append({"source_id": sid, "canvas": ci, "held_for_look": True,
+                                   "skip": f"blla found {n} lines, below {a.min_lines} (blank, ruled or cover leaf, "
+                                           "or writing blla misses; look before any use)"}); continue
             got.append((ci, c, url, img_bytes, img.size, ratio))
         if not got:
             report.append({"source_id": sid, "skip": "no usable canvas"}); continue
@@ -363,7 +384,7 @@ def cmd_ingest(a):
                 "holding_institution": "National Library of Israel",
                 "holding_shelfmark": d.get("shelfmark") or d["record_id"],
                 "quality": {"usable_for_htr": True, "legibility": "unknown", "exclusion_reasons": [],
-                            "notes": "Blank-page gate by ink ratio only; not visually inspected."},
+                            "notes": "Blank-page gates by ink ratio and blla line count; not visually inspected."},
                 "transcription": {"status": "none", "text_path": None, "alto_path": None, "hocr_path": None,
                                   "source_url": None, "created_by": "unknown",
                                   "rights": {"rights_basis": "public_domain", "license_expression": None,
@@ -392,7 +413,8 @@ def main():
     p.add_argument("--delay", type=float, default=1.5)
     p.add_argument("--exclude-plans", nargs="*", help="earlier batch plans; their records are never re-assessed")
     i = sub.add_parser("ingest"); i.add_argument("plan"); i.add_argument("--pages", type=int, default=3)
-    i.add_argument("--min-ink", type=float, default=0.01); i.add_argument("--delay", type=float, default=1.5)
+    i.add_argument("--min-ink", type=float, default=0.01)
+    i.add_argument("--min-lines", type=int, default=3, help="0 turns the blla line gate off"); i.add_argument("--delay", type=float, default=1.5)
     a = ap.parse_args()
     {"pick": cmd_pick, "ingest": cmd_ingest}[a.cmd](a)
 
