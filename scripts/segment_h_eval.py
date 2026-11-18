@@ -9,6 +9,10 @@ Each line has `polygon` (kraken boundary), `baseline` and `box` [x0, y0, x1, y1]
 image), in image pixels as displayed: where the file has an EXIF orientation (2-8), it is applied first, as browsers do, and
 the page records `exif_orientation` and `image_size` in that displayed frame (tag 0 is invalid and read as 1). A line kraken gives
 no polygon for gets `box` null and `box_status` "no_polygon". Nothing is guessed or filtered.
+Page overrides come from data/eval/h_line_items_overrides.json (data-collection's agent visual check, committed before the
+run): on pages listed under `segmenter` as "legacy", kraken's legacy box segmenter (nlbin + pageseg.segment, Apache-2.0)
+replaces blla; its lines have a rectangle `polygon`, no baseline, and `box_status` "segmented_legacy". `page_flags`
+("no_hebrew_text", "poor") are copied to the page as `page_flag`; null otherwise.
 The output follows heocr-restricted-eval's midcentury_line_items.v1 shape.
 Signed: data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource
 """
@@ -38,7 +42,7 @@ def main():
     a = ap.parse_args()
 
     import kraken
-    from kraken import blla
+    from kraken import binarization, blla, pageseg
     from PIL import Image, ImageOps
 
     model = Path(kraken.__file__).parent / "blla.mlmodel"
@@ -49,6 +53,8 @@ def main():
         rows += [dict(json.loads(l), eval_set=s) for l in p.read_text(encoding="utf-8").splitlines() if l.strip()]
     assert len({r["entry_id"] for r in rows}) == len(rows), "a page is in two manifests"
 
+    ov = json.loads((ROOT / "data" / "eval" / "h_line_items_overrides.json").read_text(encoding="utf-8"))
+    assert set(ov["segmenter"]) | set(ov["page_flags"]) <= {r["entry_id"] for r in rows}, "override for an unknown page"
     items, stats = [], Counter()
     for r in rows[: a.limit]:
         img = ROOT / r["image_path"]
@@ -58,9 +64,21 @@ def main():
         if orient != 1:
             im = ImageOps.exif_transpose(im)
         W, H = im.size
-        seg = blla.segment(im.convert("RGB"), text_direction=TEXT_DIRECTION, model=None)
+        engine = ov["segmenter"].get(r["entry_id"], "blla")
         lines = []
-        for i, ln in enumerate(seg.lines):
+        if engine == "legacy":
+            seg = pageseg.segment(binarization.nlbin(im.convert("RGB")), text_direction=TEXT_DIRECTION)
+            for i, ln in enumerate(seg.lines):
+                x0, y0, x1, y1 = (int(v) for v in ln.bbox)
+                box = [max(0, x0), max(0, y0), min(W, x1), min(H, y1)]
+                stats["segmented_legacy"] += 1
+                lines.append({"i": i, "prefill": "", "box": box, "box_status": "segmented_legacy",
+                              "polygon": [[box[0], box[1]], [box[2], box[1]], [box[2], box[3]], [box[0], box[3]]],
+                              "baseline": None, "region": None, "match": None, "tier_a": None, "bidi_risk": None})
+            seg.regions = None
+        else:
+            seg = blla.segment(im.convert("RGB"), text_direction=TEXT_DIRECTION, model=None)
+        for i, ln in enumerate(seg.lines if engine == "blla" else []):
             poly = [[int(x), int(y)] for x, y in ln.boundary] if ln.boundary else None
             box, status = None, "no_polygon"
             if poly:
@@ -74,6 +92,7 @@ def main():
         items.append({"page_key": r["entry_id"], "eval_set": r["eval_set"], "stratum": r["stratum"],
                       "source_id": r["source_id"], "image": r["image_path"], "image_sha256": r["image_sha256"],
                       "image_size": [W, H], "exif_orientation": orient,
+                      "segmenter": engine, "page_flag": ov["page_flags"].get(r["entry_id"]),
                       "coordinate_frame": "display", "prefill_source": None, "prefill_from_stock": False,
                       "regions": len(seg.regions.get("text", [])) if isinstance(seg.regions, dict) else None,
                       "lines": lines})
@@ -89,7 +108,10 @@ def main():
                       subprocess.run(["kraken", "--version"], capture_output=True, text=True).stdout.strip(),
                       "engine_licence": "Apache-2.0", "model": "blla.mlmodel (kraken default, bundled)",
                       "model_sha256": sha(model), "model_licence": "Apache-2.0",
-                      "text_direction": TEXT_DIRECTION, "recognition": "none"},
+                      "text_direction": TEXT_DIRECTION, "recognition": "none",
+                      "fallback": "kraken legacy pageseg (nlbin), on the pages in h_line_items_overrides.json"},
+        "overrides_sha256": sha(ROOT / "data" / "eval" / "h_line_items_overrides.json"),
+        "page_flags": dict(Counter(p["page_flag"] for p in items if p["page_flag"])),
         "hash_commit": head, "script": "scripts/segment_h_eval.py", "script_dirty": bool(dirty),
         "pages_total": len(items), "lines_total": sum(len(p["lines"]) for p in items),
         "stats": dict(stats), "pages": items,
