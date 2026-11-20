@@ -159,6 +159,8 @@ def process(page, ov):
         m = ink[y0:y1, x0:x1]
         if m.any() and np.median(g[y0:y1, x0:x1][m]) > page_ink + 45:
             suspect.append({"id": l["id"], "box": l["box"], "why": "faint (bleed-through?)"})
+    anon = [0]
+
     def split_tall(lines, limit, only=None, min_part=0.3):
         out = []
         for l in lines:
@@ -179,7 +181,10 @@ def process(page, ov):
                 for k, (a, z) in enumerate(((y0, y0 + cut), (y0 + cut, y1))):
                     tb = tight([x0, a, x1, z], ink)
                     if tb:
-                        cid = c["id"] or ("j:" + "+".join(c["from"]) if c["from"] else "x")
+                        if not c["id"] and not c["from"]:
+                            anon[0] += 1
+                            c["id"] = f"x{anon[0]}"  # a line joined from added pieces only: unique per page
+                        cid = c["id"] or "j:" + "+".join(c["from"])
                         stack.append({"id": f"s:{cid}:{k}", "box": tb, "src": "split", "from": c["from"], "poly": None,
                                       "baseline": None, "region": c["region"]})
         return out
