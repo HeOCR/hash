@@ -17,7 +17,9 @@ Rules, applied per page and in this order:
    60%) overlap by at least JOIN_OVERLAP of the smaller band, and the horizontal gap between them is at most JOIN_GAP
    × the line height. When both pieces have kraken baselines, one baseline, extended, must pass within 0.35 × the
    line height of the other (slanted writing). A join is refused if it would make the line wider than MAX_ASPECT × its height (contrib's
-   40:1 limit), or if it would cross a wide blank vertical gutter (spreads).
+   40:1 limit), or if it would cross a gutter: a wide blank vertical band, or a spread's binding. On a landscape page,
+   the binding is the x near the centre that at most 3% of v1 boxes cross, within 3% of the centre; a page's `spread`
+   override decides instead.
 4. **Add.** Ink not covered by any box (ruling, grid lines and borders removed first) is grouped into rows. A row
    becomes a new line only if it has 2 or more ink components as dark as the page's boxed writing, real ink density
    and a line's size.
@@ -26,7 +28,9 @@ Rules, applied per page and in this order:
    - `drop`: line ids;
    - `add`: boxes in image pixels;
    - `add_ov`: boxes in the overlay frame (longest side 1500);
-   - `flag`: a page flag such as "poor_boxes".
+   - `flag`: a page flag such as "poor_boxes";
+   - `spread`: true or false, to override spread detection;
+   - `keep_v1`: true keeps the page's v1 boxes unchanged, where the check found the repairs worse.
    A manual box replaces every box it mostly covers, and it is tightened to its ink.
 6. **Order.** Columns run right to left (split at gutters), and lines run top to bottom within a column.
 
@@ -114,7 +118,7 @@ def gutters(ink, W):
             s = x
             while x < int(0.8 * W) and blank[x]:
                 x += 1
-            if x - s > W * 0.02:
+            if x - s > W * 0.03:
                 out.append((s, x))
         x += 1
     return out
@@ -175,9 +179,20 @@ def process(page, ov):
                                   "baseline": None, "region": c["region"]})
     lines = out
     gut = gutters(ink, W)
+    # spreads: on a landscape page, the x near the centre that the fewest v1 boxes cross is the binding, when at most 3%
+    # of v1 boxes cross it and it lies within 3% of the centre (blla rarely draws a line across a binding). A page's
+    # `spread` override (true/false) decides instead.
+    v1b = [l["box"] for l in page["lines"] if l["box"]]
+    spread = ov.get(page["page_key"], {}).get("spread")
+    if v1b and (spread is True or (spread is None and W > 1.2 * H)):
+        xs = range(int(0.38 * W), int(0.62 * W), max(1, W // 400))
+        best = min(xs, key=lambda x: (sum(b[0] < x < b[2] for b in v1b), abs(x - W / 2)))
+        auto = sum(b[0] < best < b[2] for b in v1b) <= 0.03 * len(v1b) and abs(best / W - 0.5) <= 0.03
+        if spread is True or auto:
+            gut.append((best - 2, best + 2))
     def crosses(a, b):
-        lo, hi = min(a[2], b[2]), max(a[0], b[0])
-        return any(lo <= s and e <= hi for s, e in gut) or any(s < (a[0] + a[2]) / 2 < e or s < (b[0] + b[2]) / 2 < e for s, e in gut)
+        """True if the union of a and b would span a gutter."""
+        return any(min(a[0], b[0]) < s_ and max(a[2], b[2]) > e_ for s_, e_ in gut)
     def join_all(lines):
         lines.sort(key=lambda l: -l["box"][2])
         merged = True
@@ -252,7 +267,8 @@ def process(page, ov):
         b = [int(x), int(y), int(x + w), int(y + h)]
         for t, r in enumerate(rows):
             (c0, c1), (d0, d1) = core(r), core(b)
-            if min(c1, d1) - max(c0, d0) > 0.3 * min(c1 - c0, d1 - d0) and max(r[0], b[0]) - min(r[2], b[2]) < 1.5 * mh:
+            if min(c1, d1) - max(c0, d0) > 0.3 * min(c1 - c0, d1 - d0) and max(r[0], b[0]) - min(r[2], b[2]) < 1.5 * mh \
+                    and not crosses(r, b):
                 r[:] = [min(r[0], b[0]), min(r[1], b[1]), max(r[2], b[2]), max(r[3], b[3])]; ncomp[t] += 1; break
         else:
             rows.append(b); ncomp.append(1)
@@ -331,7 +347,13 @@ def main():
         if p["eval_set"] not in a.sets or (a.pages and p["page_key"] not in a.pages):
             continue
         assert sha(ROOT / p["image"]) == p["image_sha256"], p["page_key"]
-        lines, dropped, suspect, info = process(p, ov["pages"])
+        if ov["pages"].get(p["page_key"], {}).get("keep_v1"):
+            # the agent check found v2's repairs worse than v1 on this page: keep v1's boxes unchanged
+            lines = [dict(l, id=f"v1:{l['i']}", box_source="legacy" if l["box_status"] == "segmented_legacy" else "blla",
+                          merged_from=None, v1_ids=[f"v1:{l['i']}"]) for l in p["lines"] if l["box"]]
+            dropped, suspect, info = [], [], {"keep_v1": True}
+        else:
+            lines, dropped, suspect, info = process(p, ov["pages"])
         q = {k: v for k, v in p.items() if k != "lines"}
         q.update(lines=lines, dropped=dropped, suspect=suspect, rebox=info)
         fl = ov["pages"].get(p["page_key"], {}).get("flag")
