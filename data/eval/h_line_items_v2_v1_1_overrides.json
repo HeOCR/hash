@@ -1,0 +1,172 @@
+{
+ "schema": "h_line_items_v2_overrides.v1",
+ "rule": "data-collection's agent check of the h_eval_v1_1 v2 overlays (scripts/h_line_overlays_v2.py), geometry only: no text read or typed. Committed before the final run of scripts/rebox_h_eval.py --v11-rules. Checked by eye: the 9 pages with the highest risk score (over-tall lines, many added or re-split boxes); the rest is measured by the coverage sample in H_LINE_ITEMS_V2_V1_1.md.",
+ "pages": {
+  "nli__ms_990000411340205171__p0003": {
+   "drop_all": true,
+   "add_ov": [
+    [
+     280,
+     163,
+     602,
+     213
+    ],
+    [
+     268,
+     213,
+     602,
+     243
+    ],
+    [
+     262,
+     242,
+     566,
+     272
+    ],
+    [
+     335,
+     276,
+     621,
+     330
+    ],
+    [
+     195,
+     474,
+     652,
+     546
+    ],
+    [
+     678,
+     362,
+     782,
+     426
+    ],
+    [
+     750,
+     804,
+     985,
+     877
+    ],
+    [
+     830,
+     890,
+     916,
+     940
+    ]
+   ]
+  },
+  "nli__ms_990000411340205171__p0004": {
+   "keep_v1": true,
+   "flag": "poor_boxes"
+  },
+  "nli__ms_990000416060205171__p0004": {
+   "drop_all": true,
+   "add_ov": [
+    [
+     905,
+     822,
+     1382,
+     864
+    ],
+    [
+     915,
+     866,
+     1005,
+     896
+    ],
+    [
+     975,
+     902,
+     1305,
+     942
+    ]
+   ]
+  },
+  "nli__ms_990000454790205171__p0002": {
+   "drop": [
+    "s:a:5:1",
+    "a:6",
+    "s:j:v1:6+v1:15+v1:20+v1:32+v1:33:0",
+    "s:v1:24:1"
+   ]
+  },
+  "nli__ms_990000752880205171__p0002": {
+   "flag": "no_handwriting",
+   "drop_all": true,
+   "add_ov": [
+    [
+     538,
+     93,
+     678,
+     120
+    ],
+    [
+     268,
+     416,
+     954,
+     460
+    ],
+    [
+     253,
+     465,
+     954,
+     502
+    ],
+    [
+     456,
+     522,
+     754,
+     550
+    ],
+    [
+     403,
+     1288,
+     802,
+     1317
+    ]
+   ]
+  },
+  "nli__ms_990025880400205171__p0004": {
+   "spread": true,
+   "flag": "poor_boxes"
+  },
+  "nli__ms_990025900380205171__p0001": {
+   "add_ov": [
+    [
+     203,
+     583,
+     1222,
+     672
+    ],
+    [
+     235,
+     688,
+     1225,
+     787
+    ],
+    [
+     1020,
+     1040,
+     1162,
+     1100
+    ]
+   ]
+  },
+  "nli__ms_990043786520205171__p0002": {
+   "drop": [
+    "a:10",
+    "a:7",
+    "s:j:v1:13:0",
+    "a:4",
+    "v1:18",
+    "a:2",
+    "a:5"
+   ]
+  },
+  "nli__ms_990043786520205171__p0004": {
+   "keep_v1": true,
+   "flag": "poor_boxes"
+  }
+ },
+ "signed": "data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource"
+}
