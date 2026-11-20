@@ -1,0 +1,370 @@
+{
+ "schema": "h_line_items_v2_overrides.v1",
+ "rule": "data-collection's agent check of the v2 overlays (scripts/h_line_overlays_v2.py), page by page; committed before the final run. Geometry only: no text. Ids refer to the v2 run of scripts/rebox_h_eval.py at the commit that adds this file.",
+ "pages": {
+  "commons__hatikvah_imber_manuscript__p0001": {
+   "add_ov": [
+    [
+     185,
+     22,
+     600,
+     58
+    ],
+    [
+     280,
+     76,
+     630,
+     110
+    ],
+    [
+     240,
+     268,
+     660,
+     306
+    ]
+   ],
+   "spread": false
+  },
+  "commons__hirsch_torah_letter_1878__p0001": {
+   "flag": "poor_boxes",
+   "keep_v1": true
+  },
+  "commons__hirsch_torah_letter_1878__p0002": {
+   "flag": "poor_boxes",
+   "keep_v1": true
+  },
+  "commons__hirsch_torah_letter_1878__p0003": {
+   "drop": [
+    "a:0"
+   ]
+  },
+  "commons__kafka_hebrew_writings__p0001": {
+   "flag": "poor_boxes",
+   "spread": true
+  },
+  "commons__mardumsk_haskama_1931__p0001": {
+   "add_ov": [
+    [
+     1220,
+     70,
+     1310,
+     115
+    ],
+    [
+     140,
+     285,
+     1355,
+     345
+    ],
+    [
+     82,
+     338,
+     1462,
+     412
+    ],
+    [
+     145,
+     418,
+     1482,
+     480
+    ],
+    [
+     12,
+     488,
+     1478,
+     558
+    ],
+    [
+     122,
+     556,
+     1497,
+     620
+    ]
+   ]
+  },
+  "commons__mira_ben_ari_letter__p0001": {
+   "add_ov": [
+    [
+     12,
+     360,
+     1470,
+     404
+    ],
+    [
+     328,
+     552,
+     1472,
+     612
+    ],
+    [
+     118,
+     772,
+     1374,
+     832
+    ],
+    [
+     662,
+     838,
+     1430,
+     892
+    ]
+   ],
+   "spread": false
+  },
+  "commons__pelliot_hebreu_1__p0001": {
+   "add_ov": [
+    [
+     25,
+     2,
+     638,
+     42
+    ],
+    [
+     25,
+     45,
+     638,
+     100
+    ],
+    [
+     25,
+     100,
+     638,
+     150
+    ],
+    [
+     25,
+     148,
+     638,
+     200
+    ],
+    [
+     25,
+     205,
+     638,
+     262
+    ],
+    [
+     25,
+     262,
+     638,
+     312
+    ],
+    [
+     25,
+     312,
+     638,
+     368
+    ],
+    [
+     25,
+     370,
+     638,
+     428
+    ],
+    [
+     25,
+     430,
+     638,
+     472
+    ],
+    [
+     25,
+     472,
+     638,
+     530
+    ],
+    [
+     25,
+     530,
+     638,
+     580
+    ],
+    [
+     25,
+     580,
+     638,
+     625
+    ],
+    [
+     25,
+     625,
+     638,
+     672
+    ],
+    [
+     25,
+     675,
+     638,
+     728
+    ],
+    [
+     25,
+     735,
+     638,
+     788
+    ],
+    [
+     25,
+     788,
+     638,
+     832
+    ],
+    [
+     25,
+     832,
+     638,
+     880
+    ],
+    [
+     25,
+     880,
+     638,
+     918
+    ]
+   ]
+  },
+  "commons__rachel_gan_naul__p0001": {
+   "drop": [
+    "a:1"
+   ],
+   "add_ov": [
+    [
+     30,
+     150,
+     155,
+     205
+    ],
+    [
+     400,
+     160,
+     700,
+     250
+    ],
+    [
+     250,
+     252,
+     790,
+     318
+    ],
+    [
+     310,
+     320,
+     790,
+     385
+    ],
+    [
+     280,
+     398,
+     790,
+     450
+    ],
+    [
+     235,
+     452,
+     790,
+     520
+    ],
+    [
+     95,
+     585,
+     795,
+     665
+    ],
+    [
+     420,
+     680,
+     795,
+     735
+    ],
+    [
+     165,
+     735,
+     795,
+     828
+    ],
+    [
+     165,
+     826,
+     795,
+     898
+    ]
+   ]
+  },
+  "commons__tsherniak_postcard_1913__p0001": {
+   "flag": "poor_boxes"
+  },
+  "loc__2018757724__p0002": {
+   "drop": [
+    "a:1",
+    "a:3",
+    "a:5",
+    "a:0",
+    "a:2"
+   ],
+   "add_ov": [
+    [
+     465,
+     452,
+     575,
+     502
+    ],
+    [
+     395,
+     500,
+     865,
+     560
+    ]
+   ]
+  },
+  "loc__2018757827__p0005": {
+   "add_ov": [
+    [
+     298,
+     332,
+     847,
+     412
+    ],
+    [
+     118,
+     483,
+     907,
+     547
+    ]
+   ]
+  },
+  "loc__2023530824__p0004": {
+   "flag": "poor_boxes"
+  },
+  "loc__2023530824__p0005": {
+   "flag": "poor_boxes",
+   "keep_v1": true
+  },
+  "nli__nnl_archive_al997009912248505171__p0009": {
+   "add_ov": [
+    [
+     788,
+     93,
+     1447,
+     142
+    ]
+   ]
+  },
+  "nli__nnl_archive_al997009912248505171__p0026": {
+   "drop": [
+    "a:1",
+    "a:4",
+    "a:3"
+   ]
+  },
+  "nli__nnl_archive_al997009912248505171__p0065": {
+   "drop": [
+    "a:7",
+    "a:14",
+    "a:16",
+    "a:12",
+    "a:0"
+   ]
+  }
+ },
+ "signed": "data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource"
+}
