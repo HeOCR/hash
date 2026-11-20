@@ -30,6 +30,7 @@ Rules, applied per page and in this order:
    - `add_ov`: boxes in the overlay frame (longest side 1500);
    - `flag`: a page flag such as "poor_boxes";
    - `spread`: true or false, to override spread detection;
+   - `drop_all`: true removes every automatic box (listed in `dropped`), leaving only `add`/`add_ov` boxes;
    - `keep_v1`: true keeps the page's v1 boxes unchanged, where the check found the repairs worse.
    A manual box replaces every box it mostly covers, and it is tightened to its ink.
 6. **Order.** Columns run right to left (split at gutters), and lines run top to bottom within a column.
@@ -54,11 +55,14 @@ from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 SPLIT_H = 1.8
+JOIN_MAX_GROW = 1.3  # a join may not make the line taller than 1.3 x its taller piece (v1.1 run on)
+RESPLIT_H = 1.6  # after joining, joined and added lines taller than this x median line are split again (v1.1 run on)
 JOIN_OVERLAP = 0.5
 JOIN_GAP = 2.5
 MAX_ASPECT = 40.0
 EMPTY_INK = 0.004
 STAMP_FRAC = 0.5
+RESPLIT = JOIN_CAP = False  # set by --v11-rules; off reproduces the h_eval_v1 file
 OVERLAY_FRAME = 1500  # overrides may give boxes as `add_ov`, in the frame of h_line_overlays_v2.py (longest side 1500)
 
 
@@ -155,29 +159,38 @@ def process(page, ov):
         m = ink[y0:y1, x0:x1]
         if m.any() and np.median(g[y0:y1, x0:x1][m]) > page_ink + 45:
             suspect.append({"id": l["id"], "box": l["box"], "why": "faint (bleed-through?)"})
+    anon = [0]
+
+    def split_tall(lines, limit, only=None, min_part=0.3):
+        out = []
+        for l in lines:
+            stack = [l]
+            while stack:
+                c = stack.pop()
+                x0, y0, x1, y1 = c["box"]
+                if (only and c["src"] not in only) or y1 - y0 <= limit * mh:
+                    out.append(c); continue
+                prof = ink[y0:y1, x0:x1].mean(axis=1)
+                lo, hi = int(0.3 * mh), (y1 - y0) - int(0.3 * mh)
+                if hi <= lo:
+                    out.append(c); continue
+                cut = lo + int(np.argmin(prof[lo:hi]))
+                top, bot = prof[:cut], prof[cut:]
+                if prof[cut] > 0.5 * prof.max() or (top > 0.05).sum() < min_part * mh or (bot > 0.05).sum() < min_part * mh:
+                    out.append(c); continue
+                for k, (a, z) in enumerate(((y0, y0 + cut), (y0 + cut, y1))):
+                    tb = tight([x0, a, x1, z], ink)
+                    if tb:
+                        if not c["id"] and not c["from"]:
+                            anon[0] += 1
+                            c["id"] = f"x{anon[0]}"  # a line joined from added pieces only: unique per page
+                        cid = c["id"] or "j:" + "+".join(c["from"])
+                        stack.append({"id": f"s:{cid}:{k}", "box": tb, "src": "split", "from": c["from"], "poly": None,
+                                      "baseline": None, "region": c["region"]})
+        return out
+
     # 2. split
-    out = []
-    for l in lines:
-        stack = [l]
-        while stack:
-            c = stack.pop()
-            x0, y0, x1, y1 = c["box"]
-            if y1 - y0 <= SPLIT_H * mh:
-                out.append(c); continue
-            prof = ink[y0:y1, x0:x1].mean(axis=1)
-            lo, hi = int(0.3 * mh), (y1 - y0) - int(0.3 * mh)
-            if hi <= lo:
-                out.append(c); continue
-            cut = lo + int(np.argmin(prof[lo:hi]))
-            top, bot = prof[:cut], prof[cut:]
-            if prof[cut] > 0.5 * prof.max() or (top > 0.05).sum() < 0.3 * mh or (bot > 0.05).sum() < 0.3 * mh:
-                out.append(c); continue
-            for k, (a, z) in enumerate(((y0, y0 + cut), (y0 + cut, y1))):
-                tb = tight([x0, a, x1, z], ink)
-                if tb:
-                    stack.append({"id": f"s:{c['id']}:{k}", "box": tb, "src": "split", "from": c["from"], "poly": None,
-                                  "baseline": None, "region": c["region"]})
-    lines = out
+    lines = split_tall(lines, SPLIT_H)
     gut = gutters(ink, W)
     # spreads: on a landscape page, the x near the centre that the fewest v1 boxes cross is the binding, when at most 3%
     # of v1 boxes cross it and it lies within 3% of the centre (blla rarely draws a line across a binding). A page's
@@ -219,6 +232,8 @@ def process(page, ov):
                     if gap > JOIN_GAP * h or crosses(a, b):
                         continue
                     nb = [min(a[0], b[0]), min(a[1], b[1]), max(a[2], b[2]), max(a[3], b[3])]
+                    if JOIN_CAP and (nb[3] - nb[1]) > JOIN_MAX_GROW * max(a[3] - a[1], b[3] - b[1]):
+                        continue  # the union would swallow a neighbouring row
                     if (nb[2] - nb[0]) > MAX_ASPECT * max(1, min(a[3] - a[1], b[3] - b[1])):
                         continue
                     if gap < -0.5 * min(a[2] - a[0], b[2] - b[0]):  # heavy horizontal overlap: two lines, not pieces
@@ -295,8 +310,13 @@ def process(page, ov):
         else:
             kept.append(l)
     lines = join_all(kept)
+    if RESPLIT:
+        lines = split_tall(lines, RESPLIT_H, only={"joined", "added"}, min_part=0.6)  # no thin slivers
     # 5. overrides
     po = ov.get(page["page_key"], {})
+    if po.get("drop_all"):
+        dropped += [{"id": l["id"] or "j:" + "+".join(l["from"]), "box": l["box"], "reason": "agent_check"} for l in lines]
+        lines = []
     lines = [l for l in lines if (l["id"] or "") not in set(po.get("drop", []))
              and not set(l["from"]) & set(po.get("drop_from", []))]
     f = max(W, H) / OVERLAY_FRAME if max(W, H) > OVERLAY_FRAME else 1.0  # overlays are only ever downscaled
@@ -337,10 +357,15 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--sets", nargs="*", default=["h_eval_v1", "h_eval_v1_1"])
     ap.add_argument("--pages", nargs="*")
+    ap.add_argument("--overrides", default="data/eval/h_line_items_v2_overrides.json")
+    ap.add_argument("--v11-rules", action="store_true",
+                    help="v1.1 run on: join height cap (JOIN_MAX_GROW) and re-split of tall joined/added lines")
     a = ap.parse_args()
     v1p = ROOT / "data/eval/h_line_items_v1.json"
     v1 = json.loads(v1p.read_text(encoding="utf-8"))
-    ovp = ROOT / "data/eval/h_line_items_v2_overrides.json"
+    ovp = ROOT / a.overrides
+    global RESPLIT, JOIN_CAP
+    RESPLIT = JOIN_CAP = a.v11_rules
     ov = json.loads(ovp.read_text(encoding="utf-8")) if ovp.exists() else {"pages": {}}
     pages, stats = [], Counter()
     for p in v1["pages"]:
@@ -366,13 +391,14 @@ def main():
     assert all(l["prefill"] == "" for p in pages for l in p["lines"])
     head = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
     dirty = subprocess.run(["git", "-C", str(ROOT), "status", "--porcelain", "--", "scripts/rebox_h_eval.py",
-                            "data/eval/h_line_items_v2_overrides.json"], capture_output=True, text=True).stdout.strip()
+                            a.overrides], capture_output=True, text=True).stdout.strip()
     res = {"schema": "h_line_items.v2", "shape_of": "heocr-restricted-eval midcentury_line_items.v1",
            "from": {"file": "data/eval/h_line_items_v1.json", "sha256": sha(v1p)}, "sets": a.sets,
            "rule": __doc__.strip().splitlines()[0], "recognition": "none",
-           "params": {"split_h": SPLIT_H, "join_overlap": JOIN_OVERLAP, "join_gap": JOIN_GAP, "max_aspect": MAX_ASPECT,
+           "params": {"v11_rules": a.v11_rules, "join_max_grow": JOIN_MAX_GROW if a.v11_rules else None,
+                      "resplit_h": RESPLIT_H if a.v11_rules else None, "split_h": SPLIT_H, "join_overlap": JOIN_OVERLAP, "join_gap": JOIN_GAP, "max_aspect": MAX_ASPECT,
                       "empty_ink": EMPTY_INK, "stamp_frac": STAMP_FRAC, "opencv": cv2.__version__},
-           "overrides_sha256": sha(ovp) if ovp.exists() else None, "hash_commit": head,
+           "overrides": a.overrides, "overrides_sha256": sha(ovp) if ovp.exists() else None, "hash_commit": head,
            "script": "scripts/rebox_h_eval.py", "script_dirty": bool(dirty),
            "pages_total": len(pages), "lines_total": sum(len(p["lines"]) for p in pages), "stats": dict(stats),
            "pages": pages, "signed": "data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource"}

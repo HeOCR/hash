@@ -4,13 +4,17 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ITEMS = ROOT / "data" / "eval" / "h_line_items_v2.json"
+FILES = [ROOT / "data" / "eval" / f for f in ("h_line_items_v2.json", "h_line_items_v2_v1_1.json")]
 V1 = ROOT / "data" / "eval" / "h_line_items_v1.json"
 SOURCES = {"blla", "legacy", "joined", "split", "added", "manual"}
 
 
-def test_line_items_v2():
-    d = json.loads(ITEMS.read_text(encoding="utf-8"))
+import pytest
+
+
+@pytest.mark.parametrize("items", FILES, ids=lambda p: p.name)
+def test_line_items_v2(items):
+    d = json.loads(items.read_text(encoding="utf-8"))
     v1 = {p["page_key"]: p for p in json.loads(V1.read_text(encoding="utf-8"))["pages"]}
     assert d["schema"] == "h_line_items.v2" and d["recognition"] == "none"
     assert d["from"]["sha256"] == hashlib.sha256(V1.read_bytes()).hexdigest()
