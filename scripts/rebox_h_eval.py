@@ -30,6 +30,7 @@ Rules, applied per page and in this order:
    - `add_ov`: boxes in the overlay frame (longest side 1500);
    - `flag`: a page flag such as "poor_boxes";
    - `spread`: true or false, to override spread detection;
+   - `drop_all`: true removes every automatic box (listed in `dropped`), leaving only `add`/`add_ov` boxes;
    - `keep_v1`: true keeps the page's v1 boxes unchanged, where the check found the repairs worse.
    A manual box replaces every box it mostly covers, and it is tightened to its ink.
 6. **Order.** Columns run right to left (split at gutters), and lines run top to bottom within a column.
@@ -158,7 +159,7 @@ def process(page, ov):
         m = ink[y0:y1, x0:x1]
         if m.any() and np.median(g[y0:y1, x0:x1][m]) > page_ink + 45:
             suspect.append({"id": l["id"], "box": l["box"], "why": "faint (bleed-through?)"})
-    def split_tall(lines, limit, only=None):
+    def split_tall(lines, limit, only=None, min_part=0.3):
         out = []
         for l in lines:
             stack = [l]
@@ -173,7 +174,7 @@ def process(page, ov):
                     out.append(c); continue
                 cut = lo + int(np.argmin(prof[lo:hi]))
                 top, bot = prof[:cut], prof[cut:]
-                if prof[cut] > 0.5 * prof.max() or (top > 0.05).sum() < 0.3 * mh or (bot > 0.05).sum() < 0.3 * mh:
+                if prof[cut] > 0.5 * prof.max() or (top > 0.05).sum() < min_part * mh or (bot > 0.05).sum() < min_part * mh:
                     out.append(c); continue
                 for k, (a, z) in enumerate(((y0, y0 + cut), (y0 + cut, y1))):
                     tb = tight([x0, a, x1, z], ink)
@@ -305,9 +306,12 @@ def process(page, ov):
             kept.append(l)
     lines = join_all(kept)
     if RESPLIT:
-        lines = split_tall(lines, RESPLIT_H, only={"joined", "added"})
+        lines = split_tall(lines, RESPLIT_H, only={"joined", "added"}, min_part=0.6)  # no thin slivers
     # 5. overrides
     po = ov.get(page["page_key"], {})
+    if po.get("drop_all"):
+        dropped += [{"id": l["id"] or "j:" + "+".join(l["from"]), "box": l["box"], "reason": "agent_check"} for l in lines]
+        lines = []
     lines = [l for l in lines if (l["id"] or "") not in set(po.get("drop", []))
              and not set(l["from"]) & set(po.get("drop_from", []))]
     f = max(W, H) / OVERLAY_FRAME if max(W, H) > OVERLAY_FRAME else 1.0  # overlays are only ever downscaled
