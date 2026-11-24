@@ -1,0 +1,191 @@
+{
+ "decisions": [
+  {
+   "record_id": "990000434100205171",
+   "title": "מגיד מישרים : העתקה מדפוס לובלין, ת\"ו.",
+   "decision": "accepted",
+   "reasons": [],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/990000434100205171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/public-domain-free-use",
+   "license_slug": "public-domain-free-use",
+   "canvas_count": 54,
+   "item_url": "https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000434100205171",
+   "attribution": [
+    "The National Library of Israel. \"Ktiv\" Project מאוסף הספרייה הלאומית. פרוייקט \"כתיב\""
+   ],
+   "marc": {
+    "090": [
+     {
+      "a": "Ms. Heb. 7500=28"
+     },
+     {
+      "a": "B 990 (8°7500)"
+     }
+    ],
+    "100": [
+     {
+      "a": "קארו, יוסף בן אפרים,",
+      "d": "1488-1575",
+      "9": "heb",
+      "8": "PreferredLanguageHeading"
+     }
+    ],
+    "245": [
+     {
+      "a": "מגיד מישרים :",
+      "b": "העתקה מדפוס לובלין, ת\"ו."
+     }
+    ],
+    "260": [
+     {
+      "c": "1850 בערך."
+     }
+    ],
+    "300": [
+     {
+      "a": "47 דף ;",
+      "c": "14.5X21 ס\"מ."
+     }
+    ],
+    "500": [
+     {
+      "a": "נושא נוסף: קבלה"
+     }
+    ],
+    "597": [
+     {
+      "a": "מאוסף הספרייה הלאומית. פרוייקט \"כתיב\""
+     }
+    ],
+    "700": [
+     {
+      "a": "משה בן סעדיה אלקפ[אע]י",
+      "9": "heb",
+      "e": "(מעתיק)",
+      "8": "PreferredLanguageHeading"
+     },
+     {
+      "a": "אלונאעי, שלמה",
+      "c": "הלוי",
+      "9": "heb",
+      "e": "בעלים קודמים",
+      "8": "PreferredLanguageHeading"
+     },
+     {
+      "a": "סלים פינחס",
+      "9": "heb",
+      "e": "בעלים קודמים",
+      "8": "PreferredLanguageHeading"
+     },
+     {
+      "a": "בן ציון סעיד",
+      "9": "heb",
+      "e": "בעלים קודמים",
+      "8": "PreferredLanguageHeading"
+     },
+     {
+      "a": "ושצ'י, יוסף דוד",
+      "9": "heb",
+      "e": "בעלים קודמים",
+      "8": "PreferredLanguageHeading"
+     },
+     {
+      "a": "זכריה בן שלמה,",
+      "c": "הכהן",
+      "9": "heb",
+      "e": "בעלים קודמים",
+      "8": "PreferredLanguageHeading"
+     }
+    ],
+    "710": [
+     {
+      "a": "The National Library of Israel",
+      "x": "Jerusalem",
+      "c": "Israel",
+      "9": "lat",
+      "e": "current owner",
+      "8": "PreferredLanguageHeading"
+     }
+    ],
+    "903": [
+     {
+      "a": "No restrictions;",
+      "b": "000000001",
+      "c": "Public domain",
+      "d": "Over 140 years from publishing date"
+     }
+    ],
+    "939": [
+     {
+      "a": "public domain free use"
+     }
+    ],
+    "041": [
+     {
+      "a": "heb"
+     }
+    ]
+   },
+   "created": "1850",
+   "created_year_est": 1850,
+   "created_precision": "year",
+   "creators": [
+    {
+     "name": "קארו, יוסף בן אפרים",
+     "role": "author",
+     "death_year": 1575,
+     "authority_url": null
+    },
+    {
+     "name": "משה בן סעדיה אלקפ[אע]י",
+     "role": "writer",
+     "death_year": null,
+     "authority_url": null
+    },
+    {
+     "name": "אלונאעי, שלמה",
+     "role": "author",
+     "death_year": null,
+     "authority_url": null
+    },
+    {
+     "name": "סלים פינחס",
+     "role": "author",
+     "death_year": null,
+     "authority_url": null
+    },
+    {
+     "name": "בן ציון סעיד",
+     "role": "author",
+     "death_year": null,
+     "authority_url": null
+    },
+    {
+     "name": "ושצ'י, יוסף דוד",
+     "role": "author",
+     "death_year": null,
+     "authority_url": null
+    },
+    {
+     "name": "זכריה בן שלמה",
+     "role": "author",
+     "death_year": null,
+     "authority_url": null
+    }
+   ],
+   "document_type": "other",
+   "is_copy": true,
+   "owner": [
+    "The National Library of Israel"
+   ],
+   "shelfmark": "Ms. Heb. 7500=28",
+   "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
+   "rights_939": "public domain free use",
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
+  }
+ ],
+ "source_plan": "nli_ms_batch1/2"
+}

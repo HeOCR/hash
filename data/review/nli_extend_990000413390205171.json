@@ -1,0 +1,134 @@
+{
+ "decisions": [
+  {
+   "record_id": "990000413390205171",
+   "title": "בחינת עולם : כנראה העתקה מדפוס שונצינו רמ\"ה - בהשמטת הביאור.",
+   "decision": "accepted",
+   "reasons": [],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/990000413390205171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/public-domain-free-use",
+   "license_slug": "public-domain-free-use",
+   "canvas_count": 17,
+   "item_url": "https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000413390205171",
+   "attribution": [
+    "The National Library of Israel. \"Ktiv\" Project מאוסף הספרייה הלאומית. פרוייקט \"כתיב\""
+   ],
+   "marc": {
+    "090": [
+     {
+      "a": "Ms. Heb. 7020=28"
+     },
+     {
+      "a": "B 296 (7020=28)"
+     },
+     {
+      "a": "F 40946"
+     }
+    ],
+    "100": [
+     {
+      "a": "הפניני, ידעיה בן אברהם,",
+      "c": "הבדרשי,",
+      "d": "1270 בערך-1340 בערך",
+      "9": "heb",
+      "8": "PreferredLanguageHeading"
+     }
+    ],
+    "245": [
+     {
+      "a": "בחינת עולם :",
+      "b": "כנראה העתקה מדפוס שונצינו רמ\"ה - בהשמטת הביאור."
+     }
+    ],
+    "260": [
+     {
+      "c": "שמ\"ח (1588)."
+     }
+    ],
+    "300": [
+     {
+      "a": "12 דף ;",
+      "c": "14X19 ס\"מ."
+     }
+    ],
+    "500": [
+     {
+      "a": "1ב: דבר המבאר - כנראה בכתיבה מאוחרת יותר."
+     },
+     {
+      "a": "12א: \"חידה זו חיבר ותיקן האלוף המרומם נ\"י פ\"ה מוהר\"ר עקיבא יזיי\"א\" בן יעקב ז\"ל [=לפי האקרוסטיכון]."
+     },
+     {
+      "a": "נושא נוסף: מוסר"
+     }
+    ],
+    "597": [
+     {
+      "a": "מאוסף הספרייה הלאומית. פרוייקט \"כתיב\""
+     }
+    ],
+    "710": [
+     {
+      "a": "The National Library of Israel",
+      "x": "Jerusalem",
+      "c": "Israel",
+      "9": "lat",
+      "e": "current owner",
+      "8": "PreferredLanguageHeading"
+     },
+     {
+      "a": "Allony, Nehemia",
+      "x": "Jerusalem",
+      "c": "Israel",
+      "9": "lat",
+      "e": "former owner",
+      "8": "PreferredLanguageHeading"
+     }
+    ],
+    "903": [
+     {
+      "a": "No restrictions;",
+      "b": "000000001",
+      "c": "Public domain",
+      "d": "Over 140 years from publishing date"
+     }
+    ],
+    "939": [
+     {
+      "a": "public domain free use"
+     }
+    ],
+    "041": [
+     {
+      "a": "heb"
+     }
+    ]
+   },
+   "created": "1588",
+   "created_year_est": 1588,
+   "created_precision": "year",
+   "creators": [
+    {
+     "name": "הפניני, ידעיה בן אברהם",
+     "role": "author",
+     "death_year": null,
+     "authority_url": null
+    }
+   ],
+   "document_type": "other",
+   "is_copy": true,
+   "owner": [
+    "The National Library of Israel",
+    "Allony, Nehemia"
+   ],
+   "shelfmark": "Ms. Heb. 7020=28",
+   "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
+   "rights_939": "public domain free use",
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
+  }
+ ],
+ "source_plan": "nli_ms_batch1/2"
+}

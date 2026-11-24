@@ -1,0 +1,159 @@
+{
+ "decisions": [
+  {
+   "record_id": "990000408780205171",
+   "title": "שפתי כהן : פירוש על התורה. העתקה מן הדפוס.",
+   "decision": "accepted",
+   "reasons": [],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/990000408780205171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/public-domain-free-use",
+   "license_slug": "public-domain-free-use",
+   "canvas_count": 177,
+   "item_url": "https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000408780205171",
+   "attribution": [
+    "The National Library of Israel. \"Ktiv\" Project מאוסף הספרייה הלאומית. פרוייקט \"כתיב\""
+   ],
+   "marc": {
+    "090": [
+     {
+      "a": "Ms. Heb. 1340=24"
+     },
+     {
+      "a": "B 523 (4°1340)"
+     }
+    ],
+    "100": [
+     {
+      "a": "מרדכי,",
+      "c": "הכהן, מצפת",
+      "9": "heb",
+      "8": "PreferredLanguageHeading"
+     }
+    ],
+    "245": [
+     {
+      "a": "שפתי כהן :",
+      "b": "פירוש על התורה. העתקה מן הדפוס."
+     }
+    ],
+    "260": [
+     {
+      "c": "תר\"ב (1842)."
+     }
+    ],
+    "300": [
+     {
+      "a": "קנח דף."
+     }
+    ],
+    "500": [
+     {
+      "a": "כולל את הפירוש רק לס' בראשית-שמות. הפירוש על ס' ויקרא-דברים נמצא בכ\"י ירושלים 1285."
+     },
+     {
+      "a": "עם הערות בודדות בשוליים או ב\"חלונות\" ליד הטכסט, אחדות מהן מאת \"סאלם ן' א\"א יודא מנצורה\" המזכיר שלמד \"אצל מו' אברהם מנזלי\" וכן מזכיר מנהג לקראוא את פרשת העקידה בליל יו\"כ בבית הכנסת ע\"ש \"יחיא צאלח\" ושאר בתי הכנסת במקומו (יח ע\"א)."
+     },
+     {
+      "a": "נושא נוסף: מקרא פרשנות תורה (מרדכי הכהן מצפת)"
+     }
+    ],
+    "597": [
+     {
+      "a": "מאוסף הספרייה הלאומית. פרוייקט \"כתיב\""
+     }
+    ],
+    "700": [
+     {
+      "a": "מנזלי, אברהם",
+      "9": "heb",
+      "e": "(מוזכר)",
+      "8": "PreferredLanguageHeading"
+     },
+     {
+      "a": "מנצורה, שלום בן יהודה,",
+      "d": "1800-1884",
+      "9": "heb",
+      "e": "(ממנו)",
+      "8": "PreferredLanguageHeading"
+     },
+     {
+      "a": "אלציחי, סעדיה בן מעודד בן סעדיה",
+      "9": "heb",
+      "e": "(מעתיק)",
+      "8": "PreferredLanguageHeading"
+     }
+    ],
+    "710": [
+     {
+      "a": "The National Library of Israel",
+      "x": "Jerusalem",
+      "c": "Israel",
+      "9": "lat",
+      "e": "current owner",
+      "8": "PreferredLanguageHeading"
+     }
+    ],
+    "903": [
+     {
+      "a": "No restrictions;",
+      "b": "000000001",
+      "c": "Public domain",
+      "d": "Over 140 years from publishing date"
+     }
+    ],
+    "939": [
+     {
+      "a": "public domain free use"
+     }
+    ],
+    "041": [
+     {
+      "a": "heb"
+     }
+    ]
+   },
+   "created": "1842",
+   "created_year_est": 1842,
+   "created_precision": "year",
+   "creators": [
+    {
+     "name": "מרדכי",
+     "role": "author",
+     "death_year": null,
+     "authority_url": null
+    },
+    {
+     "name": "מנזלי, אברהם",
+     "role": "author",
+     "death_year": null,
+     "authority_url": null
+    },
+    {
+     "name": "מנצורה, שלום בן יהודה",
+     "role": "author",
+     "death_year": 1884,
+     "authority_url": null
+    },
+    {
+     "name": "אלציחי, סעדיה בן מעודד בן סעדיה",
+     "role": "writer",
+     "death_year": null,
+     "authority_url": null
+    }
+   ],
+   "document_type": "other",
+   "is_copy": true,
+   "owner": [
+    "The National Library of Israel"
+   ],
+   "shelfmark": "Ms. Heb. 1340=24",
+   "rights_903": "No restrictions; 000000001 Public domain Over 140 years from publishing date",
+   "rights_939": "public domain free use",
+   "term": "העתקה",
+   "languages": [
+    "he"
+   ]
+  }
+ ],
+ "source_plan": "nli_ms_batch1/2"
+}

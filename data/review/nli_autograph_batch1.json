@@ -1,0 +1,237 @@
+{
+ "seed": 20261124,
+ "n": 40,
+ "discovery": "/private/tmp/claude-501/-Users-shaypalachy-agents-environments-opensource-projects-heocr/3ac44d28-6a76-4a55-b6c3-06326a2b2dcc/scratchpad/autograph_candidates.json",
+ "exclude_plans": [
+  "data/review/nli_ms_batch1.json",
+  "data/review/nli_ms_batch2.json"
+ ],
+ "picked_at": "2026-11-24T17:48:04.205839+00:00",
+ "counts": {
+  "rejected": 13
+ },
+ "decisions": [
+  {
+   "record_id": "NNL_ARCHIVE_AL997009626717705171",
+   "title": "מכתב מאת ביאליק, חיים נחמן אל מנדלי מוכר ספרים (1907).",
+   "decision": "rejected",
+   "reasons": [
+    "licence slug fair-use"
+   ],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/997009626717705171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/fair-use",
+   "license_slug": "fair-use",
+   "canvas_count": 3,
+   "item_url": "https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009626717705171",
+   "attribution": [
+    "רשומה זו היא חלק מפרויקט רשת ארכיוני ישראל (רא\"י) וזמינה במסגרת שיתוף פעולה בין ארכיון בית ביאליק, משרד ירושלים ומורשת והספרייה הלאומית של ישראל. This bibliographic record is part of the Israel Archive Network project (IAN) and has been made accessible thanks to the collaborative efforts of the Bialik House Archive, the Ministry of Jerusalem and Heritage and the National Library of Israel."
+   ],
+   "term": ""
+  },
+  {
+   "record_id": "NNL_ARCHIVE_AL997012091762505171",
+   "title": "מכתב מאת טשרניחובסקי, שאול אל ח\"נ ביאליק.",
+   "decision": "rejected",
+   "reasons": [
+    "licence slug fair-use"
+   ],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/997012091762505171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/fair-use",
+   "license_slug": "fair-use",
+   "canvas_count": 3,
+   "item_url": "https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997012091762505171",
+   "attribution": [
+    "רשומה זו היא חלק מפרויקט רשת ארכיוני ישראל (רא\"י) וזמינה במסגרת שיתוף פעולה בין ארכיון בית ביאליק, משרד ירושלים ומורשת והספרייה הלאומית של ישראל. This bibliographic record is part of the Israel Archive Network project (IAN) and has been made accessible thanks to the collaborative efforts of the Bialik House Archive, the Ministry of Jerusalem and Heritage and the National Library of Israel."
+   ],
+   "term": ""
+  },
+  {
+   "record_id": "NNL_ARCHIVE_AL997012091762405171",
+   "title": "מכתב ושירים מאת טשרניחובסקי, שאול אל ח\"נ ביאליק.",
+   "decision": "rejected",
+   "reasons": [
+    "licence slug הנגשה-כשימוש-הוגן-למטרות-של-לימוד-עצמי-הוראה-ומחקר"
+   ],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/997012091762405171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/הנגשה-כשימוש-הוגן-למטרות-של-לימוד-עצמי-הוראה-ומחקר",
+   "license_slug": "הנגשה-כשימוש-הוגן-למטרות-של-לימוד-עצמי-הוראה-ומחקר",
+   "canvas_count": 6,
+   "item_url": "https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997012091762405171",
+   "attribution": [
+    "רשומה זו היא חלק מפרויקט רשת ארכיוני ישראל (רא\"י) וזמינה במסגרת שיתוף פעולה בין ארכיון בית ביאליק, משרד ירושלים ומורשת והספרייה הלאומית של ישראל. This bibliographic record is part of the Israel Archive Network project (IAN) and has been made accessible thanks to the collaborative efforts of the Bialik House Archive, the Ministry of Jerusalem and Heritage and the National Library of Israel."
+   ],
+   "term": ""
+  },
+  {
+   "record_id": "NNL_ARCHIVE_AL997009626716405171",
+   "title": "מכתב מאת ביאליק, חיים נחמן אל מנדלי מוכר ספרים (1907).",
+   "decision": "rejected",
+   "reasons": [
+    "licence slug fair-use"
+   ],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/997009626716405171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/fair-use",
+   "license_slug": "fair-use",
+   "canvas_count": 4,
+   "item_url": "https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009626716405171",
+   "attribution": [
+    "רשומה זו היא חלק מפרויקט רשת ארכיוני ישראל (רא\"י) וזמינה במסגרת שיתוף פעולה בין ארכיון בית ביאליק, משרד ירושלים ומורשת והספרייה הלאומית של ישראל. This bibliographic record is part of the Israel Archive Network project (IAN) and has been made accessible thanks to the collaborative efforts of the Bialik House Archive, the Ministry of Jerusalem and Heritage and the National Library of Israel."
+   ],
+   "term": ""
+  },
+  {
+   "record_id": "NNL_ARCHIVE_AL997009626881605171",
+   "title": "מכתב מאת ביאליק, חיים נחמן אל מנדלי מוכר ספרים ורבניצקי, י.ח.",
+   "decision": "rejected",
+   "reasons": [
+    "licence slug הנגשה-כשימוש-הוגן-למטרות-של-לימוד-עצמי-הוראה-ומחקר"
+   ],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/997009626881605171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/הנגשה-כשימוש-הוגן-למטרות-של-לימוד-עצמי-הוראה-ומחקר",
+   "license_slug": "הנגשה-כשימוש-הוגן-למטרות-של-לימוד-עצמי-הוראה-ומחקר",
+   "canvas_count": 5,
+   "item_url": "https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009626881605171",
+   "attribution": [
+    "רשומה זו היא חלק מפרויקט רשת ארכיוני ישראל (רא\"י) וזמינה במסגרת שיתוף פעולה בין ארכיון בית ביאליק, משרד ירושלים ומורשת והספרייה הלאומית של ישראל. This bibliographic record is part of the Israel Archive Network project (IAN) and has been made accessible thanks to the collaborative efforts of the Bialik House Archive, the Ministry of Jerusalem and Heritage and the National Library of Israel."
+   ],
+   "term": ""
+  },
+  {
+   "record_id": "NNL_ARCHIVE_AL997009417716505171",
+   "title": "מכתב מ-ברדיצ'בסקי, מיכה יוסף אל שופמן, גרשון.",
+   "decision": "rejected",
+   "reasons": [
+    "licence slug fair-use"
+   ],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/997009417716505171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/fair-use",
+   "license_slug": "fair-use",
+   "canvas_count": 2,
+   "item_url": "https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009417716505171",
+   "attribution": [
+    "ארכיון גרשון שופמן זמין דיגיטלית במסגרת שיתוף פעולה בין ארכיון מכון גנזים - אגודת הסופרים העבריים במדינת ישראל (ע\"ר), משרד המורשת, חטיבת היודאיקה בספריית הרווארד והספרייה הלאומית של ישראל. The Gershon Shofman Archive, can now be accessed online as part of a collaborative initiative between the Gnazim Institute - Association of Hebrew Writers, Israel, The Israel Ministry of Heritage, the Harvard Library Judaica Division and the National Library of Israel."
+   ],
+   "term": ""
+  },
+  {
+   "record_id": "NNL_ARCHIVE_AL997009626716005171",
+   "title": "מכתב מאת ביאליק, חיים נחמן אל מנדלי מוכר ספרים (1907).",
+   "decision": "rejected",
+   "reasons": [
+    "licence slug fair-use"
+   ],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/997009626716005171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/fair-use",
+   "license_slug": "fair-use",
+   "canvas_count": 2,
+   "item_url": "https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009626716005171",
+   "attribution": [
+    "רשומה זו היא חלק מפרויקט רשת ארכיוני ישראל (רא\"י) וזמינה במסגרת שיתוף פעולה בין ארכיון בית ביאליק, משרד ירושלים ומורשת והספרייה הלאומית של ישראל. This bibliographic record is part of the Israel Archive Network project (IAN) and has been made accessible thanks to the collaborative efforts of the Bialik House Archive, the Ministry of Jerusalem and Heritage and the National Library of Israel."
+   ],
+   "term": ""
+  },
+  {
+   "record_id": "NNL_ARCHIVE_AL997010040120905171",
+   "title": "קובץ משיריו של טשרניחובסקי, שאול.",
+   "decision": "rejected",
+   "reasons": [
+    "licence slug fair-use"
+   ],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/997010040120905171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/fair-use",
+   "license_slug": "fair-use",
+   "canvas_count": 32,
+   "item_url": "https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997010040120905171",
+   "attribution": [
+    "ארכיון אשר ברש זמין דיגיטלית במסגרת שיתוף פעולה בין ארכיון מכון גנזים - אגודת הסופרים העבריים במדינת ישראל (ע\"ר), משרד המורשת, חטיבת היודאיקה בספריית הרווארד והספרייה הלאומית של ישראל. The Asher Barash Archive, can now be accessed online as part of a collaborative initiative between the Gnazim Institute - Association of Hebrew Writers, Israel, The Israel Ministry of Heritage, the Harvard Library Judaica Division and the National Library of Israel."
+   ],
+   "term": ""
+  },
+  {
+   "record_id": "NNL_ARCHIVE_AL997012462561405171",
+   "title": "מכתב בחרוזים מאת שאול טשרניחובסקי לח. נ. ביאליק.",
+   "decision": "rejected",
+   "reasons": [
+    "licence slug fair-use"
+   ],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/997012462561405171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/fair-use",
+   "license_slug": "fair-use",
+   "canvas_count": 6,
+   "item_url": "https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997012462561405171",
+   "attribution": [
+    "רשומה זו היא חלק מפרויקט רשת ארכיוני ישראל (רא\"י) וזמינה במסגרת שיתוף פעולה בין ארכיון בית ביאליק, משרד ירושלים ומורשת והספרייה הלאומית של ישראל. This bibliographic record is part of the Israel Archive Network project (IAN) and has been made accessible thanks to the collaborative efforts of the Bialik House Archive, the Ministry of Jerusalem and Heritage and the National Library of Israel."
+   ],
+   "term": ""
+  },
+  {
+   "record_id": "NNL_ARCHIVE_AL997012462556205171",
+   "title": "מכתב מאת טשרניחובסקי, שאול אל ביאליק, ח. נ. בענייני כתיבה וכספים.",
+   "decision": "rejected",
+   "reasons": [
+    "licence slug fair-use"
+   ],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/997012462556205171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/fair-use",
+   "license_slug": "fair-use",
+   "canvas_count": 4,
+   "item_url": "https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997012462556205171",
+   "attribution": [
+    "רשומה זו היא חלק מפרויקט רשת ארכיוני ישראל (רא\"י) וזמינה במסגרת שיתוף פעולה בין ארכיון בית ביאליק, משרד ירושלים ומורשת והספרייה הלאומית של ישראל. This bibliographic record is part of the Israel Archive Network project (IAN) and has been made accessible thanks to the collaborative efforts of the Bialik House Archive, the Ministry of Jerusalem and Heritage and the National Library of Israel."
+   ],
+   "term": ""
+  },
+  {
+   "record_id": "NNL_ALEPH990036511110205171",
+   "title": "אגרת אל חיים חייקל לונסקי.",
+   "decision": "rejected",
+   "reasons": [
+    "MARC HTTP 0"
+   ],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/990036511110205171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/public-domain-free-use",
+   "license_slug": "public-domain-free-use",
+   "canvas_count": 1,
+   "item_url": "https://www.nli.org.il/en/manuscripts/NNL_ALEPH990036511110205171",
+   "attribution": [
+    "From the Rosenthaliana Collections - Special Collections of the University of Amsterdam. Digitisation by Ardon Bar-Hama, The National Library of Israel. \"Ktiv\" Project"
+   ],
+   "term": ""
+  },
+  {
+   "record_id": "NNL_ARCHIVE_AL997012462555805171",
+   "title": "מכתב מאת טשרניחובסקי, שאול אל ביאליק, ח. נ., בענייני כספים.",
+   "decision": "rejected",
+   "reasons": [
+    "licence slug fair-use"
+   ],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/997012462555805171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/fair-use",
+   "license_slug": "fair-use",
+   "canvas_count": 3,
+   "item_url": "https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997012462555805171",
+   "attribution": [
+    "רשומה זו היא חלק מפרויקט רשת ארכיוני ישראל (רא\"י) וזמינה במסגרת שיתוף פעולה בין ארכיון בית ביאליק, משרד ירושלים ומורשת והספרייה הלאומית של ישראל. This bibliographic record is part of the Israel Archive Network project (IAN) and has been made accessible thanks to the collaborative efforts of the Bialik House Archive, the Ministry of Jerusalem and Heritage and the National Library of Israel."
+   ],
+   "term": ""
+  },
+  {
+   "record_id": "NNL_ARCHIVE_AL997009626715605171",
+   "title": "מכתב מאת מנדלי מוכר ספרים אל חיים נחמן ביאליק (אייר תרס\"ט).",
+   "decision": "rejected",
+   "reasons": [
+    "licence slug fair-use"
+   ],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/997009626715605171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/fair-use",
+   "license_slug": "fair-use",
+   "canvas_count": 3,
+   "item_url": "https://www.nli.org.il/en/archives/NNL_ARCHIVE_AL997009626715605171",
+   "attribution": [
+    "רשומה זו היא חלק מפרויקט רשת ארכיוני ישראל (רא\"י) וזמינה במסגרת שיתוף פעולה בין ארכיון בית ביאליק, משרד ירושלים ומורשת והספרייה הלאומית של ישראל. This bibliographic record is part of the Israel Archive Network project (IAN) and has been made accessible thanks to the collaborative efforts of the Bialik House Archive, the Ministry of Jerusalem and Heritage and the National Library of Israel."
+   ],
+   "term": ""
+  }
+ ],
+ "signed": "data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource"
+}
