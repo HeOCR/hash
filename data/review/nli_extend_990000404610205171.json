@@ -1,0 +1,103 @@
+{
+ "decisions": [
+  {
+   "record_id": "990000404610205171",
+   "title": "כתובים (שיר השירים) : \"... ותרגומו ... גם תבסיר נלוה עמו ביאור בלשון פרסי ...\". כנראה העתקה מדפוס ירושלים (תרנ\"ו או תרס\"ד).",
+   "decision": "accepted",
+   "reasons": [],
+   "manifest_url": "https://iiif.nli.org.il/IIIFv21/990000404610205171/manifest",
+   "license_url": "https://www.nli.org.il/contenteditors/pages-for-terms-of-use/public-domain-free-use",
+   "license_slug": "public-domain-free-use",
+   "canvas_count": 52,
+   "item_url": "https://www.nli.org.il/en/manuscripts/NNL_ALEPH990000404610205171",
+   "attribution": [
+    "The National Library of Israel. \"Ktiv\" Project מאוסף הספרייה הלאומית. פרוייקט \"כתיב\""
+   ],
+   "marc": {
+    "090": [
+     {
+      "a": "Ms. Heb. 2643=28"
+     },
+     {
+      "a": "B 461 (8°2643)"
+     }
+    ],
+    "245": [
+     {
+      "a": "כתובים (שיר השירים) :",
+      "b": "\"... ותרגומו ... גם תבסיר נלוה עמו ביאור בלשון פרסי ...\". כנראה העתקה מדפוס ירושלים (תרנ\"ו או תרס\"ד)."
+     }
+    ],
+    "260": [
+     {
+      "c": "1920 בערך."
+     }
+    ],
+    "300": [
+     {
+      "a": "49 דף."
+     }
+    ],
+    "500": [
+     {
+      "a": "כולל גם תרגום ותפסיר של ההפטרה לשמיני של פסח."
+     },
+     {
+      "a": "נושא נוסף: מקרא תנ\"ך כתובים מגלות שיר השירים"
+     }
+    ],
+    "597": [
+     {
+      "a": "מאוסף הספרייה הלאומית. פרוייקט \"כתיב\""
+     }
+    ],
+    "710": [
+     {
+      "a": "The National Library of Israel",
+      "x": "Jerusalem",
+      "c": "Israel",
+      "9": "lat",
+      "e": "current owner",
+      "8": "PreferredLanguageHeading"
+     }
+    ],
+    "903": [
+     {
+      "a": "No restrictions;",
+      "b": "000000001",
+      "c": "Public domain",
+      "d": "Anonymous work over 70 years from publishing date"
+     }
+    ],
+    "939": [
+     {
+      "a": "public domain free use"
+     }
+    ],
+    "041": [
+     {
+      "a": "per"
+     }
+    ]
+   },
+   "created": "1920",
+   "created_year_est": 1920,
+   "created_precision": "year",
+   "creators": [],
+   "document_type": "poem",
+   "is_copy": true,
+   "owner": [
+    "The National Library of Israel"
+   ],
+   "shelfmark": "Ms. Heb. 2643=28",
+   "rights_903": "No restrictions; 000000001 Public domain Anonymous work over 70 years from publishing date",
+   "rights_939": "public domain free use",
+   "term": "העתקה",
+   "languages": [
+    "he",
+    "fa"
+   ]
+  }
+ ],
+ "source_plan": "nli_ms_batch1/2"
+}

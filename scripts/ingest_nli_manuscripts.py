@@ -224,6 +224,10 @@ def assess(rec_id, search_rec, delay):
     return d
 
 
+def existing_entries():
+    return {json.loads(l)["entry_id"] for l in (IDX / "entries.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()}
+
+
 def existing_units():
     return {json.loads(l)["source_id"] for l in (IDX / "sources.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()}
 
@@ -294,13 +298,16 @@ def cmd_ingest(a):
         if d["decision"] != "accepted":
             continue
         sid = f"nli__ms_{d['record_id']}"
-        if sid in have:
+        if (sid in have) != bool(a.extend):  # normal runs add new sources; --extend only adds pages to existing ones
             continue
         st, body = fetch(d["manifest_url"], a.delay)
         man = json.loads(body)
         canvases = (man.get("sequences") or [{}])[0].get("canvases", [])
         order = list(range(len(canvases)))
-        if len(canvases) >= 4:
+        if a.extend:  # deeper pages of an already-ingested source: start at --from-canvas, skip pages already present
+            present = existing_entries()
+            order = [ci for ci in order[a.from_canvas - 1:] if f"{sid}__p{ci + 1:04d}" not in present]
+        elif len(canvases) >= 4:
             order = order[1:] + order[:1]  # a leading canvas is often a cover or binding
         got, tried = [], 0
         for ci in order:
@@ -336,7 +343,7 @@ def cmd_ingest(a):
         rights = {"rights_basis": "public_domain", "license_expression": "LicenseRef-NLI-Public-Domain-Free-Use",
                   "commercial_use_allowed": True, "derivatives_allowed": True, "scan_redistribution_allowed": True,
                   "attribution_required": True}
-        new_sources.append({
+        (new_sources if not a.extend else []).append({
             "source_id": sid, "record_type": "item", "status": "verified", "priority": "high",
             "provider": "National Library of Israel", "title": d["title"],
             "description": f"NLI digitized manuscript (Ktiv), {d.get('created') or 'undated'}, {d['canvas_count']} canvases.",
@@ -399,7 +406,7 @@ def cmd_ingest(a):
     with (IDX / "entries.jsonl").open("a", encoding="utf-8") as f:
         for e in new_entries:
             f.write(json.dumps(e, ensure_ascii=False) + "\n")
-    rep = Path(a.plan).with_suffix(".ingest_report.json")
+    rep = Path(a.plan).with_suffix(".extend_report.json" if a.extend else ".ingest_report.json")
     rep.write_text(json.dumps({"sources": len(new_sources), "entries": len(new_entries), "skips": report},
                               ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(json.dumps({"sources": len(new_sources), "entries": len(new_entries), "skips": len(report)}))
@@ -415,6 +422,9 @@ def main():
     i = sub.add_parser("ingest"); i.add_argument("plan"); i.add_argument("--pages", type=int, default=3)
     i.add_argument("--min-ink", type=float, default=0.01)
     i.add_argument("--min-lines", type=int, default=3, help="0 turns the blla line gate off"); i.add_argument("--delay", type=float, default=1.5)
+    i.add_argument("--extend", action="store_true",
+                   help="add pages to sources already in data/index (same rights decisions); no new source rows")
+    i.add_argument("--from-canvas", type=int, default=1, help="with --extend: first canvas (1-based) to consider")
     a = ap.parse_args()
     {"pick": cmd_pick, "ingest": cmd_ingest}[a.cmd](a)
 
