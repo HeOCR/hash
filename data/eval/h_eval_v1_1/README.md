@@ -14,7 +14,7 @@ unchanged; v1.1 only adds pages, from units outside every earlier hold-out.
   conservative.
 - **Hand rule (lead 2026-11-18):** role `writer` counts; `author` counts only outside `nli__ms_*` sources, where HASH's
   legacy entries are autographs; otherwise a unit is its own hand.
-- **Hold-out:** 108 pages appended to `data/index/eval_holdout.jsonl` with `eval_set` `h_eval_v1_1`.
+- **Hold-out:** 108 pages appended to `data/index/eval_holdout.jsonl` with `eval_set` `h_eval_v1_1`: 66 `selected: true` (scored, excluded from training) and 42 `selected: false` (train-allowed, tagged). This follows the owner rule in `../h_eval_v1/README.md`.
 - **Exposure:** 0 training hits; one hocrgen package fixture holds a different page of a selected Senesh unit.
 - **Flagged:** 12 units (the 8 cc_by_sa units, out as in v1; 4 undated NLI letters with no named person).
 
