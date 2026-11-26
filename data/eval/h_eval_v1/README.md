@@ -11,8 +11,13 @@ HASH index only (no page image was opened). Plan and decisions: `docs/h_eval_set
 | `unscored.jsonl` | pages or units that failed a gate, with the reason |
 | `exposure_sweep.json` | where held-out pages appear outside HASH; 0 training hits |
 
-The hold-out list is `data/index/eval_holdout.jsonl`: every page of every selected unit. Training-list builders,
-hletterscriptgen and synthetic generators must refuse these units.
+The hold-out list is `data/index/eval_holdout.jsonl`: every page of every selected unit, with `selected` marking the
+scored pages. **Owner rule (2026-11-26, contamination v2 amendment 1):** only a scored page's own pixels are excluded
+from training: rows with `selected: true` (113 across v1 and v1.1), in any capture of the same physical page, or a crop of
+it. Rows with `selected: false` are other pages of the same units. They are train-allowed, tagged
+`in_hash_eval_holdout_unselected`, and are excluded only if a later draw makes them scored pages. Same writer, same unit
+and same text are tags, never exclusions. Training-list builders, hletterscriptgen and synthetic generators refuse
+`selected: true` pages only.
 
 - **Primary: 44 pages, 31 units, 31 hands, all unseen writers.** The pool ran out below 50. The 10% writer cap is 5 pages,
   so Senesh gives 5. The set grows to about 100 by dated amendments as the intake round adds hands.
