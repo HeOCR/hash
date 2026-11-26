@@ -93,7 +93,8 @@ Then they need not type anything twice, and nothing is lost.
 
 ## Rules
 
-- These units are in `data/index/eval_holdout.jsonl`. No H page, box or crop enters any training list.
+- These units are in `data/index/eval_holdout.jsonl`. No scored H page, box or crop (`train_policy: excluded_scored`)
+  enters any training list.
 - The boxes are geometry only. No text from any engine may become, or seed, an H reference.
 
 — data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource

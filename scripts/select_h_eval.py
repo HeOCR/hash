@@ -6,7 +6,9 @@ image sha256 and size come from the index). It is committed before it runs; the 
     python3 scripts/select_h_eval.py --version v1 --target 50 --seed 20261118
 
 Writes data/eval/h_eval_<version>/{manifest.jsonl,manifest.json,flags.jsonl,unscored.jsonl} and rewrites
-data/index/eval_holdout.jsonl (every page of every selected unit; training builders must refuse these units).
+data/index/eval_holdout.jsonl (every page of every selected unit). Per contamination v2 amendment 1 (restricted-eval #1651),
+only the scored pages (selected: true, train_policy excluded_scored) are protected: their own pixels, in any capture or crop,
+never enter TRAIN. Unselected pages of the same units are train_allowed_tagged (train_tag in_hash_eval_holdout_unselected).
 Signed: data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource
 """
 from __future__ import annotations
@@ -19,6 +21,13 @@ import re
 import subprocess
 from collections import Counter, defaultdict
 from pathlib import Path
+
+
+def train_policy(row):
+    """Hold-out row -> TRAIN policy (contamination v2 amendment 1, restricted-eval #1651)."""
+    if row["selected"]:
+        return {**row, "train_policy": "excluded_scored"}
+    return {**row, "train_policy": "train_allowed_tagged", "train_tag": "in_hash_eval_holdout_unselected"}
 
 ROOT = Path(__file__).resolve().parents[1]
 IDX = ROOT / "data" / "index"
@@ -219,8 +228,9 @@ def main():
     dump(out / "unscored.jsonl", unscored)
 
     sel_units = sorted({r["source_id"] for r in rows})
-    holdout = [{"entry_id": e["entry_id"], "source_id": u, "eval_set": f"h_eval_{a.version}",
-                "selected": e["entry_id"] in {r["entry_id"] for r in rows}} for u in sel_units for e in units[u]]
+    chosen = {r["entry_id"] for r in rows}
+    holdout = [train_policy({"entry_id": e["entry_id"], "source_id": u, "eval_set": f"h_eval_{a.version}",
+                             "selected": e["entry_id"] in chosen}) for u in sel_units for e in units[u]]
     dump(IDX / "eval_holdout.jsonl", holdout)
 
     commit = subprocess.run(["git", "-C", str(ROOT), "log", "-1", "--format=%H", "--", "scripts/select_h_eval.py"],

@@ -74,7 +74,8 @@ back in contrib's export.
 
 ## Rules (unchanged)
 
-These units are in `data/index/eval_holdout.jsonl`. No H page, box or crop enters any training list, and no machine
+These units are in `data/index/eval_holdout.jsonl`. No scored H page, box or crop (`train_policy: excluded_scored`) enters
+any training list, and no machine
 text may become, or seed, an H reference.
 
 — data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource

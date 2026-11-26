@@ -21,6 +21,11 @@ def test_holdout_covers_whole_units_and_manifests():
     for h in holdout:
         held[h["source_id"]].add(h["entry_id"])
         assert unit_set.setdefault(h["source_id"], h["eval_set"]) == h["eval_set"], f"{h['source_id']} in two sets"
+    for h in holdout:  # contamination v2 amendment 1 (restricted-eval #1651): only scored pages are protected
+        if h["selected"]:
+            assert h["train_policy"] == "excluded_scored" and "train_tag" not in h, h["entry_id"]
+        else:
+            assert h["train_policy"] == "train_allowed_tagged" and h["train_tag"] == "in_hash_eval_holdout_unselected", h["entry_id"]
     for unit, ids in held.items():
         assert ids == by_unit[unit], f"{unit}: hold-out must list every page of the unit"
     for name in SETS:

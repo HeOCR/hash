@@ -23,7 +23,8 @@ Metadata only: reads data/index/*.jsonl, never a page image. Committed before it
     python3 scripts/select_h_eval_v1_1.py --target-total 100 --seed 20261119
 
 Writes data/eval/h_eval_v1_1/{manifest.jsonl,manifest.json,flags.jsonl,unscored.jsonl} and appends the v1.1 units'
-pages to data/index/eval_holdout.jsonl (v1 rows are kept as they are).
+pages to data/index/eval_holdout.jsonl (v1 rows are kept as they are), each with its train_policy: scored pages
+excluded_scored, unselected pages train_allowed_tagged (contamination v2 amendment 1, restricted-eval #1651).
 Signed: data-collection[claude/claude-code#shay-macbook-m4]@heocr/opensource
 """
 from __future__ import annotations
@@ -36,6 +37,13 @@ import re
 import subprocess
 from collections import Counter, defaultdict
 from pathlib import Path
+
+
+def train_policy(row):
+    """Hold-out row -> TRAIN policy (contamination v2 amendment 1, restricted-eval #1651); same rule as select_h_eval.py."""
+    if row["selected"]:
+        return {**row, "train_policy": "excluded_scored"}
+    return {**row, "train_policy": "train_allowed_tagged", "train_tag": "in_hash_eval_holdout_unselected"}
 
 ROOT = Path(__file__).resolve().parents[1]
 IDX = ROOT / "data" / "index"
@@ -258,8 +266,8 @@ def main():
     dump(out / "flags.jsonl", flagged)
     dump(out / "unscored.jsonl", unscored)
     chosen = {r["entry_id"] for r in rows}
-    new_hold = [{"entry_id": e["entry_id"], "source_id": u, "eval_set": f"h_eval_{VERSION}",
-                 "selected": e["entry_id"] in chosen} for u in sorted({r["source_id"] for r in rows}) for e in units[u]]
+    new_hold = [train_policy({"entry_id": e["entry_id"], "source_id": u, "eval_set": f"h_eval_{VERSION}",
+                              "selected": e["entry_id"] in chosen}) for u in sorted({r["source_id"] for r in rows}) for e in units[u]]
     dump(IDX / "eval_holdout.jsonl", holdout + new_hold)
 
     git = lambda *args: subprocess.run(["git", "-C", str(ROOT), *args], capture_output=True, text=True).stdout.strip()
