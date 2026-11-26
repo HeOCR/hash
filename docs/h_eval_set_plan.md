@@ -68,7 +68,9 @@ HASH as it is (lead 2026-11-18), with honest intervals; the intake round grows i
 - **Text exposure.** Once references exist, eval's `check_train_overlap.py` runs on every compared model's list. Pages
   are then scored zero-exposure first, as with mid-century (word 6-gram, no threshold).
 - **Hold-out record.** The selected units go into a HASH hold-out file (`data/index/eval_holdout.jsonl`, added with the
-  selection PR). hletterscriptgen, synth-gen and every list builder must refuse units in it.
+  selection PR). Under contamination v2 amendment 1 (restricted-eval #1651, 2026-11-26), list builders, hletterscriptgen
+  and synth-gen exclude only the scored pages (`train_policy: excluded_scored`) and their own pixels in any capture or
+  crop. Unselected pages of these units are `train_allowed_tagged` (`train_tag: in_hash_eval_holdout_unselected`).
 - **Famous texts.** Some pages have widely published texts, for example Imber's Hatikvah or a Bialik poem. LLM readers
   may know them by heart. These pages are tagged `known_text` and reported as a stratum, not dropped.
 
